@@ -1,0 +1,113 @@
+<!-- /templates/customers/register.liquid -->
+<section class="py-12 bg-light">
+  <div class="container">
+    <div class="row">
+      <!-- Card -->
+      <div class="card card-lg">
+        <div class="card-body">
+          <!-- Heading -->
+          <h6 class="mb-7 text-center">Register</h6>
+
+          {% form 'create_customer' %}
+            <div class="row">
+              {{ form.errors | default_errors }}
+              <div class="col-12">
+                <div class="form-group">
+                  <label class="visually-hidden" for="first_name"> First Name * </label>
+                  <input
+                    class="form-control form-control-sm"
+                    name="customer[first_name]"
+                    id="first_name"
+                    type="text"
+                    placeholder="First Name *"
+                    required=""
+                  >
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-group">
+                  <label class="visually-hidden" for="last_name"> Last Name * </label>
+                  <input
+                    class="form-control form-control-sm"
+                    name="customer[last_name]"
+                    id="last_name"
+                    type="text"
+                    placeholder="Last Name *"
+                    required=""
+                  >
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-group">
+                  <label class="visually-hidden" for="email"> Email Address * </label>
+                  <input
+                    class="form-control form-control-sm"
+                    id="email"
+                    name="customer[email]"
+                    type="email"
+                    placeholder="Email Address *"
+                    required=""
+                  >
+                </div>
+              </div>
+              <div class="col-12">
+                <!-- Password -->
+                <div class="form-group">
+                  <label class="visually-hidden" for="password"> Password * </label>
+                  <input
+                    class="form-control form-control-sm"
+                    name="customer[password]"
+                    id="password"
+                    type="password"
+                    placeholder="Password *"
+                    required=""
+                  >
+                </div>
+              </div>
+              {% comment %}
+                <div class="col-12 col-md-6">
+
+                  <!-- Password -->
+                  <div class="form-group">
+                    <label class="visually-hidden" for="registerPasswordConfirm">
+                      Confirm Password *
+                    </label>
+                    <input class="form-control form-control-sm" id="registerPasswordConfirm" type="password" placeholder="Confrm Password *" required="">
+                  </div>
+
+                </div>
+                <div class="col-12 col-md-auto">
+
+                  <!-- Link -->
+                  <div class="form-group fs-sm text-muted">
+                    By registering your details, you agree with our Terms &amp; Conditions,
+                    and Privacy and Cookie Policy.
+                  </div>
+
+                </div>
+                <div class="col-12 col-md">
+
+                  <!-- Newsletter -->
+                  <div class="form-group">
+                    <div class="form-check">
+                      <input class="form-check-input" id="registerNewsletter" type="checkbox">
+                      <label class="form-check-label" for="registerNewsletter">
+                        Sign me up for the Newsletter!
+                      </label>
+                    </div>
+                  </div>
+
+                </div>
+              {% endcomment %}
+              <div class="col-12">
+                <!-- Button -->
+                <button class="btn btn-sm btn-dark" type="submit">Register</button>
+              </div>
+            </div>
+          {% endform %}
+          <!-- Form -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
