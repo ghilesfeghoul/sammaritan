@@ -1,28 +1,118 @@
 <!-- /templates/customers/login.liquid -->
+<section class="py-12 bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <!-- Card -->
+        <div class="card card-lg mb-10 mb-md-0">
+          <div class="card-body">
+            <!-- Heading -->
+            <h6 class="mb-7">{{ 'templates.customers.login.title' | t }}</h6>
 
-<h2>Login</h2>
-{% form 'customer_login' %}
+            <!-- Form -->
+            {% form 'customer_login' %}          
+              <div class="row">
+                {{ form.errors | default_errors }}    
+                <div class="col-12">
+                  <!-- Email -->
+                  <div class="form-group">
+                    <label class="visually-hidden" for="loginEmail"> Email Address * </label>
+                    <input
+                      class="form-control form-control-sm"
+                      id="loginEmail"
+                      type="email"
+                      name="customer[email]"
+                      placeholder="Email Address *"
+                      required=""
+                    >
+                  </div>
+                </div>
+                <div class="col-12">
+                  <!-- Password -->
+                  <div class="form-group">
+                    <label class="visually-hidden" for="loginPassword"> Password * </label>
+                    <input
+                      class="form-control form-control-sm"
+                      id="loginPassword"
+                      type="password"
+                      name="customer[password]"
+                      placeholder="Password *"
+                      required=""
+                    >
+                  </div>
+                </div>
+                <div class="col-12 col-md">
+                  <!-- Remember -->
+                  <div class="form-group">
+                    <div class="form-check">
+                      <input class="form-check-input" id="loginRemember" type="checkbox">
+                      <label class="form-check-label" for="loginRemember"> Remember me </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-auto">
+                  <!-- Link -->
+                  <div class="form-group">
+                    <a class="fs-sm text-reset" data-bs-toggle="modal" href="#modalPasswordReset">Forgot Password?</a>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <!-- Button -->
+                  <button class="btn btn-sm btn-dark" type="submit">Sign In</button>
+                </div>
+              </div>
+            {% endform %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-{{ form.errors | default_errors }}
-
-<label for="customer_email">Email Address</label>
-<input type="email" name="customer[email]" />
-
-<label for="customer_password">Password</label>
-<input type="password" name="customer[password]" />
-
-<input type="submit" value="Sign In" />
-
-{% endform %}
-
-{% comment %} <h2>Forgot Password</h2>
-{% form 'recover_customer_password' %}
-
-{{ form.errors | default_errors }}
-
-<label for="customer_email">Email Address</label>
-<input type="email" name="email" />
-
-<input type="submit" value="Submit" />
-
-{% endform %} {% endcomment %}
+<div class="modal fade" id="modalPasswordReset" tabindex="-1" style="display: none;" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+  
+        <!-- Close -->
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+          <i class="fe fe-x" aria-hidden="true"></i>
+        </button>
+  
+        <!-- Header-->
+        <div class="modal-header lh-fixed fs-lg">
+          <strong class="mx-auto">{{ 'templates.customers.login.password-reset-title' | t }}</strong>
+        </div>
+  
+        <!-- Body -->
+        <div class="modal-body text-center">
+  
+          <!-- Text -->
+          <p class="mb-7 fs-sm text-gray-500">
+            Please enter your Email Address. You will receive a link
+            to create a new password via Email.
+          </p>
+  
+          <!-- Form -->
+          {% form 'recover_customer_password' %}
+            {{ form.errors | default_errors }}
+            <!-- Email -->
+            <div class="form-group">
+              <label class="visually-hidden" for="modalPasswordResetEmail">
+                Email Address *
+              </label>
+              <input name="email" class="form-control form-control-sm" id="modalPasswordResetEmail" type="email" placeholder="Email Address *" required="">
+            </div>
+  
+            <!-- Button -->
+            <button type="submit" class="btn btn-sm btn-dark">
+              Reset Password
+            </button>
+  
+        {% endform %}
+  
+        </div>
+  
+      </div>
+  
+    </div>
+  </div>

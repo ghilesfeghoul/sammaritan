@@ -5,5 +5,13 @@
       "subtext_html": "The page you were looking for does not exist",
       "homepage_link": "Go to Homepage"
     }
+  },
+  "templates": {
+    "customers": {
+      "login": {
+        "title": "Login",
+        "password-reset-title": "Forgot Password?"
+      }
+    }
   }
 }

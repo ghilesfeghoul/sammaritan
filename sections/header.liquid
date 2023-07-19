@@ -25,14 +25,16 @@
         <li class="nav-item dropdown hovered">
           <!-- Toggle -->
           <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" aria-expanded="false">
-            <img class="mb-1 me-1" src="{{ 'usa.svg' | asset_url}}" alt="..."> United States
+            {{ localization.country | image_url: width: 20 | image_tag: class: 'mb-1 me-1' }}
+            {{ localization.country.name }}
           </a>
 
           <!-- Menu -->
           <div class="dropdown-menu min-w-0">
             {% for country in localization.available_countries %}
               <a class="dropdown-item" href="#!">
-                {{ country | image_url: width: 20 | image_tag }} {{country.name}}
+                {{ country | image_url: width: 20 | image_tag: class: 'mb-1 me-1' }}
+                {{ country.name }}
               </a>
             {% endfor %}
           </div>
@@ -40,13 +42,18 @@
 
         <li class="nav-item dropdown hovered">
           <!-- Toggle -->
-          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" aria-expanded="false">USD</a>
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" aria-expanded="false">
+            {{- shop.currency -}}
+          </a>
 
-          <!-- Menu -->
-          <div class="dropdown-menu min-w-0">
-            <a class="dropdown-item" href="#!">USD</a>
-            <a class="dropdown-item" href="#!">EUR</a>
-          </div>
+          {% if shop.enabled_currencies %}
+            <!-- Menu -->
+            <div class="dropdown-menu min-w-0">
+              {% for currency in shop.enabled_currencies %}
+                <a class="dropdown-item" href="#!">{{currency.iso_code}}</a>
+              {% endfor %}
+            </div>
+          {% endif %}
         </li>
         {% if localization.available_languages %}
           <li class="nav-item dropdown hovered">
