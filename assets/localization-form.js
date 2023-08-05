@@ -10,10 +10,9 @@ if (!customElements.get("localization-form")) {
           ),
           panel: this.querySelector("ul"),
         };
-        console.log(this.elements);
         this.addEventListener("keyup", this.onContainerKeyUp.bind(this));
 
-        this.querySelectorAll("a").forEach((item) =>
+        this.querySelectorAll('.disclosure__link').forEach((item) =>
           item.addEventListener("click", this.onItemClick.bind(this))
         );
       }
@@ -25,9 +24,9 @@ if (!customElements.get("localization-form")) {
 
       onItemClick(event) {
         event.preventDefault();
-        const form = this.querySelector("form");
-        this.elements.input.value = event.currentTarget.dataset.value;
-        if (form) form.submit();
+            const form = this.querySelector("form");
+            this.elements.input.value = event.currentTarget.dataset.value;
+            if (form) form.submit();
       }
     }
   );
