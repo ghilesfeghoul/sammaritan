@@ -1,0 +1,13 @@
+{
+    "settings_schema": {
+        "sections": {
+            "template-not-found": {
+                "settings": {
+                    "text": {
+                        "title": "blala"
+                    }
+                }
+            }
+        }
+    }
+}

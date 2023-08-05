@@ -1,0 +1,83 @@
+<style>
+  .btn-dark {
+    background-color: {{ section.settings.button_color }}
+    ;
+    color: {{ section.settings.button_text_color }}
+  }
+</style>
+<section class="py-12">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-10 col-lg-8 col-xl-6 text-center">
+
+        <!-- Icon -->
+        <div class="mb-7 fs-1">🙁</div>
+
+        <!-- Heading -->
+        <h2 class="mb-5">{{ section.settings.title }}</h2>
+
+        <!-- Text -->
+        <p class="mb-7 text-gray-500">
+          <p>{{ section.settings.subtext_html }}</p>
+        </p>
+
+        {% if section.settings.button_url == blank %}
+          {% assign shop_url = shop.secure_url %}
+        {% else %}
+          {% assign shop_url = section.settings.button_url %}
+        {% endif %}
+        <!-- Button -->
+        <a class="btn btn-dark" href="{{ shop_url }}">
+          {{ section.settings.button_text }}
+        </a>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Template 404",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "default": "Not found",
+        "label": "Title of the page",
+        "info": "Customize the title of your page"
+      },
+      {
+        "type": "text",
+        "id": "subtext_html",
+        "default": "The page you were looking for does not exist",
+        "label": "Error Message",
+        "info": "Customize the error message of your page"
+      },
+      {
+        "type": "color",
+        "id": "button_text_color",
+        "default": "#FFF",
+        "label": "Text color button",
+        "info": "Customize the color of the text button"
+      },
+      {
+        "type": "color",
+        "id": "button_color",
+        "default": "#000",
+        "label": "Color button",
+        "info": "Customize the color of the button"
+      }, {
+        "type": "text",
+        "id": "button_text",
+        "default": "Go to Homepage",
+        "label": "Button text",
+        "info": "Customize the text of the button"
+      }, {
+        "type": "url",
+        "id": "button_url",
+        "label": "Button URL"
+      }
+    ]
+  }
+{% endschema %}
