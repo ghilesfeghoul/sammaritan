@@ -1,0 +1,27 @@
+{
+    "name": "Navbar",
+    "type": "header",
+    "sections": {
+      "header": {
+        "type": "header",
+        "settings": {
+          "header_selector": "Classic",
+          "menu": "main-menu"
+        },
+        "blocks": {
+          "account": {
+            "type": "customer_account"
+          },
+          "cart": {
+            "type": "customer_cart"
+          }
+        },
+        "block_order": [
+          "account", "cart"
+        ]
+      }
+    },
+    "order": [
+      "header"
+    ]
+  }

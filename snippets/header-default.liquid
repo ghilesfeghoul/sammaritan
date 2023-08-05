@@ -1,0 +1,161 @@
+<nav class="navbar navbar-expand-lg navbar-light ">
+  <div class="container">
+
+    <!-- Brand -->
+    <a class="navbar-brand d-lg-none" href="{{ routes.root_url }}">
+      {{ shop.name }}
+    </a>
+
+
+    <!-- Toggler -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarFashionTopCollapse"
+      aria-controls="navbarFashionTopCollapse"
+      aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Collapse -->
+    <div class="collapse navbar-collapse" id="navbarFashionTopCollapse">
+
+      <!-- Nav -->
+      <ul class="navbar-nav">
+        {% for block in section.blocks %}
+          {% if block.type == 'link' %}
+            <li class="nav-item">
+              <a class="nav-link text-uppercase active" href="{{ block.settings.link_url }}">{{ block.settings.text_display }}</a>
+            </li>
+          {% endif %}
+        {% endfor %}
+
+
+      </ul>
+
+      <!-- Brand -->
+      <a class="navbar-brand mx-auto d-none d-lg-block" href="{{ routes.root_url }}">
+        {{ shop.name }}
+      </a>
+
+      {%- if shop.customer_accounts_enabled -%}
+        <ul class="navbar-nav flex-row">
+          {% for block in section.blocks %}
+            {% case block.type %}
+              {% when 'customer_account' %}
+                <li class="nav-item">
+                  <a class="nav-link" href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}">
+                    <i class="fe fe-user"></i>
+                  </a>
+                </li>
+              {% when 'customer_cart' %}
+                <li class="nav-item ms-lg-n4">
+                  <a
+                    class="nav-link"
+                    data-bs-toggle="offcanvas"
+                    href="{{ routes.cart_url }}">
+                    <span data-cart-items="2">
+                      <i class="fe fe-shopping-cart"></i>
+                    </span>
+                  </a>
+                </li>
+              {% when '@app' %}
+              {% render block %}
+
+            {% endcase %}
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </div>
+  </div>
+</nav>
+<div class="navbar navbar-fashion navbar-expand-lg navbar-dark mb-4 bg-dark">
+  <div class="container">
+
+    <!-- Search-->
+    <form class="navbar-form me-auto order-lg-1">
+      <div class="input-group">
+        <input
+          type="search"
+          class="form-control"
+          placeholder="Search for items and brands">
+        <div class="input-group-append">
+          <button class="btn btn-dark">
+            <i class="fe fe-search"></i>
+          </button>
+        </div>
+      </div>
+    </form>
+
+    <!-- Toggler -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarFashionBottomCollapse"
+      aria-controls="navbarFashionBottomCollapse"
+      aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Collapse -->
+    <div class="collapse navbar-collapse" id="navbarFashionBottomCollapse">
+      <ul class="navbar-nav">
+        {%- for link in section.settings.menu.links -%}
+          {%- if link.links != blank -%}
+            <li class="nav-item dropdown hovered">
+              <a
+                class="nav-link"
+                data-bs-toggle="dropdown"
+                href="{{ link.url }}"
+                aria-expanded="false">{{- link.title | escape -}}</a>
+
+              <div class="dropdown-menu">
+                <div class="card card-lg">
+                  <div class="card-body">
+                    {% if link.levels == 1 %}
+                      <ul class="list-styled fs-sm">
+                      {% else %}
+                        <div class="row">
+                        {% endif %}
+                        {%- for childlink in link.links -%}
+                          {%- if childlink.links != blank -%}
+                            <div class="col">
+                              <a class="mb-5 fw-bold" href="{{ childlink.url }}">{{- childlink.title | escape -}}</a>
+                              <ul class="list-styled mb-0 fs-sm">
+                                {% for grandchildlink in childlink.links %}
+                                  <li class="list-styled-item">
+                                    <a class="list-styled-link" href="{{ grandchildlink.url }}">{{- grandchildlink.title | escape -}}</a>
+                                  </li>
+                                {% endfor %}
+                              </ul>
+                            </div>
+                          {%- else -%}
+                            <li class="list-styled-item">
+                              <a class="list-styled-link" href="{{ childlink.url }}">{{- childlink.title | escape -}}</a>
+                            </li>
+                          {%- endif -%}
+                        {%- endfor -%}
+                        {% if link.levels == 1 %}
+                        </ul>
+                    {% else %}
+                      </div>
+                    {% endif %}
+                  </div>
+                </div>
+              </div>
+            </li>
+          {%- else -%}
+            <li class="nav-item">
+              <a class="nav-link" href="{{ link.url }}">{{- link.title | escape -}}</a>
+            </li>
+          {%- endif -%}
+        {%- endfor -%}
+      </ul>
+    </div>
+
+  </div>
+</div>
