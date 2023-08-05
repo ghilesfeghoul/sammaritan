@@ -1,0 +1,44 @@
+<div class="disclosure">
+  <li class="nav-item dropdown hovered">
+
+    <!-- Toggle -->
+    <a
+      class="nav-link text-body dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-controls="LanguageList"
+      href="#"
+      aria-expanded="false">
+      {{ localization.language.endonym_name | capitalize }}</a>
+
+    <!-- Menu -->
+    <div class="dropdown-menu">
+      <div class="card card-lg">
+        <div class="card-body">
+          <ul
+            id="LanguageList"
+            role="list"
+            class="disclosure__list list-styled fs-sm">
+            {%- for language in localization.available_languages -%}
+              <li class="list-styled-item disclosure__item" tabindex="-1">
+                <a
+                  class="list-styled-link link link--text disclosure__link"
+                  href="#"
+                  hreflang="{{ language.iso_code }}"
+                  lang="{{ language.iso_code }}"
+                  {% if language.iso_code == localization.language.iso_code %}
+                  aria-current="true"
+                  {% endif %}
+                  data-value="{{ language.iso_code }}">{{ language.endonym_name | capitalize }}</a>
+              </li>
+            {%- endfor -%}
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </li>
+  <input
+    type="hidden"
+    name="locale_code"
+    value="{{ localization.language.iso_code }}">
+</div>

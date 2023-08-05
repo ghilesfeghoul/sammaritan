@@ -18,6 +18,10 @@
     <script src="{{ 'application.js' | asset_url }}" defer></script>
     <script src="{{ 'theme.bundle.js' | asset_url }}" defer></script>
     <script src="{{ 'vendor.bundle.js' | asset_url  }}" defer></script>
+
+    {%- if localization.available_countries.size > 1 or localization.available_languages.size > 1 -%}
+      <script src="{{ 'localization-form.js' | asset_url }}" defer="defer"></script>
+    {%- endif -%}
   </head>
   <body>
 

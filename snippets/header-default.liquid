@@ -21,7 +21,6 @@
 
     <!-- Collapse -->
     <div class="collapse navbar-collapse" id="navbarFashionTopCollapse">
-
       <!-- Nav -->
       <ul class="navbar-nav">
         {% for block in section.blocks %}
@@ -31,8 +30,6 @@
             </li>
           {% endif %}
         {% endfor %}
-
-
       </ul>
 
       <!-- Brand -->
@@ -40,27 +37,48 @@
         {{ shop.name }}
       </a>
 
+      <ul class="navbar-nav nav-divided">
+
+
+        {%- if section.settings.enable_country_selector and localization.available_countries.size > 1 -%}
+          <localization-form>
+            {%- form 'localization' -%}
+              <div>
+                {%- render 'country-localization', localPosition: 'HeaderCountry' -%}
+              </div>
+            {%- endform -%}
+          </localization-form>
+        {% endif %}
+
+        {%- if section.settings.enable_language_selector and localization.available_languages.size > 1 -%}
+          <localization-form>
+            {%- form 'localization' -%}
+              <div>
+                {%- render 'language-localization', localPosition: 'HeaderLanguage' -%}
+              </div>
+            {%- endform -%}
+          </localization-form>
+        {% endif %}
+      </ul>
+
       {%- if shop.customer_accounts_enabled -%}
         <ul class="navbar-nav flex-row">
           {% for block in section.blocks %}
             {% case block.type %}
               {% when 'customer_account' %}
-                <li class="nav-item">
-                  <a class="nav-link" href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}">
-                    <i class="fe fe-user"></i>
-                  </a>
-                </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}">
+                  <i class="fe fe-user"></i>
+                </a>
+              </li>
               {% when 'customer_cart' %}
-                <li class="nav-item ms-lg-n4">
-                  <a
-                    class="nav-link"
-                    data-bs-toggle="offcanvas"
-                    href="{{ routes.cart_url }}">
-                    <span data-cart-items="2">
-                      <i class="fe fe-shopping-cart"></i>
-                    </span>
-                  </a>
-                </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ routes.cart_url }}">
+                  <span data-cart-items="{{ cart.item_count }}">
+                    <i class="fe fe-shopping-cart"></i>
+                  </span>
+                </a>
+              </li>
               {% when '@app' %}
               {% render block %}
 

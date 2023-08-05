@@ -1,0 +1,43 @@
+<div class="disclosure">
+  <li class="nav-item dropdown hovered">
+
+    <!-- Toggle -->
+    <a
+      class="nav-link text-body dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-controls="CountryList"
+      href="#"
+      aria-expanded="false">
+      {{- localization.country.currency.iso_code }}
+      {{ localization.country.currency.symbol }} | {{ localization.country.name -}}</a>
+
+    <!-- Menu -->
+    <div class="dropdown-menu">
+      <div class="card card-lg">
+        <div class="card-body">
+          <ul
+            id="CountryList"
+            role="list"
+            class="disclosure__list list-styled fs-sm">
+            {%- for country in localization.available_countries -%}
+              <li class="list-styled-item disclosure__item" tabindex="-1">
+                <a
+                  class="list-styled-link link link--text disclosure__link"
+                  href="#"
+                  {% if country.iso_code == localization.country.iso_code %}
+                  aria-current="true"
+                  {% endif %}
+                  data-value="{{ country.iso_code }}">{{ country.name }}</a>
+              </li>
+            {%- endfor -%}
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </li>
+  <input
+    type="hidden"
+    name="country_code"
+    value="{{ localization.country.iso_code }}">
+</div>
