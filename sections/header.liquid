@@ -1,5 +1,5 @@
 {% case section.settings.header_selector %}
-  {% when 'Classic' %}
+  {% when 'Fashion' %}
   {% render 'header-default' %}
 
   {% when 'Assymetric' %}
@@ -16,8 +16,8 @@
         "id": "header_selector",
         "options": [
           {
-            "label": "Classic",
-            "value": "Classic"
+            "label": "Fashion",
+            "value": "Fashion"
           }, {
             "label": "Simple",
             "value": "Simple"
@@ -50,6 +50,56 @@
         "type": "image_picker",
         "id": "logo",
         "label": "Choose the logo to display (your brand)"
+      }, {
+        "type": "checkbox",
+        "id": "allow_social_links",
+        "default": false,
+        "label": "Display all social links"
+      }, {
+        "type": "text",
+        "id": "facebook_link",
+        "label": "Your facebook link"
+      }, {
+        "type": "checkbox",
+        "id": "allow_facebook_link",
+        "default": false,
+        "label": "Display facebook link"
+      }, {
+        "type": "text",
+        "id": "youtube_link",
+        "label": "Your YouTube link"
+      }, {
+        "type": "checkbox",
+        "id": "allow_youtube_link",
+        "default": false,
+        "label": "Display YouTube link"
+      }, {
+        "type": "text",
+        "id": "twitter_link",
+        "label": "Your Twitter link"
+      }, {
+        "type": "checkbox",
+        "id": "allow_twitter_link",
+        "default": false,
+        "label": "Display Twitter link"
+      }, {
+        "type": "text",
+        "id": "instagram_link",
+        "label": "Your Instagram link"
+      }, {
+        "type": "checkbox",
+        "id": "allow_instagram_link",
+        "default": false,
+        "label": "Display Instagram link"
+      }, {
+        "type": "text",
+        "id": "medium_link",
+        "label": "Your Medium link"
+      }, {
+        "type": "checkbox",
+        "id": "allow_medium_link",
+        "default": false,
+        "label": "Display Medium link"
       }
     ],
     "blocks": [
