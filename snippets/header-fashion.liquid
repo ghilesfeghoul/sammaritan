@@ -145,7 +145,7 @@
       <ul class="navbar-nav">
         {%- for link in section.settings.menu.links -%}
           {%- if link.links != blank -%}
-            <li class="nav-item dropdown hovered">
+            <li class="nav-item dropdown">
               <a
                 class="nav-link"
                 data-bs-toggle="dropdown"
@@ -173,9 +173,9 @@
                               </ul>
                             </div>
                           {%- else -%}
-                            <li class="list-styled-item">
-                              <a class="list-styled-link" href="{{ childlink.url }}">{{- childlink.title | escape -}}</a>
-                            </li>
+                            <div class="col">
+                              <a class="mb-5 fw-bold" href="{{ childlink.url }}">{{- childlink.title | escape -}}</a>
+                            </div>
                           {%- endif -%}
                         {%- endfor -%}
                         {% if link.levels == 1 %}

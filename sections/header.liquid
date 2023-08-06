@@ -1,11 +1,11 @@
 {% case section.settings.header_selector %}
   {% when 'Fashion' %}
-  {% render 'header-default' %}
+  {% render 'header-fashion' %}
 
   {% when 'Assymetric' %}
   {% render 'header-assymetric' %}
 {% else %}
-  {% render 'header-simple' %}
+  {% render 'header-classic' %}
 {% endcase %}
 
 {% schema %}
@@ -19,8 +19,8 @@
             "label": "Fashion",
             "value": "Fashion"
           }, {
-            "label": "Simple",
-            "value": "Simple"
+            "label": "Classic",
+            "value": "Classic"
           }, {
             "label": "Assymetric",
             "value": "Assymetric"

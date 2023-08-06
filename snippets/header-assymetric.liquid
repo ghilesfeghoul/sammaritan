@@ -24,7 +24,7 @@
                           {%- if childlink.links != blank -%}
                           <div class="row">
                             <div class="col-12 py-3">
-                              <h6 class="mb-5 fw-bold">{{ childlink.title | escape }}</h6>
+                              <a class="mb-5 fw-bold fs-lg" href="{{ childlink.url }}">{{ childlink.title | escape }}</a>
                               <ul class="list-styled fs-lg">
                               {% for grandchildlink in childlink.links %}
                                     <li class="list-styled-item">
@@ -36,9 +36,11 @@
                     
                               </div>
                           {%- else -%}
-                          <li class="list-styled-item">
-                            <a class="list-styled-link" href="{{ childlink.url }}">{{- childlink.title | escape -}}</a>
-                          </li>
+                          <div class="row">
+                            <div class="col-12 py-3">
+                              <a href="{{ childlink.url }}" class="mb-5 fw-bold fs-lg">{{ childlink.title | escape }}</a>
+                            </div>
+                          </div>
                         {%- endif -%}  
                       {%- endfor -%}
 

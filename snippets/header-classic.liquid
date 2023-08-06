@@ -1,0 +1,173 @@
+<nav class="navbar navbar-expand-xl navbar-light ">
+  <div class="container">
+
+
+    {%- if section.settings.logo != blank -%}
+      {%- assign logo_alt = section.settings.logo.alt | default: shop.name | escape -%}
+      <!-- Mobile -->
+      <img
+        class="img-fluid img-thumbnail navbar-brand d-xl-none"
+        src="{{ section.settings.logo | image_url }}"
+        width="60"
+        height="60"
+        alt="{{ logo_alt }}"
+        loading="lazy">
+    {% else %}
+      <!-- Brand -->
+      <a class="navbar-brand d-xl-none" href="{{ routes.root_url }}">
+        {{ shop.name }}
+      </a>
+    {% endif %}
+
+    <!-- Toggler -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarClassicCollapse"
+      aria-controls="navbarClassicCollapse"
+      aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Collapse -->
+    <div class="collapse navbar-collapse" id="navbarClassicCollapse">
+
+      <!-- Nav -->
+      <ul class="navbar-nav">
+        {%- for link in section.settings.menu.links -%}
+        <li class="nav-item flex flex-row {% if link.links != blank %}dropdown position-static{% endif %}">
+            {%- if link.links != blank -%}
+              <a
+              class="nav-link"
+              data-bs-toggle="dropdown"
+              href="#">{{ link.title | escape }}</a>
+
+              <div class="dropdown-menu px-10" style="min-width: 650px;">
+                <div class="card card-lg">
+                  <div class="card-body">
+                    <div class="row">
+                      {%- for childlink in link.links -%}
+                        <div class="col">
+                        
+                          {%- if childlink.links != blank -%}
+                          <a class="mb-5 fw-bold d-block" href="{{ childlink.url }}">{{- childlink.title | escape -}}</a>
+                          <ul class="list-styled fs-sm">
+                            {% for grandchildlink in childlink.links %}
+                              <li class="list-styled-item">
+                                <a class="list-styled-link" href="{{ grandchildlink.url }}">{{- grandchildlink.title | escape -}}</a>
+                              </li>
+                            {% endfor %}
+                          </ul>
+                      {%- else -%}
+                            <a class="mb-5 fw-bold d-block" href="{{ childlink.url }}">{{- childlink.title | escape -}}</a>
+                      {%- endif -%}
+                      </div>
+        
+                        
+                    {%- endfor -%}
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+            {% else %}
+              <a class="nav-link" href="{{ link.url }}">{{- link.title | escape -}}</a>
+            {% endif %}
+          </li>
+        {% endfor %}
+
+      </ul>
+
+
+      {%- if section.settings.logo != blank -%}
+        {%- assign logo_alt = section.settings.logo.alt | default: shop.name | escape -%}
+        <!-- Mobile -->
+        <img
+          class="img-fluid img-thumbnail navbar-brand mx-auto d-none d-xl-block"
+          src="{{ section.settings.logo | image_url }}"
+          width="100"
+          height="100"
+          alt="{{ logo_alt }}"
+          loading="lazy">
+      {% else %}
+        <!-- Brand -->
+        <a class="navbar-brand mx-auto d-none d-xl-block" href="{{ routes.root_url }}">
+          {{ shop.name }}
+        </a>
+      {% endif %}
+
+      <!-- Nav -->
+      <ul class="navbar-nav nav-divided">
+        {%- if section.settings.enable_country_selector and localization.available_countries.size > 1 -%}
+        <li class="nav-item dropdown hovered"></li>
+        <localization-form>
+          {%- form 'localization' -%}
+            <div>
+              {%- render 'country-localization', localPosition: 'HeaderCountry' -%}
+            </div>
+          {%- endform -%}
+        </localization-form>
+        </li>
+      {% endif %}
+  
+      {%- if section.settings.enable_language_selector and localization.available_languages.size > 1 -%}
+      <li class="nav-item dropdown"></li>
+        <localization-form>
+          {%- form 'localization' -%}
+            <div>
+              {%- render 'language-localization', localPosition: 'HeaderLanguage' -%}
+            </div>
+          {%- endform -%}
+        </localization-form>
+        </li>
+      {% endif %}
+      </ul>
+
+      <!-- Nav -->
+      <ul class="navbar-nav flex-row">
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            data-bs-toggle="offcanvas"
+            href="#modalSearch">
+            <i class="fe fe-search"></i>
+          </a>
+        </li>
+
+
+        {%- if shop.customer_accounts_enabled -%}
+          {% for block in section.blocks %}
+            {% case block.type %}
+              {% when 'customer_account' %}
+                <li class="nav-item ms-lg-n4">
+                  <a class="nav-link" href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}">
+                    <i class="fe fe-user"></i>
+                  </a>
+                </li>
+            {% when '@app' %}
+              {% render block %}
+              {% when 'customer_cart' %}
+                <li class="nav-item ms-lg-n4">
+          <a
+            class="nav-link"
+            data-bs-toggle="offcanvas"
+            href="{{ routes.cart_url }}">
+            <span data-cart-items="{{ cart.item_count }}">
+              <i class="fe fe-shopping-cart"></i>
+            </span>
+          </a>
+        </li>
+
+            {% endcase %}
+          {% endfor %}
+      {% endif %}
+
+        
+      </ul>
+
+    </div>
+
+  </div>
+</nav>

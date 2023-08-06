@@ -5,7 +5,7 @@
       "header": {
         "type": "header",
         "settings": {
-          "header_selector": "Assymetric",
+          "header_selector": "Classic",
           "menu": "main-menu"
         },
         "blocks": {
