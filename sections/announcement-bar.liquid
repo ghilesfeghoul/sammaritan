@@ -1,10 +1,153 @@
+{% for option in section.settings.type_annoncement %}
+  {% if option == 'Promotion' %}
+    {% render 'promotion' %}
+
+  {% else %}
+    {% render 'other-announcement' %}
+  {% endif %}
+{% endfor %}
+
+
 {% schema %}
   {
     "name": "Announcement bar",
+    "settings": [
+      {
+        "id": "type_annoncement",
+        "label": "Choose the type of the announcement bar",
+        "type": "select",
+        "options": [
+          {
+            "label": "Promotion",
+            "value": "Promotion"
+          }, {
+            "label": "Other",
+            "value": "Other"
+          }
+        ],
+        "default": "Promotion"
+      },
+      {
+        "type": "text",
+        "id": "promotion_text",
+        "label": "Promotion text",
+        "default": "Promotion"
+      },
+      {
+        "type": "select",
+        "id": "promo_type",
+        "options": [
+          {
+            "label": "Free shipping",
+            "value": "Free shipping"
+          }, {
+            "label": "Discount",
+            "value": "Discount"
+          }
+        ],
+        "default": "Discount",
+        "label": "Type of the promotion"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_country_selector",
+        "default": true,
+        "label": "Show country selector",
+        "info": "The country selector is only available on other announcement bar"
+      }, {
+        "type": "checkbox",
+        "id": "enable_language_selector",
+        "default": true,
+        "label": "Show language selector",
+        "info": "The language selector is only available on other announcement bar"
+      }, {
+        "type": "checkbox",
+        "id": "allow_social_links",
+        "default": false,
+        "label": "Display all social links",
+        "info": "This setting is only available on other announcement bar"
+      }, {
+        "type": "text",
+        "id": "facebook_link",
+        "label": "Your facebook link",
+        "info": "This setting is only available on other announcement bar"
+      }, {
+        "type": "checkbox",
+        "id": "allow_facebook_link",
+        "default": false,
+        "label": "Display facebook link",
+        "info": "This setting is only available on other announcement bar"
+      }, {
+        "type": "text",
+        "id": "youtube_link",
+        "label": "Your YouTube link",
+        "info": "This setting is only available on other announcement bar"
+      }, {
+        "type": "checkbox",
+        "id": "allow_youtube_link",
+        "default": false,
+        "label": "Display YouTube link",
+        "info": "This setting is only available on other announcement bar"
+      }, {
+        "type": "text",
+        "id": "twitter_link",
+        "label": "Your Twitter link",
+        "info": "This setting is only available on other announcement bar"
+      }, {
+        "type": "checkbox",
+        "id": "allow_twitter_link",
+        "default": false,
+        "label": "Display Twitter link",
+        "info": "This setting is only available on other announcement bar"
+      }, {
+        "type": "text",
+        "id": "instagram_link",
+        "label": "Your Instagram link",
+        "info": "This setting is only available on other announcement bar"
+      }, {
+        "type": "checkbox",
+        "id": "allow_instagram_link",
+        "default": false,
+        "label": "Display Instagram link",
+        "info": "This setting is only available on other announcement bar"
+      }, {
+        "type": "text",
+        "id": "medium_link",
+        "label": "Your Medium link",
+        "info": "This setting is only available on other announcement bar"
+      }, {
+        "type": "checkbox",
+        "id": "allow_medium_link",
+        "default": false,
+        "label": "Display Medium link",
+        "info": "This setting is only available on other announcement bar"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "Link",
+        "type": "link",
+        "limit": 3,
+        "settings": [
+          {
+            "type": "url",
+            "id": "link_url",
+            "label": "Type the link url",
+            "info": "The link url is only available on other announcement bar"
+          }, {
+            "type": "text",
+            "id": "text_display",
+            "label": "Type the text to display in the header",
+            "info": "The link text is only available on other announcement bar"
+          }
+        ]
+      }
+    ],
     "presets": [
       {
         "name": "Announcement bar"
       }
-    ]
+    ],
+    "limit": 2
   }
 {% endschema %}

@@ -1,0 +1,173 @@
+<div class="navbar navbar-topbar navbar-expand-xl navbar-light bg-light">
+  <div class="container">
+
+    {% if section.settings.promotion_text != blank %}
+
+      {% if section.settings.promo_type == "Discount" %}
+        <!-- Promo -->
+        <div class="me-xl-8">
+          <span class="heading-xxxs">⚡️ {{ section.settings.promotion_text }} ⚡️</span>
+        </div>
+      {% else %}
+        <!-- Promo -->
+        <div class="me-xl-8">
+          <i class="fe fe-truck me-2"></i>
+          <span class="heading-xxxs">
+            {{ section.settings.promotion_text }}
+          </span>
+        </div>
+      {% endif %}
+    {% endif %}
+
+
+    <!-- Toggler -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#topbarCollapse"
+      aria-controls="topbarCollapse"
+      aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Collapse -->
+    <div class="collapse navbar-collapse" id="topbarCollapse">
+
+      <!-- Nav -->
+      <ul class="nav nav-divided navbar-nav me-auto">
+        {%- if section.settings.enable_country_selector and localization.available_countries.size > 1 -%}
+          <localization-form>
+            {%- form 'localization' -%}
+              <div>
+                {%- render 'country-localization', localPosition: 'HeaderCountry' -%}
+              </div>
+            {%- endform -%}
+          </localization-form>
+        {% endif %}
+        {%- if section.settings.enable_language_selector and localization.available_languages.size > 1 -%}
+          <localization-form>
+            {%- form 'localization' -%}
+              <div>
+                {%- render 'language-localization', localPosition: 'HeaderLanguage' -%}
+              </div>
+            {%- endform -%}
+          </localization-form>
+        {% endif %}
+      </ul>
+
+      <!-- Nav -->
+      <ul class="nav navbar-nav me-8">
+        {% for block in section.blocks %}
+          {% case block.type %}
+            {% when 'link' %}
+            <li class="nav-item">
+              <a class="nav-link" href="{{ block.settings.link_url }}">{{ block.settings.text_display }}</a>
+            </li>
+        {% else %}
+          {% endcase %}
+        {% endfor %}
+      </ul>
+
+      <!-- Social links -->
+      {% if section.settings.allow_social_links %}
+        <ul class="nav navbar-nav flex-row">
+          {% if section.settings.facebook_link != blank %}
+            <li class="nav-item">
+              <a class="nav-link text-gray-350" href="{{ section.settings.facebook_link }}">
+                {% render 'facebook-icon' %}
+              </a>
+            </li>
+          {% endif %}
+
+          {% if section.settings.youtube_link != blank %}
+            <li class="nav-item">
+              <a class="nav-link text-gray-350" href="{{ section.settings.youtube_linl }}">
+                {% render 'youtube-icon' %}
+              </a>
+            </li>
+          {% endif %}
+
+
+          {% if section.settings.twitter_link != blank %}
+            <li class="nav-item">
+              <a class="nav-link text-gray-350" href="{{ section.settings.twitter_link }}">
+                {% render 'twitter-icon' %}
+              </a>
+            </li>
+          {% endif %}
+
+
+          {% if section.settings.instagram_link != blank %}
+            <li class="nav-item">
+              <a class="nav-link text-gray-350" href="{{ section.settings.instagram_link }}">
+                {% render 'instagram-icon' %}
+              </a>
+            </li>
+          {% endif %}
+
+
+          {% if section.settings.medium_link != blank %}
+            <li class="nav-item">
+              <a class="nav-link text-gray-350" href="{{ section.settings.medium_link }}">
+                {% render 'medium-icon' %}
+              </a>
+            </li>
+          {% endif %}
+
+
+        </ul>
+      {% else %}
+        <ul class="nav navbar-nav flex-row">
+          {% if section.settings.facebook_link != blank and section.settings.allow_facebook_link %}
+            <li class="nav-item">
+              <a class="nav-link text-gray-350" href="{{ section.settings.facebook_link }}">
+                {% render 'facebook-icon' %}
+              </a>
+            </li>
+          {% endif %}
+
+          {% if section.settings.youtube_link != blank and section.settings.allow_youtube_link %}
+            <li class="nav-item">
+              <a class="nav-link text-gray-350" href="{{ section.settings.youtube_linl }}">
+                {% render 'youtube-icon' %}
+              </a>
+            </li>
+          {% endif %}
+
+
+          {% if section.settings.twitter_link != blank and section.settings.allow_twitter_link %}
+            <li class="nav-item">
+              <a class="nav-link text-gray-350" href="{{ section.settings.twitter_link }}">
+                {% render 'twitter-icon' %}
+              </a>
+            </li>
+          {% endif %}
+
+
+          {% if section.settings.instagram_link != blank and section.settings.allow_instagram_link %}
+            <li class="nav-item">
+              <a class="nav-link text-gray-350" href="{{ section.settings.instagram_link }}">
+                {% render 'instagram-icon' %}
+              </a>
+            </li>
+          {% endif %}
+
+
+          {% if section.settings.medium_link != blank and section.settings.allow_medium_link %}
+            <li class="nav-item">
+              <a class="nav-link text-gray-350" href="{{ section.settings.medium_link }}">
+                {% render 'medium-icon' %}
+              </a>
+            </li>
+          {% endif %}
+
+
+        </ul>
+      {% endif %}
+
+
+    </div>
+  </div>
+</div>
