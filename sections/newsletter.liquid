@@ -1,0 +1,165 @@
+{% case section.settings.newsletter_color %}
+  {% when 'dark' %}
+  {% assign bg_color = "bg-dark" %}
+  {% assign text_class = "text-white" %}
+  {% when 'white' %}
+  {% assign bg_color = "bg-white" %}
+  {% assign text_class = "text-dark" %}
+  {% when 'gray' %}
+  {% assign bg_color = "bg-light" %}
+  {% assign text_class = "text-dark" %}{% else %}
+
+{% endcase %}
+
+<div class="{{ bg_color }} bg-cover">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-10 col-lg-8 col-xl-6 pt-8">
+
+        {%- for block in section.blocks -%}
+          {% case block.type %}
+            {% when '@app' %}
+            {% render block %}
+            {% when 'text' %}
+            <!-- Heading -->
+            <h5 class="mb-7 text-center {{ text_class }} {{ block.settings.size }}">{{ block.settings.heading }}</h5>
+
+            {% when 'subtext' %}
+            <!-- Paragraph -->
+            <div class="fs-xxx {{ text_class }} text-center">{{ block.settings.paragraph }}</div>
+
+            {% when 'email_form' %}
+            <!-- Form -->
+            {% form 'customer', class: 'mb-11' %}
+              <input
+                type="hidden"
+                name="contact[tags]"
+                value="newsletter">
+              <div class="row gx-5 align-items-start">
+                <div class="col">
+                  <input
+                    id="NewsletterForm--{{ section.id }}"
+                    type="email"
+                    name="contact[email]"
+                    value="{{ form.email }}"
+                    class="form-control form-control-gray-700 form-control-lg"
+                    placeholder="Enter Email *"
+                    required>
+                </div>
+                <div class="col-auto">
+                  <button
+                    type="submit"
+                    name="commit"
+                    class="btn btn-gray-500 btn-lg">Subscribe</button>
+                </div>
+              </div>
+              {%- if form.errors -%}
+                <div class="alert alert-danger mt-5">
+                  {{- form.errors.translated_fields.email | capitalize }}
+                  {{ form.errors.messages.email -}}
+                </div>
+              {%- endif -%}
+              {%- if form.posted_successfully? -%}
+                <div class="alert alert-success mt-5">
+                  Subscribed successfully
+                </div>
+              {%- endif -%}
+            {% endform %}
+        {% else %}
+          {% endcase %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+{% schema %}
+  {
+    "name": "Newsletter",
+    "settings": [
+      {
+        "type": "select",
+        "id": "newsletter_color",
+        "label": "Change the newsletter color scheme",
+        "options": [
+          {
+            "label": "White",
+            "value": "white"
+          }, {
+            "label": "Gray",
+            "value": "gray"
+          }, {
+            "label": "Dark",
+            "value": "dark"
+          }
+        ],
+        "default": "dark"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "text",
+        "name": "text",
+        "settings": [
+          {
+            "type": "inline_richtext",
+            "id": "heading",
+            "default": "Subscribe to our emails",
+            "label": "Heading"
+          }, {
+            "type": "select",
+            "id": "size",
+            "label": "Text size",
+            "options": [
+              {
+                "label": "Small",
+                "value": "fs-5"
+              }, {
+                "label": "Medium",
+                "value": "fs-3"
+              }, {
+                "label": "Large",
+                "value": "fs-1"
+              }
+            ],
+            "default": "fs-3"
+          }
+        ]
+      }, {
+        "name": "Description",
+        "type": "subtext",
+        "settings": [
+          {
+            "type": "richtext",
+            "id": "paragraph",
+            "default": "<p>Be the first to know about new collections and exclusive offers.</p>",
+            "label": "Description"
+          }
+        ],
+        "limit": 1
+      }, {
+        "name": "Newsletter form",
+        "type": "email_form",
+        "limit": 1
+      }, {
+        "type": "@app"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Newsletter",
+        "blocks": [
+          {
+            "type": "text"
+          }, {
+            "type": "subtext"
+          }, {
+            "type": "email_form"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

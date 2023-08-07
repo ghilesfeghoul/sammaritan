@@ -1,0 +1,165 @@
+<footer>
+  <div class="py-12 bg-dark bg-cover text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+
+          {%- if section.settings.logo != blank -%}
+            {%- assign logo_alt = section.settings.logo.alt | default: shop.name | escape -%}
+            <!-- Mobile -->
+            <img
+              class="img-fluid img-thumbnail mb-7"
+              src="{{ section.settings.logo | image_url }}"
+              width="60"
+              height="60"
+              alt="{{ logo_alt }}"
+              loading="lazy">
+          {% else %}
+            <!-- Brand -->
+            <a class="h2 mb-7 d-block text-white" href="{{ routes.root_url }}">
+              {{ shop.name }}
+            </a>
+          {% endif %}
+
+          <div class="row">
+            {% for block in section.blocks %}
+              {% case block.type %}
+                {% when '@app' %}
+                {% render block %}
+                {% when 'link_list' %}
+                  <div class="col-md-4 col-6 col-sm">
+
+                  <!-- Heading -->
+                  <h6 class="heading-xxs mb-4 text-white">
+                    {{ block.settings.heading }}
+                  </h6>
+
+                  <!-- Links -->
+                  <ul class="list-unstyled mb-7 mb-sm-0">
+                    {% for link in block.settings.menu.links %}
+                      <li>
+                        <a class="text-gray-300" href="{{ link.url }}">{{ link.title | escape }}</a>
+                      </li>
+                    {% endfor %}
+                  </ul>
+
+                </div>
+                {% when 'text' %}
+                  <div class="col-md-4 col-6 col-sm">
+                  <!-- Heading -->
+                  <h6 class="heading-xxs mb-4 text-white">
+                    {{ block.settings.heading }}
+                  </h6>
+
+                  <div class="text-gray-300">
+                    {{ block.settings.subtext }}
+                  </div>
+                </div>
+            {% else %}
+              {% endcase %}
+            {% endfor %}
+          </div>
+
+
+          {% if section.settings.allow_social_links %}
+            <!-- Links -->
+            <ul class="list-inline fs-lg">
+              {% if settings.social_facebook_link != blank %}
+                <li class="list-inline-item">
+                  <a class="text-gray-350" href="{{ settings.social_facebook_link }}">
+                    {% render 'facebook-icon' %}
+                  </a>
+                </li>
+              {% endif %}
+
+              {% if settings.social_youtube_link != blank %}
+                <li class="list-inline-item">
+                  <a class="text-gray-350" href="{{ settings.social_youtube_link }}">
+                    {% render 'youtube-icon' %}
+                  </a>
+                </li>
+              {% endif %}
+
+
+              {% if settings.social_twitter_link != blank %}
+                <li class="list-inline-item">
+                  <a class="text-gray-350" href="{{ settings.social_twitter_link }}">
+                    {% render 'twitter-icon' %}
+                  </a>
+                </li>
+              {% endif %}
+
+
+              {% if settings.social_instagram_link != blank %}
+                <li class="list-inline-item">
+                  <a class="text-gray-350" href="{{ settings.social_instagram_link }}">
+                    {% render 'instagram-icon' %}
+                  </a>
+                </li>
+              {% endif %}
+
+
+              {% if settings.social_medium_link != blank %}
+                <li class="list-inline-item">
+                  <a class="text-gray-350" href="{{ settings.social_medium_link }}">
+                    {% render 'medium-icon' %}
+                  </a>
+                </li>
+              {% endif %}
+            </ul>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-6">
+    <div class="container">
+      <div
+        class="row">
+        {%- if section.settings.enable_country_selector and localization.available_countries.size > 1 or section.settings.enable_language_selector and localization.available_languages.size > 1 -%}
+          <div class="col">
+            <div class="d-flex justify-content-start">
+              <div>
+                {%- if section.settings.enable_country_selector and localization.available_countries.size > 1 -%}
+                  <localization-form>
+                    {%- form 'localization' -%}
+                      <div class="dropdown">
+                        {%- render 'country-localization', localPosition: 'FooterCountry' -%}
+                      </div>
+                    {%- endform -%}
+                  </localization-form>
+                {% endif %}
+              </div>
+              <div>
+                {%- if section.settings.enable_language_selector and localization.available_languages.size > 1 -%}
+                  <localization-form>
+                    {%- form 'localization' -%}
+                      <div class="dropdown">
+                        {%- render 'language-localization', localPosition: 'FooterLanguage' -%}
+                      </div>
+                    {%- endform -%}
+                  </localization-form>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        {% endif %}
+
+        <div class="col">
+          <!-- Copyright -->
+          <p class="mb-3 mb-md-0 fs-xxs text-muted py-auto">
+            {{ section.settings.rights | escape }}
+          </p>
+        </div>
+        <!-- Payment methods -->
+        {% if section.settings.show_payment_methods %}
+          <div class="col-auto">
+            {% for type in shop.enabled_payment_types -%}
+              {{ type | payment_type_svg_tag: class: 'footer-payment' }}
+            {% endfor %}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</footer>
