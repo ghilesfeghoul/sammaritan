@@ -1,11 +1,8 @@
 {
   "settings_schema": {
     "social-media": {
-      "name": "Social media",
+      "name": "Médias sociaux",
       "settings": {
-        "header": {
-          "content": "Social accounts"
-        },
         "social_twitter_link": {
           "label": "Twitter",
           "info": "https://twitter.com/sammaritan"
@@ -25,6 +22,9 @@
         "social_medium_link": {
           "label": "Medium",
           "info": "https://medium.com/sammaritan"
+        },
+        "header": {
+          "content": "Comptes sociaux"
         }
       }
     }

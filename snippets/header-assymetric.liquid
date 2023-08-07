@@ -84,91 +84,44 @@
         <!-- Social links -->
         {% if section.settings.allow_social_links %}
           <ul class="list-inline">
-            {% if section.settings.facebook_link != blank %}
+            {% if settings.social_facebook_link != blank %}
               <li class="list-inline-item">
-                <a class="text-gray-350" href="{{ section.settings.facebook_link }}">
+                <a class="text-gray-350" href="{{ settings.social_facebook_link }}">
                   {% render 'facebook-icon' %}
                 </a>
               </li>
             {% endif %}
 
-            {% if section.settings.youtube_link != blank %}
+            {% if settings.social_youtube_link != blank %}
               <li class="list-inline-item">
-                <a class="text-gray-350" href="{{ section.settings.youtube_linl }}">
+                <a class="text-gray-350" href="{{ settings.social_youtube_link }}">
                   {% render 'youtube-icon' %}
                 </a>
               </li>
             {% endif %}
 
             
-            {% if section.settings.twitter_link != blank %}
+            {% if settings.social_twitter_link != blank %}
               <li class="list-inline-item">
-                <a class="text-gray-350" href="{{ section.settings.twitter_link }}">
+                <a class="text-gray-350" href="{{ settings.social_twitter_link }}">
                   {% render 'twitter-icon' %}
                 </a>
               </li>
             {% endif %}
           
 
-            {% if section.settings.instagram_link != blank %}
+            {% if settings.social_instagram_link != blank %}
               <li class="list-inline-item">
-                <a class="text-gray-350" href="{{ section.settings.instagram_link }}">
+                <a class="text-gray-350" href="{{ settings.social_instagram_link }}">
                   {% render 'instagram-icon' %}
                 </a>
               </li>
             {% endif %}
           
 
-            {% if section.settings.medium_link != blank %}
+            {% if settings.social_medium_link != blank %}
               <li class="list-inline-item">
-                <a class="text-gray-350" href="{{ section.settings.medium_link }}">
-                  {% render 'medium-icon' %}
-                </a>
-              </li>
-            {% endif %}
-          
-
-          </ul>
-        {% else %}
-          <ul class="list-inline">
-            {% if section.settings.facebook_link != blank and section.settings.allow_facebook_link %}
-              <li class="list-inline-item">
-                <a class="text-gray-350" href="{{ section.settings.facebook_link }}">
-                  {% render 'facebook-icon' %}
-                </a>
-              </li>
-            {% endif %}
-
-            {% if section.settings.youtube_link != blank and section.settings.allow_youtube_link %}
-              <li class="list-inline-item">
-                <a class="text-gray-350" href="{{ section.settings.youtube_linl }}">
-                  {% render 'youtube-icon' %}
-                </a>
-              </li>
-            {% endif %}
-
-            
-            {% if section.settings.twitter_link != blank and section.settings.allow_twitter_link %}
-              <li class="list-inline-item">
-                <a class="text-gray-350" href="{{ section.settings.twitter_link }}">
-                  {% render 'twitter-icon' %}
-                </a>
-              </li>
-            {% endif %}
-          
-
-            {% if section.settings.instagram_link != blank and section.settings.allow_instagram_link %}
-              <li class="list-inline-item">
-                <a class="text-gray-350" href="{{ section.settings.instagram_link }}">
-                  {% render 'instagram-icon' %}
-                </a>
-              </li>
-            {% endif %}
-          
-
-            {% if section.settings.medium_link != blank and section.settings.allow_medium_link %}
-              <li class="list-inline-item">
-                <a class="text-gray-350" href="{{ section.settings.medium_link }}">
+                <a class="text-gray-350" href="{{ settings.social_medium_link }}">
                   {% render 'medium-icon' %}
                 </a>
               </li>

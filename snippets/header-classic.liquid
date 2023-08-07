@@ -47,27 +47,35 @@
               <div class="dropdown-menu px-10" style="min-width: 650px;">
                 <div class="card card-lg">
                   <div class="card-body">
-                    <div class="row">
                       {%- for childlink in link.links -%}
-                        <div class="col">
-                        
-                          {%- if childlink.links != blank -%}
-                          <a class="mb-5 fw-bold d-block" href="{{ childlink.url }}">{{- childlink.title | escape -}}</a>
-                          <ul class="list-styled fs-sm">
-                            {% for grandchildlink in childlink.links %}
-                              <li class="list-styled-item">
-                                <a class="list-styled-link" href="{{ grandchildlink.url }}">{{- grandchildlink.title | escape -}}</a>
-                              </li>
-                            {% endfor %}
-                          </ul>
+                        {% assign openRow = forloop.index | modulo: 3 %}
+                        {% assign closeRow = forloop.index | modulo: 2 %}
+                        {% if openRow == 0 or forloop.index == 1 %}
+                          <div class="row mb-5">
+                        {% endif %}
+                          <div class="col">
+                            {%- if childlink.links != blank -%}
+                            <a class="mb-2 fw-bold d-block" href="{{ childlink.url }}">{{- childlink.title | escape -}}</a>
+                            <ul class="list-styled fs-sm">
+                              {% for grandchildlink in childlink.links %}
+                                <li class="list-styled-item">
+                                  <a class="list-styled-link" href="{{ grandchildlink.url }}">{{- grandchildlink.title | escape -}}</a>
+                                </li>
+                              {% endfor %}
+                            </ul>
+                          </div>
+                          {% if closeRow == 0 %}
+                          </div>   
+                          {% endif %}
+
                       {%- else -%}
                             <a class="mb-5 fw-bold d-block" href="{{ childlink.url }}">{{- childlink.title | escape -}}</a>
                       {%- endif -%}
-                      </div>
+
         
                         
                     {%- endfor -%}
-                    </div>
+                  </div>
                     
                   </div>
                 </div>
