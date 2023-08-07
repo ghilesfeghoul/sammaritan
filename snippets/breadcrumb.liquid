@@ -1,19 +1,84 @@
-<nav class="py-5">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
+{%- unless template == 'index' or template == 'cart' or template == 'list-collections' or template == '404' -%}
+  {%- assign t = template | split: '.' | first -%}
 
-        <!-- Breadcrumb -->
-        <ol class="breadcrumb mb-0 fs-xs text-gray-400">
-          <li class="breadcrumb-item">
-            <a class="text-gray-400" href="{{ url }}">{{ title | escape }}</a>
-          </li>
-          <li class="breadcrumb-item active">
-            {{ active | escape }}
-          </li>
-        </ol>
+  <nav
+    class="py-5"
+    role="navigation"
+    aria-label="breadcrumbs">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <ol class="breadcrumb mb-0 fs-xs text-gray-400">
+            <li class="breadcrumb-item">
+              <a class="text-gray-400" href="{{ routes.root_url }}">
+                Home
+              </a>
+            </li>
+            {%- case t -%}
+              {%- when 'page' -%}
+              <li class="breadcrumb-item active">
+                {{ page.title }}
+              </li>
+              {%- when 'product' -%}
+              {%- if collection.url -%}
+                <li class="breadcrumb-item">
+                  <a class="text-gray-400" href="{{ collection.url }}">{{ collection.title }}</a>
+                </li>
+              {%- endif -%}
+              <li class="breadcrumb-item active">
+                {{ product.title }}
+              </li>
+              {%- when 'collection' and collection.handle -%}
+              {%- if current_tags -%}
+                <li class="breadcrumb-item">
+                  <a
+                    class="text-gray-400"
+                    href="{{ collection.url }}"
+                    aria-current="page">{{ collection.title }}</a>
+                </li>
+                <li class="breadcrumb-item active">
+                  {{ current_tags | join: " + " }}
+                </li>
+              {%- else -%}
+                <li class="breadcrumb-item active">
+                  {{ collection.title }}
+                </li>
+              {%- endif -%}
+              {%- when 'blog' -%}
+              {%- if current_tags -%}
+                <li class="breadcrumb-item">
+                  <a
+                    class="text-gray-400"
+                    href="{{ blog.url }}"
+                    aria-current="page">{{ blog.title }}</a>
+                </li>
+                <li class="breadcrumb-item active">
+                  {{ current_tags | join: " + " }}
+                </li>
+              {%- else -%}
+                <li class="breadcrumb-item active">
+                  {{ blog.title }}
+                </li>
+              {%- endif -%}
+              {%- when 'article' -%}
+              <li class="breadcrumb-item">
+                <a
+                  class="text-gray-400"
+                  href="{{ blog.url }}"
+                  aria-current="page">{{ blog.title }}</a>
+              </li>
+              <li class="breadcrumb-item active">
+                {{ article.title }}
+              </li>
+            {%- else -%}
+              <li class="breadcrumb-item active">
+                {{ page_title }}
+              </li>
+            {%- endcase -%}
+          </ol>
 
+        </div>
       </div>
     </div>
-  </div>
-</nav>
+  </nav>
+{%- endunless -%}

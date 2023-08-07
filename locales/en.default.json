@@ -4,6 +4,15 @@
       "title": "Not found",
       "subtext_html": "The page you were looking for does not exist",
       "homepage_link": "Go to Homepage"
+    },
+    "article": {
+      "comment": {
+        "message_success": "Comment is posted successfully",
+        "message_error": "Oh no! Your comment was not posted",
+        "button_title": "Post comment"
+      },
+      "none": "There are no comments in this article",
+      "impressions": "See what people are saying"
     }
   },
   "templates": {

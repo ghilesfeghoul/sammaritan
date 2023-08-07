@@ -1,0 +1,284 @@
+{% render 'breadcrumb' %}
+<article
+  class="pt-7"
+  itemscope
+  itemtype="https://schema.org/BlogPosting">
+
+  {% for block in section.blocks %}
+    {% case block.type %}
+      {% when 'article_title' %}
+
+      <!-- HEADER -->
+      <header class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+
+            <!-- Heading -->
+            <h3 itemprop="headline" class="mb-3">{{ article.title }}</h3>
+
+
+            <!-- Subheading -->
+            {% if section.settings.enable_author %}
+              <p class="mb-0 text-muted" itemprop="author">{{ article.author }}</p>
+            {% endif %}
+
+            {% when 'article_published_date' %}
+            {% if section.settings.enable_published_date %}
+              <time
+                class="text-muted"
+                itemprop="datePublished dateCreated"
+                datetime="{{ article.published_at | date: '%Y-%m-%d' }}">{{ article.published_at | date: format: 'on_date' }}</time>
+            {% endif %}
+          </div>
+        </div>
+      </header>
+      {% when 'featured_image' %}
+      <!-- Image -->
+      <section class="pt-10">
+        <div class="container">
+          <div class="row">
+            <div itemprop="image" class="col-12">
+
+              <!-- Image -->
+              {% if article.image != blank %}
+                <img
+                  loading="lazy"
+                  class="img-fluid"
+                  src="{{ article.image | image_url: width: 1080, height: 520 }}"
+                  alt="{{ article.image.alt }}">
+              {% else %}
+                {% assign placeholder_image = 'lifestyle-1' %}
+                {{ placeholder_image | placeholder_svg_tag: 'img-fluid' }}
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {% when 'article_content' %}
+      <!-- Content -->
+      <section class="pt-10">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div itemprop="articleBody" class="col-12 col-md-10 fs-lg text-gray-500">
+              {{ article.content }}
+            </div>
+          </div>
+        </div>
+      </section>
+  {% else %}
+    {% endcase %}
+  {% endfor %}
+
+  {% if section.settings.enable_tags and article.tags.size > 0 %}
+
+    <footer class="pt-10">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-12 text-center">
+            <!-- Tags -->
+            {% for tag in article.tags %}
+              <a class="btn btn-xs btn-outline-border fw-normal text-gray-500 me-3 mb-3" href="#!">
+                {{ tag | escape }}
+              </a>
+            {% endfor %}
+
+          </div>
+        </div>
+      </div>
+    </footer>
+  {% endif %}
+
+
+</article>
+{% if blog.comments_enabled? %}
+  <hr>
+  <div id="comments" class="my-8">
+    {% if article.comments_count > 0 %}
+      <div class="container">
+        <div class="flex-1 items-center justify-center mx-auto px-4">
+          <h5 class="text-center">
+            {{ 'general.article.impressions' | t }}
+          </h5>
+
+          {% paginate article.comments by 5 %}
+            {% for com in article.comments %}
+              <div class="border my-4 px-4">
+                <span class="comment-author">{{ com.author }}</span>
+                <span class="text-xs text-gray-400">{{ com.created_at | date: format: 'default' }}</span>
+                <p class="text-sm">{{ com.content }}</p>
+              </div>
+            {% endfor %}
+
+            {% render 'pagination', pagination: paginate %}
+          {% endpaginate %}
+        </div>
+      </div>
+    {% else %}
+      <div class="container">
+        <h5 class="mb-4">{{ 'general.article.none' | t }}</h5>
+      </div>
+    {% endif %}
+  </div>
+
+  <hr>
+  <section class="pt-7 pb-12">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+
+          <!-- Heading -->
+          <h3 class="mb-10 text-center">Drop comment here</h3>
+
+        </div>
+      </div>
+      <div class="row justify-content-between">
+        <div class="col-12">
+
+          <div id="comment_form" class="mb-8">
+            {% form 'new_comment', article %}
+              <div class="flex-1 mx-auto items-center justify-center max-w-4xl px-4">
+                {% if form.errors %}
+                  <div class="alert alert-danger">
+                    <div class="text-sm ml-3">
+                      {{ 'general.article.comment.message_error' | t }}
+                    </div>
+                  </div>
+                  <ul class="px-4 mb-3 ml-7 list-decimal">
+                    {% for error in form.errors %}
+                      <li>
+                        <span>{{ form.errors.messages[error] }}</span>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                {% elsif form.posted_successfully? %}
+                  <div class="alert alert-success">
+                    <div class="text-sm ml-3">{{ 'general.article.comment.message_success' | t }}</div>
+                  </div>
+                {% endif %}
+                <div class="row justify-content-between">
+                  <!-- Title -->
+                  <div class="form-group col-12 col-md-6">
+                    <label class="visually-hidden" for="comment_author">
+                      Your Name *
+                    </label>
+                    <input
+                      name="comment[author]"
+                      id="comment_author"
+                      class="form-control form-control-sm"
+                      type="text"
+                      placeholder="Your Name *"
+                      required="">
+                  </div>
+
+                  <!-- Email -->
+                  <div class="form-group col-12 col-md-6">
+                    <label class="visually-hidden" for="comment_email">
+                      Your Email *
+                    </label>
+                    <input
+                      class="form-control form-control-sm"
+                      type="email"
+                      name="comment[email]"
+                      id="comment_email"
+                      placeholder="Your Email *"
+                      required="">
+                  </div>
+                </div>
+                <!-- Email -->
+                <div class="form-group mb-7">
+                  <label class="visually-hidden" for="comment_content">
+                    Message *
+                  </label>
+                  <textarea
+                    class="form-control form-control-sm"
+                    rows="5"
+                    name="comment[body]"
+                    id="comment_content"
+                    placeholder="Type your comment"
+                    required=""></textarea>
+                </div>
+                <!-- Button -->
+                <button type="submit" class="btn btn-dark">
+                  Send Message
+                </button>
+              </div>
+            {% endform %}
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endif %}
+
+<script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+                                                                                                "@type": "BlogPosting",
+                                                                                                "headline": {{ article.title | json }},
+  "articleBody": {{ article.content | strip_html | json }},
+  {% if article.excerpt != blank %}
+    "description": {{ article.excerpt | strip_html | json }},
+  {% endif %}
+  {% if article.image %}
+    "image": [
+    {{ article.image | image_url: width: 480, height: 480 | prepend: 'https:' | json }}
+    ],
+  {% endif %}
+  "datePublished": {{ article.published_at | date: format: "default" | json }},
+  "dateCreated": {{ article.created_at | date: format: "default" | json }},
+  "author": {
+                                                                                                    "@type": "Person",
+                                                                                                    "name": {{ article.author | json }}
+  },
+  "publisher": {
+                                                                                                    "@type": "Organization",
+                                                                                                    "name": {{ shop.name | json }}
+  }
+  }
+</script>
+
+{% schema %}
+  {
+    "name": "Template Article",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "enable_author",
+        "default": true,
+        "label": "Display Author Name"
+      }, {
+        "type": "checkbox",
+        "id": "enable_published_date",
+        "default": true,
+        "label": "Display Published Date"
+      }, {
+        "type": "checkbox",
+        "id": "enable_tags",
+        "default": true,
+        "label": "Display Article tags"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "article_title",
+        "name": "Title and Author",
+        "limit": 1
+      }, {
+        "type": "article_published_date",
+        "name": "Published Date",
+        "limit": 1
+      }, {
+        "type": "featured_image",
+        "name": "Thumbnail",
+        "limit": 1
+      }, {
+        "type": "article_content",
+        "name": "Content",
+        "limit": 1
+      }
+    ]
+  }
+{% endschema %}

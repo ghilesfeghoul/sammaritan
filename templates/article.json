@@ -1,8 +1,37 @@
 {
-  "name": "Article",
   "sections": {
     "template": {
-      "type": "template-article"
+      "type": "template-article",
+      "blocks": {
+        "title": {
+          "type": "article_title",
+          "settings": {
+          }
+        },
+        "published_date": {
+          "type": "article_published_date",
+          "settings": {
+          }
+        },
+        "thumbnail": {
+          "type": "featured_image",
+          "settings": {
+          }
+        },
+        "content": {
+          "type": "article_content",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "thumbnail",
+        "title",
+        "published_date",
+        "content"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [

@@ -1,3 +1,27 @@
 {
-    
-}
+    "general": {
+      "404": {
+        "title": "Not found",
+        "subtext_html": "The page you were looking for does not exist",
+        "homepage_link": "Go to Homepage"
+      },
+      "article": {
+        "comment": {
+          "message_success": "Votre commentaire a été ajouté avec succés",
+          "message_error": "En raison d'une erreur technique, votre message n'a pas été publié, veuillez réessayer plus tard",
+          "button_title": "Commenter"
+        },
+        "none": "Cet article ne contient pas de commentaires",
+        "impressions": "Ce qu'ils en pensent"
+      }
+    },
+    "templates": {
+      "customers": {
+        "login": {
+          "title": "Login",
+          "password-reset-title": "Forgot Password?"
+        }
+      }
+    }
+  }
+  
