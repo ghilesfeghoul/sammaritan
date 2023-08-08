@@ -74,27 +74,34 @@
 
         {% when "collection_grid" %}
         <div class="row mb-10">
-          {% paginate collection.products by block.settings.products_per_page %}
+          {% if collection.products.size > 0 %}
+            {% paginate collection.products by block.settings.products_per_page %}
+              {% liquid
+                    assign cols = block.settings.cols_per_row 
+                    assign mobile_cols = block.settings.mobile_cols_per_row            
+                %}
 
+              {% for product in collection.products %}
+                <div class="col-{% if mobile_cols == "1" %}12{% else %}6{% endif %} col-md-{% if cols == "3" %}4{% else %}3{% endif %}">
+                  {% render 'product-card', product_info: product %}
+                </div>
+              {% endfor %}
+              <div class="row">
+                <div class="col-12 text-center">
 
-            {% liquid
-                assign cols = block.settings.cols_per_row 
-                assign mobile_cols = block.settings.mobile_cols_per_row            
-            %}
+                  {% render 'pagination', pagination: paginate %}
 
-            {% for product in collection.products %}
-              <div class="col-{% if mobile_cols == "1" %}12{% else %}6{% endif %} col-md-{% if cols == "3" %}4{% else %}3{% endif %}">
-                {% render 'product-card', product_info: product %}
+                </div>
               </div>
-            {% endfor %}
+            {% endpaginate %}
+          {% else %}
             <div class="row">
-              <div class="col-12 text-center">
-
-                {% render 'pagination', pagination: paginate %}
-
+              <div class="col-12 text-center fw-bold">
+                No products found
               </div>
             </div>
-          {% endpaginate %}
+          {% endif %}
+
         </div>
     {% else %}
 

@@ -1,0 +1,86 @@
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <!-- Heading -->
+        <h3 class="mb-10 text-center">{{ section.settings.title }}</h3>
+      </div>
+    </div>
+    <div class="row">
+      {% for collection in collections %}
+        {% if collection.all_products_count > 0 %}
+          {% if collection.featured_image != blank %}
+            {% assign collection_image = collection.featured_image %}
+          {% else %}
+            {% assign collection_image = collection.products.first.image %}
+            {% if collection_image == blank %}
+              {% assign collection_image = 'product-2' | placeholder_svg_tag %}
+            {% endif %}
+          {% endif %}
+          <div class="col-12 col-md-6 col-lg-4 d-flex flex-column mb-7">
+
+            <!-- Card -->
+            <div class="card justify-content-center bg-cover" style="min-height: 320px;">
+
+              <!-- Background -->
+              <div class="card-bg">
+                <div class="card-bg-img bg-cover" style="background-image: url({{ collection_image | image_url }});"></div>
+              </div>
+
+              <!-- Body -->
+              <div class="card-body text-center fw-bold" style="color: {{ section.settings.text_color }};">
+
+                <!-- Heading -->
+                <h5 class="mb-0">{{ collection.title }}</h5>
+
+                <!-- Text -->
+                <a
+                  class="btn btn-link stretched-link px-0 fw-bold"
+                  style="color: {{ section.settings.text_color }};"
+                  href="{{ collection.url }}">
+                  {{ section.settings.button_text }}
+                  <i class="fe fe-arrow-right ms-2"></i>
+                </a>
+
+              </div>
+
+            </div>
+
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Template List Collections",
+    "disabled_on": {
+      "groups": ["header", "footer"]
+    },
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "default": "Collections",
+        "label": "Title"
+      }, {
+        "type": "text",
+        "id": "button_text",
+        "default": "Shop now",
+        "label": "Link text"
+      }, {
+        "type": "color",
+        "id": "text_color",
+        "default": "#FFF",
+        "label": "Change the color of text inside the cards"
+      }
+    ],
+    "presets": [
+      {
+        "name": "List collections"
+      }
+    ]
+  }
+{% endschema %}
