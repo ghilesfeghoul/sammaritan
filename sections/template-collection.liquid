@@ -1,1 +1,153 @@
 {% render 'breadcrumb' %}
+
+<section class="py-12">
+  <div class="container">
+    {% for block in section.blocks %}
+      {% case block.type %}
+        {% when "collection_banner" %}
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-10 col-lg-8 col-xl-6 mb-7">
+            <!-- Heading -->
+            <h2 class="mb-4 text-center">{{ collection.title }}</h2>
+
+          </div>
+        </div>
+
+        {% if block.settings.show_description and block.settings.show_image %}
+          <div class="row mb-7">
+            <div class="col-12 col-md-6">
+              <p class="text-muted" style="text-align: justify;">
+                {{ collection.description }}
+              </p>
+            </div>
+            <div class="col-12 col-md-6">
+              <section>
+                <div class="container">
+                  <div class="row justify-content-center py-14 bg-cover" style="background-image: url({{ collection.image | image_url }});"></div>
+                </div>
+              </section>
+            </div>
+          </div>
+
+        {% else %}
+          {% if block.settings.show_description %}
+            <div class="row">
+              <p class="text-muted" style="text-align: justify;">
+                {{ collection.description }}
+              </p>
+            </div>
+          {% endif %}
+          {% if block.settings.show_image %}
+            <div class="row mb-10">
+              <div class="container">
+                <div class="row justify-content-center py-14 bg-cover" style="background-image: url({{ collection.image | image_url }});">
+                  <div class="col-12 col-md-8 col-lg-6 col-xl-5"></div>
+                </div>
+              </div>
+            </div>
+          {% endif %}
+
+        {% endif %}
+
+
+        {% when "collection_grid" %}
+        <div class="row mb-10">
+          {% paginate collection.products by block.settings.products_per_page %}
+
+
+            {% liquid
+                assign cols = block.settings.cols_per_row 
+                assign mobile_cols = block.settings.mobile_cols_per_row            
+            %}
+
+            {% for product in collection.products %}
+              <div class="col-{% if mobile_cols == "1" %}12{% else %}6{% endif %} col-md-{% if cols == "3" %}4{% else %}3{% endif %}">
+                {% render 'product-card', product_info: product %}
+              </div>
+            {% endfor %}
+            <div class="row">
+              <div class="col-12 text-center">
+
+                {% render 'pagination', pagination: paginate %}
+
+              </div>
+            </div>
+          {% endpaginate %}
+        </div>
+    {% else %}
+
+      {% endcase %}
+    {% endfor %}
+  </div>
+</section>
+
+
+{% schema %}
+  {
+    "name": "Collection Template",
+    "blocks": [
+      {
+        "name": "Collection grid",
+        "type": "collection_grid",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "range",
+            "id": "products_per_page",
+            "min": 3,
+            "max": 12,
+            "step": 1,
+            "label": "Products per page",
+            "default": 3
+          }, {
+            "type": "select",
+            "id": "cols_per_row",
+            "options": [
+              {
+                "label": "3",
+                "value": "3"
+              }, {
+                "label": "4",
+                "value": "4"
+              }
+            ],
+            "label": "Number of columns to show within a row for medium and large screens",
+            "default": "3"
+          }, {
+            "type": "select",
+            "id": "mobile_cols_per_row",
+            "options": [
+              {
+                "label": "1",
+                "value": "1"
+              }, {
+                "label": "2",
+                "value": "2"
+              }
+            ],
+            "label": "Number of columns to show within a row for mobile screens",
+            "default": "1"
+          }
+        ]
+      }, {
+        "name": "Collection banner",
+        "type": "collection_banner",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "checkbox",
+            "id": "show_description",
+            "label": "Show the description of the collection",
+            "default": true
+          }, {
+            "type": "checkbox",
+            "id": "show_image",
+            "label": "Show the image of the collection",
+            "info": "For a better experience, make sure to upload a photo format 16:9",
+            "default": true
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

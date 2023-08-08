@@ -1,8 +1,16 @@
 {
-  "name": "Collection",
   "sections": {
     "template": {
-      "type": "template-collection"
+      "type": "template-collection",
+      "blocks": {
+        "banner": {
+          "type": "collection_banner"
+        },
+        "grid": {
+          "type": "collection_grid"
+        }
+      },
+      "block_order": ["banner", "grid"]
     }
   },
   "order": [
