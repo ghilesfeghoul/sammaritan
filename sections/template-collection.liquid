@@ -14,30 +14,52 @@
         </div>
 
         {% if block.settings.show_description and block.settings.show_image %}
-          <div class="row mb-7">
-            <div class="col-12 col-md-6">
-              <p class="text-muted" style="text-align: justify;">
-                {{ collection.description }}
-              </p>
+          {% if collection.description != blank and collection.image != blank %}
+            <div class="row mb-7">
+              <div class="col-12 col-md-6">
+                <p class="text-muted" style="text-align: justify;">
+                  {{ collection.description }}
+                </p>
+              </div>
+              <div class="col-12 col-md-6">
+                <section>
+                  <div class="container">
+                    <div class="row justify-content-center py-14 bg-cover" style="background-image: url({{ collection.image | image_url }});"></div>
+                  </div>
+                </section>
+              </div>
             </div>
-            <div class="col-12 col-md-6">
-              <section>
-                <div class="container">
-                  <div class="row justify-content-center py-14 bg-cover" style="background-image: url({{ collection.image | image_url }});"></div>
+          {% else %}
+            {% if collection.description != blank %}
+              <div class="row mb-7">
+                <div class="col-12 {% if collection.image != blank %}col-md-6{% endif %}">
+                  <p class="text-muted" style="text-align: justify;">
+                    {{ collection.description }}
+                  </p>
                 </div>
-              </section>
-            </div>
-          </div>
+              </div>
+            {% endif %}
+            {% if collection.image != blank %}
+              <div class="row mb-7">
+                <section>
+                  <div class="container">
+                    <div class="row justify-content-center py-14 bg-cover" style="background-image: url({{ collection.image | image_url }});"></div>
+                  </div>
+                </section>
+              </div>
+
+            {% endif %}
+          {% endif %}
 
         {% else %}
-          {% if block.settings.show_description %}
+          {% if block.settings.show_description and collection.description != blank %}
             <div class="row">
               <p class="text-muted" style="text-align: justify;">
                 {{ collection.description }}
               </p>
             </div>
           {% endif %}
-          {% if block.settings.show_image %}
+          {% if block.settings.show_image and collection.image != blank %}
             <div class="row mb-10">
               <div class="container">
                 <div class="row justify-content-center py-14 bg-cover" style="background-image: url({{ collection.image | image_url }});">
