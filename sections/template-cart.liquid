@@ -50,10 +50,18 @@
                         <span class="ms-auto">{{ item.line_price | money }}</span>
                       </div>
 
-                      <!-- Text -->
-                      <p class="mb-7 fs-sm text-muted">
-                        {{ item.variant.title | truncatewords: 5 }}
-                      </p>
+                      {%- if item.product.has_only_default_variant == false
+ or item.properties.size != 0
+ or item.selling_plan_allocation != null
+ -%}
+                        <!-- Text -->
+                        <p class="mb-7 fs-sm text-muted">
+                          {%- for option in item.options_with_values -%}
+                            <b>{{ option.name }}:</b>
+                            {{ option.value }} <br>
+                          {%- endfor -%}
+                        </p>
+                      {% endif %}
 
 
 
@@ -133,7 +141,7 @@
                     <span class="ms-auto fs-sm">{{ cart.total_price | money }}</span>
                   </li>
                   <li class="list-group-item fs-sm text-center text-gray-500">
-                    Shipping cost calculated at Checkout *
+                    Tax included and shipping and discounts calculated at checkout
                   </li>
                 </ul>
               </div>
