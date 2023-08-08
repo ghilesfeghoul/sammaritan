@@ -1,0 +1,83 @@
+<style>
+  .max-h-230 {
+    max-height: 230px;
+  }
+</style>
+<div class="card mb-7 border shadow-lg rounded-lg">
+  <!-- Badge -->
+  {% if product_info.available %}
+    {% if product_info.price < product_info.compare_at_price %}
+      <div class="badge bg-primary text-white card-badge card-badge-start text-uppercase">
+        Sale
+      </div>
+    {% endif %}
+  {% else %}
+    <div class="badge bg-dark card-badge card-badge-start text-uppercase">
+      Sold out
+    </div>
+  {% endif %}
+
+
+  <!-- Image -->
+  <div class="card-img">
+
+    {% if product_info.featured_image %}
+      <a class="card-img-hover" href="{{ product_info.url }}">
+        {% if product_info.images.size > 1 %}
+          {% if product_info.images[1] != blank %}
+            <img
+              class="img-fluid card-img-top card-img-back max-h-230"
+              src="{{ product_info.images[1] | image_url }}"
+              alt="...">
+            <img
+              class="img-fluid card-img-top card-img-front max-h-230"
+              src="{{ product_info.featured_image | image_url }}"
+              alt="...">
+          {% endif %}
+        {% else %}
+          <img
+            class="card-img-top card-img-back max-h-230"
+            src="{{ product_info.featured_image | image_url }}"
+            alt="...">
+          <img
+            class="card-img-top card-img-front max-h-230"
+            src="{{ product_info.featured_image | image_url }}"
+            alt="...">
+        {% endif %}
+      </a>
+
+    {% else %}
+      <!-- Image -->
+      {{ 'product-1' | placeholder_svg_tag: 'card-img-hover bg-light w-full' }}
+    {% endif %}
+  </div>
+
+  <!-- Body -->
+  <div class="card-body px-5">
+
+    <!-- Vendor -->
+    <div class="fs-xs">
+      <span class="text-muted">{{ product_info.vendor }}</a>
+    </div>
+
+    <!-- Title -->
+    <div class="fw-bold">
+      <span class="text-body">
+        {{ product_info.title }}
+      </a>
+    </div>
+
+    <!-- Price -->
+    <div class="fw-bold">
+      {% if product_info.price < product_info.compare_at_price %}
+        <span class="fs-xs text-gray-350 text-decoration-line-through">{{ product_info.compare_at_price | money }}</span>
+        <span class="text-primary">{{ product_info.price | money }}</span>
+
+      {% else %}
+        {{ product_info.price | money }}
+      {% endif %}
+    </div>
+
+  </div>
+
+</div>

@@ -1,0 +1,36 @@
+<div class="card mb-10 border shadow-lg rounded-lg">
+
+  <!-- Badge -->
+  <div class="badge bg-dark card-badge card-badge-start text-uppercase">
+    New
+  </div>
+
+  <!-- Image -->
+  <div class="card-img">
+    <!-- Image -->
+    {{ 'product-1' | placeholder_svg_tag: 'card-img-hover bg-light w-full' }}
+  </div>
+
+  <!-- Body -->
+  <div class="card-body px-5">
+
+    <!-- Vendor -->
+    <div class="fs-xs">
+      <span class="text-muted">Vendor</a>
+    </div>
+
+    <!-- Title -->
+    <div class="fw-bold">
+      <span class="text-body">
+        Product title
+      </a>
+    </div>
+
+    <!-- Price -->
+    <div class="fw-bold text-muted">
+      {{ 99.99 | money }}
+    </div>
+
+  </div>
+
+</div>

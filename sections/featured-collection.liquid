@@ -1,0 +1,69 @@
+<section class="py-12">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-10 col-lg-8 col-xl-6">
+        <!-- Heading -->
+        <h2 class="mb-4 text-center">{{ section.settings.title }}</h2>
+      </div>
+    </div>
+    <div class="row">
+      {% for product in section.settings.featured_collection.products limit: section.settings.number_of_products_to_show %}
+        <div class="col-6 col-md-4 col-lg-3">
+          {% render 'product-card', product_info: product %}
+        </div>
+      {% else %}
+        {% for item in (1..4) %}
+          <div class="col-6 col-md-4 col-lg-3">
+            {% render 'product-card-placeholder' %}
+          </div>
+        {% endfor %}
+      {% endfor %}
+
+    </div>
+    {% if section.settings.featured_collection.products != blank %}
+      <div class="row">
+        <div class="col-12">
+
+          <!-- Link  -->
+          <div class="mt-7 text-center">
+            <a class="link-underline" href="{{ section.settings.featured_collection.url }}">View More</a>
+          </div>
+
+        </div>
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Featured collection",
+    "disabled_on": {
+      "groups": ["header", "footer"]
+    },
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "default": "Featured collection",
+        "label": "Title"
+      }, {
+        "type": "collection",
+        "id": "featured_collection",
+        "label": "Collection"
+      }, {
+        "type": "range",
+        "id": "number_of_products_to_show",
+        "min": 4,
+        "max": 12,
+        "default": 4,
+        "label": "Number of products to show"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Featured Collection"
+      }
+    ]
+  }
+{% endschema %}
