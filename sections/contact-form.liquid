@@ -1,0 +1,116 @@
+<section class="pb-8 pt-5">
+  <div class="container">
+    {% if section.settings.title != blank %}
+      <div class="row">
+        <div class="col-12">
+          <!-- Heading -->
+          <h3 class="mb-10 text-center">{{ section.settings.title }}</h3>
+
+        </div>
+      </div>
+    {% endif %}
+    <div class="row">
+      <div class="col-12">
+        {% form 'contact' %}
+          {% if form.errors %}
+            <div class="alert alert-danger">
+              <div class="text-sm ml-3">
+                Oh no! Your message is not sent
+              </div>
+              <ul class="px-4 mb-3 ml-7 list-decimal">
+                {% for error in form.errors %}
+                  <li>
+                    <span>{{ form.errors.translated_fields[error] | append: ' ' | append: form.errors.messages[error] }}</span>
+                  </li>
+                {% endfor %}
+              </ul>
+            </div>
+          {% elsif form.posted_successfully? %}
+            <div class="alert alert-success">
+              Your message is sent successfully
+            </div>
+          {% endif %}
+          <div class="form-group">
+            <label class="visually-hidden" for="ContactFormName">
+              Your Name *
+            </label>
+            <input
+              class="form-control form-control-sm"
+              id="ContactFormName"
+              name="contact[name]"
+              type="text"
+              placeholder="Your Name *"
+              required>
+          </div>
+          <!-- Email -->
+          <div class="form-group">
+            <label class="visually-hidden" for="ContactFormEmail">
+              email *
+            </label>
+            <input
+              class="form-control form-control-sm"
+              name="contact[email]"
+              id="ContactFormEmail"
+              type="email"
+              placeholder="Your Email *"
+              required>
+          </div>
+
+          {% if section.settings.show_phone %}
+            <div class="form-group">
+              <label class="visually-hidden" for="ContactFormPhone">
+                phone *
+              </label>
+              <input
+                class="form-control form-control-sm"
+                id="ContactFormPhone"
+                name="contact[phone]"
+                type="tel"
+                placeholder="Phone number *"
+                required>
+            </div>
+          {% endif %}
+
+          <div class="form-group mb-7">
+            <label class="visually-hidden" for="ContactFormMessage">
+              Message *
+            </label>
+            <textarea
+              class="form-control form-control-sm"
+              name="contact[body]"
+              id="ContactFormMessage"
+              rows="5"
+              placeholder="Message *"
+              required></textarea>
+          </div>
+          <button class="btn btn-dark" type="submit">Send</button>
+        {% endform %}
+
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Contact Form",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      }, {
+        "type": "checkbox",
+        "id": "show_phone",
+        "label": "Enable phone input",
+        "info": "Add an input phone to the contact form",
+        "default": false
+      }
+    ],
+    "presets": [
+      {
+        "name": "Contact Form"
+      }
+    ]
+  }
+{% endschema %}
