@@ -1,0 +1,77 @@
+<div class="row gx-5 mb-10 mb-md-0">
+  <div class="col-2">
+    <!-- Slider -->
+    <div
+      class="flickity-nav flickity-vertical flickity-enabled"
+      data-flickity="{&quot;asNavFor&quot;: &quot;#productSlider&quot;, &quot;draggable&quot;: false}"
+      tabindex="0">
+      <div class="flickity-viewport" style="height: 74px;">
+        <div class="flickity-slider" style="transform: translateX(-400%);">
+          {% for media in product.media %}
+            {% if forloop.first %}
+              <div class="ratio ratio-1x1 bg-cover mb-4 flickity-cell is-selected is-nav-selected" style="background-image: url(&quot;{{ media | image_url }}&quot;); transform: translateX(400%);"></div>
+            {% else %}
+              <div
+                class="ratio ratio-1x1 bg-cover mb-4 flickity-cell"
+                style="background-image: url(&quot;{{ media | image_url }}&quot;); transform: translateX({{ forloop.index0 | times: 100 }}%);"
+                aria-hidden="true"></div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="col-10">
+
+    <!-- Card -->
+    <div class="card">
+
+      <!-- Badge -->
+      {% if product.available == false %}
+        <div class="badge bg-secondary card-badge card-badge-end text-uppercase">
+          Out of stock
+        </div>
+      {% endif %}
+      <!-- Slider -->
+      <div
+        data-flickity="{&quot;draggable&quot;: false, &quot;fade&quot;: true}"
+        id="productSlider"
+        class="flickity-enabled is-fade"
+        tabindex="0">
+        <div class="flickity-viewport" style="height: 452.888px;">
+          <div class="flickity-slider" style="transform: translateX(0%);">
+            {% for media in product.media %}
+              {% if forloop.first %}
+                <a
+                  href="#"
+                  data-bigpicture="{ &quot;imgSrc&quot;: &quot;{{ media | image_url }}&quot;}"
+                  class="flickity-cell is-selected"
+                  style="transform: translateX(0%); opacity: 1;">
+                  <img
+                    src="{{ media | image_url }}"
+                    alt="{{ media.preview_image.alt }}"
+                    class="card-img-top">
+                </a>
+              {% else %}
+                <a
+                  href="#"
+                  data-bigpicture="{ &quot;imgSrc&quot;: &quot;{{ media | image_url }}&quot;}"
+                  class="flickity-cell"
+                  aria-hidden="true"
+                  style="transform: translateX(0%); opacity: 0;">
+                  <img
+                    src="{{ media | image_url }}"
+                    alt="{{ media.preview_image.alt }}"
+                    class="card-img-top">
+                </a>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>

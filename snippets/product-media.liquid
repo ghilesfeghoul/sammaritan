@@ -1,0 +1,27 @@
+{% case media.media_type %}
+  {% when 'image' %}
+  <!-- Image -->
+  <a class="d-block mb-4" data-bigpicture="{ &quot;imgSrc&quot;: &quot;{{ media | image_url }}&quot;}">
+    <img
+      class="img-fluid"
+      src="{{ media | image_url }}"
+      alt="{{ media.preview_image.alt }}"
+      loading="lazy">
+  </a>
+
+  {% when 'external_video' %}
+  <div class="ratio ratio-16x9">
+    <iframe src="{{ media | external_video_url }}" allowfullscreen></iframe>
+  </div>
+
+  {% when 'video' %}
+  <a class="d-block mb-4 ratio ratio-16x9" data-bigpicture="{ &quot;imgSrc&quot;: &quot;{{ media.preview_image.src }}&quot;}">
+    {{ media | video_tag: controls: true, class: 'img-fluid' }}
+  </a>
+
+  {% when 'model' %}
+  {{ media | model_viewer_tag }}
+
+{% else %}
+  {{ media | media_tag }}
+{% endcase %}

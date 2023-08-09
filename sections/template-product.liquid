@@ -1,0 +1,557 @@
+{% render 'breadcrumb' %}
+
+{% assign selected_variant = product.selected_or_first_available_variant %}
+<section class="mb-7">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="row">
+          <div class="col-12 col-md-6">
+            {% if section.settings.image_render == 'stacked' %}
+              {% render 'images-stacked', product: product %}
+            {% else %}
+              {% render 'images-left', product: product %}
+            {% endif %}
+          </div>
+          <div class="col-12 col-md-6 ps-lg-10">
+            <div class="position-sticky" style="top: 62px;">
+              <!-- Form -->
+              <div class="mb-9">
+                {% form 'product', product, id: 'product-form', novalidate: 'novalidate' %}
+                  <input
+                  type="hidden"
+                    name="id"
+                    value="{{ selected_variant.id }}">
+
+                  <!-- Header -->
+                  <div class="row mb-1">
+                    <div class="col">
+
+                      <!-- Preheading -->
+                      <a class="text-muted" href="{{ product.collections.first.url }}">{{ product.collections.first.title }}</a>
+
+                    </div>
+                    {% comment %} <div class="col-auto">
+
+                    <!-- APP BLOCK -->
+                    <!-- Rating -->
+                    <div class="rating fs-xs text-dark">
+                    <div class="rating-item">
+                    <svg class="svg-inline--fa fa-star" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M381.2 150.3L524.9 171.5C536.8 173.2 546.8 181.6 550.6 193.1C554.4 204.7 551.3 217.3 542.7 225.9L438.5 328.1L463.1 474.7C465.1 486.7 460.2 498.9 450.2 506C440.3 513.1 427.2 514 416.5 508.3L288.1 439.8L159.8 508.3C149 514 135.9 513.1 126 506C116.1 498.9 111.1 486.7 113.2 474.7L137.8 328.1L33.58 225.9C24.97 217.3 21.91 204.7 25.69 193.1C29.46 181.6 39.43 173.2 51.42 171.5L195 150.3L259.4 17.97C264.7 6.954 275.9-.0391 288.1-.0391C300.4-.0391 311.6 6.954 316.9 17.97L381.2 150.3z"></path></svg><!-- <i class="fas fa-star"></i> Font Awesome fontawesome.com -->
+                    </div>
+                    <div class="rating-item">
+                    <svg class="svg-inline--fa fa-star" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M381.2 150.3L524.9 171.5C536.8 173.2 546.8 181.6 550.6 193.1C554.4 204.7 551.3 217.3 542.7 225.9L438.5 328.1L463.1 474.7C465.1 486.7 460.2 498.9 450.2 506C440.3 513.1 427.2 514 416.5 508.3L288.1 439.8L159.8 508.3C149 514 135.9 513.1 126 506C116.1 498.9 111.1 486.7 113.2 474.7L137.8 328.1L33.58 225.9C24.97 217.3 21.91 204.7 25.69 193.1C29.46 181.6 39.43 173.2 51.42 171.5L195 150.3L259.4 17.97C264.7 6.954 275.9-.0391 288.1-.0391C300.4-.0391 311.6 6.954 316.9 17.97L381.2 150.3z"></path></svg><!-- <i class="fas fa-star"></i> Font Awesome fontawesome.com -->
+                    </div>
+                    <div class="rating-item">
+                    <svg class="svg-inline--fa fa-star" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M381.2 150.3L524.9 171.5C536.8 173.2 546.8 181.6 550.6 193.1C554.4 204.7 551.3 217.3 542.7 225.9L438.5 328.1L463.1 474.7C465.1 486.7 460.2 498.9 450.2 506C440.3 513.1 427.2 514 416.5 508.3L288.1 439.8L159.8 508.3C149 514 135.9 513.1 126 506C116.1 498.9 111.1 486.7 113.2 474.7L137.8 328.1L33.58 225.9C24.97 217.3 21.91 204.7 25.69 193.1C29.46 181.6 39.43 173.2 51.42 171.5L195 150.3L259.4 17.97C264.7 6.954 275.9-.0391 288.1-.0391C300.4-.0391 311.6 6.954 316.9 17.97L381.2 150.3z"></path></svg><!-- <i class="fas fa-star"></i> Font Awesome fontawesome.com -->
+                    </div>
+                    <div class="rating-item">
+                    <svg class="svg-inline--fa fa-star" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M381.2 150.3L524.9 171.5C536.8 173.2 546.8 181.6 550.6 193.1C554.4 204.7 551.3 217.3 542.7 225.9L438.5 328.1L463.1 474.7C465.1 486.7 460.2 498.9 450.2 506C440.3 513.1 427.2 514 416.5 508.3L288.1 439.8L159.8 508.3C149 514 135.9 513.1 126 506C116.1 498.9 111.1 486.7 113.2 474.7L137.8 328.1L33.58 225.9C24.97 217.3 21.91 204.7 25.69 193.1C29.46 181.6 39.43 173.2 51.42 171.5L195 150.3L259.4 17.97C264.7 6.954 275.9-.0391 288.1-.0391C300.4-.0391 311.6 6.954 316.9 17.97L381.2 150.3z"></path></svg><!-- <i class="fas fa-star"></i> Font Awesome fontawesome.com -->
+                    </div>
+                    <div class="rating-item">
+                    <svg class="svg-inline--fa fa-star" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M381.2 150.3L524.9 171.5C536.8 173.2 546.8 181.6 550.6 193.1C554.4 204.7 551.3 217.3 542.7 225.9L438.5 328.1L463.1 474.7C465.1 486.7 460.2 498.9 450.2 506C440.3 513.1 427.2 514 416.5 508.3L288.1 439.8L159.8 508.3C149 514 135.9 513.1 126 506C116.1 498.9 111.1 486.7 113.2 474.7L137.8 328.1L33.58 225.9C24.97 217.3 21.91 204.7 25.69 193.1C29.46 181.6 39.43 173.2 51.42 171.5L195 150.3L259.4 17.97C264.7 6.954 275.9-.0391 288.1-.0391C300.4-.0391 311.6 6.954 316.9 17.97L381.2 150.3z"></path></svg><!-- <i class="fas fa-star"></i> Font Awesome fontawesome.com -->
+                    </div>
+                    </div>
+
+                    <a class="fs-sm text-reset ms-2" href="#reviews">
+                    Reviews (0)
+                    </a>
+
+                    </div> {% endcomment %}
+                  </div>
+
+                  {% for block in section.blocks %}
+                    {% case block.type %}
+                      {% when 'title' %}
+                      <!-- Heading -->
+                      <h3 class="mb-1">{{ product.title }}</h3>
+
+                      {% when 'vendor' %}
+                      <div class="mb-2 text-muted">By {{ product.vendor }}</div>
+
+
+                      {% when 'price' %}
+                        <div id="price-{{ section.id }}" class="mb-7">
+                        <!-- Price -->
+                        {% if selected_variant.price < selected_variant.compare_at_price %}
+                          <span class="fs-lg fw-bold text-gray-350 text-decoration-line-through">{{ selected_variant.compare_at_price | money }}</span>
+                        {% endif %}
+                        <span class="ms-1 fs-5 fw-bolder {% if selected_variant.price < selected_variant.compare_at_price %}text-primary{% endif %}">
+                          {{ selected_variant.price | money }}
+                        </span>
+                        {% if selected_variant.available %}
+                          <span class="fs-sm ms-1">(In Stock)</span>
+                        {% else %}
+                          <span class="fs-sm ms-1">(Sold out)</span>
+                        {% endif %}
+                      </div>
+
+                      {% when 'variant_selector' %}
+                      {% unless product.has_only_default_variant %}
+                        <variant-selector data-url="{{ product.url }}" data-section="{{ section.id }}">
+                          {% for option in product.options_with_values %}
+                            <div class="form-group">
+
+                              <!-- Label -->
+                              <p class="mb-5">
+                                {{ option.name }}:
+                                <strong id="{{ option.name }}Caption">{{ option.selected_value }}</strong>
+                              </p>
+
+                              <div id="selector-{{ section.id }}" class="mb-8 ms-n1">
+                                {% for value in option.values %}
+                                  <div class="form-check form-check-inline form-check-size mb-2">
+                                    <input
+                                      type="radio"
+                                      class="form-check-input"
+                                      name="options[{{ option.name | escape }}]"
+                                      id="option-{{ option.name }}-{{ section.id }}-{{ forloop.index0 }}"
+                                      value="{{ value | escape }}"
+                                      data-target="#{{ option.name }}Caption"
+                                      {% if option.selected_value == value %}
+                                      checked
+                                      {% endif %}
+                                      {% if selected_variant.available == false and option.selected_value == value %}
+                                      disabled
+                                      {% endif %}>
+                                    <label class="form-check-label" for="option-{{ option.name }}-{{ section.id }}-{{ forloop.index0 }}">{{ value }}</label>
+                                  </div>
+                                {% endfor %}
+                              </div>
+
+
+                            </div>
+                          {% endfor %}
+                          <script type="application/json">
+                            {{ product.variants | json }}
+                          </script>
+                        </variant-selector>
+                      {% endunless %}
+
+                      <div class="form-group">
+
+                        <div class="row gx-5 mb-7">
+
+
+                          {% when 'quantity' %}
+                            <div class="col-12 col-lg-auto">
+                            <!-- Quantity -->
+                            <select class="form-select mb-2">
+                              <option value="1" selected="">1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                              <option value="4">4</option>
+                              <option value="5">5</option>
+                              <option value="6">6</option>
+                              <option value="7">7</option>
+                              <option value="8">8</option>
+                              <option value="9">9</option>
+                              <option value="10">10</option>
+                            </select>
+
+                          </div>
+
+                          {% when 'checkout_button' %}
+                            <div id="button-{{ section.id }}" class="col-12 col-lg">
+
+                            <!-- Submit -->
+                            <button
+                              {% if selected_variant.available == false %}
+                              disabled
+                              {% endif %}
+                              name="add"
+                              type="submit"
+                              class="btn w-100 btn-dark mb-2">
+                              {% if selected_variant.available %}
+                                Add to Cart
+                              {% else %}
+                                Sold out
+                              {% endif %}
+                              <i class="fe fe-shopping-cart ms-2"></i>
+                            </button>
+
+                          </div>
+
+                          {% when '@app' %}
+                          {% render block %}
+                        </div>
+                      </div>
+
+                      {% when 'description' %}
+
+                      <!-- Description -->
+                      <div class="list-group list-group-sm list-group-flush-x mb-3 mt-5" id="productCollapseParent">
+                        <div class="list-group-item">
+
+                          <!-- Toggle -->
+                          <a
+                            class="d-block dropdown-toggle text-body"
+                            data-bs-toggle="collapse"
+                            href="#productCollapseDetails">
+                            <strong>Product Description</strong>
+                          </a>
+
+                          <!-- Collapse -->
+                          <div
+                            class="collapse"
+                            id="productCollapseDetails"
+                            data-bs-parent="#productCollapseParent">
+                            <div class="pt-5 fs-sm text-gray-500">
+
+                              {{ product.description }}
+
+                            </div>
+                          </div>
+
+                        </div>
+                        {% comment %} <div class="list-group-item">
+
+                        <!-- Toggle -->
+                        <a
+                        class="d-block dropdown-toggle text-body"
+                        data-bs-toggle="collapse"
+                        href="#productCollapseSize">
+                        <strong>Size &amp; Fit</strong>
+                        </a>
+
+                        <!-- Collapse -->
+                        <div
+                        class="collapse"
+                        id="productCollapseSize"
+                        data-bs-parent="#productCollapseParent">
+                        <div class="pt-5 fs-sm">
+
+                        <!-- Heading -->
+                        <p class="text--body">
+                        <strong>Fitting information:</strong>
+                        </p>
+
+                        <!-- List -->
+                        <ul>
+                        <li>
+                        Upon seas hath every years have whose subdue creeping
+                        they're it were.
+                        </li>
+                        <li>
+                        Make great day bearing.
+                        </li>
+                        <li>
+                        For the moveth is days don't said days.
+                        </li>
+                        </ul>
+
+                        <!-- Heading -->
+                        <p class="text-body">
+                        <strong>Model measurements:</strong>
+                        </p>
+
+                        <!-- List -->
+                        <ul class="list-unstyled">
+                        <li>Height: 1.80 m</li>
+                        <li>Bust/Chest: 89 cm</li>
+                        <li>Hips: 91 cm</li>
+                        <li>Waist: 65 cm</li>
+                        <li>Model size: M</li>
+                        </ul>
+
+                        <!-- Size chart -->
+                        <p class="mb-0">
+                        <img
+                        src="assets/img/icons/icon-ruler.svg"
+                        alt="..."
+                        class="img-fluid">
+                        <a
+                        class="text-reset text-decoration-underline ms-3"
+                        data-bs-toggle="modal"
+                        href="#modalSizeChart">Size chart</a>
+                        </p>
+
+                        </div>
+                        </div>
+
+                        </div>
+                        <div class="list-group-item">
+
+                        <!-- Toggle -->
+                        <a
+                        class="d-block dropdown-toggle text-body"
+                        data-bs-toggle="collapse"
+                        href="#productCollapseShipping">
+                        <strong>Shipping &amp; Returns</strong>
+                        </a>
+
+                        <!-- Collapse -->
+                        <div
+                        class="collapse"
+                        id="productCollapseShipping"
+                        data-bs-parent="#productCollapseParent">
+                        <div class="pt-5 fs-sm text-gray-500">
+
+                        <!-- Table -->
+                        <div class="table-responsive">
+                        <table class="table table-bordered table-sm table-hover">
+                        <thead>
+                        <tr>
+                        <th>Shipping Options</th>
+                        <th>Delivery Time</th>
+                        <th>Price</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                        <td>Standard Shipping</td>
+                        <td>Delivery in 5 - 7 working days</td>
+                        <td>$8.00</td>
+                        </tr>
+                        <tr>
+                        <td>Express Shipping</td>
+                        <td>Delivery in 3 - 5 working days</td>
+                        <td>$12.00</td>
+                        </tr>
+                        <tr>
+                        <td>1 - 2 day Shipping</td>
+                        <td>Delivery in 1 - 2 working days</td>
+                        <td>$12.00</td>
+                        </tr>
+                        <tr>
+                        <td>Free Shipping</td>
+                        <td>
+                        Living won't the He one every subdue meat replenish
+                        face was you morning firmament darkness.
+                        </td>
+                        <td>$0.00</td>
+                        </tr>
+                        </tbody>
+                        </table>
+                        </div>
+
+                        <!-- Caption -->
+                        <p class="mb-0 text-gray-500">
+                        May, life blessed night so creature likeness their, for.
+                        <a class="text-body text-decoration-underline" href="#!">Find out more</a>
+                        </p>
+
+                        </div>
+                        </div>
+
+                        </div> {% endcomment %}
+                      </div>
+
+                  {% else %}
+
+                    {% endcase %}
+                  {% endfor %}
+                {% endform %}
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  class VariantSelector extends HTMLElement {
+    constructor() {
+      super();
+      this.addEventListener('change', this.onVariantChange);
+    }
+
+    onVariantChange() {
+      this.getSelectedOptions();
+
+      this.getSelectedVariant();
+
+      if (this.currentVariant) {
+        this.updateUrl();
+        this.updateFormID();
+        this.updatePrice();
+        this.updateCheckout();
+        this.updateVariantSelector();
+      }
+    }
+    getSelectedOptions() {
+      this.options = Array.from(this.querySelectorAll('input[type="radio"]'), (radio) => {
+        if (radio.checked) {
+          return radio.value
+        } else {}
+      }).filter(el => el !== undefined);
+    }
+
+    getVariantJSON() {
+      this.variantData = this.variantData || JSON.parse(this.querySelector('[type="application/json"]').textContent);
+      return this.variantData;
+    }
+
+    getSelectedVariant() {
+      this.currentVariant = this.getVariantJSON().find((variant) => {
+        const findings = !variant.options.map((option, index) => {
+          return this.options[index] === option
+        }).includes(false);
+
+        if (findings) 
+          return variant;
+        
+
+
+
+      })
+
+      return this.currentVariant;
+    }
+
+    updateUrl() {
+      if (!this.currentVariant) 
+        return;
+      
+
+
+
+      window.history.replaceState({}, '', `${
+        this.dataset.url
+      }?variant=${
+        this.currentVariant.id
+      }`)
+    }
+
+    updateFormID() {
+      const form_input = document.querySelector("#product-form").querySelector('input[name="id"]');
+      form_input.value = this.currentVariant.id
+    }
+
+    updatePrice() {
+      fetch(`${
+        this.dataset.url
+      }?variant=${
+        this.currentVariant.id
+      }&section_id=${
+        this.dataset.section
+      }`).then((response) => response.text()).then((responseText) => {
+        const id = `price-${
+          this.dataset.section
+        }`;
+        const html = new DOMParser().parseFromString(responseText, 'text/html');
+        const oldPrice = document.getElementById(id)
+        const newPrice = html.getElementById(id)
+
+        if (oldPrice && newPrice) 
+          oldPrice.innerHTML = newPrice.innerHTML;
+        
+
+
+
+      })
+    }
+
+    updateCheckout() {
+      fetch(`${
+        this.dataset.url
+      }?variant=${
+        this.currentVariant.id
+      }&section_id=${
+        this.dataset.section
+      }`).then((response) => response.text()).then((responseText) => {
+        const id = `button-${
+          this.dataset.section
+        }`;
+        const html = new DOMParser().parseFromString(responseText, 'text/html');
+        const oldButton = document.getElementById(id)
+        const newButton = html.getElementById(id)
+
+        if (oldButton && newButton) 
+          oldButton.innerHTML = newButton.innerHTML;
+        
+
+
+
+      })
+    }
+
+    updateVariantSelector() {
+      fetch(`${
+        this.dataset.url
+      }?variant=${
+        this.currentVariant.id
+      }&section_id=${
+        this.dataset.section
+      }`).then((response) => response.text()).then((responseText) => {
+        const id = `selector-${
+          this.dataset.section
+        }`;
+        const html = new DOMParser().parseFromString(responseText, 'text/html');
+        const oldButton = document.getElementById(id)
+        const newButton = html.getElementById(id)
+
+        if (oldButton && newButton) 
+          oldButton.innerHTML = newButton.innerHTML;
+        
+
+
+
+      })
+    }
+  }
+  customElements.define('variant-selector', VariantSelector);
+</script>
+
+
+{% schema %}
+  {
+    "name": "Product page",
+    "settings": [
+      {
+        "type": "select",
+        "id": "image_render",
+        "label": "Change the image render",
+        "options": [
+          {
+            "label": "Stacked",
+            "value": "stacked"
+          }, {
+            "label": "Images left",
+            "value": "left"
+          }
+        ],
+        "default": "stacked"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "vendor",
+        "name": "Vendor",
+        "limit": 1
+      },
+      {
+        "type": "title",
+        "name": "Title",
+        "limit": 1
+      },
+      {
+        "type": "price",
+        "name": "Price",
+        "limit": 1
+      },
+      {
+        "type": "variant_selector",
+        "name": "Variant Selector",
+        "limit": 1
+      }, {
+        "type": "quantity",
+        "name": "Quantity",
+        "limit": 1
+      }, {
+        "type": "description",
+        "name": "Description",
+        "limit": 1
+      }, {
+        "type": "checkout_button",
+        "name": "Checkout Button",
+        "limit": 1
+      }, {
+        "type": "@app"
+      }
+    ]
+  }
+{% endschema %}
