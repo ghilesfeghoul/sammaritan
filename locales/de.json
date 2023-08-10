@@ -406,8 +406,131 @@
         "no_js_credit_card_fields_redirect_hint": "Sie werden weitergeleitet, um Ihre Zahlungsinformationen hinzuzufügen.",
         "card_fields_container_prefix": "Feldcontainer für:",
         "card_fields_unavailable_html": {
-          "one": "Kredit- und Debitkartenzahlungen sind derzeit nicht verfügbar.<br> <a href=\"%{current_url}\">Aktualisieren Sie diese Seite<\/a> oder versuchen Sie es später noch einmal."
-        }
+          "one": "Kredit- und Debitkartenzahlungen sind derzeit nicht verfügbar.<br> <a href=\"%{current_url}\">Aktualisieren Sie diese Seite<\/a> oder versuchen Sie es später noch einmal.",
+          "other": "Kredit- und Debitkartenzahlungen sind derzeit nicht verfügbar.<br> <a href=\"%{current_url}\">Aktualisieren Sie diese Seite<\/a> oder probieren Sie eine andere Zahlungsmethode aus."
+        },
+        "card_fields_processing_error": "Bei der Verarbeitung der Zahlung ist ein Problem aufgetreten. Versuchen Sie, diese Seite zu aktualisieren oder überprüfen Sie Ihre Internetverbindung.",
+        "technical_error": "Aufgrund eines technischen Problems können Zahlungen derzeit nicht verarbeitet werden. Versuchen Sie es in ein paar Minuten noch einmal.",
+        "no_method_error": "Dieser Shop kann derzeit keine Zahlungen akzeptieren.",
+        "not_configured_error": "Dieser Shop kann derzeit keine Zahlungen akzeptieren.",
+        "missing_credit_card_error": "Geben Sie Ihre Kartendaten ein, um die Zahlung abzuschließen",
+        "billing_address_not_supported_for_payment_method_error": "Diese Zahlungsmethode ist für Ihre Rechnungsadresse und Währung nicht verfügbar. Bitte versuchen Sie es mit einer anderen Zahlungsmethode.",
+        "generic_incorrect_card_info": "Ihre Zahlungsdaten konnten nicht bestätigt werden. Überprüfen Sie Ihre Kartendaten und versuchen Sie es erneut.",
+        "sofort_label": "Sofortüberweisung",
+        "shop_pay_installments_label": "Kaufen Sie Ratenzahlungen",
+        "paypal_modal": {
+          "order_contains_subscriptions": "Abonnement",
+          "order_contains_fixed_selling_plans": "Im Gesamtbetrag sind möglicherweise keine Steuern, Versandkosten, aufgeschobene Gebühren und einige Rabatte enthalten. Fahren Sie mit der Kasse fort, um den heute fälligen Betrag zu erhalten."
+        },
+        "klarna_pay_later_label": "Bezahlen Sie später mit Klarna",
+        "klarna_pay_now_label": "Bezahlen Sie jetzt mit Klarna",
+        "klarna_slice_it_label": "Finanzieren mit Klarna",
+        "purchase_options_card_update_agreement_label_html": "Durch die Aktualisierung Ihrer Zahlungsmethode autorisieren Sie Zahlungen für wiederkehrende oder aufgeschobene Käufe gemäß den <a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{cancellation_policy}\" href=\"%{policy_href}\">Stornierungsbedingungen<\/a> dieses Shops.",
+        "subscription_card_update_agreement_label": "Wenn Sie die Zahlungsmethode ändern, werden Ihr Abonnement und zukünftige wiederkehrende Zahlungen aktualisiert.",
+        "subscription_agreement_label": "Ich verstehe, dass ich einem Abonnement zustimme. Es wird zum angegebenen Preis und in der angegebenen Häufigkeit verlängert, bis es endet oder %{cancelled} wird.",
+        "subscription_agreement_cancelled": "abgesagt",
+        "subscription_agreement_label_html": "Ich verstehe, dass ich einem Abonnement zustimme. Es wird zum angegebenen Preis und in der angegebenen Häufigkeit verlängert, bis es endet oder endet\n <a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{subscription_policy}\" href=\"%{policy_href}\">abgesagt<\/a> .\n",
+        "purchase_options_agreement_label": "Mir ist bewusst, dass es sich bei einem oder mehreren Artikeln in meinem Warenkorb um einen aufgeschobenen oder wiederkehrenden Kauf handelt. Indem ich fortfahre, stimme ich den %{cancellation_policy_label} zu und ermächtige Sie, meine Zahlungsmethode zu den auf dieser Seite aufgeführten Preisen, Häufigkeiten und Daten zu belasten, bis meine Bestellung ausgeführt ist oder ich, sofern zulässig, storniere.",
+        "purchase_options_agreement_label_html": "Mir ist bewusst, dass es sich bei einem oder mehreren Artikeln in meinem Warenkorb um einen aufgeschobenen oder wiederkehrenden Kauf handelt. Indem ich fortfahre, stimme ich dem zu\n <a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{subscription_policy}\" href=\"%{policy_href}\">Stornierungsbedingungen<\/a>\n und ermächtige Sie, meine Zahlungsmethode bis zu meinem\n Die Bestellung wird ausgeführt oder ich storniere, sofern zulässig.\n",
+        "change_currency_section_description": "Wählen Sie eine Währungsoption aus",
+        "no_real_orders_dev_store": "Dieser Shop kann keine echten Bestellungen oder echten Zahlungen akzeptieren.",
+        "waiting_on_payment_methods": "Verfügbare Zahlungsmethoden abrufen...",
+        "apple_pay_payment_error": "Ihre Zahlung konnte nicht abgeschlossen werden. Versuchen Sie es erneut oder verwenden Sie eine andere Zahlungsmethode.",
+        "taxes_not_included": "Steuern nicht inbegriffen",
+        "no_taxes_banner_content": "Für diese Bestellung werden keine Steuern erhoben. Sobald Sie die Zahlung eingezogen haben, können keine Steuern mehr hinzugefügt werden.",
+        "paypal": {
+          "connect": "Klicken Sie hier, um Ihr PayPal-Konto zu verbinden"
+        },
+        "apple": {
+          "connect": "Klicken Sie hier, um Ihr Apple Pay-Konto zu verbinden",
+          "not_available": "Apple Pay ist in diesem Browser nicht verfügbar. Um Ihr Apple Pay-Konto zu verbinden, müssen Sie Safari auf einem Apple-Gerät verwenden."
+        },
+        "google": {
+          "connect": "Klicken Sie hier, um eine Verbindung mit Ihrem Google Pay-Konto herzustellen",
+          "error_authorizing": "Fehler bei der Autorisierung der Zahlung"
+        },
+        "account_connected": "Konto verbunden.",
+        "mor_disclaimer_html": "Indem Sie unten klicken und Ihre Bestellung abschließen, erklären Sie sich damit einverstanden, Ihre Artikel bei Global-e als eingetragener Händler zu kaufen\n für diese Transaktion gelten <a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{mor_terms}\" href=\"%{terms_href}\">die Allgemeinen Geschäftsbedingungen<\/a> von Global-e\n und <a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{privacy_policy}\" href=\"%{policy_href}\">Datenschutzrichtlinie<\/a> . Global-e ist ein internationales Unternehmen\n Fulfillment-Dienstleister für %{shop_name}\n",
+        "pending_payment": {
+          "due_notice": "Ihre Zahlung in Höhe von %{amount_due} ist am %{due_date} fällig.",
+          "multibanco": {
+            "instruction_html": "Nehmen Sie Ihre Zahlung bei Multibanco oder online mit den untenstehenden Angaben vor. Bei Fragen oder zur Aktualisierung der Zahlungsdetails wenden Sie sich bitte an %{contact_us}.",
+            "entity": "Juristische Person",
+            "reference": "Referenz",
+            "amount": "Menge",
+            "find_nearest_atm": "Finden Sie den nächstgelegenen Geldautomaten"
+          }
+        },
+        "update_payment_method": "Zahlungsmethode aktualisieren",
+        "order_covered_by_store_credit_notice": "Ihre Bestellung ist durch Ihr Shop-Guthaben gedeckt.",
+        "order_covered_by_redeemables_notice": "Ihre Bestellung ist abgedeckt.",
+        "store_credit": {
+          "label": "Einkaufskredit",
+          "apply_label": "Laden Sie eine Gutschrift ein"
+        },
+        "clear": "Klar",
+        "billing_must_match_shipping_notice": "Die Rechnungsadresse Ihrer Zahlungsmethode muss mit der Lieferadresse übereinstimmen.",
+        "same_billing_address_checkbox_label": "Lieferadresse als Rechnungsadresse verwenden",
+        "location_billing_address_label": "Standort der Rechnungsadresse",
+        "fact_billing_address_label": "Rechnungsadresse",
+        "location_shipping_address_label": "Lieferadresse des Standorts",
+        "no_working_method_error": "Dieser Shop kann derzeit keine Zahlungen akzeptieren. Aktualisieren Sie diese Seite oder kommen Sie später wieder.",
+        "brand_not_available": "Dieser Shop akzeptiert {{brand}} nicht. Bitte verwenden Sie zum Bezahlen eine andere Karte.",
+        "shipping_rate_updated": "Die verfügbaren Versandarten wurden aktualisiert. Bestätigen Sie Ihre Auswahl, bevor Sie zur Kasse gehen.",
+        "billing_address_invalid_phone": "Aktualisieren Sie die Telefonnummer in Ihrer Rechnungsadresse für {{label}} {{last_digits}} , um fortzufahren.",
+        "billing_address_invalid_phone_no_card": "Aktualisieren Sie die Telefonnummer in Ihrer Rechnungsadresse, um fortzufahren.",
+        "preview_not_available": {
+          "title": "Vorschau nicht verfügbar",
+          "content": "Keine Sorge, dieser Express-Checkout funktioniert für Ihre Kunden."
+        },
+        "card_fields": {
+          "errors": {
+            "required": {
+              "issue_date": "Geben Sie ein gültiges Ausstellungsdatum ein",
+              "issue_number": "Geben Sie eine gültige Ausgabenummer ein"
+            },
+            "invalid": {
+              "verification_value": "Geben Sie einen gültigen CVV- oder Sicherheitscode ein"
+            }
+          }
+        },
+        "simulated_checkout": "Vorschau folgt bald",
+        "vaulting_agreement_label": "Speichern Sie meine Zahlungsinformationen bei %{company} für eine schnellere Kaufabwicklung.",
+        "business_customer_vaulting_payment_label": "Bewahren Sie diese Karte beim Bezahlen auf und autorisieren Sie %{company}, diese Karte für zukünftige Einkäufe an diesem Standort zu belasten. Jeder diesem Standort zugewiesene Kontakt ist berechtigt, diese Karte zu verwenden.",
+        "purchase_options_and_vaulting_agreement_label": "Bei einem oder mehreren Artikeln in Ihrem Warenkorb handelt es sich um einen aufgeschobenen oder wiederkehrenden Kauf. Indem Sie mit Ihrer Zahlung fortfahren, erklären Sie sich damit einverstanden, dass Ihre Zahlungsmethode automatisch zu dem auf dieser Seite aufgeführten Preis und in der Häufigkeit belastet wird, bis sie endet oder Sie stornieren. Alle Stornierungen unterliegen der %{cancellation_policy_label}.",
+        "purchase_options_cancellation_policy_label": "Stornierungsbedingungen",
+        "use_different_credit_card_label": "Verwenden Sie eine andere Karte",
+        "saved_credit_card": "Ihre gespeicherte Kreditkarte",
+        "saved_credit_card_info": "Letzte vier Ziffern",
+        "saved_credit_cards_modal": {
+          "view_all_label": "Alle gespeicherten Karten anzeigen",
+          "done": "Erledigt",
+          "cancel": "Stornieren"
+        },
+        "expired_cards_info": {
+          "one": "Es gibt %{count} abgelaufene Karten, die Sie in Ihrem Konto anzeigen und bearbeiten können.",
+          "other": "Es sind %{count} abgelaufene Karten vorhanden, die Sie in Ihrem Konto anzeigen und bearbeiten können."
+        },
+        "local_payment_method_receiver_notice": "Nach der Bestellung erhalten Sie die Zahlungsdetails. Nehmen Sie die Zahlung innerhalb von {{dueDays}} Tagen an einem Geldautomaten oder online vor.",
+        "order_edit_banner_title": "Es ist eine Zahlung von {{amount_owed}} erforderlich",
+        "order_edit_banner_subtitle": "Ihre Bestellung {{order_number}} wurde aktualisiert. Überprüfen Sie diese Änderungen und bezahlen Sie dann, um Ihre Bestellung zu bestätigen.",
+        "order_edit_banner_single_item_added": "Hinzugefügt",
+        "order_edit_banner_multiple_items_added": "{{amount}} hinzugefügt",
+        "order_edit_banner_single_item_removed": "ENTFERNT",
+        "order_edit_banner_multiple_items_removed": "{{amount}} entfernt",
+        "order_edit_banner_single_item_returned": "Ist zurückgekommen",
+        "order_edit_banner_multiple_items_returned": "{{amount}} zurückgegeben",
+        "gift_card_wrapper": {
+          "heading": "Geschenkkarte",
+          "apply_gift_card_label": "Beantragen Sie eine Geschenkkarte",
+          "payment_tag": "Geschenkkarte"
+        },
+        "custom_onsite_payment_method_modal": {
+          "title": "Individuelle Zahlungsbestätigung vor Ort"
+        },
+        "markets_pro_disclaimer_label": "Indem Sie unten klicken und Ihre Bestellung abschließen, erklären Sie sich damit einverstanden, Ihre Artikel von Global-e als eingetragenem Händler für diese Transaktion zu den %{markets_pro_terms} und %{privacy_policy} von Global-e zu kaufen. Global-e ist ein internationaler Fulfillment-Dienstleister für %{shop_name}",
+        "markets_pro_disclaimer_terms_and_conditions": "Geschäftsbedingungen",
+        "markets_pro_disclaimer_privacy_policy": "Datenschutzrichtlinie"
       },
       "payment_summary": {
         "gift_card_current_balance_notice": "Aktueller Saldo %{amount}",
