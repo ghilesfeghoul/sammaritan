@@ -352,6 +352,175 @@
         "address_zip_invalid": "Geben Sie eine gültige Postleitzahl ein",
         "gift_card_invalid": "Die Geschenkkarte „••••%{last_four_characters}“ ist nicht mehr gültig",
         "vaulting_agreement_blank": "Um fortzufahren, müssen Sie Ihre neue Kreditkarte speichern, da die Zahlung für diese Bestellung zu einem späteren Zeitpunkt erfolgt."
+      },
+      "throttle": {
+        "cart_summary_heading": "Ihr Warenkorb",
+        "merchandise": {
+          "available": "Verfügbar",
+          "sold_out": "Ausverkauft"
+        },
+        "inventory": {
+          "partial_inventory_banner": "Ein Teil Ihres Warenkorbs ist ausverkauft und kann an der Kasse nicht gekauft werden.",
+          "sold_out": {
+            "heading": "Ihr Warenkorb ist ausverkauft",
+            "storefront_body": "Gehen Sie zurück in den Laden, um mit dem Einkauf fortzufahren",
+            "no_storefront_body": "Leider ist der Artikel, den Sie kaufen möchten, nicht mehr verfügbar.",
+            "link": "Zurück zum Laden"
+          }
+        },
+        "title": "Warteschlange",
+        "time_to_checkout_title": "Zeit zum Auschecken – {{shopName}}",
+        "estimated_wait_time": {
+          "calculating": "Berechnung der geschätzten Wartezeit",
+          "less_than_one": "Geschätzte Wartezeit: Weniger als eine Minute",
+          "one": "Geschätzte Wartezeit: {{count}} Minute",
+          "other": "Geschätzte Wartezeit: {{count}} Minuten"
+        },
+        "last_checked": "(Zuletzt überprüft: {{time}} )",
+        "footer": {
+          "heading": "Aktualisieren Sie diese Seite nicht, sie wird automatisch aktualisiert.",
+          "body": "Artikel in Ihrem Warenkorb werden erst reserviert, wenn Sie den Bestellvorgang abschließen."
+        }
+      },
+      "cart_checkout_validation": {
+        "runtime_error": "Bei der Bearbeitung Ihrer Anfrage ist ein Problem aufgetreten. Bitte wenden Sie sich an den Shop-Inhaber."
+      },
+      "no_address_location": {
+        "title": "Standort ohne Adresse",
+        "header": "Sie haben keine Lieferadresse für diesen Standort",
+        "alt_header": "Fehlende Lieferadresse",
+        "message": "Kontaktieren Sie uns, um eine Adresse für diesen Standort hinzuzufügen und den Bestellvorgang abzuschließen.",
+        "email_us_button_label": "senden Sie uns eine Email"
+      },
+      "order_errors": {
+        "creation_failure": "Beim Erstellen Ihrer Bestellung ist ein Problem aufgetreten. Versuchen Sie es erneut oder kontaktieren Sie uns für weitere Informationen.",
+        "network_failure": "Ihre Bestellung konnte aufgrund eines Netzwerkfehlers nicht übermittelt werden. Überprüfen Sie Ihre Verbindung und versuchen Sie es erneut."
+      },
+      "session_errors": {
+        "session_not_unique": "Bei der Bearbeitung Ihrer Bestellung ist ein Problem aufgetreten. Aktualisieren Sie diese Seite, um zum Shop zurückzukehren.",
+        "session_already_finished": "Diese Bestellung wurde bereits übermittelt. Sie können zum Geschäft zurückkehren, um eine neue Bestellung zu starten."
+      },
+      "pickup_point": {
+        "location_is_currently_closed": "Geschlossen",
+        "business_hours": "Öffnungszeiten",
+        "title": "Abholpunkt",
+        "or": "oder",
+        "search_button": "Suchen",
+        "selector_tabs": "Auswahl des Abholpunkts",
+        "selector_tab_map": "Karte",
+        "selector_tab_list": "Aufführen",
+        "could_not_resolve_address": "Ihre Adresse konnte nicht gefunden werden. Versuchen Sie es erneut oder verwenden Sie eine andere Adresse",
+        "no_pickup_points_near_you": "In der Nähe der ausgewählten Adresse wurden keine Abholpunkte gefunden",
+        "no_pickup_points_near_location": "Keine Abholpunkte in der Nähe Ihres Standorts gefunden",
+        "no_pickup_points_found": "Keine Abholpunkte gefunden",
+        "paginator": {
+          "next_accessibility_label": "Nächste Seite",
+          "previous_accessibility_label": "Vorherige Seite",
+          "header": {
+            "one": "Zeigt %{first} - %{last} von %{count} Punkt an",
+            "other": "Es werden %{first} - %{last} von %{count} Punkten angezeigt"
+          },
+          "selected_pickup_point_label": {
+            "one": "%{pickup_point_index} von %{count} Punkt",
+            "other": "%{pickup_point_index} von %{count} Punkten"
+          },
+          "selected_page": {
+            "one": "%{first} – %{last} von %{count} Punkt",
+            "other": "%{first} – %{last} von %{count} Punkten"
+          }
+        },
+        "number_of_pickup_points_near_location": {
+          "one": "%{count} Abholpunkt in der Nähe Ihres Standorts",
+          "other": "%{count} Abholpunkte in der Nähe Ihres Standorts"
+        },
+        "change": "Ändern",
+        "waiting_on_pickup_point_location_notice": "Auf der Suche nach Abholpunkten...",
+        "geolocation": {
+          "shared_location_button": "Verwenden Sie meinen Standort",
+          "errors": {
+            "unsuported_by_browser": "Das Abrufen der Geolokalisierung wird von Ihrem Browser nicht unterstützt. Versuchen Sie es erneut oder verwenden Sie einen anderen Browser.",
+            "permission_not_allowed": "Erlauben Sie die Freigabe Ihres Standorts.",
+            "permission_denied": "Ihr Standort konnte nicht ermittelt werden. Versuchen Sie es erneut."
+          }
+        }
+      },
+      "error_page": {
+        "terminal": {
+          "title": "Es gab ein Problem mit unserem Checkout",
+          "message": "Aktualisieren Sie diese Seite oder versuchen Sie es in ein paar Minuten erneut",
+          "action": {
+            "cta": "Seite neu laden"
+          },
+          "request_id": "Anfrage-ID: {{requestId}}"
+        }
+      },
+      "notice_banner": {
+        "return_to_cart_link_text": "Zurück zum Warenkorb",
+        "return_to_cart_to_update_quantities": "%{return_to_cart_link_text}, um die Mengen zu aktualisieren",
+        "subscription_changed": "Eines Ihrer Abonnements hat sich geändert.",
+        "company_location_changed": "Ihr Warenkorb wurde aktualisiert. Überprüfen Sie Ihre Bestellung, bevor Sie sie absenden.",
+        "company_location_changed_product_removed": "Ihr Warenkorb wurde aktualisiert, da einige Produkte an diesem Standort nicht verfügbar sind. Überprüfen Sie Ihre Bestellung, bevor Sie sie absenden.",
+        "violations_title": "{{violation}} fehlt oder ist ungültig",
+        "individual_violations_title": {
+          "DeliveryViolations": "Lieferanschrift",
+          "PaymentViolations": "Rechnungsadresse",
+          "OtherViolations": "Bestellinformationen"
+        },
+        "all_violations_content": "Rufen Sie uns an oder {{emailLink}} , um diese Informationen zu aktualisieren und Ihre Bestellung abzuschließen:",
+        "editable_shipping_address_violations_message_title": "Fügen Sie diese Informationen hinzu, um Ihre Bestellung abzuschließen:",
+        "editable_shipping_address_violations_message_footer": "Um die Adresse für diesen Standort dauerhaft zu aktualisieren, {{emailLink}} .",
+        "editable_shipping_address_violations_email_link": "kontaktiere uns"
+      },
+      "marketplaces": {
+        "legal_notice": {
+          "legal_text": "Rezension",
+          "link_label": "{{partnerDisplayName}} Allgemeine Geschäftsbedingungen"
+        }
+      },
+      "online_store_chat": {
+        "title": "Fragen? chatte mit uns"
+      },
+      "local_pickup": {
+        "location_information": {
+          "one": "Es gibt %{count} Geschäft mit Lagerbeständen in der Nähe von %{address}",
+          "other": "Es gibt %{count} Geschäfte mit Lagerbeständen in der Nähe von %{address}"
+        },
+        "toggle_location": "Ändere meinen Standort",
+        "or": "ODER",
+        "cancel": "Stornieren",
+        "your_location": "Ihr Standort",
+        "search_button": "Finden Sie Geschäfte",
+        "no_stores_found": "Keine Geschäfte gefunden",
+        "could_not_resolve_address": "Ihre Adresse konnte nicht gefunden werden. Versuchen Sie es erneut oder verwenden Sie eine andere Adresse",
+        "paginator": {
+          "accessibility_label": "Paginierung für lokale Abholung",
+          "previous": "Vorherige Seite",
+          "next": "Nächste Seite",
+          "label": {
+            "one": "%{first} – %{last} von %{count} Speicher",
+            "other": "%{first} – %{last} von %{count} Geschäften"
+          }
+        },
+        "reveal_more_label": {
+          "one": "%{count} weiteren Standort anzeigen",
+          "other": "%{count} weitere Standorte anzeigen"
+        }
+      },
+      "captcha": {
+        "title": "Füllen Sie das CAPTCHA aus, um fortzufahren",
+        "errors": {
+          "not_solved": "Füllen Sie das CAPTCHA aus, um fortzufahren"
+        }
+      },
+      "discount_errors": {
+        "generic_error": "Ihre Bestellung konnte nicht bearbeitet werden, da Ihr Rabattcode nicht mehr verfügbar ist. Überprüfen Sie den Gesamtbetrag Ihrer Bestellung und versuchen Sie es erneut."
+      },
+      "wallets": {
+        "return_to_store": "Zurück zum Geschäft",
+        "redirect_hint": "Sie werden aufgefordert, sich mit {{walletName}} anzumelden.",
+        "logged_in": "Verbunden mit {{email}}",
+        "shipping_line_label": "Versand",
+        "payment_in_progress_title": "Zahlung läuft"
       }
     },
     "filters": {
