@@ -110,7 +110,56 @@
         "shipping_used_as_billing_notice": "Diese wird auch als Rechnungsadresse für diese Bestellung verwendet.",
         "delivery_option_title": "Versandart",
         "contact_method_title": "Kontakt",
-        "email_or_phone_label": "E-Mail oder Mobiltelefonnummer"
+        "email_or_phone_label": "E-Mail oder Mobiltelefonnummer",
+        "email_or_phone_placeholder": "E-Mail oder Mobiltelefonnummer",
+        "stored_addresses_label": "Gespeicherte Adressen",
+        "new_address_label": "Verwenden Sie eine neue Adresse",
+        "first_name_label": "Vorname",
+        "optional_first_name_label": "Vorname (optional)",
+        "last_name_label": "Familienname, Nachname",
+        "company_label": "Unternehmen",
+        "optional_company_label": "Firma (optional)",
+        "address1_label": "Adresse",
+        "address2_label": "Apartment, Suite usw.",
+        "optional_address2_label": "Apartment, Suite usw. (optional)",
+        "city_label": "Stadt",
+        "country_label": "Land\/Region",
+        "country_code": "Länder-\/Regionscode",
+        "province_label": "Provinz",
+        "province_placeholder": "Provinz",
+        "county_label": "Bezirk",
+        "county_placeholder": "Bezirk",
+        "state_label": "Zustand",
+        "state_placeholder": "Zustand",
+        "region_none": "Nichts ausgewählt",
+        "prefecture_label": "Präfektur",
+        "prefecture_placeholder": "Präfektur",
+        "governorate_label": "Gouvernement",
+        "governorate_placeholder": "Gouvernement",
+        "emirate_label": "Emirat",
+        "emirate_placeholder": "Emirat",
+        "state_and_territory_label": "Staat\/Territorium",
+        "state_and_territory_placeholder": "Staat\/Territorium",
+        "phone_label": "Telefon",
+        "optional_phone_label": "Telefon optional)",
+        "phone_placeholder": "Telefon",
+        "phone_tooltip": "Für den Fall, dass wir Sie bezüglich Ihrer Bestellung kontaktieren müssen",
+        "zip_code_label": "PLZ",
+        "zip_code_placeholder": "PLZ",
+        "postal_code_label": "Postleitzahl",
+        "postal_code_placeholder": "Postleitzahl",
+        "postcode_label": "Postleitzahl",
+        "postcode_placeholder": "Postleitzahl",
+        "pincode_label": "Geheimzahl",
+        "pincode_placeholder": "Geheimzahl",
+        "civic_number_warning": "Fügen Sie eine Hausnummer hinzu, falls Sie eine haben",
+        "optional_last_name_label": "Nachname (optional)",
+        "optional_recipient_label": "Achtung (optional)",
+        "different_shipping_address_label": "Zu einer anderen Adresse verschicken",
+        "different_shipping_address_text": "Verwenden Sie für diese Bestellung eine Einmaladresse",
+        "change_company_location_link_label": "Firmenstandort ändern",
+        "change_location_link_label": "Den Ort wechseln",
+        "ship_to_company": "Versand an {{companyName}}"
       },
       "stock": {
         "unpurchasable_product_generic": {
@@ -130,6 +179,32 @@
             "other": "Diese Artikel werden aus Ihrem Warenkorb entfernt, da für Ihre Adresse keine Versandmethoden verfügbar sind."
           },
           "status_column_header": "Keine Lieferung"
+        },
+        "page_title": "Probleme mit dem Inventar",
+        "title": "Ausverkauft",
+        "items_unavailable_notice": "Einige Artikel sind nicht mehr verfügbar. Ihr Warenkorb wurde aktualisiert.",
+        "product_column_header": "Produkte",
+        "quantity_column_header": "Menge",
+        "price_column_header": "Preis",
+        "removed_from_cart_notice": "Aus dem Warenkorb entfernt",
+        "sold_out_label": "Ausverkauft",
+        "reduced_label": "Reduziert",
+        "reduced_with_quantity_label": "Nur noch %{quantity_available} übrig",
+        "remove_from_cart_button_label": "Aus dem Warenkorb entfernen",
+        "continue_shopping_button_label": "Weitermachen",
+        "go_back_to_cart_button_label": "Gehen Sie zurück zu meinem Warenkorb",
+        "remove": "Entfernen",
+        "empty_cart_label": "Ihr Warenkorb ist leer",
+        "quantity_update": {
+          "page_title": "Mengenaktualisierung",
+          "title": "Mengenaktualisierung",
+          "description": "Die verfügbaren Mengen für diese Artikel haben sich geändert und werden in Ihrem Warenkorb aktualisiert."
+        },
+        "unpurchasable_product": {
+          "title": "Unkäufliches Produkt",
+          "header": "Einige Artikel wurden aus Ihrem Warenkorb entfernt",
+          "message": "Diese Artikel sind für B2B-Bestellungen nicht verfügbar.",
+          "status_column_header": "Nicht verfügbar"
         }
       },
       "contextual_availability": {
@@ -787,6 +862,36 @@
           "contact_method_title": "Kontakt",
           "billing_address_title": "Abrechnung"
         }
+      },
+      "delivery_options": {
+        "free_total_label": "Frei",
+        "ship": "Schiff",
+        "shipping_address": "Lieferanschrift",
+        "pick_up": "Abholen",
+        "pick_up_locations": "Abholorte",
+        "pick_up_in_one_hour": "Normalerweise in 1 Stunde fertig",
+        "pick_up_in_two_hours": "Normalerweise in 2 Stunden fertig",
+        "pick_up_in_four_hours": "Normalerweise in 4 Stunden fertig",
+        "pick_up_in_twenty_four_hours": "Normalerweise innerhalb von 24 Stunden fertig",
+        "pick_up_in_two_to_four_days": "Normalerweise in 2-4 Tagen fertig",
+        "pick_up_in_five_or_more_days": "Normalerweise in mehr als 5 Tagen fertig",
+        "pick_up_in_zero_to_two_hours": "In 2 Stunden abholbereit",
+        "pick_up_in_two_to_four_hours": "In 4 Stunden abholbereit",
+        "pick_up_immediately": "Jetzt zur Abholung bereit",
+        "pick_up_next_day": "Bereit zur Abholung am nächsten Tag",
+        "pickup_point_method_definition": "Zum Abholpunkt versenden",
+        "retail_method_definition": "Einzelhandelsversand",
+        "none_method_definition": "Kein Versand",
+        "subscription_pickup_information": "Diese Versandart gilt für alle Artikel dieser Bestellung und für alle zukünftigen Bestellungen dieses Abonnements."
+      },
+      "customer_account": {
+        "not_user_label": "Nicht %{first_name}?",
+        "have_an_account_label": "Ein Konto haben?",
+        "sign_in_link_label": "Anmeldung",
+        "sign_out_link_label": "Ausloggen",
+        "save_my_information_label": "Bewahren Sie diese Informationen für das nächste Mal auf",
+        "invalid_address": "Die ausgewählte Adresse ist ungültig. %{update_address_link} oder wählen Sie eine andere Adresse aus.",
+        "incomplete_address": "Die ausgewählte Adresse ist unvollständig. %{update_address_link} oder wählen Sie eine andere Adresse aus."
       }
     },
     "filters": {
@@ -942,11 +1047,107 @@
         "empty_state_title": "Noch keine Bestellungen",
         "empty_state_title_for_pending_orders": "Keine ausstehenden Bestellungen",
         "estimated_shortform": "Europäische Sommerzeit. {{date}}",
-        "estimated_delivery": "Voraussichtliche Lieferung {{date}}"
+        "estimated_delivery": "Voraussichtliche Lieferung {{date}}",
+        "one_images_accessibility_label": "Die Bestellung umfasst {{lineItemName1}}",
+        "two_images_accessibility_label": "Die Bestellung umfasst {{lineItemName1}} , {{lineItemName2}}",
+        "three_images_accessibility_label": "Die Bestellung umfasst {{lineItemName1}} , {{lineItemName2}} , {{lineItemName3}}",
+        "four_images_accessibility_label": "Die Bestellung umfasst {{lineItemName1}} , {{lineItemName2}} , {{lineItemName3}} , {{lineItemName4}}",
+        "more_than_three_products_accessibility_label": "Die Bestellung umfasst {{lineItemName1}} , {{lineItemName2}} und {{numberOfAdditionalProducts}} weitere Produkte",
+        "more_than_four_products_accessibility_label": "Die Bestellung umfasst {{lineItemName1}} , {{lineItemName2}} , {{lineItemName3}} und {{numberOfAdditionalProducts}} weitere Produkte",
+        "plus_more": "+ {{numberOfAdditionalProducts}}",
+        "plus_more_products": "+ {{numberOfAdditionalProducts}} Produkte",
+        "carousel": {
+          "one_products_accessibility_label": "Die Bestellung umfasst die Menge {{lineItemName1}} {{lineItemQuantity1}}",
+          "two_products_accessibility_label": "Die Bestellung umfasst {{lineItemName1}} Menge {{lineItemQuantity1}} , {{lineItemName2}} Menge {{lineItemQuantity2}}",
+          "three_products_accessibility_label": "Die Bestellung umfasst {{lineItemName1}} Menge {{lineItemQuantity1}} , {{lineItemName2}} Menge {{lineItemQuantity2}} , {{lineItemName3}} Menge {{lineItemQuantity3}}",
+          "four_products_accessibility_label": "Die Bestellung umfasst {{lineItemName1}} Menge {{lineItemQuantity1}} , {{lineItemName2}} Menge {{lineItemQuantity2}} , {{lineItemName3}} Menge {{lineItemQuantity3}} , {{lineItemName4}} Menge {{lineItemQuantity4}}",
+          "five_products_accessibility_label": "Die Bestellung umfasst {{lineItemName1}} Menge {{lineItemQuantity1}} , {{lineItemName2}} Menge {{lineItemQuantity2}} , {{lineItemName3}} Menge {{lineItemQuantity3}} , {{lineItemName4}} Menge {{lineItemQuantity4}} , {{lineItemName5}} Menge {{lineItemQuantity5}}",
+          "six_products_accessibility_label": "Die Bestellung umfasst {{lineItemName1}} Menge {{lineItemQuantity1}} , {{lineItemName2}} Menge {{lineItemQuantity2}} , {{lineItemName3}} Menge {{lineItemQuantity3}} , {{lineItemName4}} Menge {{lineItemQuantity4}} , {{lineItemName5}} Menge {{lineItemQuantity5}} , {{lineItemName6}} Menge {{lineItemQuantity6}}",
+          "six_and_more_products_accessibility_label": "Die Bestellung umfasst {{lineItemName1}} Menge {{lineItemQuantity1}} , {{lineItemName2}} Menge {{lineItemQuantity2}} , {{lineItemName3}} Menge {{lineItemQuantity3}} , {{lineItemName4}} Menge {{lineItemQuantity4}} , {{lineItemName5}} Menge {{lineItemQuantity5}} , {{lineItemName6}} Menge {{lineItemQuantity6}} und mehr",
+          "view_order_details": "Bestell Details ansehen",
+          "previous": "Vorherige",
+          "next": "Nächste"
+        },
+        "items": {
+          "one": "{{count}} Artikel",
+          "other": "{{count}} Artikel"
+        },
+        "list_view": "Listenansicht anzeigen",
+        "no_filtered_results_description": "Entfernen oder passen Sie Filter an, um Ihre Bestellungen anzuzeigen",
+        "no_filtered_results_title": "Keine gefilterten Ergebnisse",
+        "order_link": "Bestellung ansehen {{name}}",
+        "order_number": "Bestellen Sie {{name}}",
+        "orders_title": "Bestätigt",
+        "pagination": {
+          "nav_accessibility_label": "Navigationsschaltflächen für Bestellungen",
+          "next": "Nächste",
+          "next_accessibility_label": "Nächste Bestellungen",
+          "previous": "Vorher",
+          "previous_accessibility_label": "Vorherige Bestellungen",
+          "load_more": "Mehr laden",
+          "load_more_accessibility_label": "Weitere Bestellungen laden"
+        },
+        "order_status_message": {
+          "list_view": {
+            "view_order_for_details": "Einzelheiten finden Sie in der Bestellung",
+            "estimated_delivery": "Voraussichtliche Lieferung {{date}}",
+            "last_updated": "Zuletzt aktualisiert am {{date}}"
+          },
+          "table_view": {
+            "estimated_delivery": "Europäische Sommerzeit. Lieferung am {{date}}"
+          }
+        },
+        "payment_status": {
+          "list_view": {
+            "overdue": "Zahlung überfällig",
+            "due": "Zahlung fällig am {{date}}",
+            "due_today": "Zahlung heute fällig",
+            "due_without_date": "Zahlung fällig",
+            "due_on_fulfillment": "Zahlung fällig bei Erfüllung",
+            "pay_to_confirm": "Bezahlen Sie zur Bestätigung",
+            "payment_not_due": "Zahlung noch nicht fällig"
+          },
+          "table_view": {
+            "overdue": "Überfällig",
+            "due": "Fällig am {{date}}",
+            "due_today": "Heute fällig",
+            "paid": "Bezahlt",
+            "due_without_date": "Fällig",
+            "due_on_fulfillment": "Fällig bei Erfüllung",
+            "pay_to_confirm": "Bezahlen Sie zur Bestätigung",
+            "payment_not_due": "Noch nicht fällig"
+          }
+        },
+        "sort_by": "Sortieren nach: {{option}}",
+        "sort_hide_options_accessibility_label": "Sortieroptionen für bestätigte Bestellungen ausblenden.",
+        "sort_show_options_accessibility_label": "Sortieroptionen für bestätigte Bestellungen anzeigen.",
+        "sort_currently_sorted_by_accessibility_label": "Derzeit sortiert nach: {{option}}",
+        "sort_title": "Sortieren",
+        "sort": {
+          "date": {
+            "newest": "Vom Neuesten zum Ältesten",
+            "oldest": "Vom Ältesten zum Neuesten"
+          },
+          "location": {
+            "ascending": "Standort (AZ)",
+            "descending": "Standort (ZA)"
+          },
+          "order_number": {
+            "ascending": "Bestellnummer (von niedrig nach hoch)",
+            "descending": "Bestellnummer (hoch nach niedrig)"
+          },
+          "order_total": {
+            "ascending": "Bestellsumme (von niedrig nach hoch)",
+            "descending": "Bestellsumme (von hoch nach niedrig)"
+          }
+        },
+        "table_view": "Tabellenansicht anzeigen",
+        "show_order_actions_accessibility_label": "Bestellaktionen für Bestellung {{name}} anzeigen"
       },
       "order_status": {
         "gift_card_resend": {
-          "other": "E-Mails erneut senden"
+          "other": "E-Mails erneut senden",
+          "one": "E-Mail zurücksenden"
         },
         "gift_card_resend_text": {
           "one": "Text erneut senden",
@@ -992,7 +1193,45 @@
         "submitted_description": "Überprüfen Sie die Bestell- und Zahlungsdetails.",
         "track_shipment": "Sendung verfolgen",
         "request_return": "Rücksendung anfordern",
-        "view_order_for_details": "Einzelheiten finden Sie in der Bestellung"
+        "view_order_for_details": "Einzelheiten finden Sie in der Bestellung",
+        "attempted_delivery_label": "Versuchte Lieferung",
+        "attempted_delivery_description": "Der Zustellversuch war erfolglos.",
+        "confirmed_description": "Wir haben Ihre Bestellung erhalten.",
+        "on_its_way_description": "Diese Lieferung ist unterwegs.",
+        "out_for_delivery_description": "Diese Sendung ist zur Auslieferung bereit.",
+        "preparing_for_shipping_label": "Vorbereitung für den Versand",
+        "preparing_for_shipping_description": "Diese Artikel werden für den Versand vorbereitet.",
+        "ready_for_pickup_label": "Abholbereit",
+        "ready_for_pickup_description": "Diese Artikel stehen zur Abholung bereit. Bitte bringen Sie bei der Abholung Ihrer Bestellung Ihre Bestellbestätigung mit.",
+        "ready_for_pickup_location": "Ihre Bestellung liegt zur Abholung vor Ort bereit",
+        "picked_up_label": "Abgeholt",
+        "picked_up_description": "Diese Artikel wurden abgeholt.",
+        "canceled_description": "Ihre Bestellung wurde am {{date}} storniert.",
+        "canceled_label": "Abgesagt",
+        "canceled_title": "Ihre Bestellung wurde storniert",
+        "come_back": "Kehren Sie auf diese Seite zurück, um Updates zu Ihrem Sendungsstatus zu erhalten.",
+        "company_tracking_number": "{{company}} Tracking-Nummer:",
+        "confirmed_label": "Bestätigt",
+        "confirmed_title": "Ihre Bestellung ist bestätigt",
+        "confirmed_description_pickup": "Sie erhalten eine E-Mail, wenn Ihre Bestellung zur Abholung bereit ist.",
+        "confirmed_description_digital": "Sie erhalten eine E-Mail, wenn Ihre Bestellung fertig ist.",
+        "confirmed_description_gift_card_text": "Sie erhalten eine SMS, wenn Ihre Bestellung fertig ist.",
+        "delivered_description": "Diese Sendung wurde zugestellt.",
+        "delivered_label": "Geliefert",
+        "delivered_title": "Ihre Sendung wurde zugestellt",
+        "delivered_description_digital": "Ihre Bestellung ist abgeschlossen.",
+        "delivered_description_gift_card": {
+          "one": "Geschenkgutschein wurde per E-Mail verschickt.",
+          "other": "Geschenkgutscheine wurden per E-Mail verschickt."
+        },
+        "delivered_description_gift_card_text": {
+          "one": "Die Geschenkkarte wurde per SMS verschickt.",
+          "other": "Geschenkgutscheine wurden per SMS verschickt."
+        },
+        "gift_card_label": {
+          "one": "Geschenkkarte",
+          "other": "Geschenkkarten"
+        }
       },
       "status_mark_as_delivered": "Als geliefert markieren",
       "status_title": "Bestellstatus",
