@@ -89,39 +89,41 @@
                       {% when 'variant_selector' %}
                       {% unless product.has_only_default_variant %}
                         <variant-selector data-url="{{ product.url }}" data-section="{{ section.id }}">
-                          {% for option in product.options_with_values %}
-                            <div class="form-group">
+                          <div id="selector-{{ section.id }}">
+                            {% for option in product.options_with_values %}
+                              <div class="form-group">
 
-                              <!-- Label -->
-                              <p class="mb-5">
-                                {{ option.name }}:
-                                <strong id="{{ option.name }}Caption">{{ option.selected_value }}</strong>
-                              </p>
+                                <!-- Label -->
+                                <p class="mb-5">
+                                  {{ option.name }}:
+                                  <strong id="{{ option.name }}Caption">{{ option.selected_value }}</strong>
+                                </p>
 
-                              <div id="selector-{{ section.id }}" class="mb-8 ms-n1">
-                                {% for value in option.values %}
-                                  <div class="form-check form-check-inline form-check-size mb-2">
-                                    <input
-                                      type="radio"
-                                      class="form-check-input"
-                                      name="options[{{ option.name | escape }}]"
-                                      id="option-{{ option.name }}-{{ section.id }}-{{ forloop.index0 }}"
-                                      value="{{ value | escape }}"
-                                      data-target="#{{ option.name }}Caption"
-                                      {% if option.selected_value == value %}
-                                      checked
-                                      {% endif %}
-                                      {% if selected_variant.available == false and option.selected_value == value %}
-                                      disabled
-                                      {% endif %}>
-                                    <label class="form-check-label" for="option-{{ option.name }}-{{ section.id }}-{{ forloop.index0 }}">{{ value }}</label>
-                                  </div>
-                                {% endfor %}
+                                <div class="mb-8 ms-n1">
+                                  {% for value in option.values %}
+                                    <div class="form-check form-check-inline form-check-size mb-2">
+                                      <input
+                                        type="radio"
+                                        class="form-check-input"
+                                        name="options[{{ option.name | escape }}]"
+                                        id="option-{{ option.name }}-{{ section.id }}-{{ forloop.index0 }}"
+                                        value="{{ value | escape }}"
+                                        data-target="#{{ option.name }}Caption"
+                                        {% if option.selected_value == value %}
+                                        checked
+                                        {% endif %}
+                                        {% if selected_variant.available == false and option.selected_value == value %}
+                                        disabled
+                                        {% endif %}>
+                                      <label class="form-check-label" for="option-{{ option.name }}-{{ section.id }}-{{ forloop.index0 }}">{{ value }}</label>
+                                    </div>
+                                  {% endfor %}
+                                </div>
+
+
                               </div>
-
-
-                            </div>
-                          {% endfor %}
+                            {% endfor %}
+                          </div>
                           <script type="application/json">
                             {{ product.variants | json }}
                           </script>
@@ -180,7 +182,7 @@
                       {% when 'description' %}
 
                       <!-- Description -->
-                      <div class="list-group list-group-sm list-group-flush-x mb-3 mt-5" id="productCollapseParent">
+                      <div class="list-group list-group-sm list-group-flush-x mb-7 mt-5" id="productCollapseParent">
                         <div class="list-group-item">
 
                           <!-- Toggle -->
