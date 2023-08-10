@@ -1,5 +1,8 @@
 {
-  "current": "Default",
+  "current": {
+    "logo_width": 90,
+    "facebook_link": ""
+  },
   "presets": {
     "Default": {
       "logo_width": 90,
