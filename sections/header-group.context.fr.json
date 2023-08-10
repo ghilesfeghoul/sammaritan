@@ -62,7 +62,7 @@
       "disabled": false,
       "settings": {
         "type_annoncement": "Other",
-        "promotion_text": "Livraison gratuite en france metropolitaine",
+        "promotion_text": "Livraison gratuite en france",
         "promo_type": "Free shipping",
         "enable_country_selector": false,
         "enable_language_selector": false,
