@@ -1,0 +1,33 @@
+{
+  "parent": "product.json",
+  "context": {
+    "market": "fr"
+  },
+  "sections": {
+    "template": {
+      "disabled": false,
+      "settings": {
+      },
+      "blocks": {
+        "ddabab02-12d0-41b3-9677-9d8c4d6e3d22": {
+          "type": "shopify:\/\/apps\/app-wishlist\/blocks\/wishlist-button\/c9c2c3c8-8744-4fe7-90f5-f62b22a092cc",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "vendor",
+        "price",
+        "variant_selector",
+        "quantity",
+        "checkout_button",
+        "ddabab02-12d0-41b3-9677-9d8c4d6e3d22",
+        "description"
+      ]
+    }
+  },
+  "order": [
+    "template"
+  ]
+}
