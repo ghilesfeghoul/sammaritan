@@ -4,65 +4,6 @@
     "market": "fr"
   },
   "sections": {
-    "header": {
-      "disabled": false,
-      "settings": {
-        "header_selector": "Fashion"
-      },
-      "blocks": {
-        "6aa7cd17-a5eb-4b44-81c4-63f61b3b8830": {
-          "type": "link",
-          "settings": {
-            "link_url": "shopify:\/\/collections\/ski-collection",
-            "text_display": "SKI"
-          }
-        },
-        "4d1a5f3f-d224-4503-9fed-18c9738f18c2": {
-          "type": "link",
-          "settings": {
-            "link_url": "shopify:\/\/collections\/hydrogen",
-            "text_display": "Hydrogen"
-          }
-        },
-        "43fc0622-1098-4413-8058-f643fa1de01c": {
-          "type": "link",
-          "settings": {
-            "link_url": "shopify:\/\/collections\/automated-collection",
-            "text_display": "automated"
-          }
-        },
-        "44e68100-b406-4068-9ed9-3aa8f33da9b0": {
-          "type": "shopify:\/\/apps\/app-wishlist\/blocks\/wishlist-logo\/c9c2c3c8-8744-4fe7-90f5-f62b22a092cc",
-          "settings": {
-          }
-        }
-      },
-      "block_order": [
-        "account",
-        "44e68100-b406-4068-9ed9-3aa8f33da9b0",
-        "cart",
-        "6aa7cd17-a5eb-4b44-81c4-63f61b3b8830",
-        "4d1a5f3f-d224-4503-9fed-18c9738f18c2",
-        "43fc0622-1098-4413-8058-f643fa1de01c"
-      ]
-    },
-    "9378830e-7376-49a4-a68d-e2f94de65655": {
-      "type": "announcement-bar",
-      "disabled": false,
-      "settings": {
-        "type_annoncement": "Promotion",
-        "promotion_text": "Promotion",
-        "promo_type": "Discount",
-        "enable_country_selector": true,
-        "enable_language_selector": true,
-        "allow_social_links": false
-      },
-      "blocks": {
-      },
-      "block_order": [
-
-      ]
-    },
     "4557c857-c99c-4d30-b7aa-2a318f7d0a64": {
       "type": "announcement-bar",
       "disabled": false,
@@ -101,6 +42,64 @@
         "4dc41a6b-a4b1-432e-8d93-1392b407babb",
         "1f90798f-e6a2-4900-b6dc-7ec86bdf31fc",
         "04e8cfc2-200d-40bc-9bab-217e3f310a9c"
+      ]
+    },
+    "9378830e-7376-49a4-a68d-e2f94de65655": {
+      "type": "announcement-bar",
+      "disabled": false,
+      "settings": {
+        "type_annoncement": "Promotion",
+        "promotion_text": "Promotion",
+        "promo_type": "Discount",
+        "enable_country_selector": true,
+        "enable_language_selector": true,
+        "allow_social_links": false
+      },
+      "blocks": {
+      },
+      "block_order": [
+
+      ]
+    },
+    "header": {
+      "disabled": false,
+      "settings": {
+      },
+      "blocks": {
+        "44e68100-b406-4068-9ed9-3aa8f33da9b0": {
+          "type": "shopify:\/\/apps\/app-wishlist\/blocks\/wishlist-logo\/c9c2c3c8-8744-4fe7-90f5-f62b22a092cc",
+          "settings": {
+          }
+        },
+        "6aa7cd17-a5eb-4b44-81c4-63f61b3b8830": {
+          "type": "link",
+          "settings": {
+            "link_url": "shopify:\/\/collections\/ski-collection",
+            "text_display": "SKI"
+          }
+        },
+        "4d1a5f3f-d224-4503-9fed-18c9738f18c2": {
+          "type": "link",
+          "settings": {
+            "link_url": "shopify:\/\/collections\/hydrogen",
+            "text_display": "Hydrogen"
+          }
+        },
+        "43fc0622-1098-4413-8058-f643fa1de01c": {
+          "type": "link",
+          "settings": {
+            "link_url": "shopify:\/\/collections\/automated-collection",
+            "text_display": "automated"
+          }
+        }
+      },
+      "block_order": [
+        "account",
+        "44e68100-b406-4068-9ed9-3aa8f33da9b0",
+        "cart",
+        "6aa7cd17-a5eb-4b44-81c4-63f61b3b8830",
+        "4d1a5f3f-d224-4503-9fed-18c9738f18c2",
+        "43fc0622-1098-4413-8058-f643fa1de01c"
       ]
     }
   },
