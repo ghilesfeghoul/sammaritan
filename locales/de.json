@@ -637,6 +637,156 @@
         "additional_information": {
           "title": "Weitere Informationen"
         }
+      },
+      "thank_you": {
+        "picked_up_description_html": "Ihre Bestellung wurde am %{date} in %{location_name} abgeholt.",
+        "contact_us": "Kontaktiere uns",
+        "contact_us_lowercase": "kontaktiere uns",
+        "contact_us_html": "Brauchen Sie Hilfe? %{kontaktiere uns}",
+        "updated_time": "Vor %{time_ago} aktualisiert",
+        "failure": "Nicht zugestellt",
+        "failed_title": "Ihre Bestellung konnte nicht geliefert werden",
+        "failed_contact_merchant": "Kontaktieren Sie %{company}, um die Lieferung zu arrangieren.",
+        "failed_contact_merchant_no_company": "Kontaktieren Sie uns, um die Lieferung zu vereinbaren.",
+        "non_shippable_title": "Ihre Bestellung ist abgeschlossen",
+        "let_us_know": "Lass uns wissen",
+        "login_title": "Melden Sie sich an, um alle Bestelldetails anzuzeigen",
+        "login_description": "Ihre Bestellnummer finden Sie in der Quittung, die Sie per E-Mail erhalten haben.",
+        "login_description_phone": "Ihre Bestellnummer finden Sie in der Quittung, die Sie per SMS erhalten haben.",
+        "login_not_customer_html": "Nicht %{name}? Sie können %{link}",
+        "login_reorder_link_text": {
+          "one": "Kaufen Sie dieses Produkt auch",
+          "other": "Kaufen Sie diese Produkte auch"
+        },
+        "customer_information_hidden_fields_message": "Melden Sie sich an, um alle Kundeninformationen anzuzeigen.",
+        "cancelled_title": "Ihre Bestellung wurde storniert",
+        "cancelled_description": "Ihre Bestellung wurde am %{date} storniert. Kontaktieren Sie uns, wenn Sie Fragen haben.",
+        "order_number_label": "Bestellnummer",
+        "customer_validation_error": "Geben Sie eine gültige E-Mail-Adresse oder Bestellnummer ein.",
+        "customer_validation_error_phone": "Geben Sie eine gültige Telefonnummer oder Bestellnummer ein.",
+        "login": "Anmeldung",
+        "unfulfilled_items_title": "Vorbereitung für den Versand",
+        "unfulfilled_items_description": "Wir bereiten diese Artikel derzeit für den Versand vor.",
+        "marker": {
+          "current": "Aktueller Versandort",
+          "shipping": "Lieferanschrift"
+        },
+        "pick_up_in_store_marker": {
+          "current": "Aktueller Versandort",
+          "shipping": "Treffpunkt"
+        },
+        "fulfillment": {
+          "fulfilled_table_title": "Artikel in dieser Lieferung",
+          "unfulfilled_table_title": "Artikel werden für den Versand vorbereitet",
+          "product_image_label": "Produktbild",
+          "description_label": "Beschreibung",
+          "quantity_label": "Menge"
+        },
+        "order_updates_description_missing": "Sie erhalten keine Versandaktualisierungen.",
+        "order_updates_subscribe_to_email_notifications": "Erhalten Sie Versandaktualisierungen per E-Mail",
+        "order_updates_subscribe_to_email_or_phone_notifications": "Erhalten Sie Versandaktualisierungen per E-Mail oder SMS",
+        "order_updates_subscribe_to_phone_notifications": "Erhalten Sie Versandaktualisierungen per SMS",
+        "order_updates_submit_subscription": "Einreichen",
+        "buy_with_prime_tracking_button_label": "Verfolgen und verwalten Sie „Buy with Prime“-Bestellungen",
+        "track_shipment": "Sendung verfolgen",
+        "other_options": "Andere Optionen",
+        "delivery_information_label": "Lieferinformationen:",
+        "gift_card_sent_confirmation": "Geschenkkarten verschickt",
+        "qr_code": {
+          "send_link_to_phone": "Oder senden Sie einen Link an Ihr Telefon",
+          "title": "Verfolgen Sie auf Ihrem Telefon"
+        },
+        "shop_qr_with_sms_upsell": {
+          "qr_code": {
+            "title": "Scannen Sie mit Ihrem Telefon"
+          },
+          "sms": {
+            "title": "Oder senden Sie einen Link an Ihr Telefon"
+          }
+        },
+        "view_business_customer_account": "Konto ansehen",
+        "breadcrumbs_submitted": "Eingereicht",
+        "breadcrumbs_in_review": "Im Rückblick",
+        "breadcrumbs_confirmed": "Bestätigt",
+        "missing_shipping_address_banner": {
+          "title": "Für die Bestellung ist keine Lieferadresse angegeben",
+          "text_html": "%{contact_us}, um Ihre Adresse hinzuzufügen",
+          "contact_us": "Kontaktiere uns"
+        },
+        "first_payment_complete": "Erste Zahlung abgeschlossen",
+        "in_store_purchase": "Kauf im Laden",
+        "branded_promise": {
+          "shop_promise": {
+            "confirmed": {
+              "guaranteed_on_time": "Lieferung garantiert bis %{date} mit",
+              "on_time": "Lieferung bis %{date} mit"
+            },
+            "in_transit": {
+              "guaranteed_on_time": "Lieferung garantiert bis %{date} mit",
+              "on_time": "Lieferung bis %{date} mit",
+              "guaranteed_delayed": "Ihre Lieferung ist bis zum %{date} nicht wie erwartet eingetroffen. Sobald es eintrifft, können Sie bei uns einen Anspruch geltend machen",
+              "delayed": "Ihre Lieferung, die bis zum %{date} erwartet wird, hat Verspätung."
+            },
+            "out_for_delivery": {
+              "guaranteed_on_time": "Lieferung garantiert bis %{date} mit",
+              "on_time": "Lieferung bis %{date} mit",
+              "guaranteed_delayed": "Ihre Lieferung ist bis zum %{date} nicht wie erwartet eingetroffen. Sobald es eintrifft, können Sie bei uns einen Anspruch geltend machen",
+              "delayed": "Ihre Lieferung, die bis zum %{date} erwartet wird, hat Verspätung."
+            },
+            "delivered": {
+              "guaranteed_on_time": "Pünktlich geliefert mit",
+              "on_time": "Geliefert am %{date} mit",
+              "guaranteed_delayed": "Da Ihre Lieferung nach dem erwarteten Datum %{date} eingetroffen ist, haben Sie möglicherweise Anspruch auf %{shop_cash} mit",
+              "delayed": "Geliefert am %{date}, ursprünglich erwartet am %{original_delivery_date}"
+            }
+          }
+        },
+        "location_title": "Standort",
+        "thank_you_ready_for_picked_up": "Ihre Bestellung wurde bei %{address} abgeholt.",
+        "ready_for_delivery": "Bereit zur Auslieferung",
+        "order_updates_subscribe_to_email_notifications_failed": "Wir können diese E-Mail nicht für Aktualisierungen speichern. Bitte versuchen Sie es erneut oder verwenden Sie eine andere E-Mail-Adresse.",
+        "order_updates_subscribe_to_email_notifications_email_already_exists": "Die von Ihnen eingegebene E-Mail existiert bereits.",
+        "subscriptions_management": {
+          "title": "Abonnement",
+          "description": "Gehen Sie weiter zu Ihrem Konto, um Ihre Abonnements anzuzeigen und zu verwalten.",
+          "button_label": "Verwalten Sie Ihr Abonnement"
+        },
+        "manage_order_label": "Verwalten Sie Ihre Bestellung",
+        "gift_card_confirmation_by_text_typ": {
+          "one": "Sie erhalten in wenigen Minuten eine SMS mit Ihrer Geschenkkarte.",
+          "other": "Sie erhalten in wenigen Minuten eine SMS mit Ihren Geschenkkarten."
+        },
+        "gift_card_confirmation_by_email_typ": {
+          "one": "Sie erhalten in wenigen Minuten eine E-Mail mit Ihrer Geschenkkarte.",
+          "other": "Sie erhalten in wenigen Minuten eine E-Mail mit Ihren Geschenkkarten."
+        },
+        "gift_card_email_title": {
+          "one": "Geschenkgutschein wurde per E-Mail verschickt",
+          "other": "Geschenkgutscheine wurden per E-Mail verschickt"
+        },
+        "gift_card_text_title": {
+          "one": "Geschenkgutschein wurde per SMS verschickt",
+          "other": "Geschenkgutscheine wurden per SMS verschickt"
+        },
+        "resend_gift_cards_by_email": "E-Mail zurücksenden",
+        "resend_gift_cards_by_text": "SMS erneut senden",
+        "gift_card_resent_confirmation": {
+          "one": "Geschenkkarte wurde erneut gesendet.",
+          "other": "Geschenkkarten wurden erneut verschickt."
+        },
+        "gift_card_resend_failure": {
+          "one": "Beim erneuten Versenden Ihrer Geschenkkarte ist ein Problem aufgetreten. Versuchen Sie es erneut oder kontaktieren Sie uns.",
+          "other": "Beim erneuten Versenden Ihrer Geschenkkarten ist ein Problem aufgetreten. Versuchen Sie es erneut oder kontaktieren Sie uns."
+        }
+      },
+      "review": {
+        "title": "Rezension",
+        "review_title": "Überprüfen Sie die Bestellung",
+        "checkout_as_guest": "Als Gast auschecken",
+        "blocks": {
+          "contact_method_title": "Kontakt",
+          "billing_address_title": "Abrechnung"
+        }
       }
     },
     "filters": {
@@ -1169,8 +1319,71 @@
         "expand_events_label": "Zeige Details",
         "hide_events_label": "Details ausblenden",
         "ineligible_return_message": "In dieser Bestellung sind keine Artikel für eine Rückgabe berechtigt.",
-        "ineligible_return_message_when_returned": "Es sind keine weiteren Artikel in dieser Bestellung für eine Rückgabe berechtigt."
-      }
+        "ineligible_return_message_when_returned": "Es sind keine weiteren Artikel in dieser Bestellung für eine Rückgabe berechtigt.",
+        "print_shipping_label": "Versandetikett drucken",
+        "return_and_refund_modal_header": "Rückgaberecht",
+        "tracking_number": "Tracking-Nummer:"
+      },
+      "shipping": {
+        "address": "Lieferanschrift",
+        "address_map_marker": "Lieferanschrift",
+        "method": "Versandart",
+        "summary": "Versand",
+        "free": "Frei",
+        "free_shipping_discount": "Kostenloser Versand",
+        "one_time": "Einmaliger Versand",
+        "subscription": "Abonnementversand"
+      },
+      "pickup": {
+        "pickup": "Abholen",
+        "pickup_location": "Treffpunkt"
+      },
+      "show_items": "Artikel anzeigen",
+      "show_order_summary": "Bestellübersicht anzeigen",
+      "hide_order_summary": "Bestellübersicht ausblenden",
+      "subtitle": "Bestätigt am {{date}}",
+      "subtotal": "Zwischensumme",
+      "summary_list_title_accessibility_label": "Auftragspositionen",
+      "summary_title": "Bestellübersicht",
+      "summary_totals_title_accessibility_label": "Bestellsummen",
+      "shop_order_tracking": {
+        "download_shop_to_track": "Laden Sie Shop herunter, um das Paket zu verfolgen",
+        "track_order_with_shop": "Bestellung im Shop verfolgen",
+        "title_header": "Scannen Sie mit Ihrem Telefon",
+        "real_time_delivery_updates": "Der Shop sendet Ihnen in Echtzeit Lieferaktualisierungen, sobald Ihre Bestellung versandt wurde."
+      },
+      "edit_summary": {
+        "added": "Hinzugefügt",
+        "added_with_quantity": "{{quantity}} hinzugefügt",
+        "removed": "ENTFERNT",
+        "removed_with_quantity": "{{quantity}} entfernt",
+        "updated_at": "Ihre Bestellung wurde am {{date}} aktualisiert",
+        "returned": "Ist zurückgekommen",
+        "returned_with_quantities": "{{delta}} von {{total}} zurückgegeben",
+        "removed_with_quantities": "{{delta}} von {{total}} entfernt"
+      },
+      "shop_pay": {
+        "order_completed_with": "Bestellung abgeschlossen mit",
+        "learn_more": "Erfahren Sie mehr"
+      },
+      "taxes": "Steuern",
+      "duties": "Aufgaben",
+      "ok_duties_tooltip": "Diese Bestellung wird aus einem anderen Land versendet, daher wurden Ihrer Bestellsumme Zölle hinzugefügt.",
+      "error_duties_tooltip": "Da diese Bestellung aus einem anderen Land verschickt wird, können bei der Lieferung Zölle und Steuern anfallen.",
+      "zero_duties_tooltip": "Diese Bestellung wird aus einem anderen Land versendet. Für Bestellungen in diesem Wert werden keine Zölle erhoben.",
+      "tip": "Tipp",
+      "title": "Bestellen Sie {{name}}",
+      "total": "Gesamt",
+      "unit_price": "{{price}} \/Stück",
+      "pagination": {
+        "load_more": "Mehr laden",
+        "load_more_accessibility_label": "Laden Sie weitere Artikel",
+        "loading_accessibility_label": "Artikel werden geladen"
+      },
+      "login_to_view_all_order_details": "Melden Sie sich an, um alle Bestelldetails anzuzeigen.",
+      "log_in": "Anmeldung",
+      "logged_in_account_no_permission_to_order": "Sie sind als {{email}} angemeldet. Dieses Konto ist nicht berechtigt, diese Bestellung zu verwalten.",
+      "log_in_to_a_different_account": "Melden Sie sich bei einem anderen Konto an"
     },
     "payment_method_brands": {
       "discover": "Entdecken"
@@ -1183,6 +1396,65 @@
       "subscription_policy": "Abonnementbedingungen",
       "terms_of_sale": "Verkaufsbedingungen",
       "terms_of_service": "Nutzungsbedingungen"
+    },
+    "addresses": {
+      "add_button": "Adresse hinzufügen",
+      "add_button_text": "Hinzufügen",
+      "add_button_accessibility_label": "Adresse hinzufügen",
+      "back_button": "Zurück",
+      "back_button_accessibility_label": "Zurück zur Bearbeitungsadresse {{address}}",
+      "add_address_banner": "Fügen Sie Adressen hinzu, die beim Bezahlvorgang verwendet werden sollen",
+      "no_addresses_banner": "Keine Adressen hinzugefügt",
+      "address_deleted_notification": "Adresse gelöscht",
+      "cancel_adding_address_accessibility_label": "Hinzufügen der Adresse abbrechen",
+      "cancel_deletion_button": "Stornieren",
+      "cancel_deletion_button_accessibility_label": "Löschen von {{address}} abbrechen",
+      "default_address": {
+        "title": "Standardadresse",
+        "title_accessibility_label": "Standardadresse: {{address}}"
+      },
+      "delete_button": "Löschen",
+      "delete_button_accessibility_label": "{{address}} löschen",
+      "delete_confirmation_button": "Adresse löschen",
+      "delete_confirmation_button_accessibility_label": "{{address}} löschen",
+      "delete_confirmation_message": "Adresse löschen? Bestehende Bestellungen sind davon nicht betroffen.",
+      "delete_confirmation_title": "Adresse löschen?",
+      "delete_confirmation_description": "Bestehende Bestellungen sind davon nicht betroffen.",
+      "edit_button": "Bearbeiten",
+      "edit_button_accessibility_label": "Bearbeiten Sie {{address}}",
+      "edit_section_accessibility_label": "Bearbeiten Sie {{address}}",
+      "edit_modal_title": {
+        "default": "Adresse bearbeiten",
+        "billing": "Rechnungsadresse bearbeiten",
+        "shipping": "Lieferadresse bearbeiten"
+      },
+      "loading_accessibility_message": "Adresse wird geladen",
+      "loading_addresses_accessibility_message": "Adressen werden geladen",
+      "loading_billing_accessibility_message": "Rechnungsadresse wird geladen",
+      "loading_finished_accessibility_message": "Neue Seite mit Adressen wurde geladen",
+      "loading_shipping_accessibility_message": "Versandadresse wird geladen",
+      "pagination": {
+        "load_more": "Mehr laden",
+        "load_more_accessibility_label": "Weitere Adressen laden"
+      },
+      "save_new_address_accessibility_label": "Adresse speichern",
+      "title": "Adressen",
+      "billing_address_dropdown_placeholder": "Rechnungsadresse"
+    },
+    "address_form": {
+      "attention": "Aufmerksamkeit",
+      "attention_help_text": "Der Name einer Person oder Abteilung",
+      "auto_complete_close_accessibility_label": "Schließen Sie Vorschläge",
+      "auto_complete_title": "Vorschläge",
+      "billing_address": "Als Rechnungsadresse verwenden",
+      "cancel": "Stornieren",
+      "cancel_accessibility_label": "Bearbeiten der Adresse {{address}} abbrechen",
+      "creation_success_notification": "Adresse hinzugefügt",
+      "default_address": "Dies ist meine Standardadresse",
+      "default_address_creation_success_notification": "Standardadresse hinzugefügt",
+      "default_address_update_success_notification": "Standardadresse aktualisiert",
+      "loading_add_form_accessibility_message": "Neues Adressformular wird geladen",
+      "loading_edit_form_accessibility_message": "Formular zum Bearbeiten der Adresse wird geladen"
     }
   },
   "general": {
