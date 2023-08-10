@@ -4,5 +4,18 @@
     "market": "fr"
   },
   "sections": {
+    "template": {
+      "settings": {
+      },
+      "blocks": {
+        "grid": {
+          "settings": {
+            "products_per_page": 12,
+            "cols_per_row": "3",
+            "mobile_cols_per_row": "2"
+          }
+        }
+      }
+    }
   }
 }
