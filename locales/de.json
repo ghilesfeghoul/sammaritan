@@ -353,6 +353,326 @@
         "gift_card_invalid": "Die Geschenkkarte „••••%{last_four_characters}“ ist nicht mehr gültig",
         "vaulting_agreement_blank": "Um fortzufahren, müssen Sie Ihre neue Kreditkarte speichern, da die Zahlung für diese Bestellung zu einem späteren Zeitpunkt erfolgt."
       }
+    },
+    "filters": {
+      "availability": {
+        "value": {
+          "out_of_stock": "Ausverkauft"
+        }
+      },
+      "vendor": {
+        "label": "Marke"
+      },
+      "price": {
+        "label": "Preis"
+      },
+      "product_type": {
+        "label": "Produktart"
+      },
+      "boolean": {
+        "true_label": "Ja",
+        "false_label": "NEIN"
+      },
+      "tags": {
+        "label": "Weitere Filter"
+      }
+    },
+    "search": {
+      "sorting": {
+        "relevance": "Relevanz",
+        "price_ascending": "Preis niedrig bis hoch",
+        "price_descending": "Preis, hoch bis niedrig"
+      }
+    },
+    "page_titles": {
+      "blog_or_article_with_error": "Fehler – %{title}",
+      "products": "Produkte",
+      "shopping_cart": "Dein Einkaufswagen",
+      "account": "Konto",
+      "create_account": "Benutzerkonto erstellen",
+      "reset_account": "Konto zurücksetzen",
+      "addresses": "Adressen",
+      "order": "Bestellen Sie %{name}",
+      "search": "Suchen",
+      "search_results": {
+        "one": "Suche: %{count} Ergebnis für „%{terms}“ gefunden",
+        "other": "Suche: %{count} Ergebnisse für „%{terms}“ gefunden"
+      },
+      "collections": "Sammlungen",
+      "not_found": "404 Nicht gefunden",
+      "challenge": "Herausforderung",
+      "checkpoint": "Kontrollpunkt"
+    },
+    "cart": {
+      "discounts_with_count": "%{count} Rabatte wurden angewendet"
+    },
+    "challenge": {
+      "message": "Um fortzufahren, teilen Sie uns mit, dass Sie kein Roboter sind.",
+      "error": "Ihre Antwort war nicht korrekt. Bitte versuchen Sie es erneut.",
+      "submit_button_text": "Einreichen"
+    },
+    "checkpoint": {
+      "message": "Lösen Sie das Captcha, um fortzufahren",
+      "error": "Die Captcha-Validierung ist fehlgeschlagen",
+      "submit_button_text": "Einreichen"
+    },
+    "store_availability": {
+      "pick_up_time": {
+        "one_hour": "Normalerweise in 1 Stunde fertig",
+        "two_hours": "Normalerweise in 2 Stunden fertig",
+        "four_hours": "Normalerweise in 4 Stunden fertig",
+        "twenty_four_hours": "Normalerweise innerhalb von 24 Stunden fertig",
+        "two_to_four_days": "Normalerweise in 2-4 Tagen fertig",
+        "five_or_more_days": "Normalerweise in mehr als 5 Tagen fertig",
+        "zero_to_two_hours": "Normalerweise in 2 Stunden fertig",
+        "two_to_four_hours": "Normalerweise in 4 Stunden fertig",
+        "immediately": "Jetzt zur Abholung bereit",
+        "next_day": "Bereit zur Abholung am nächsten Tag"
+      }
+    }
+  },
+  "customer_accounts": {
+    "enable_javascript": "Um Ihr Konto anzuzeigen, aktivieren Sie JavaScript in Ihren Browsereinstellungen oder melden Sie sich mit einem anderen Browser an.",
+    "navigation_and_structure": {
+      "account_menu": {
+        "hide_accessibility_label": "Kontomenü ausblenden",
+        "label": "Konto",
+        "show_accessibility_label": "Kontomenü anzeigen",
+        "nav_accessibility_label": "Kontonavigation",
+        "open_menu_accessibility_label": "Öffnen Sie die Kontonavigation",
+        "close_menu_accessibility_label": "Schließen Sie die Kontonavigation",
+        "loading_message": "Kontonavigation wird geladen"
+      },
+      "action_menu_accessibility_label": "Mehr Aktionen",
+      "close_menu_accessibility_label": "Hauptnavigation schließen",
+      "contact_email_subject": "Kontakt vom Online-Shop {{shopName}}",
+      "contact_link": "Kontaktiere uns",
+      "delete_confirmation": {
+        "cancel": "Stornieren",
+        "delete": "Löschen"
+      },
+      "dismiss_toast": "Zurückweisen",
+      "document_title": "{{sectionName}} – {{shopName}} – Konto",
+      "go_to_store_link": "Zum Laden gehen",
+      "loading_message": "Wird geladen",
+      "log_out_link": "Ausloggen",
+      "logout_overlay_label": "Ich melde mich ab...",
+      "nav_label_accessibility_label": "Hauptnavigation",
+      "navigation_accessibility_message": "Sie haben zu {{sectionName}} navigiert",
+      "open_menu_accessibility_label": "Hauptnavigation öffnen",
+      "orders_link_label": "Aufträge",
+      "shop_logo_accessibility_label": "{{shopName}} Logo",
+      "subscriptions_link_label": "Abonnements"
+    },
+    "account_information": {
+      "loading_accessibility_message": "Kontoinformationen werden geladen",
+      "loading_finished_accessibility_message": "Kontoinformationen wurden geladen",
+      "profile_card": {
+        "cancel": "Stornieren",
+        "cancel_accessibility_label": "Bearbeiten des Profils abbrechen",
+        "edit": "Bearbeiten",
+        "edit_accessibility_label": "Profil bearbeiten",
+        "email_help_text": "Die für die Anmeldung verwendete E-Mail-Adresse kann nicht geändert werden",
+        "first_name": "Vorname",
+        "last_name": "Familienname, Nachname",
+        "no_name_provided_accessibility_label": "Kein Name hinzugefügt",
+        "phone_number_help_text": "Die für die Anmeldung verwendete Telefonnummer kann nicht geändert werden",
+        "save": "Speichern",
+        "save_accessibility_label": "Profil sichern",
+        "title": "Profil"
+      },
+      "profile_update_confirmation_message": "Profil aktualisiert",
+      "title": "Kontoinformationen",
+      "people": {
+        "pagination": {
+          "load_more": "Mehr laden",
+          "load_more_accessibility_label": "Laden Sie mehr Leute",
+          "loading_accessibility_label": "Leute werden geladen"
+        }
+      },
+      "add_button": "Hinzufügen"
+    },
+    "orders": {
+      "list_layout_accessibility_label": "Layoutoptionen",
+      "list_title": "Aufträge",
+      "order_list": {
+        "column_headers": {
+          "order": "Befehl",
+          "items": "Artikel",
+          "total": "Gesamt"
+        },
+        "delivered": "Geliefert am {{date}}",
+        "empty_state_order_source_description": "Hier werden nur Bestellungen angezeigt, die von {{email}} aufgegeben wurden.",
+        "empty_state_subtitle": "Gehen Sie zum Geschäft, um eine Bestellung aufzugeben.",
+        "empty_state_title": "Noch keine Bestellungen",
+        "empty_state_title_for_pending_orders": "Keine ausstehenden Bestellungen",
+        "estimated_shortform": "Europäische Sommerzeit. {{date}}",
+        "estimated_delivery": "Voraussichtliche Lieferung {{date}}"
+      }
+    },
+    "B2B": {
+      "draft_order_details": {
+        "payment_status": {
+          "draft": {
+            "submitted": {
+              "description": "Senden Sie die Zahlung, um diese Bestellung zu bestätigen.",
+              "title": "Bezahlen Sie zur Bestätigung"
+            }
+          },
+          "paid": {
+            "title": "Bezahlt",
+            "title_with_date": "Bezahlt am {{date}}",
+            "description": "Ihre Bestellung ist vollständig bezahlt."
+          },
+          "refund": {
+            "title": "Erstattet",
+            "title_with_date": "Erstattet am {{date}}",
+            "description_full_refund": "Sie haben für diese Bestellung eine vollständige Rückerstattung erhalten.",
+            "description_single_refund": "Sie haben für diese Bestellung eine teilweise Rückerstattung erhalten.",
+            "description_multiple_refunds": "Sie haben für diese Bestellung eine teilweise Rückerstattung erhalten."
+          },
+          "canceled": {
+            "title": "Zahlung storniert",
+            "description": "Ihnen werden keine Kosten berechnet."
+          },
+          "pay_now": "Zahlen Sie jetzt",
+          "pay_now_accessibility_label": "Bezahlen Sie jetzt für die Bestellung {{orderName}}",
+          "title": "Zahlungsstatus"
+        },
+        "order_timeline": {
+          "expand_events_label": "Zeige Details",
+          "expand_events_accessibility_label": "Details zum Bestellentwurf anzeigen",
+          "hide_events_label": "Details ausblenden",
+          "hide_events_accessibility_label": "Details zum Bestellentwurf ausblenden"
+        },
+        "subtitle": "Eingereicht am {{date}}",
+        "title": "Bestellen Sie {{name}}"
+      },
+      "payment_methods": {
+        "payment_delete": {
+          "description_without_replacement": "Diese Zahlungsmethode wird für zukünftige Einkäufe an diesem Standort nicht mehr verfügbar sein.",
+          "description_with_replacement": "Das Löschen dieser Zahlungsmethode wirkt sich auf vorautorisierte Zahlungen für diesen Standort aus. Ersetzen Sie es durch eine alternative Zahlungsmethode, um weiterhin anstehende Bestellungen zu erhalten."
+        },
+        "payment_details": {
+          "order_label": "Bestellen Sie {{name}}",
+          "draft_label": "Bestellentwurf {{name}}"
+        }
+      },
+      "purchase_order_number": {
+        "add_accessibility_label": "Bestellnummer hinzufügen",
+        "add_modal_title": "Bestellnummer hinzufügen",
+        "cancel": "Stornieren",
+        "close_modal_accessibility_label": "Bestellnummer modal schließen",
+        "discard": "Verwerfen",
+        "discard_changes_modal_title": "Änderungen verwerfen?",
+        "edit_accessibility_label": "Bestellnummer bearbeiten",
+        "edit_modal_title": "Bestellnummer bearbeiten",
+        "empty_state": "Keine Bestellnummer",
+        "modal_po_number_input_label": "Bestellnummer",
+        "modal_po_number_input_max_length_error": "Bestellnummern haben maximal {{maxLength}} Zeichen.",
+        "save": "Speichern",
+        "title": "Bestellnummer {{poNumber}}"
+      }
+    },
+    "errors": {
+      "address_deletion_error": {
+        "description": "Beim Löschen dieser Adresse ist ein Problem aufgetreten. Versuchen Sie es erneut oder aktualisieren Sie die Seite."
+      },
+      "addresses_loading_issue": {
+        "description": "Verbindungsfehler. Überprüfen Sie Ihre Internetverbindung und versuchen Sie es erneut."
+      },
+      "banner_title": {
+        "one": "Es liegt ein {{count}} Fehler vor",
+        "other": "Es liegen {{count}} Fehler vor"
+      },
+      "failed_address_creation": {
+        "description": "Beim Erstellen Ihrer Adresse ist ein Problem aufgetreten. Versuchen Sie, diese Seite zu aktualisieren oder überprüfen Sie Ihre Internetverbindung."
+      },
+      "failed_address_update": {
+        "description": "Beim Aktualisieren Ihrer Adresse ist ein Problem aufgetreten. Versuchen Sie, diese Seite zu aktualisieren oder überprüfen Sie Ihre Internetverbindung."
+      },
+      "load_orders_error": {
+        "title": "Bestellungen können nicht geladen werden",
+        "description": "Versuchen Sie es noch einmal oder kommen Sie später noch einmal vorbei.",
+        "retry_button": "Wiederholen"
+      },
+      "load_paypal_error": {
+        "description": "Beim Laden von PayPal ist ein Problem aufgetreten. Bitte versuche es erneut."
+      },
+      "no_access": {
+        "back_to_authentication_link": "Melden Sie sich bei einem anderen Konto an",
+        "description": "Sie sind nicht als B2B-Kunde bei {{shopName}} registriert",
+        "title": "Kein Zugang"
+      },
+      "no_access_to_locations": {
+        "description": "Sie haben keinen Zugriff auf irgendwelche Standorte"
+      },
+      "not_found": {
+        "description": "Überprüfen Sie die URL oder versuchen Sie es in ein paar Minuten erneut.",
+        "title": "Beim Laden dieser Seite ist ein Problem aufgetreten"
+      },
+      "order_not_found": {
+        "description": "Diese Bestellung existiert nicht oder Sie haben keine Berechtigung, sie anzuzeigen.",
+        "title": "Bestellung nicht gefunden"
+      },
+      "profile_update_error": {
+        "description": "Beim Aktualisieren Ihres Profils ist ein Problem aufgetreten. Versuchen Sie, diese Seite zu aktualisieren oder überprüfen Sie Ihre Internetverbindung."
+      },
+      "retry_action_label": "Wiederholen"
+    },
+    "payment_methods": {
+      "title": "Zahlungsarten",
+      "add_payment_method_button": "Zahlungsmethode hinzufügen",
+      "add_payment_method_banner": "Fügen Sie eine Zahlungsmethode hinzu, um den Checkout zu beschleunigen oder vorab autorisierte Dienste zu nutzen",
+      "no_payment_methods_banner": "Keine Zahlungsmethoden hinzugefügt",
+      "edit_payment_method_button_accessibility_label": "Bearbeiten Sie {{paymentMethodName}} mit der Endung {{lastDigits}}",
+      "edit_payment_method_brand_button_accessibility_label": "Bearbeiten Sie {{paymentMethodName}}",
+      "delete_payment_method_button": "Löschen",
+      "delete_payment_method_button_accessibility_label": "{{paymentMethodName}} löschen",
+      "back_button": "Zurück",
+      "back_button_accessibility_label": "Zurück zu {{paymentMethodStepTitle}}",
+      "generic_card": "Karte",
+      "expiration_warning_button_accessibility_label": "Ablaufwarnung für {{paymentMethodName}} mit der Endung {{lastDigits}} anzeigen",
+      "expires_soon": "Diese Karte läuft bald ab",
+      "expired": "Diese Karte ist ungültig",
+      "card_update_consent": "Diese Zahlungsart wird für zukünftige Einkäufe gespeichert.",
+      "digital_wallet_title": "Digitale Geldbörse",
+      "credit_or_debit_card_title": "Kredit- oder Debitkarte",
+      "google_pay": {
+        "loading": "Google Pay wird geladen",
+        "errors": {
+          "generic": "Es gab ein Problem mit Google Pay. Versuchen Sie es erneut oder verwenden Sie eine andere Zahlungsmethode.",
+          "missing_billing_address": "Für Google Pay ist eine Rechnungsadresse erforderlich. Bitte fügen Sie eine zu Ihrem Konto hinzu."
+        }
+      },
+      "apple_pay": {
+        "loading": "Apple Pay wird geladen",
+        "errors": {
+          "generic": "Es gab ein Problem mit Apple Pay. Versuchen Sie es erneut oder verwenden Sie eine andere Zahlungsmethode.",
+          "not_available": "Apple Pay ist auf diesem Gerät nicht verfügbar.",
+          "missing_billing_address": "Für Apple Pay ist eine Rechnungsadresse erforderlich. Bitte fügen Sie eine zu Ihrem Konto hinzu."
+        }
+      },
+      "payment_details": {
+        "title": "Details zur Zahlungsart",
+        "credit_card_details_accessibility_label": "endet mit {{lastDigits}}",
+        "billing_title": "Rechnungsadresse",
+        "card_info_title": "Karteninformationen",
+        "payment_method_expiring_on": "Läuft am {{expiryDate}} ab",
+        "payment_method_expired_on": "Abgelaufen am {{expiryDate}}",
+        "preauthorized_payments": "Vorautorisierte Zahlungen",
+        "close_payment_modal": "Schließen",
+        "close_payment_modal_accessibility_label": "Details zur Zahlungsmethode schließen",
+        "payment_method_not_found_error": "Zahlungsmethode konnte nicht gefunden werden",
+        "payment_details_loading": "Details zur Zahlungsmethode werden geladen",
+        "pre_authorized_payments": "Vorautorisierte Zahlungen",
+        "total_amount_of_subscription_line_items_left": "und {{total}} mehr",
+        "total_amount_of_subscription_line_items_left_accessibility_label": "{{totalItems}} Artikel insgesamt, es werden {{totalItemsToDisplay}} Artikel angezeigt.",
+        "next_payment_due": "Nächste Zahlung fällig am {{dueDateInMonthDayYear}}",
+        "edit_payment_method_button": "Bearbeiten",
+        "edit_payment_method_button_accessibility_label": "Zahlungsmethode bearbeiten, die auf {{lastDigits}} endet",
+        "loading_shop_pay": "Shop Pay wird geladen"
+      }
     }
   }
 }
