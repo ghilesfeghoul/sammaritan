@@ -1,7 +1,15 @@
 {
   "current": {
+    "social_facebook_link": "dsq",
+    "social_instagram_link": "gf",
+    "social_youtube_link": "az",
+    "social_twitter_link": "tr",
+    "social_medium_link": "gfe",
     "logo_width": 90,
-    "facebook_link": ""
+    "facebook_link": "",
+    "content_for_index": [
+
+    ]
   },
   "presets": {
     "Default": {

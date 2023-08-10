@@ -5,6 +5,7 @@
   },
   "sections": {
     "header": {
+      "disabled": false,
       "settings": {
         "header_selector": "Fashion"
       },
@@ -55,9 +56,50 @@
       "block_order": [
 
       ]
+    },
+    "4557c857-c99c-4d30-b7aa-2a318f7d0a64": {
+      "type": "announcement-bar",
+      "disabled": false,
+      "settings": {
+        "type_annoncement": "Other",
+        "promotion_text": "Livraison gratuite en france metropolitaine",
+        "promo_type": "Free shipping",
+        "enable_country_selector": false,
+        "enable_language_selector": false,
+        "allow_social_links": true
+      },
+      "blocks": {
+        "4dc41a6b-a4b1-432e-8d93-1392b407babb": {
+          "type": "link",
+          "settings": {
+            "link_url": "shopify:\/\/pages\/about-us",
+            "text_display": "A propos"
+          }
+        },
+        "1f90798f-e6a2-4900-b6dc-7ec86bdf31fc": {
+          "type": "link",
+          "settings": {
+            "link_url": "shopify:\/\/pages\/contact",
+            "text_display": "Contactez-nous"
+          }
+        },
+        "04e8cfc2-200d-40bc-9bab-217e3f310a9c": {
+          "type": "link",
+          "settings": {
+            "link_url": "shopify:\/\/pages\/politique-de-confidentialite",
+            "text_display": "Politique de confidentialité"
+          }
+        }
+      },
+      "block_order": [
+        "4dc41a6b-a4b1-432e-8d93-1392b407babb",
+        "1f90798f-e6a2-4900-b6dc-7ec86bdf31fc",
+        "04e8cfc2-200d-40bc-9bab-217e3f310a9c"
+      ]
     }
   },
   "order": [
+    "4557c857-c99c-4d30-b7aa-2a318f7d0a64",
     "9378830e-7376-49a4-a68d-e2f94de65655",
     "header"
   ]
