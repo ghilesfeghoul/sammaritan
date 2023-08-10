@@ -254,7 +254,85 @@
         },
         "alternative_payment_currency_total_notice": "Hinweis: Ihnen werden %{amount_due} berechnet.",
         "waiting_on_taxes_message": "Wenn Ihre Steuern nicht innerhalb der nächsten Sekunden berechnet werden, aktualisieren Sie die Seite.",
-        "waiting_on_taxes_notice": "Steuern berechnen"
+        "waiting_on_taxes_notice": "Steuern berechnen",
+        "amazon_payments_login_hint": "Sie werden aufgefordert, sich bei Amazon anzumelden.",
+        "amazon_payments_logout": "Melden Sie sich von Amazon Pay ab",
+        "amazon_payments_failed_mfa_challenge": "Die ausgewählte Zahlungsmethode konnte nicht verwendet werden. Wählen Sie eine andere Methode oder wenden Sie sich an Ihre Bank oder Ihren Kartenherausgeber.",
+        "amazon_payments_abandoned_mfa_challenge": "Ihre Zahlung konnte nicht abgeschlossen werden. Versuchen Sie es mit einer anderen Zahlungsmethode oder wenden Sie sich an Ihre Bank oder Ihren Kartenherausgeber.",
+        "amazon_payments_could_not_enqueue_authorize": "Bei der Verarbeitung Ihrer Zahlung ist ein Problem aufgetreten. Versuchen Sie es erneut oder verwenden Sie eine andere Zahlungsmethode.",
+        "title": "Zahlung",
+        "amount_left_to_pay_label": "Zahlung fällig:",
+        "discount_button_action_label": "Rabattcode anwenden",
+        "gift_card_code_label": "Geschenkkartencode",
+        "apply_gift_card_button_label": "Anwenden",
+        "gift_card_balance_label": "Gleichgewicht:",
+        "supported_card_brands_more_label": "und mehr…",
+        "detected_card_brand": "Erkannte Kartenmarke: {brand}",
+        "credit_card_vaulting_sign_in_banner_title": "Speichern Sie Ihre Kreditkarte",
+        "credit_card_vaulting_sign_in_banner_info": "Melden Sie sich an oder erstellen Sie ein Konto, um Ihre Kreditkarte für zukünftige Einkäufe zu speichern.",
+        "credit_card_vaulting_sign_in_banner_button_label": "Anmeldung",
+        "ftd_vault_credit_card_label": "Speichern Sie diese Kreditkarte für eine schnellere Kaufabwicklung in meinem Konto",
+        "card_number_label": "Kartennummer",
+        "card_number_placeholder": "Kartennummer",
+        "card_pay_with": "Bezahlen mit:",
+        "card_security_notice": "Alle Transaktionen sind sicher und verschlüsselt.",
+        "card_security_vault_notice": "Wir benötigen Ihre Daten für zukünftige Zahlungen. Alle Transaktionen sind sicher und verschlüsselt.",
+        "card_information_notice": "Alle Transaktionen sind sicher und verschlüsselt. Kreditkarteninformationen werden niemals gespeichert.",
+        "name_on_card_label": "Name auf der Karte",
+        "name_on_card_placeholder": "Name auf der Karte",
+        "card_expired": "Abgelaufen",
+        "card_expiry_label": "Ablaufdatum (MM \/ JJ)",
+        "card_expiry_placeholder": "Ablaufdatum (MM \/ JJ)",
+        "credit_card_start_month": "Startmonat",
+        "credit_card_start_year": "Startjahr",
+        "delete_customer_mandate_modal_title": "Diese Zahlungskarte entfernen?",
+        "delete_customer_mandate_modal_body": "Wenn Sie diese Karte entfernen, müssen Sie sie erneut hinzufügen, bevor Sie sie für Zahlungen verwenden können.",
+        "delete_customer_mandate_modal_confirm": "Karte entfernen",
+        "delete_customer_mandate_modal_cancel": "Stornieren",
+        "card_verification_value_label": "Sicherheitscode",
+        "card_verification_value_placeholder": "Sicherheitscode",
+        "card_verification_confirm": "Zur Verifizierung geben Sie bitte den Sicherheitscode Ihrer Karte ein.",
+        "card_expiry_date_explanation": "Ablaufdatum der Karte im Format: Monat, Monat, Jahr, Jahr",
+        "card_expiration_month_label": "Monat des Ablaufens",
+        "card_expiration_year_label": "Ablaufjahr",
+        "card_verification_value_explanation": "3-stelliger Sicherheitscode, der sich normalerweise auf der Rückseite Ihrer Karte befindet. American Express-Karten haben einen 4-stelligen Code auf der Vorderseite.",
+        "card_verification_value_explanation_amex": "4-stelliger Sicherheitscode auf der Vorderseite Ihrer Karte",
+        "card_verification_value_explanation_other": "3-stelliger Sicherheitscode auf der Rückseite Ihrer Karte",
+        "card_start_label": "Ausstellungsdatum (MM \/ JJ)",
+        "card_start_placeholder": "Ausstellungsdatum (MM \/ JJ)",
+        "card_issue_number_label": "Ausgabe Nummer",
+        "card_issue_number_placeholder": "Ausgabe Nummer",
+        "card_change_label": "Ändern",
+        "card_update_label": "Karte aktualisieren",
+        "ends_with_label": "endet mit %{last_digits}",
+        "payment_method_saved": "Zahlungsart gespeichert",
+        "card_vaulted_company_location": "Karte für diesen Standort gespeichert",
+        "expiry_long": "(Läuft %{month}\/%{year} ab)",
+        "expiry_short": "(Verfallsdatum %{Monat}\/%{Jahr})",
+        "saved_by_payment_method": "Gespeichert von %{paid_method}",
+        "pay_with_payment_method": "Bezahlen Sie mit %{paid_method}",
+        "different_credit_card_label": "Verwenden Sie eine andere Kreditkarte",
+        "same_billing_address_label": "Entspricht der Lieferadresse",
+        "different_billing_address_label": "Verwenden Sie eine andere Rechnungsadresse",
+        "billing_address_associated_with_mandate": "Verwenden Sie die mit der Zahlungsmethode verknüpfte Adresse",
+        "billing_address_associated_with_mandate_info": "Wenn Sie Ihre Rechnungsadresse ändern möchten, entfernen Sie bitte Ihre Kreditkartendaten und geben Sie sie erneut ein",
+        "free_order_notice_html": "Ihre Bestellung ist <strong>kostenlos<\/strong> . Es ist keine Zahlung erforderlich.",
+        "express_checkout_free_order": "Für eine kostenlose Bestellung werden Ihnen keine Kosten berechnet",
+        "order_covered_by_gift_cards_notice": {
+          "one": "Ihre Bestellung ist durch Ihre Geschenkkarte abgedeckt.",
+          "other": "Ihre Bestellung ist durch Ihre Geschenkkarten gedeckt."
+        },
+        "offsite_gateway_redirect_hint": "Nachdem Sie auf „%{button_label}“ geklickt haben, werden Sie zu %{gateway_label} weitergeleitet, um Ihren Kauf sicher abzuschließen.",
+        "offsite_gateway_redirect_hint_multi_currency_html": "%{gateway_label} gesamt %{total_shop_price}",
+        "receiver_payment_experience_hint": "Nach der Bestellung erhalten Sie die Zahlungsdetails. Nehmen Sie die Zahlung bei Multibanco oder online innerhalb von %{due_days} Tagen vor.",
+        "billing_address_title": "Rechnungsadresse",
+        "billing_address_description": "Wählen Sie die Adresse aus, die Ihrer Karte oder Zahlungsmethode entspricht.",
+        "billing_address_description_no_shipping_address": "Geben Sie die Adresse ein, die Ihrer Karte oder Zahlungsmethode entspricht.",
+        "no_js_credit_card_fields_redirect_hint": "Sie werden weitergeleitet, um Ihre Zahlungsinformationen hinzuzufügen.",
+        "card_fields_container_prefix": "Feldcontainer für:",
+        "card_fields_unavailable_html": {
+          "one": "Kredit- und Debitkartenzahlungen sind derzeit nicht verfügbar.<br> <a href=\"%{current_url}\">Aktualisieren Sie diese Seite<\/a> oder versuchen Sie es später noch einmal."
+        }
       },
       "payment_summary": {
         "gift_card_current_balance_notice": "Aktueller Saldo %{amount}",
@@ -521,6 +599,44 @@
         "logged_in": "Verbunden mit {{email}}",
         "shipping_line_label": "Versand",
         "payment_in_progress_title": "Zahlung läuft"
+      },
+      "shipping": {
+        "subscription_delivery_description": {
+          "recurring_order_shipping_price": "gefolgt von %{recurring_order_shipping_price}",
+          "first_order_shipping_price_included": "Erste Bestellung enthalten, gefolgt von %{recurring_order_shipping_price}",
+          "first_order_different_shipping_price": "%{first_order_shipping_price} (%{per_delivery_price} pro Lieferung), gefolgt von %{recurring_order_shipping_price}",
+          "first_n_order_free": {
+            "one": "Erste Bestellung kostenlos",
+            "other": "Die ersten %{count} Bestellungen sind kostenlos"
+          },
+          "free_for_first_n_order": {
+            "one": "Zur Erstbestellung",
+            "other": "Für die ersten %{count} Bestellungen"
+          }
+        },
+        "one_time_purchase_shipping": "Einmaliger Versand",
+        "address2_add_label": "Apartment, Suite usw. hinzufügen",
+        "duties_and_taxes_title": "Zölle und Steuern",
+        "shipping_information_required_notice": "Versandinformationen sind erforderlich. {{link}} .",
+        "shipping_information_redirect_link": "Geben Sie hier Ihre Daten ein",
+        "loading_progressive_rates": "Auf der Suche nach weiteren Tarifen…",
+        "no_other_methods_available": "Keine anderen Methoden verfügbar",
+        "duties_and_taxes_options": {
+          "ddu_title": "Bezahlung bei Zustellung",
+          "ddu_caption": "Es können zusätzliche Gebühren anfallen",
+          "ddp_title": "Zahlen Sie jetzt",
+          "ddp_caption": "Keine zusätzlichen Gebühren bei der Lieferung"
+        },
+        "shipping_method_combinations": {
+          "combination": "%{rest} und %{current}"
+        },
+        "shipping_used_as_billing_notice": "Diese wird auch als Rechnungsadresse für diese Bestellung verwendet.",
+        "address_update": "Adresse aktualisieren"
+      },
+      "localized_fields": {
+        "additional_information": {
+          "title": "Weitere Informationen"
+        }
       }
     },
     "filters": {
@@ -677,7 +793,73 @@
         "empty_state_title_for_pending_orders": "Keine ausstehenden Bestellungen",
         "estimated_shortform": "Europäische Sommerzeit. {{date}}",
         "estimated_delivery": "Voraussichtliche Lieferung {{date}}"
-      }
+      },
+      "order_status": {
+        "gift_card_resend": {
+          "other": "E-Mails erneut senden"
+        },
+        "gift_card_resend_text": {
+          "one": "Text erneut senden",
+          "other": "Texte erneut senden"
+        },
+        "gift_resend_success": {
+          "one": "Geschenkkarte erneut gesendet",
+          "other": "Geschenkkarten erneut verschickt"
+        },
+        "gift_resend_failure": {
+          "one": "Beim erneuten Versenden Ihrer Geschenkkarte ist ein Problem aufgetreten. Versuchen Sie es erneut oder kontaktieren Sie uns.",
+          "other": "Beim erneuten Versenden Ihrer Geschenkkarten ist ein Problem aufgetreten. Versuchen Sie es erneut oder kontaktieren Sie uns."
+        },
+        "gift_card_resend_description": {
+          "one": "Wenn Sie die E-Mail nicht erhalten haben, senden Sie die E-Mail erneut oder",
+          "other": "Wenn sie nicht empfangen wurden, senden Sie die E-Mails erneut oder"
+        },
+        "gift_card_resend_description_text": {
+          "one": "Wenn es nicht empfangen wurde, senden Sie die SMS erneut oder",
+          "other": "Wenn sie nicht empfangen wurden, senden Sie die Texte erneut oder"
+        },
+        "confirmed_gift_card_additional_description": {
+          "one": "Die Geschenkkarte wird in einer separaten E-Mail verschickt.",
+          "other": "Jede Geschenkkarte wird in einer separaten E-Mail versendet."
+        },
+        "confirmed_gift_card_additional_description_text": {
+          "one": "Die Geschenkkarte wird in einem separaten Text verschickt.",
+          "other": "Jede Geschenkkarte wird in einem separaten Text versendet."
+        },
+        "estimated_delivery": "Voraussichtliche Lieferung {{date}}",
+        "in_review_description": "Wir informieren Sie, wenn wir weitere Informationen benötigen oder wenn Ihre Bestellung bestätigt ist.",
+        "in_review_label": "Im Rückblick",
+        "in_review_title": "Ihre Bestellung wird überprüft",
+        "last_updated": "Zuletzt aktualisiert am {{date}}",
+        "multiple_shipments_label": "Mehrere Sendungen",
+        "no_tracking_number": "Für diese Sendung gibt es keine Sendungsverfolgungsnummer.",
+        "on_its_way_label": "Auf dem Weg",
+        "on_its_way_title": "Ihre Sendung ist unterwegs",
+        "out_for_delivery_label": "raus zur Lieferung",
+        "out_for_delivery_title": "Ihre Sendung ist zur Auslieferung bereit",
+        "resume_tracking": "Fortsetzungsverfolgung",
+        "submitted_label": "Eingereicht",
+        "submitted_description": "Überprüfen Sie die Bestell- und Zahlungsdetails.",
+        "track_shipment": "Sendung verfolgen",
+        "request_return": "Rücksendung anfordern",
+        "view_order_for_details": "Einzelheiten finden Sie in der Bestellung"
+      },
+      "status_mark_as_delivered": "Als geliefert markieren",
+      "status_title": "Bestellstatus",
+      "buy_again": "Noch einmal kaufen",
+      "buy_again_accessibility_label": "Für die Bestellung {{orderId}} erneut kaufen",
+      "manage": "Verwalten",
+      "manage_accessiblity_label": "Bestellung verwalten {{orderId}}",
+      "group_title_label": "Teil von: {{groupTitle}}",
+      "havent_received_your_delivery": "Sie haben Ihre Lieferung nicht erhalten?",
+      "didnt_pick_up_order": "Haben Sie Ihre Bestellung nicht abgeholt?",
+      "if_you_didnt_receive_this": "Wenn Sie dies nicht erhalten haben,",
+      "if_not_received": {
+        "one": "Wenn es nicht empfangen wurde,",
+        "other": "Wenn sie nicht empfangen wurden,"
+      },
+      "let_us_know": "Lass uns wissen",
+      "contact_us": "kontaktiere uns."
     },
     "B2B": {
       "draft_order_details": {
@@ -841,6 +1023,80 @@
         "edit_payment_method_button": "Bearbeiten",
         "edit_payment_method_button_accessibility_label": "Zahlungsmethode bearbeiten, die auf {{lastDigits}} endet",
         "loading_shop_pay": "Shop Pay wird geladen"
+      }
+    },
+    "order_details": {
+      "shipment_timeline": {
+        "expand_events_label": "Zeige Details",
+        "expand_events_accessibility_label": "Versanddetails der Bestellung anzeigen",
+        "hide_events_label": "Details ausblenden",
+        "hide_events_accessibility_label": "Versanddetails der Bestellung ausblenden"
+      },
+      "addresses_section_title": "Abrechnung und Versand",
+      "order_details": "Bestelldetails",
+      "order_details_skeleton_accessibility_label": "Melden Sie sich an, um alle Bestelldetails anzuzeigen.",
+      "billing_address": "Rechnungsadresse",
+      "card_ending_with": "endet mit {{lastDigits}}",
+      "contact": "Kontakt",
+      "contact_information": "Kontaktinformationen",
+      "company": "Unternehmen",
+      "fully_refunded_label": "ERSTATTET",
+      "group_title_label": "Teil von: {{groupTitle}}",
+      "discount": "Rabatt",
+      "hide_items": "Elemente ausblenden",
+      "loading": "Bestelldetails werden geladen",
+      "loading_finished_accessibility_message": "Bestelldetails wurden geladen",
+      "location": "Standort",
+      "image_gallery": {
+        "next": "Nächste Artikel anzeigen",
+        "previous": "Vorherige Artikel anzeigen"
+      },
+      "mobile_summary_toggle_button": {
+        "open": "Bestellübersicht anzeigen",
+        "closed": "Bestellübersicht ausblenden"
+      },
+      "no_data": "Keiner",
+      "no_data_provided_accessibility_label": "{{fieldName}} ist leer",
+      "not_applicable": "N \/ A",
+      "paid_amount": "Bezahlt",
+      "partially_refunded_label": "TEILWEISE ERSTATTET",
+      "payment": {
+        "status_in_review": "Zahlung fällig nach Überprüfung",
+        "status_unpaid": "Zahlung fällig am {{date}}",
+        "title": "Zahlung",
+        "card_payment_details": "endet mit {{lastDigits}} - {{formattedTransactionAmount}}",
+        "gift_card_payment_details": "endet mit {{lastDigits}} - {{formattedTransactionAmount}}",
+        "shop_pay_installments": {
+          "paid_in_installments": "Bezahlt in Raten mit Shop Pay.",
+          "view_schedule": "Zeitplan anzeigen"
+        },
+        "manual_payment_methods": {
+          "money_order": "Zahlungsanweisung – {{formattedTransactionAmount}}",
+          "cash_on_delivery": "Nachnahme (Nachnahme) – {{formattedTransactionAmount}}",
+          "bank_deposit": "Bankeinzahlung – {{formattedTransactionAmount}}"
+        }
+      },
+      "paid_with_shop_pay_installments_card": {
+        "paid_with_shop_pay_installments": "Bezahlt mit Shop Pay Raten",
+        "description": "Behalten Sie den Überblick über Ihren Zahlungsplan mit Erinnerungen in der Shop-App.",
+        "payment_reminders_button": "Erhalten Sie Zahlungserinnerungen",
+        "desktop_qr_code_content": {
+          "title": "Suchen Sie nach Erinnerungen",
+          "description": "Erhalten Sie mit Shop Erinnerungen an Ihre Ratenzahlungen."
+        }
+      },
+      "refunded_amount": "Erstattet",
+      "request_return_failed": "Bei der Verarbeitung Ihrer Anfrage ist ein Problem aufgetreten. Bitte versuche es erneut.",
+      "remaining_amount": "Übrig",
+      "marketing_section_title": "Neuigkeiten und Angebote",
+      "marketing_description": "Sie erhalten Marketing-E-Mails. Sie können sich jederzeit abmelden.",
+      "marketing_checkbox_label": "Senden Sie mir eine E-Mail mit Neuigkeiten und Angeboten",
+      "marketing_checkmark_label": "Sie haben sich für den Erhalt von Neuigkeiten und Angeboten per E-Mail angemeldet",
+      "returns": {
+        "expand_events_label": "Zeige Details",
+        "hide_events_label": "Details ausblenden",
+        "ineligible_return_message": "In dieser Bestellung sind keine Artikel für eine Rückgabe berechtigt.",
+        "ineligible_return_message_when_returned": "Es sind keine weiteren Artikel in dieser Bestellung für eine Rückgabe berechtigt."
       }
     }
   }
