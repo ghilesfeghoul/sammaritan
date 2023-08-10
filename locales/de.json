@@ -849,7 +849,57 @@
         "redirect_hint": "Sie werden aufgefordert, sich mit {{walletName}} anzumelden.",
         "logged_in": "Verbunden mit {{email}}",
         "shipping_line_label": "Versand",
-        "payment_in_progress_title": "Zahlung läuft"
+        "payment_in_progress_title": "Zahlung läuft",
+        "payment_in_progress_body": "Ihre Zahlung wird bearbeitet. Ihre Bestellung wird in Kürze abgeschlossen.",
+        "call_to_action": "Bezahlen Sie mit {{walletName}}",
+        "redirection_notice": "Nachdem Sie auf „ {{buttonLabel}} “ geklickt haben, werden Sie zu {{walletName}} weitergeleitet, um Ihren Kauf sicher abzuschließen.",
+        "errors": {
+          "unavailable": {
+            "title": "{{walletName}} nicht verfügbar",
+            "description": "{{walletName}} war nicht verfügbar. Verwenden Sie eine andere Zahlungsmethode oder versuchen Sie es später erneut.",
+            "instructions": "Es ist ein Problem mit {{walletName}} . Kehren Sie zum Geschäft zurück, um es noch einmal zu versuchen oder es auf eine andere Art und Weise auszuprobieren."
+          },
+          "generic": "Es ist ein Problem mit {{walletName}} . Versuchen Sie es erneut oder verwenden Sie eine andere Zahlungsmethode.",
+          "terminal": "Es ist ein Problem mit {{walletName}} . Bitte verwenden Sie eine andere Zahlungsmethode.",
+          "detour": {
+            "stock_problems": "Einige Artikel sind nicht mehr verfügbar. Schließen Sie {{walletName}} und versuchen Sie es erneut.",
+            "price_change": "Die Preise einiger Artikel haben sich geändert. Schließen Sie {{walletName}} , um Ihre Bestellung zu überprüfen, und versuchen Sie es erneut.",
+            "queue": "Sie wurden zur Kasse in die Warteschlange gestellt. Schließen Sie {{walletName}} um fortzufahren."
+          },
+          "unsupported": {
+            "address": "Der Händler kann nicht an diese Adresse liefern",
+            "postal_code": "Dieser Standort wird nicht unterstützt"
+          },
+          "outdated": {
+            "shipping_method": "Die Versandoptionen für Ihre Bestellung haben sich geändert. Überprüfen Sie Ihre Auswahl."
+          },
+          "invalid": {
+            "shipping_address": "Geben Sie eine gültige Lieferadresse ein",
+            "billing_address": "Geben Sie eine gültige Rechnungsadresse ein",
+            "shipping_option": "Wählen Sie eine gültige Versandoption",
+            "email": "Geben Sie eine gültige E-Mail-Adresse ein",
+            "zone": "Geben Sie ein gültiges Bundesland\/eine gültige Provinz ein",
+            "postal_code": "Geben Sie eine gültige Postleitzahl ein",
+            "reduction_code": "Geben Sie einen gültigen Rabattcode oder eine Geschenkkarte ein"
+          },
+          "missing": {
+            "first_name": "Geben Sie einen Vornamen ein",
+            "last_name": "Geben Sie einen Nachnamen ein",
+            "address1": "Gib eine Adresse ein",
+            "address2": "Betreten Sie ein Apartment, eine Suite usw.",
+            "city": "Geben Sie eine Stadt ein",
+            "province": "Wählen Sie ein Bundesland\/eine Provinz aus",
+            "country": "Wählen Sie ein Land\/eine Region aus",
+            "zip": "Geben Sie eine Postleitzahl ein",
+            "phone": "Eine Telefonnummer eingeben"
+          },
+          "formatting": {
+            "name_contains_emojis": "Löschen Sie Emojis aus Ihrem Namen",
+            "postal_code_contains_emoji": "Löschen Sie Emojis aus Ihrer Postleitzahl",
+            "first_name_too_long": "Der Vorname enthält zu viele Buchstaben",
+            "last_name_too_long": "Nachname enthält zu viele Buchstaben"
+          }
+        }
       },
       "shipping": {
         "subscription_delivery_description": {
@@ -1275,8 +1325,10 @@
     "filters": {
       "availability": {
         "value": {
-          "out_of_stock": "Ausverkauft"
-        }
+          "out_of_stock": "Ausverkauft",
+          "in_stock": "Auf Lager"
+        },
+        "label": "Verfügbarkeit"
       },
       "vendor": {
         "label": "Marke"
@@ -1346,6 +1398,224 @@
         "two_to_four_hours": "Normalerweise in 4 Stunden fertig",
         "immediately": "Jetzt zur Abholung bereit",
         "next_day": "Bereit zur Abholung am nächsten Tag"
+      }
+    },
+    "pagination": {
+      "previous": "Vorherige",
+      "next": "Nächste"
+    },
+    "links": {
+      "powered_by_shopify": "Unterstützt von Shopify",
+      "learn_more": "Erfahren Sie mehr"
+    },
+    "feed": {
+      "more": "Mehr"
+    },
+    "attributes": {
+      "password": "Passwort",
+      "password_confirmation": "Die Passwortbestätigung",
+      "first_name": "Vorname",
+      "last_name": "Familienname, Nachname",
+      "body": "Körper",
+      "signature": "Adresse"
+    },
+    "addresses": {
+      "zip_code": "PLZ",
+      "postal_code": "Postleitzahl",
+      "postcode": "Postleitzahl",
+      "pincode": "Geheimzahl",
+      "prefecture": "Präfektur",
+      "province": "Provinz",
+      "state": "Zustand",
+      "state_and_territory": "Staat\/Territorium",
+      "county": "Bezirk",
+      "emirate": "Emirat",
+      "governorate": "Gouvernement",
+      "confirm": "Sind Sie sicher, dass Sie diese Adresse löschen möchten?"
+    },
+    "collections": {
+      "sorting": {
+        "manual": "Hervorgehoben",
+        "best_selling": "Meistverkauft",
+        "az": "Alphabetisch: AZ",
+        "za": "Alphabetisch: ZA",
+        "price_ascending": "Preis niedrig bis hoch",
+        "price_descending": "Preis, hoch bis niedrig",
+        "date_ascending": "Datum, alt bis neu",
+        "date_descending": "Datum, neu bis alt"
+      }
+    },
+    "errors": {
+      "blank": "darf nicht leer sein",
+      "blocked_address": "Dieser Standort wird nicht unterstützt.",
+      "credit_card_session_expired": "Die Kreditkartenautorisierung ist abgelaufen. Bitte geben Sie Ihre Zahlungsinformationen erneut ein. Ihre Karte wurde nicht belastet.",
+      "empty": "kann nicht leer sein",
+      "invalid_email": "muss eine gültige E-Mail-Adresse sein",
+      "discount_disabled": "Dieser Rabatt wurde deaktiviert",
+      "discount_expired": "Dieser Rabatt ist nicht mehr gültig",
+      "discount_limit_reached": "Dieser Rabatt hat sein Nutzungslimit erreicht",
+      "discount_not_found": "Es konnte kein gültiger Rabatt gefunden werden, der dem eingegebenen Code entspricht",
+      "customer_already_used_once_per_customer_discount_notice": "Dieser Rabatt hat sein Nutzungslimit erreicht",
+      "gift_card_already_applied": "Der Code wurde bereits auf Ihren Checkout angewendet",
+      "gift_card_code_invalid": "Code ist ungültig",
+      "gift_card_currency_mismatch": "Ihre Geschenkkarte ist in %{gift_card_currency} ausgestellt. Kontaktieren Sie uns für eine Neuausstellung in %{checkout_currency}.",
+      "gift_card_depleted": "Auf dieser Geschenkkarte ist kein Guthaben mehr vorhanden",
+      "gift_card_disabled": "Die Geschenkkarte ist deaktiviert",
+      "gift_card_expired": "Die Geschenkkarte ist abgelaufen",
+      "invalid": "ist ungültig",
+      "bad_domain": "enthält einen ungültigen Domänennamen",
+      "taken": "ist bereits vergeben",
+      "contains_html_tags": "darf keine HTML-Tags enthalten",
+      "too_short": "ist zu kurz (mindestens %{count} Zeichen)",
+      "too_long": "ist zu lang (maximal %{count} Zeichen)",
+      "password_mismatch": "muss mit dem angegebenen Passwort übereinstimmen",
+      "contains_spaces": "beginnt oder endet mit Leerzeichen.",
+      "email_domain_invalid": "Anbieter wird nicht unterstützt",
+      "invalid_for_country": "ist nicht gültig für %{country}",
+      "invalid_for_country_and_province": "ist nicht gültig für %{province} und %{country}",
+      "invalid_province_in_country": "ist keine gültige Provinz in %{country}",
+      "invalid_state_in_country": "ist kein gültiger Staat in %{country}",
+      "invalid_region_in_country": "ist keine gültige Region in %{country}",
+      "less_than_or_equal_to": "muss kleiner oder gleich %{count} sein",
+      "not_supported": "wird nicht unterstützt",
+      "full_name_required": "Geben Sie einen Vor- und Nachnamen ein",
+      "invalid_for_card_type": "ist ungültig",
+      "invalid_type": "Leider akzeptieren wir keine Karten dieser Art",
+      "invalid_format": "Format ist ungültig",
+      "expired": "abgelaufen",
+      "invalid_start_date_or_issue_number_for_debit": "Es ist ein gültiges Startdatum oder eine gültige Ausgabenummer erforderlich",
+      "invalid_expiry_year": "ist kein gültiges Ablaufjahr",
+      "reset_password_html": "Diese E-Mail-Adresse ist bereits mit einem Konto verknüpft. Wenn dieses Konto Ihnen gehört, können Sie <a href=\"\/account\/login#recover\">Ihr Passwort zurücksetzen<\/a>",
+      "verify_email": "Wir haben eine E-Mail an %{customer_email} gesendet. Klicken Sie bitte auf den darin enthaltenen Link, um Ihre E-Mail-Adresse zu bestätigen.",
+      "product_not_available": "Produkt ist für diesen Kunden nicht veröffentlicht."
+    },
+    "notices": {
+      "customer": {
+        "password_reset_error": "Fehler beim Zurücksetzen des Passworts",
+        "no_account_found": "Mit dieser E-Mail wurde kein Konto gefunden.",
+        "invalid_credentials": "Falsche Email oder Passwort.",
+        "denylisted_reset_password": "Auf Ihr Konto konnte nicht zugegriffen werden, da das aktuelle Passwort nicht sicher ist. Sie erhalten eine E-Mail, um Ihr Passwort zu aktualisieren."
+      },
+      "address": {
+        "updated": "Adresse erfolgreich aktualisiert.",
+        "error_updating": "Fehler beim Aktualisieren der Adresse",
+        "created": "Adresse erfolgreich erstellt",
+        "error_creating": "Fehler beim Erstellen der Adresse.",
+        "deleted": "Adresse erfolgreich gelöscht",
+        "error_deleting": "Fehler beim Löschen der Adresse."
+      },
+      "order": {
+        "not_available": "Diese Bestellung ist nicht verfügbar",
+        "financial_status": {
+          "authorized": "Autorisiert",
+          "pending": "Ausstehend",
+          "paid": "Bezahlt",
+          "unpaid": "Unbezahlt",
+          "voided": "Entwertet",
+          "partially_paid": "Teilweise bezahlt",
+          "partially_refunded": "Teilweise erstattet",
+          "refunded": "Erstattet",
+          "expired": "Abgelaufen"
+        },
+        "fulfillment_status": {
+          "fulfilled": "Erfüllt",
+          "complete": "Vollständig",
+          "partial": "Teilweise",
+          "unfulfilled": "Unerfüllt",
+          "restocked": "Aufgefüllt"
+        },
+        "transaction_status": {
+          "success": "Erfolg",
+          "pending": "Ausstehend",
+          "failure": "Versagen",
+          "error": "Fehler"
+        },
+        "cancel_reason": {
+          "declined": "Zahlung abgelehnt",
+          "inventory": "Artikel nicht verfügbar",
+          "fraud": "Betrügerische Bestellung",
+          "customer": "Der Kunde hat die Bestellung geändert\/storniert",
+          "staff": "Personalfehler",
+          "other": "Andere"
+        },
+        "cash_on_delivery": "Nachnahme (Nachnahme)"
+      },
+      "cart": {
+        "only_n_items_available": "Sie können nur %{count} %{name} zum Warenkorb hinzufügen.",
+        "too_many_items_in_cart": "Sie können nicht mehr %{name} zum Warenkorb hinzufügen.",
+        "less_than_minimum": "Dieses Element hat ein Minimum von %{min}.",
+        "more_than_maximum": "Dieses Element hat ein Maximum von %{max}.",
+        "not_respect_step": "Sie können dieses Element nur in Vielfachen von %{step} hinzufügen.",
+        "all_items_in_cart": "Alle %{count} %{name} befinden sich in Ihrem Warenkorb.",
+        "empty_update": "Leerer Warenkorb kann nicht aktualisiert werden",
+        "missing_parameters": "Keine gültige ID oder Zeilenparameter",
+        "generic_error": "Warenkorbfehler",
+        "product_not_available": "Produkt ist nicht verfügbar",
+        "too_many_line_items_error": "Ihr Warenkorb darf nicht mehr als %{max} Artikel enthalten.",
+        "link_expired": "Link abgelaufen",
+        "link_no_longer_exists": "Link existiert nicht mehr.",
+        "stock_problems_html": "Ein oder mehrere Artikel sind nicht mehr verfügbar. Wir haben einen <a href=\"%{link}\">aktualisierten Warenkorb<\/a> bereitgestellt.",
+        "changed": "Warenkorb geändert",
+        "items_changed": "Ein oder mehrere Elemente haben sich geändert.",
+        "product_sold_out": "Das Produkt „%{name}“ ist bereits ausverkauft.",
+        "variant_not_found": "Variante kann nicht gefunden werden",
+        "variant_requires_selling_plan": "Die Variante kann nur mit einem Verkaufsplan erworben werden.",
+        "selling_plan_not_available_for_company_locations": "Für B2B-Bestellungen ist nur ein einmaliger Kauf möglich",
+        "digital_product_not_available_for_company_locations": "Dieser Artikel kann nicht zu einer B2B-Bestellung hinzugefügt werden",
+        "selling_plan_not_applicable": "Der Verkaufsplan kann nicht auf die Variante angewendet werden",
+        "shipping_address_not_required": "Für diesen Warenkorb ist kein Versand erforderlich",
+        "shipping_address_invalid": "Bei der Berechnung Ihrer Versandkosten ist ein Problem aufgetreten. Gehen Sie zur Kasse, um einen Versandtarif auszuwählen, bevor Sie Ihre Bestellung abschließen.",
+        "bundle_requires_components": "Das Bundle-Produkt „%{name}“ kann nicht zum Warenkorb hinzugefügt werden.",
+        "gift_card_with_components_not_supported": "Das Bundle-Produkt „%{name}“ kann nicht zum Warenkorb hinzugefügt werden.",
+        "bundle_products_not_supported_for_b2b_draft": "Gebündelte Artikel können nicht zu B2B-Bestellungen für diesen Standort hinzugefügt werden."
+      },
+      "storefront": {
+        "invalid_password": "Passwort falsch, bitte versuchen Sie es erneut."
+      },
+      "tags": {
+        "add_articles": "Suche auf Artikel beschränken, die auch das Tag %{tag} haben",
+        "add_products": "Beschränken Sie die Auswahl auf Produkte, die dem Tag %{tag} entsprechen.",
+        "remove_articles": "Erweitern Sie die Suche auf Artikel, die nicht mit %{tag} gekennzeichnet sind",
+        "remove_products": "Tag %{tag} entfernen"
+      }
+    },
+    "email_marketing": {
+      "subscribed": {
+        "confirmation": "Vielen Dank, dass Sie sich für unsere Mailingliste angemeldet haben.",
+        "disclaimer": "Sie können sich jederzeit abmelden.",
+        "unsubscribe": "Abbestellen"
+      },
+      "unsubscribed": {
+        "confirmation": "Sie haben sich von unserer Mailingliste abgemeldet.",
+        "disclaimer": "Sie erhalten von uns keine Marketing-Updates mehr. Sie können sich jederzeit wieder anmelden.",
+        "preview": "Sie sehen eine Vorschau dessen, was Kunden sehen, wenn sie sich abmelden."
+      },
+      "open_tracking": {
+        "opt_in": {
+          "opted_in_html": "<b>Sie haben sich für die Öffnungsverfolgung per E-Mail entschieden.<\/b>",
+          "visibility": "Die E-Mail-Öffnungsraten werden anonym gemeldet. Im Rahmen einer aggregierten E-Mail-Öffnungsrate sehen wir nur, ob Sie eine E-Mail geöffnet haben.",
+          "opt_out_html": "Sie können die E-Mail-Öffnungsverfolgung <a style=\"text-decoration:underline;\" href=\"%{link}\">deaktivieren<\/a> , wenn Sie diese Informationen nicht weitergeben möchten.",
+          "preview_bar": "Sie sehen eine Vorschau dessen, was Kunden sehen, wenn sie sich für die E-Mail-Öffnungsverfolgung entscheiden."
+        },
+        "opt_out": {
+          "opted_out_html": "<b>Sie haben die E-Mail-Öffnungsverfolgung deaktiviert.<\/b>",
+          "visibility": "Wir sehen nicht, ob Sie unsere E-Mails geöffnet haben.",
+          "opt_in_html": "<a style=\"text-decoration:underline;\" href=\"%{link}\">Melden Sie sich an<\/a> , um die Öffnungsverfolgung per E-Mail zu versenden.",
+          "preview_bar": "Sie sehen eine Vorschau dessen, was Kunden sehen, wenn sie die Nachverfolgung von E-Mail-Öffnungen deaktivieren."
+        },
+        "no_longer_track": {
+          "status_html": "<b>Wir verfolgen keine geöffneten E-Mails mehr.<\/b>",
+          "privacy_policy": "Nachdem diese E-Mail gesendet wurde, haben wir unsere Datenschutzrichtlinie aktualisiert und verfolgen keine Öffnungen mehr."
+        },
+        "track": {
+          "status_html": "<b>E-Mail-Öffnungsverfolgung wird gemeldet.<\/b>",
+          "visibility": "Im Rahmen der gesamten E-Mail-Öffnungsrate sehen wir nur, ob Sie die E-Mail geöffnet haben."
+        },
+        "updated_policy": {
+          "status_html": "<b>E-Mail-Öffnungsverfolgung wird gemeldet.<\/b>",
+          "visibility": "Wir haben unsere Richtlinien aktualisiert und können jetzt E-Mails verfolgen. Die E-Mail-Öffnungsraten werden anonym gemeldet. Im Rahmen der gesamten E-Mail-Öffnungsrate sehen wir nur, ob Sie eine E-Mail geöffnet haben.",
+          "opt_out_html": "Wenn Sie diese Informationen nicht weitergeben möchten, können Sie <a style=\"text-decoration:underline;\" href=\"%{link}\">sich abmelden.<\/a>"
+        }
       }
     }
   },
