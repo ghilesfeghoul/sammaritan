@@ -30,10 +30,16 @@
             "link_url": "shopify:\/\/collections\/automated-collection",
             "text_display": "automated"
           }
+        },
+        "44e68100-b406-4068-9ed9-3aa8f33da9b0": {
+          "type": "shopify:\/\/apps\/app-wishlist\/blocks\/wishlist-logo\/c9c2c3c8-8744-4fe7-90f5-f62b22a092cc",
+          "settings": {
+          }
         }
       },
       "block_order": [
         "account",
+        "44e68100-b406-4068-9ed9-3aa8f33da9b0",
         "cart",
         "6aa7cd17-a5eb-4b44-81c4-63f61b3b8830",
         "4d1a5f3f-d224-4503-9fed-18c9738f18c2",

@@ -1,27 +1,35 @@
 {
-    "name": "Navbar",
-    "type": "header",
-    "sections": {
-      "header": {
-        "type": "header",
-        "settings": {
-          "header_selector": "Classic",
-          "menu": "main-menu"
-        },
-        "blocks": {
-          "account": {
-            "type": "customer_account"
-          },
-          "cart": {
-            "type": "customer_cart"
+  "name": "Navbar",
+  "type": "header",
+  "sections": {
+    "header": {
+      "type": "header",
+      "blocks": {
+        "account": {
+          "type": "customer_account",
+          "settings": {
           }
         },
-        "block_order": [
-          "account", "cart"
-        ]
+        "cart": {
+          "type": "customer_cart",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "account",
+        "cart"
+      ],
+      "settings": {
+        "header_selector": "Classic",
+        "menu": "main-menu",
+        "enable_country_selector": true,
+        "enable_language_selector": true,
+        "allow_social_links": false
       }
-    },
-    "order": [
-      "header"
-    ]
-  }
+    }
+  },
+  "order": [
+    "header"
+  ]
+}
