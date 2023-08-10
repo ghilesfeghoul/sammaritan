@@ -1022,7 +1022,80 @@
         "next_payment_due": "Nächste Zahlung fällig am {{dueDateInMonthDayYear}}",
         "edit_payment_method_button": "Bearbeiten",
         "edit_payment_method_button_accessibility_label": "Zahlungsmethode bearbeiten, die auf {{lastDigits}} endet",
-        "loading_shop_pay": "Shop Pay wird geladen"
+        "loading_shop_pay": "Shop Pay wird geladen",
+        "invalid_payment_method": "Ungültige Zahlungsmethode",
+        "invalid_payment_method_message": "Verwenden Sie eine neue Kreditkarte, um weiterhin anstehende Bestellungen zu erhalten.",
+        "replace_payment_method": "Zahlungsart ersetzen"
+      },
+      "edit_payment_method": {
+        "title": "Zahlungsart bearbeiten",
+        "save_payment_method_button": "Speichern",
+        "cancel_edit_payment_method_button": "Stornieren",
+        "payment_method_updated_toast": "Zahlungsmethode aktualisiert",
+        "billing_address": "Rechnungsadresse",
+        "billing_address_add_new": "Neue hinzufügen",
+        "billing_address_choose_from_list": "Wählen Sie aus der Liste",
+        "future_purchases_notice": "Diese Zahlungsart wird für zukünftige Einkäufe gespeichert."
+      },
+      "card_fields": {
+        "card_number_label": "Kartennummer",
+        "card_number_placeholder": "Kartennummer",
+        "name_on_card_label": "Name auf der Karte",
+        "name_on_card_placeholder": "Name auf der Karte",
+        "card_expiry_label": "Ablaufdatum (MM \/ JJ)",
+        "card_expiry_placeholder": "Ablaufdatum (MM \/ JJ)",
+        "card_verification_value_label": "Sicherheitscode",
+        "card_verification_value_placeholder": "Sicherheitscode",
+        "card_start_label": "Ausstellungsdatum (MM \/ JJ)",
+        "card_start_placeholder": "Ausstellungsdatum (MM \/ JJ)",
+        "tooltip": {
+          "tooltip_accessibility_label": "Mehr Informationen",
+          "card_verification_value_explanation_amex": "4-stelliger Sicherheitscode auf der Vorderseite Ihrer Karte",
+          "card_verification_value_explanation_other": "3-stelliger Sicherheitscode auf der Rückseite Ihrer Karte",
+          "card_verification_value_explanation": "3-stelliger Sicherheitscode, der sich normalerweise auf der Rückseite Ihrer Karte befindet. American Express-Karten haben einen 4-stelligen Code auf der Vorderseite.",
+          "card_security_notice": "Alle Transaktionen sind sicher und verschlüsselt."
+        },
+        "field_errors": {
+          "credit_card_name_invalid": "Geben Sie Ihren Namen genau so ein, wie er auf Ihrer Karte steht",
+          "credit_card_number_invalid": "Geben Sie eine gültige Kartennummer ein",
+          "credit_card_expiry_invalid": "Geben Sie ein gültiges Ablaufdatum der Karte ein",
+          "credit_card_verification_value_blank": "Geben Sie den CVV- oder Sicherheitscode auf Ihrer Karte ein"
+        }
+      },
+      "payment_delete": {
+        "title": "Zahlungsart löschen",
+        "description_without_replacement": "Diese Zahlungsmethode wird für zukünftige Einkäufe nicht mehr verfügbar sein.",
+        "description_with_replacement": "Das Löschen dieser Zahlungsmethode wirkt sich auf vorab autorisierte Zahlungen aus. Sie können diese optional durch eine andere Zahlungsmethode ersetzen, um weiterhin anstehende Bestellungen zu erhalten.",
+        "warning_message_with_replacement": {
+          "with_pending_orders_and_subscriptions": "Das Löschen dieser Zahlungsmethode wirkt sich auf vorab autorisierte Zahlungen aus. Sofern Sie keine alternative Zahlungsmethode auswählen, wird diese Zahlungsmethode weiterhin für alle ausstehenden Beträge bestehender Bestellungen belastet. Wenn Sie eine alternative Zahlungsmethode auswählen, können Sie anstehende Abonnementbestellungen ohne Unterbrechung erhalten.",
+          "with_pending_orders": "Wenn Sie diese Zahlungsmethode löschen, wird sie von Ihrem Konto entfernt und steht für zukünftige Einkäufe nicht mehr zur Verfügung. Sofern Sie keine alternative Zahlungsmethode auswählen, werden Ihnen weiterhin alle ausstehenden Beträge bestehender Bestellungen in Rechnung gestellt.",
+          "with_subscriptions": "Das Löschen dieser Zahlungsmethode wirkt sich auf vorab autorisierte Zahlungen aus. Ersetzen Sie es durch eine alternative Zahlungsmethode, um weiterhin anstehende Bestellungen zu erhalten."
+        },
+        "warning_message_without_replacement": {
+          "with_pending_orders_and_subscriptions": "Das Löschen dieser Zahlungsmethode wirkt sich auf vorab autorisierte Zahlungen aus. Über diese Zahlungsmethode werden weiterhin alle ausstehenden Beträge bestehender Bestellungen abgebucht, Sie erhalten jedoch keine anstehenden Abonnementbestellungen. Fügen Sie eine alternative Zahlungsmethode hinzu, um weiterhin Abonnementbestellungen zu erhalten.",
+          "with_pending_orders": "Wenn Sie diese Zahlungsmethode löschen, wird sie von Ihrem Konto entfernt und steht für zukünftige Einkäufe nicht mehr zur Verfügung. Ausstehende Restbeträge bestehender Bestellungen werden weiterhin in Rechnung gestellt.",
+          "with_subscriptions": "Das Löschen dieser Zahlungsmethode wirkt sich auf vorab autorisierte Zahlungen aus. Fügen Sie eine alternative Zahlungsmethode hinzu, um weiterhin anstehende Bestellungen zu erhalten."
+        },
+        "payment_method_selector_placeholder": "Wählen Sie eine Ersatzzahlungsmethode (optional)",
+        "payment_method_selector_no_alternative_payment": "Keine Ersatzmethode",
+        "replace_method_with_new_method_description": "Ihr {{currentPaymentMethodName}} wird gelöscht und durch Ihren {{newPaymentMethodName}} ersetzt.",
+        "error_when_deleting": "Es tut uns leid, aber es ist ein Fehler aufgetreten und wir konnten diese Zahlungsmethode nicht löschen. Bitte versuchen Sie es später noch einmal oder aktualisieren Sie die Seite.",
+        "delete_and_replace_button": "Löschen und ersetzen",
+        "delete_and_replace_button_accessibility_label": "Löschen Sie {{currentPaymentMethodName}} und ersetzen Sie es durch {{newPaymentMethodName}} .",
+        "deleted_successfully": "Zahlungsmethode erfolgreich gelöscht.",
+        "loading_available_payment_methods_accessibility_label": "Verfügbare Zahlungsmethoden werden geladen"
+      },
+      "add_payment_method": {
+        "title": "Zahlungsmethode hinzufügen",
+        "payment_method_added_confirmation": "Zahlungsmethode hinzugefügt",
+        "billing_address": {
+          "title": "Rechnungsadresse",
+          "add_billing_address_button": "Neue hinzufügen",
+          "add_billing_address_button_accessibility_label": "Neue Rechnungsadresse hinzufügen",
+          "choose_billing_address_from_list_button": "Wählen Sie aus der Liste",
+          "choose_billing_address_from_list_button_accessibility_label": "Wählen Sie eine Rechnungsadresse aus der Liste",
+          "missing_billing_address_error_message": "Bitte geben Sie eine Rechnungsadresse an"
+        }
       }
     },
     "order_details": {
@@ -1097,6 +1170,42 @@
         "hide_events_label": "Details ausblenden",
         "ineligible_return_message": "In dieser Bestellung sind keine Artikel für eine Rückgabe berechtigt.",
         "ineligible_return_message_when_returned": "Es sind keine weiteren Artikel in dieser Bestellung für eine Rückgabe berechtigt."
+      }
+    },
+    "payment_method_brands": {
+      "discover": "Entdecken"
+    },
+    "shop_policies": {
+      "legal_notice": "Impressum",
+      "privacy_policy": "Datenschutzrichtlinie",
+      "refund_policy": "Rückgaberecht",
+      "shipping_policy": "Versandbedingungen",
+      "subscription_policy": "Abonnementbedingungen",
+      "terms_of_sale": "Verkaufsbedingungen",
+      "terms_of_service": "Nutzungsbedingungen"
+    }
+  },
+  "general": {
+    "404": {
+      "title": "Nicht gefunden",
+      "subtext_html": "Die von Ihnen gesuchte Seite existiert nicht",
+      "homepage_link": "Gehen Sie zur Startseite"
+    },
+    "article": {
+      "comment": {
+        "message_success": "Der Kommentar wurde erfolgreich gepostet",
+        "message_error": "Ach nein! Ihr Kommentar wurde nicht gepostet",
+        "button_title": "Kommentar hinzufügen"
+      },
+      "none": "Zu diesem Artikel gibt es keine Kommentare",
+      "impressions": "Sehen Sie, was die Leute sagen"
+    }
+  },
+  "templates": {
+    "customers": {
+      "login": {
+        "title": "Anmeldung",
+        "password-reset-title": "Passwort vergessen?"
       }
     }
   }
