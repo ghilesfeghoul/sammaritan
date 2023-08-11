@@ -4,5 +4,67 @@
     "market": "fr"
   },
   "sections": {
-  }
+    "header": {
+      "settings": {
+        "header_selector": "Fashion",
+        "allow_social_links": false
+      },
+      "blocks": {
+      }
+    },
+    "8f5a788b-a24e-4a07-8123-87c7a70489c2": {
+      "type": "announcement-bar",
+      "disabled": false,
+      "settings": {
+        "type_annoncement": "Other",
+        "promotion_text": "livraison gratuite",
+        "promo_type": "Free shipping",
+        "enable_country_selector": false,
+        "enable_language_selector": false,
+        "allow_social_links": true
+      },
+      "blocks": {
+        "83b4f9a5-e559-42cd-afdb-0de6b74f453c": {
+          "type": "link",
+          "settings": {
+            "link_url": "shopify:\/\/pages\/contact",
+            "text_display": "Contactez-nous"
+          }
+        },
+        "fc9e8484-69c6-4636-afd3-3fef9dc5eb19": {
+          "type": "link",
+          "settings": {
+            "link_url": "shopify:\/\/pages\/politique-de-confidentialite",
+            "text_display": "Privacy"
+          }
+        }
+      },
+      "block_order": [
+        "83b4f9a5-e559-42cd-afdb-0de6b74f453c",
+        "fc9e8484-69c6-4636-afd3-3fef9dc5eb19"
+      ]
+    },
+    "d98064f8-1a90-4071-baed-b165f04403e7": {
+      "type": "announcement-bar",
+      "disabled": false,
+      "settings": {
+        "type_annoncement": "Promotion",
+        "promotion_text": "Promotion",
+        "promo_type": "Discount",
+        "enable_country_selector": true,
+        "enable_language_selector": true,
+        "allow_social_links": false
+      },
+      "blocks": {
+      },
+      "block_order": [
+
+      ]
+    }
+  },
+  "order": [
+    "d98064f8-1a90-4071-baed-b165f04403e7",
+    "8f5a788b-a24e-4a07-8123-87c7a70489c2",
+    "header"
+  ]
 }
