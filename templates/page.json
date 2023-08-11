@@ -1,11 +1,28 @@
 {
-    "name": "Template page",
-    "sections": {
-        "template": {
-            "type": "template-page"
-        }
+  "sections": {
+    "template": {
+      "type": "template-page",
+      "settings": {
+      }
     },
-    "order": [
-        "template"
-    ]
+    "169177423463f0a20f": {
+      "type": "apps",
+      "blocks": {
+        "8fc62aaa-b810-45b0-8c0c-f64ee257ad17": {
+          "type": "shopify:\/\/apps\/app-wishlist\/blocks\/wishlist-page\/c9c2c3c8-8744-4fe7-90f5-f62b22a092cc",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "8fc62aaa-b810-45b0-8c0c-f64ee257ad17"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "template",
+    "169177423463f0a20f"
+  ]
 }
