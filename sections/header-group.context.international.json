@@ -4,26 +4,5 @@
     "market": "international"
   },
   "sections": {
-    "d9991367-53ae-4749-8ac2-ce129de4885e": {
-      "type": "announcement-bar",
-      "disabled": false,
-      "settings": {
-        "type_annoncement": "Promotion",
-        "promotion_text": "Promotion",
-        "promo_type": "Discount",
-        "enable_country_selector": true,
-        "enable_language_selector": true,
-        "allow_social_links": false
-      },
-      "blocks": {
-      },
-      "block_order": [
-
-      ]
-    }
-  },
-  "order": [
-    "d9991367-53ae-4749-8ac2-ce129de4885e",
-    "header"
-  ]
+  }
 }
