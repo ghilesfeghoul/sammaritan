@@ -10,11 +10,6 @@
           "settings": {
           }
         },
-        "76338dd9-b3ba-4ceb-8543-492fbc0a2a2d": {
-          "type": "shopify:\/\/apps\/app-wishlist\/blocks\/wishlist-logo\/c9c2c3c8-8744-4fe7-90f5-f62b22a092cc",
-          "settings": {
-          }
-        },
         "cart": {
           "type": "customer_cart",
           "settings": {
@@ -23,7 +18,6 @@
       },
       "block_order": [
         "account",
-        "76338dd9-b3ba-4ceb-8543-492fbc0a2a2d",
         "cart"
       ],
       "settings": {
