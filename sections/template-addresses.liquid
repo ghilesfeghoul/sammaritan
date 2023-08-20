@@ -14,29 +14,20 @@
         <!-- Nav -->
         <nav class="mb-10 mb-md-0">
           <div class="list-group list-group-sm list-group-strong list-group-flush-x">
-            <a class="list-group-item list-group-item-action dropend-toggle " href="account-orders.html">
+            <a class="list-group-item list-group-item-action dropend-toggle " href="#">
               Orders
             </a>
-            <a class="list-group-item list-group-item-action dropend-toggle " href="account-wishlist.html">
-              Widhlist
-            </a>
-            <a class="list-group-item list-group-item-action dropend-toggle " href="account-personal-info.html">
-              Personal Info
-            </a>
-            <a class="list-group-item list-group-item-action dropend-toggle active" href="account-address.html">
+            <a class="list-group-item list-group-item-action dropend-toggle active" href="#">
               Addresses
             </a>
-            <a class="list-group-item list-group-item-action dropend-toggle " href="account-payment.html">
-              Payment Methods
-            </a>
-            <a class="list-group-item list-group-item-action dropend-toggle" href="#!">
+            <a class="list-group-item list-group-item-action dropend-toggle" href="{{ routes.account_logout_url }}">
               Logout
             </a>
           </div>
         </nav>
 
       </div>
-      <div class="col-12 col-md-9 col-lg-8 offset-lg-1">
+      <div id="addresses" class="col-12 col-md-9 col-lg-8 offset-lg-1">
         <div class="row">
           {% paginate customer.addresses by 10 %}
             {% for address in customer.addresses %}
@@ -88,13 +79,176 @@
 
 
             <!-- Button -->
-            <a class="btn w-100 btn-lg btn-outline-border" href="account-address-edit.html">
+            <button
+              id="add"
+              type="button"
+              class="btn w-100 btn-lg btn-outline-border">
               Add Address
               <i class="fe fe-plus"></i>
-            </a>
+            </button>
 
           </div>
         </div>
+      </div>
+      <div id="new_address" class="col-12 col-md-9 col-lg-8 offset-lg-1 d-none">
+
+        <!-- Heading -->
+        <h6 class="mb-7">
+          Add Address
+        </h6>
+
+        <!-- Form -->
+        {% form 'customer_address', customer.new_address %}
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <div class="form-group">
+                <label class="form-label" for="address_fname_{{ form.id }}">First Name</label>
+                <input
+                  class="form-control"
+                  name="address[first_name]"
+                  id="address_fname_{{ form.id }}"
+                  value="{{ form.first_name }}"
+                  type="text"
+                  placeholder="First Name">
+              </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <div class="form-group">
+                <label class="form-label" for="address_lname_{{ form.id }}">Last Name</label>
+                <input
+                  class="form-control"
+                  name="address[last_name]"
+                  id="address_lname_{{ form.id }}"
+                  value="{{ form.last_name }}"
+                  type="text"
+                  placeholder="Last Name">
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="form-group">
+                <label class="form-label" for="address_company_{{ form.id }}">Company Name</label>
+                <input
+                  class="form-control"
+                  name="address[company]"
+                  id="address_company_{{ form.id }}"
+                  value="{{ form.company }}"
+                  type="text"
+                  placeholder="Company Name">
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="form-group">
+                <label class="form-label" for="address_country_{{ form.id }}">Country</label>
+                <select
+                  class="form-control form-select"
+                  name="address[country]"
+                  id="address_country_{{ form.id }}"
+                  value="{{ form.country }}"
+                  data-country-selector
+                  data-id="{{ form.id }}">
+                  {{ all_country_option_tags }}
+                </select>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="form-group">
+                <label class="form-label" for="address_province_{{ form.id }}">Province</label>
+                <select
+                  class="form-control form-select"
+                  name="address[province]"
+                  id="address_province_{{ form.id }}"
+                  value="{{ form.province }}"></select>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="form-group">
+                <label class="form-label" for="address_address1_{{ form.id }}">Address Line 1</label>
+                <input
+                  class="form-control"
+                  name="address[address1]"
+                  id="address_address1_{{ form.id }}"
+                  value="{{ form.address1 }}"
+                  type="text"
+                  placeholder="Address Line 1">
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="form-group">
+                <label class="form-label" for="address_address2_{{ form.id }}">Address Line 2</label>
+                <input
+                  class="form-control"
+                  name="address[address2]"
+                  id="address_address2_{{ form.id }}"
+                  value="{{ form.address2 }}"
+                  type="text"
+                  placeholder="Address Line 2">
+              </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <div class="form-group">
+                <label class="form-label" for="address_city_{{ form.id }}">Town / City</label>
+                <input
+                  class="form-control"
+                  name="address[city]"
+                  id="address_city_{{ form.id }}"
+                  value="{{ form.city }}"
+                  type="text"
+                  placeholder="Town / City">
+              </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <div class="form-group">
+                <label class="form-label" for="address_zip_{{ form.id }}">ZIP / Postcode</label>
+                <input
+                  class="form-control"
+                  name="address[zip]"
+                  id="address_zip_{{ form.id }}"
+                  value="{{ form.zip }}"
+                  type="text"
+                  placeholder="ZIP / Postcode">
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="form-group">
+                <label class="form-label" for="address_phone_{{ form.id }}">Mobile Phone</label>
+                <input
+                  class="form-control"
+                  type="tel"
+                  name="address[phone]"
+                  id="address_phone_{{ form.id }}"
+                  value="{{ form.phone }}"
+                  placeholder="Mobile Phone">
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="form-group">
+                <div class="form-check mb-3">
+                  {{ form.set_as_default_checkbox }}
+
+                  <label
+                    for="address_default_address_{{ form.id }}"
+                    class="form-check-label"
+                    for="defaultDeliveryAddress">Set as default address</label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Button -->
+          <button class="btn btn-dark" type="submit">
+            Add Address
+          </button>
+
+          <!-- Button -->
+          <button
+            id="cancel"
+            class="btn btn-outline-dark"
+            type="reset">
+            Cancel
+          </button>
+
+        {% endform %}
+
       </div>
     </div>
   </div>
@@ -103,9 +257,111 @@
 <script>
   class CustomerAddress {
     constructor() {
+      this.initCustomerAddress();
+      this.customerAddressesSelector();
       this.initDeleteAddressButtons();
     }
 
+    initCustomerAddress() {
+      const allAddressesSelector = document.querySelectorAll("select[data-country-selector]");
+      if (allAddressesSelector.length < 1) 
+        return;
+      
+
+
+
+      allAddressesSelector.forEach(select => {
+        var selectedCountry = this.getSelectedCountry(select);
+
+        if (! selectedCountry) 
+          return;
+        
+
+
+
+        var provinces = selectedCountry.dataset.provinces;
+        var arrayOfProvince = JSON.parse(provinces);
+
+        var provinceSelector = document.querySelector(`#address_province_${
+          select.dataset.id
+        }`);
+
+        if (arrayOfProvince.length < 1) {
+          provinceSelector.setAttribute('disabled', 'disabled');
+        } else {
+          provinceSelector.removeAttribute('disabled');
+        } provinceSelector.innerHTML = '';
+        var options = '';
+        for (var index = 0; index < arrayOfProvince.length; index++) {
+          if (arrayOfProvince[index][0] === provinceSelector.getAttribute('value')) {
+            options += `<option value="${
+              arrayOfProvince[index][0]
+            }" selected>${
+              arrayOfProvince[index][0]
+            }</option>`;
+          } else {
+            options += `<option value="${
+              arrayOfProvince[index][0]
+            }">${
+              arrayOfProvince[index][0]
+            }</option>`;
+          }
+        }
+
+        provinceSelector.innerHTML = options;
+      })
+    }
+    getSelectedCountry(select) {
+      var option,
+        selectedOption;
+      for (var index = 0; index < select.options.length; index++) {
+        option = select.options[index];
+
+        if (option.value === select.getAttribute('value')) {
+          selectedOption = option;
+          selectedOption.setAttribute('selected', 'selected');
+          break;
+        }
+      }
+
+      return selectedOption;
+    }
+
+    customerAddressesSelector() {
+      const addressesSelector = document.querySelectorAll("select[data-country-selector]");
+      if (addressesSelector.length < 1) 
+        return;
+      
+
+
+
+      addressesSelector.forEach(select => {
+        select.addEventListener('change', function(e) {
+          var provinces = this.options[this.selectedIndex].dataset.provinces;
+          var arrayOfProvince = JSON.parse(provinces);
+
+          var provinceSelector = document.querySelector(`#address_province_${
+            this.dataset.id
+          }`);
+
+          if (arrayOfProvince.length < 1) {
+            provinceSelector.setAttribute('disabled', 'disabled');
+          } else {
+            provinceSelector.removeAttribute('disabled');
+          } provinceSelector.innerHTML = '';
+          var options = '';
+          for (var index = 0; index < arrayOfProvince.length; index++) {
+            options += `<option value="${
+              arrayOfProvince[index][0]
+            }">${
+              arrayOfProvince[index][0]
+            }</option>`;
+          }
+
+          provinceSelector.innerHTML = options;
+        });
+      });
+    }
     initDeleteAddressButtons() {
       const deleteButtons = document.querySelectorAll("button[data-delete-address]");
       if (deleteButtons.length < 1) 
@@ -129,4 +385,21 @@
   }
 
   const customerAddress = new CustomerAddress();
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const btn = document.getElementById('add');
+    btn.addEventListener('click', function() {
+      document.getElementById("new_address").setAttribute('class', "col-12 col-md-9 col-lg-8 offset-lg-1");
+      document.getElementById("addresses").setAttribute('class', "col-12 col-md-9 col-lg-8 offset-lg-1 d-none");
+    })
+
+    const cancel = document.getElementById('cancel');
+    cancel.addEventListener('click', function() {
+      document.getElementById("new_address").setAttribute('class', "col-12 col-md-9 col-lg-8 offset-lg-1 d-none");
+      document.getElementById("addresses").setAttribute('class', "col-12 col-md-9 col-lg-8 offset-lg-1");
+    })
+
+  })
 </script>
