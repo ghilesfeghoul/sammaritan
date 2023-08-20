@@ -3,26 +3,45 @@
     "template": {
       "type": "template-product",
       "blocks": {
-        "vendor": {
-          "type": "vendor"
-        },
         "title": {
-          "type": "title"
+          "type": "title",
+          "settings": {
+          }
+        },
+        "vendor": {
+          "type": "vendor",
+          "settings": {
+          }
         },
         "price": {
-          "type": "price"
+          "type": "price",
+          "settings": {
+          }
         },
         "variant_selector": {
-          "type": "variant_selector"
+          "type": "variant_selector",
+          "settings": {
+          }
         },
         "quantity": {
-          "type": "quantity"
-        },
-        "description": {
-          "type": "description"
+          "type": "quantity",
+          "settings": {
+          }
         },
         "checkout_button": {
-          "type": "checkout_button"
+          "type": "checkout_button",
+          "settings": {
+          }
+        },
+        "68ef1ecf-5c5d-42a9-a195-10c88c891b61": {
+          "type": "shopify:\/\/apps\/app-wishlist\/blocks\/wishlist-button\/c9c2c3c8-8744-4fe7-90f5-f62b22a092cc",
+          "settings": {
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+          }
         }
       },
       "block_order": [
@@ -32,8 +51,12 @@
         "variant_selector",
         "quantity",
         "checkout_button",
+        "68ef1ecf-5c5d-42a9-a195-10c88c891b61",
         "description"
-      ]
+      ],
+      "settings": {
+        "image_render": "stacked"
+      }
     }
   },
   "order": [
