@@ -31,7 +31,7 @@
         <div class="row">
           {% paginate customer.addresses by 10 %}
             {% for address in customer.addresses %}
-              <div class="col-12 col-lg-6">
+              <div class="address col-12 col-lg-6">
 
                 <!-- Card -->
                 <div class="card card-lg bg-light mb-8">
@@ -49,9 +49,9 @@
                     <div class="card-action card-action-end">
 
                       <!-- Button -->
-                      <a class="btn btn-xs btn-circle btn-white-primary" href="account-address-edit.html">
+                      <button class="edit btn btn-xs btn-circle btn-white-primary">
                         <i class="fe fe-edit-2"></i>
-                      </a>
+                      </button>
 
                       <!-- Button -->
                       <button
@@ -71,6 +71,163 @@
 
                   </div>
                 </div>
+
+              </div>
+              <div id="edit_address" class="col-12 d-none">
+
+                <!-- Heading -->
+                <h6 class="mb-7">
+                  Edit Address
+                </h6>
+
+                <!-- Form -->
+                {% form 'customer_address', address %}
+                  <div class="row">
+                    <div class="col-12 col-md-6">
+                      <div class="form-group">
+                        <label class="form-label" for="address_fname_{{ form.id }}">First Name</label>
+                        <input
+                          class="form-control"
+                          name="address[first_name]"
+                          id="address_fname_{{ form.id }}"
+                          value="{{ form.first_name }}"
+                          type="text"
+                          placeholder="First Name">
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <div class="form-group">
+                        <label class="form-label" for="address_lname_{{ form.id }}">Last Name</label>
+                        <input
+                          class="form-control"
+                          name="address[last_name]"
+                          id="address_lname_{{ form.id }}"
+                          value="{{ form.last_name }}"
+                          type="text"
+                          placeholder="Last Name">
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="form-group">
+                        <label class="form-label" for="address_company_{{ form.id }}">Company Name</label>
+                        <input
+                          class="form-control"
+                          name="address[company]"
+                          id="address_company_{{ form.id }}"
+                          value="{{ form.company }}"
+                          type="text"
+                          placeholder="Company Name">
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="form-group">
+                        <label class="form-label" for="address_country_{{ form.id }}">Country</label>
+                        <select
+                          class="form-control form-select"
+                          name="address[country]"
+                          id="address_country_{{ form.id }}"
+                          value="{{ form.country }}"
+                          data-country-selector
+                          data-id="{{ form.id }}">
+                          {{ all_country_option_tags }}
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="form-group">
+                        <label class="form-label" for="address_province_{{ form.id }}">Province</label>
+                        <select
+                          class="form-control form-select"
+                          name="address[province]"
+                          id="address_province_{{ form.id }}"
+                          value="{{ form.province }}"></select>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="form-group">
+                        <label class="form-label" for="address_address1_{{ form.id }}">Address Line 1</label>
+                        <input
+                          class="form-control"
+                          name="address[address1]"
+                          id="address_address1_{{ form.id }}"
+                          value="{{ form.address1 }}"
+                          type="text"
+                          placeholder="Address Line 1">
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="form-group">
+                        <label class="form-label" for="address_address2_{{ form.id }}">Address Line 2</label>
+                        <input
+                          class="form-control"
+                          name="address[address2]"
+                          id="address_address2_{{ form.id }}"
+                          value="{{ form.address2 }}"
+                          type="text"
+                          placeholder="Address Line 2">
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <div class="form-group">
+                        <label class="form-label" for="address_city_{{ form.id }}">Town / City</label>
+                        <input
+                          class="form-control"
+                          name="address[city]"
+                          id="address_city_{{ form.id }}"
+                          value="{{ form.city }}"
+                          type="text"
+                          placeholder="Town / City">
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <div class="form-group">
+                        <label class="form-label" for="address_zip_{{ form.id }}">ZIP / Postcode</label>
+                        <input
+                          class="form-control"
+                          name="address[zip]"
+                          id="address_zip_{{ form.id }}"
+                          value="{{ form.zip }}"
+                          type="text"
+                          placeholder="ZIP / Postcode">
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="form-group">
+                        <label class="form-label" for="address_phone_{{ form.id }}">Mobile Phone</label>
+                        <input
+                          class="form-control"
+                          type="tel"
+                          name="address[phone]"
+                          id="address_phone_{{ form.id }}"
+                          value="{{ form.phone }}"
+                          placeholder="Mobile Phone">
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="form-group">
+                        <div class="form-check mb-3">
+                          {{ form.set_as_default_checkbox }}
+
+                          <label
+                            for="address_default_address_{{ form.id }}"
+                            class="form-check-label"
+                            for="defaultDeliveryAddress">Set as default address</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Button -->
+                  <button class="btn btn-dark" type="submit">
+                    Edit
+                  </button>
+
+                  <!-- Button -->
+                  <button class="cancel_edit btn btn-outline-dark" type="reset">
+                    Cancel
+                  </button>
+
+                {% endform %}
 
               </div>
             {% endfor %}
@@ -250,6 +407,7 @@
         {% endform %}
 
       </div>
+
     </div>
   </div>
 </section>
@@ -395,11 +553,35 @@
       document.getElementById("addresses").setAttribute('class', "col-12 col-md-9 col-lg-8 offset-lg-1 d-none");
     })
 
+    const edit_buttons = document.querySelectorAll('.edit');
+    edit_buttons.forEach(button => {
+      button.addEventListener('click', function() {
+        document.getElementById("edit_address").setAttribute('class', "mb-7 col-12");
+        const addresses = document.querySelectorAll('.address');
+        addresses.forEach(address => {
+          address.setAttribute('class', "address col-12 col-md-9 col-lg-8 offset-lg-1 d-none");
+        })
+      })
+    })
+
+
     const cancel = document.getElementById('cancel');
     cancel.addEventListener('click', function() {
       document.getElementById("new_address").setAttribute('class', "col-12 col-md-9 col-lg-8 offset-lg-1 d-none");
       document.getElementById("addresses").setAttribute('class', "col-12 col-md-9 col-lg-8 offset-lg-1");
     })
+
+    const cancel_edit_buttons = document.querySelectorAll('.cancel_edit');
+    cancel_edit_buttons.forEach(cancel => {
+      cancel.addEventListener('click', function() {
+        document.getElementById("edit_address").setAttribute('class', "col-12 d-none");
+        const addresses = document.querySelectorAll('.address');
+        addresses.forEach(address => {
+          address.setAttribute('class', "address col-12 col-lg-6");
+        })
+      })
+    })
+
 
   })
 </script>
