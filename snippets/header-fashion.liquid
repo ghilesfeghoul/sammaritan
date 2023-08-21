@@ -144,55 +144,54 @@
     <div class="collapse navbar-collapse" id="navbarFashionBottomCollapse">
       <ul class="navbar-nav">
         {%- for link in section.settings.menu.links -%}
-          {%- if link.links != blank -%}
-            <li class="nav-item dropdown">
+        <li class="nav-item flex flex-row {% if link.links != blank %}dropdown position-static{% endif %}">
+            {%- if link.links != blank -%}
               <a
-                class="nav-link"
-                data-bs-toggle="dropdown"
-                href="{{ link.url }}"
-                aria-expanded="false">{{- link.title | escape -}}</a>
+              class="nav-link"
+              data-bs-toggle="dropdown"
+              href="#">{{ link.title | escape }}</a>
 
-              <div class="dropdown-menu">
+              <div class="dropdown-menu px-10" style="min-width: 650px;">
                 <div class="card card-lg">
                   <div class="card-body">
-                    {% if link.levels == 1 %}
-                      <ul class="list-styled fs-sm">
-                      {% else %}
-                        <div class="row">
+                      {%- for childlink in link.links -%}
+                        {% assign openRow = forloop.index | modulo: 3 %}
+                        {% assign closeRow = forloop.index | modulo: 2 %}
+                        {% if openRow == 0 or forloop.index == 1 %}
+                          <div class="row mb-5">
                         {% endif %}
-                        {%- for childlink in link.links -%}
-                          {%- if childlink.links != blank -%}
-                            <div class="col">
-                              <a class="mb-5 fw-bold" href="{{ childlink.url }}">{{- childlink.title | escape -}}</a>
-                              <ul class="list-styled mb-0 fs-sm">
-                                {% for grandchildlink in childlink.links %}
-                                  <li class="list-styled-item">
-                                    <a class="list-styled-link" href="{{ grandchildlink.url }}">{{- grandchildlink.title | escape -}}</a>
-                                  </li>
-                                {% endfor %}
-                              </ul>
-                            </div>
-                          {%- else -%}
-                            <div class="col">
-                              <a class="mb-5 fw-bold" href="{{ childlink.url }}">{{- childlink.title | escape -}}</a>
-                            </div>
-                          {%- endif -%}
-                        {%- endfor -%}
-                        {% if link.levels == 1 %}
-                        </ul>
-                    {% else %}
-                      </div>
-                    {% endif %}
+                          <div class="col">
+                            {%- if childlink.links != blank -%}
+                            <a class="mb-2 fw-bold d-block" href="{{ childlink.url }}">{{- childlink.title | escape -}}</a>
+                            <ul class="list-styled fs-sm">
+                              {% for grandchildlink in childlink.links %}
+                                <li class="list-styled-item">
+                                  <a class="list-styled-link" href="{{ grandchildlink.url }}">{{- grandchildlink.title | escape -}}</a>
+                                </li>
+                              {% endfor %}
+                            </ul>
+                          </div>
+                          {% if closeRow == 0 %}
+                          </div>   
+                          {% endif %}
+
+                      {%- else -%}
+                            <a class="mb-5 fw-bold d-block" href="{{ childlink.url }}">{{- childlink.title | escape -}}</a>
+                      {%- endif -%}
+
+        
+                        
+                    {%- endfor -%}
+                  </div>
+                    
                   </div>
                 </div>
               </div>
-            </li>
-          {%- else -%}
-            <li class="nav-item">
+            {% else %}
               <a class="nav-link" href="{{ link.url }}">{{- link.title | escape -}}</a>
-            </li>
-          {%- endif -%}
-        {%- endfor -%}
+            {% endif %}
+          </li>
+        {% endfor %}
       </ul>
     </div>
 
