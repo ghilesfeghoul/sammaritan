@@ -1,0 +1,281 @@
+{% render 'breadcrumb' %}
+
+<section class="pt-7 pb-12">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <a class="btn btn-outline-dark" href="{{ routes.account_url }}">Back to account</a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 text-center">
+
+        <!-- Heading -->
+        <h3 class="mb-10">My Account</h3>
+
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col-12">
+
+        <!-- Order -->
+        <div class="card card-lg mb-5 border">
+          <div class="card-body pb-0">
+
+            <!-- Info -->
+            <div class="card card-sm">
+              <div class="card-body bg-light">
+                <div class="row">
+                  <div class="col-6 col-lg-3">
+
+                    <!-- Heading -->
+                    <h6 class="heading-xxxs text-muted">Order No:</h6>
+
+                    <!-- Text -->
+                    <p class="mb-lg-0 fs-sm fw-bold">
+                      {{ order.order_number }}
+                    </p>
+
+                  </div>
+                  <div class="col-6 col-lg-3">
+
+                    <!-- Heading -->
+                    <h6 class="heading-xxxs text-muted">Order date:</h6>
+
+                    <!-- Text -->
+                    <p class="mb-lg-0 fs-sm fw-bold">
+                      <time datetime="2019-10-01">
+                        {{ order.created_at | date: "%d-%m-%Y" }}
+                      </time>
+                    </p>
+
+                  </div>
+                  <div class="col-6 col-lg-3">
+
+                    <!-- Heading -->
+                    <h6 class="heading-xxxs text-muted">Status:</h6>
+
+                    <!-- Text -->
+                    <p class="mb-0 fs-sm fw-bold">
+                      {{ order.fulfillment_status_label }}
+                    </p>
+
+                  </div>
+                  <div class="col-6 col-lg-3">
+
+                    <!-- Heading -->
+                    <h6 class="heading-xxxs text-muted">Order Amount:</h6>
+
+                    <!-- Text -->
+                    <p class="mb-0 fs-sm fw-bold">
+                      {{ order.total_price | money }}
+                    </p>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="card-footer">
+
+            <!-- Heading -->
+            <h6 class="mb-7">Order Items ({{ order.line_items | size }})</h6>
+
+            <!-- Divider -->
+            <hr class="my-5">
+
+            <!-- List group -->
+            <ul class="list-group list-group-lg list-group-flush-y list-group-flush-x">
+              {% for line_item in order.line_items %}
+                <li class="list-group-item">
+                  <div class="row align-items-center">
+                    <div class="col-4 col-md-3 col-xl-2">
+
+                      <!-- Image -->
+                      <a href="{{ line_item.product.url }}">
+                        {% if line_item.image %}
+                          <img
+                            class="img-fluid"
+                            src="{{ line_item.image | image_url }}"
+                            alt="{{ line_item.image.alt }}"
+                            loading="lazy">
+                        {% else %}
+                          {{ 'product-1' | placeholder_svg_tag: 'img-fluid' }}
+                        {% endif %}
+                      </a>
+
+                    </div>
+                    <div class="col">
+
+                      <!-- Title -->
+                      <p class="mb-4 fs-sm fw-bold">
+                        <a class="text-body" href="{{ line_item.product.url }}">{{ line_item.title }} x {{ line_item.quantity }}</a>
+                        <br>
+                        <span class="text-muted">{{ line_item.original_price | money }} x {{ line_item.quantity }} = {{ line_item.final_line_price | money }}</span>
+                      </p>
+
+                      <!-- Text -->
+                      <div class="fs-sm text-muted">
+                        {% for option in line_item.options_with_values %}
+                          {{ option.name }}: {{ option.value }} <br>
+                        {% endfor %}
+                      </div>
+
+                    </div>
+                    <div class="col">
+                      {% if line_item.successfully_fulfilled_quantity > 0 %}
+                        <div class="card card-lg bg-light mt-5 mt-md-0">
+                          <div class="card-body py-5">
+                            <p class="mb-2">We have fulfilled {{ line_item.successfully_fulfilled_quantity }} items of your recent order.</p>
+                            <p class="mb-2">Tracking company: {{ line_item.fulfillment.tracking_company }}</p>
+                            <p class="mb-2">Tracking number: {{ line_item.fulfillment.tracking_number }}</p>
+
+                            <a
+                              target="_blank"
+                              href="{{ line_item.fulfillment.tracking_url }}"
+                              class="btn btn-dark mt-3">
+                              Track order
+                            </a>
+                          </div>
+                        </div>
+
+                      {% else %}
+                        <p class="fw-bold fs-sm">This item is not yet fulfilled</p>
+                      {% endif %}
+                    </div>
+                  </div>
+                </li>
+              {% endfor %}
+            </ul>
+
+          </div>
+        </div>
+
+        <!-- Total -->
+        <div class="card card-lg mb-5 border">
+          <div class="card-body">
+
+            <!-- Heading -->
+            <h6 class="mb-7">Order Total</h6>
+
+            <!-- List group -->
+            <ul class="list-group list-group-sm list-group-flush-y list-group-flush-x">
+              <li class="list-group-item d-flex">
+                <span>Subtotal</span>
+                <span class="ms-auto">{{ order.subtotal_price | money }}</span>
+              </li>
+              <li class="list-group-item d-flex">
+                <span>Tax</span>
+                <span class="ms-auto">{{ order.tax_price | money }}</span>
+              </li>
+              <li class="list-group-item d-flex">
+                <span>Shipping</span>
+                <span class="ms-auto">{{ order.shipping_price | money }}</span>
+              </li>
+              <li class="list-group-item d-flex fs-lg fw-bold">
+                <span>Total</span>
+                <span class="ms-auto">{{ order.total_price | money }}</span>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+
+        <!-- Details -->
+        <div class="card card-lg border">
+          <div class="card-body">
+
+            <!-- Heading -->
+            <h6 class="mb-7">Billing &amp; Shipping Details</h6>
+
+            <!-- Content -->
+            <div class="row">
+              <div class="col-12 col-md-4">
+
+                <!-- Heading -->
+                <p class="mb-4 fw-bold">
+                  Billing Address:
+                </p>
+
+                <p class="mb-7 mb-md-0 text-gray-500">
+                  {% if order.billing_address != blank %}
+                    {{ order.billing_address | format_address }}
+                  {% else %}
+                    {{ customer.default_address | format_address }}
+                  {% endif %}
+                </p>
+
+              </div>
+              <div class="col-12 col-md-4">
+
+                <!-- Heading -->
+                <p class="mb-4 fw-bold">
+                  Shipping Address:
+                </p>
+
+                <p class="mb-7 mb-md-0 text-gray-500">
+                  {% if order.shipping_address != blank %}
+                    {{ order.shipping_address | format_address }}
+                  {% else %}
+                    {{ customer.default_address | format_address }}
+                  {% endif %}
+                </p>
+
+              </div>
+              <div class="col-12 col-md-4">
+
+                <!-- Heading -->
+                <p class="mb-4 fw-bold">
+                  Shipping Status:
+                </p>
+
+                <p class="mb-7 text-gray-500">
+                  {{ order.financial_status_label }}
+                </p>
+
+                <!-- Heading -->
+                <p class="mb-4 fw-bold">
+                  Payment Information:
+                </p>
+
+                <p class="mb-0 text-gray-500">
+                  {% for transaction in order.transactions %}
+                    <div class="mb-4">
+                      {% assign credit_card_company = transaction.payment_details.credit_card_company %}
+                      {% assign credit_card_last_four_digits = transaction.payment_details.credit_card_number %}
+
+                      {% if credit_card_company %}
+                        <p>{{ credit_card_company }}</p>
+                        <p>{{ credit_card_last_four_digits }}</p>
+
+                        {% case transaction.status_label %}
+                          {% when 'Failure' %}
+                          {% assign background = 'danger' %}
+                        {% else %}
+                          {% assign background = 'success' %}
+                        {% endcase %}
+
+                        <span class="bg-{{ background }} rounded-pill text-sm px-4 py-1 text-white">{{ transaction.status_label }}</span>
+                      {% else %}
+                        <p class="text-sm mb-4">This order is manually placed by {{ shop.name }}</p>
+                      {% endif %}
+                    </div>
+                  {% endfor %}
+                </p>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {"name": "Order Page"}
+{% endschema %}
