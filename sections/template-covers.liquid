@@ -1,0 +1,99 @@
+<section class="position-relative mb-4 py-13">
+
+  <!-- Cover -->
+  <div class="container-cover">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col d-none d-xl-block bg-cover" style="background-image: url({{ section.settings.image_1 | image_url }});"></div>
+        <div class="col d-none d-lg-block bg-cover" style="background-image: url({{ section.settings.image_2 | image_url }});"></div>
+        <div class="col d-none d-md-block bg-cover" style="background-image: url({{ section.settings.image_3 | image_url }});"></div>
+        <div class="col bg-cover" style="background-image: url({{ section.settings.image_4 | image_url }});"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+
+        <!-- Card -->
+        <div class="card card-xl">
+          <div class="card-body text-center">
+
+            <!-- Heading -->
+            <h4 class="mb-6">{{ section.settings.title }}</h4>
+
+            <!-- Text -->
+            <p class="mb-0">
+              {{ section.settings.descrption }}
+            </p>
+
+            <!-- Button -->
+            <a class="btn btn-dark btn-sm mb-n12" href="{{ section.settings.link }}">
+              {{ section.settings.button_title }}
+              <i class="fe fe-arrow-right ms-2"></i>
+            </a>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</section>
+{% schema %}
+  {
+    "name": "Covers",
+    "disabled_on": {
+      "groups": ["header", "footer"]
+    },
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "image_1",
+        "label": "Choose the first image"
+      },
+      {
+        "type": "image_picker",
+        "id": "image_2",
+        "label": "Choose the second image"
+      },
+      {
+        "type": "image_picker",
+        "id": "image_3",
+        "label": "Choose the third image"
+      },
+      {
+        "type": "image_picker",
+        "id": "image_4",
+        "label": "Choose the fourth image"
+      }, {
+        "type": "text",
+        "id": "title",
+        "default": "Summer Collection",
+        "label": "Change the title of your collection"
+      }, {
+        "type": "richtext",
+        "id": "descrption",
+        "default": "<p>Appear, dry there darkness they're seas, dry waters thing fly midst above.</p>",
+        "label": "Change the description of your collection"
+      }, {
+        "type": "text",
+        "id": "button_title",
+        "default": "Shop now",
+        "label": "Change the title of the button"
+      }, {
+        "type": "url",
+        "id": "link",
+        "label": "Type the link to redirect from your button collection"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Collection Covers"
+      }
+    ]
+  }
+{% endschema %}

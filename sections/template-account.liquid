@@ -1,5 +1,5 @@
 {% render 'breadcrumb' %}
-{% assign number_of_orders = customer.orders | size %}
+
 <section class="pt-7 pb-12">
   <div class="container">
     <div class="row">
@@ -20,8 +20,9 @@
 
           </div>
         </div>
+        {% assign number_of_orders = customer.orders | size %}
         {% if number_of_orders > 0 %}
-          {% paginate customer.orders by 10 %}
+          {% paginate customer.orders by 5 %}
             {% for order in customer.orders %}
               <div class="card card-lg mb-5 border">
                 <div class="card-body pb-0">
@@ -128,7 +129,11 @@
                 </div>
               </div>
             {% endfor %}
-            {% render 'pagination', pagination: paginate %}
+            <div class="row">
+              <div class="col-12 text-center">
+                {% render 'pagination', pagination: paginate %}
+              </div>
+            </div>
           {% endpaginate %}
         {% else %}
           <h5>You currently don't have any orders</h5>
@@ -168,8 +173,3 @@
     </div>
   </div>
 </section>
-
-
-{% schema %}
-  {"name": "Account Summary"}
-{% endschema %}

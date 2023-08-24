@@ -50,7 +50,7 @@
                     <div class="card-action card-action-end">
 
                       <!-- Button -->
-                      <button class="edit btn btn-xs btn-circle btn-white-primary">
+                      <button data-edit="{{ forloop.index }}" class="edit btn btn-xs btn-circle btn-white-primary">
                         <i class="fe fe-edit-2"></i>
                       </button>
 
@@ -74,7 +74,7 @@
                 </div>
 
               </div>
-              <div id="edit_address" class="col-12 d-none">
+              <div id="edit_address_{{forloop.index}}" class="col-12 d-none">
 
                 <!-- Heading -->
                 <h6 class="mb-7">
@@ -224,7 +224,10 @@
                   </button>
 
                   <!-- Button -->
-                  <button class="cancel_edit btn btn-outline-dark" type="reset">
+                  <button
+                    data-address="{{ forloop.index }}"
+                    class="cancel_edit btn btn-outline-dark"
+                    type="reset">
                     Cancel
                   </button>
 
@@ -557,7 +560,8 @@
     const edit_buttons = document.querySelectorAll('.edit');
     edit_buttons.forEach(button => {
       button.addEventListener('click', function() {
-        document.getElementById("edit_address").setAttribute('class', "mb-7 col-12");
+        const id = button.getAttribute('data-edit');
+        document.getElementById(`edit_address_${id}`).setAttribute('class', "mb-7 col-12");
         const addresses = document.querySelectorAll('.address');
         addresses.forEach(address => {
           address.setAttribute('class', "address col-12 col-md-9 col-lg-8 offset-lg-1 d-none");
@@ -575,7 +579,8 @@
     const cancel_edit_buttons = document.querySelectorAll('.cancel_edit');
     cancel_edit_buttons.forEach(cancel => {
       cancel.addEventListener('click', function() {
-        document.getElementById("edit_address").setAttribute('class', "col-12 d-none");
+        const id = cancel.getAttribute('data-address');
+        document.getElementById(`edit_address_${id}`).setAttribute('class', "col-12 d-none");
         const addresses = document.querySelectorAll('.address');
         addresses.forEach(address => {
           address.setAttribute('class', "address col-12 col-lg-6");
