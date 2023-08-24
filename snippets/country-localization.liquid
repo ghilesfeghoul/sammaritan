@@ -1,8 +1,8 @@
-<li class="nav-item dropdown hovered">
+<li class="nav-item {% if btnClass != blank %} {{ btnClass }} p-0 {% endif %} dropdown hovered">
 
   <!-- Toggle -->
   <a
-    class="nav-link dropdown-toggle"
+    class="nav-link fs-xs {% if btnClass != blank %} p-0 {% endif %} dropdown-toggle {% if txtClass != blank %} {{ txtClass }} p-0 {% endif %}"
     data-bs-toggle="dropdown"
     href="#"
     aria-controls="CountryList"

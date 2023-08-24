@@ -114,33 +114,26 @@
   </div>
   <div class="py-6">
     <div class="container">
-      <div
-        class="row">
+      <div class="row">
         {%- if section.settings.enable_country_selector and localization.available_countries.size > 1 or section.settings.enable_language_selector and localization.available_languages.size > 1 -%}
-          <div class="col">
-            <div class="d-flex justify-content-start">
-              <div>
-                {%- if section.settings.enable_country_selector and localization.available_countries.size > 1 -%}
-                  <localization-form>
-                    {%- form 'localization' -%}
-                      <div class="dropdown">
-                        {%- render 'country-localization', localPosition: 'FooterCountry' -%}
-                      </div>
-                    {%- endform -%}
-                  </localization-form>
-                {% endif %}
-              </div>
-              <div>
-                {%- if section.settings.enable_language_selector and localization.available_languages.size > 1 -%}
-                  <localization-form>
-                    {%- form 'localization' -%}
-                      <div class="dropdown">
-                        {%- render 'language-localization', localPosition: 'FooterLanguage' -%}
-                      </div>
-                    {%- endform -%}
-                  </localization-form>
-                {% endif %}
-              </div>
+          <div class="row">
+            <div class="col-md-2">
+              {%- if section.settings.enable_country_selector and localization.available_countries.size > 1 -%}
+                <localization-form>
+                  {%- form 'localization' -%}
+                    {%- render 'country-localization', localPosition: 'FooterCountry', btnClass: 'btn-sm' -%}
+                  {%- endform -%}
+                </localization-form>
+              {% endif %}
+            </div>
+            <div class="col-md-2">
+              {%- if section.settings.enable_language_selector and localization.available_languages.size > 1 -%}
+                <localization-form>
+                  {%- form 'localization' -%}
+                    {%- render 'language-localization', localPosition: 'FooterLanguage', btnClass: 'btn-sm' -%}
+                  {%- endform -%}
+                </localization-form>
+              {% endif %}
             </div>
           </div>
         {% endif %}
