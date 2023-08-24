@@ -4,5 +4,70 @@
     "market": "fr"
   },
   "sections": {
-  }
+    "32d43cb8-99f3-4c24-ad1f-261663ce210c": {
+      "type": "newsletter",
+      "disabled": false,
+      "settings": {
+        "newsletter_color": "gray"
+      },
+      "blocks": {
+        "template--20395261952297__32d43cb8-99f3-4c24-ad1f-261663ce210c-text-1": {
+          "type": "text",
+          "settings": {
+            "heading": "Subscribe to our emails",
+            "size": "fs-3"
+          }
+        },
+        "template--20395261952297__32d43cb8-99f3-4c24-ad1f-261663ce210c-subtext-1": {
+          "type": "subtext",
+          "settings": {
+            "paragraph": "<p>Be the first to know about new collections and exclusive offers.<\/p>"
+          }
+        },
+        "template--20395261952297__32d43cb8-99f3-4c24-ad1f-261663ce210c-email_form-1": {
+          "type": "email_form",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "template--20395261952297__32d43cb8-99f3-4c24-ad1f-261663ce210c-text-1",
+        "template--20395261952297__32d43cb8-99f3-4c24-ad1f-261663ce210c-subtext-1",
+        "template--20395261952297__32d43cb8-99f3-4c24-ad1f-261663ce210c-email_form-1"
+      ]
+    },
+    "ccafa1f2-1e28-42a0-a125-5075d67f305a": {
+      "type": "template-list-collections",
+      "disabled": false,
+      "settings": {
+        "title": "Collections",
+        "button_text": "Shop now",
+        "text_color": "#FFF"
+      },
+      "blocks": {
+      },
+      "block_order": [
+
+      ]
+    },
+    "0ee417fd-be55-4ed1-82f3-a61df4f4df30": {
+      "type": "contact-form",
+      "disabled": false,
+      "settings": {
+        "title": "Contact",
+        "show_phone": true
+      },
+      "blocks": {
+      },
+      "block_order": [
+
+      ]
+    }
+  },
+  "order": [
+    "ccafa1f2-1e28-42a0-a125-5075d67f305a",
+    "template",
+    "32d43cb8-99f3-4c24-ad1f-261663ce210c",
+    "0ee417fd-be55-4ed1-82f3-a61df4f4df30"
+  ]
 }

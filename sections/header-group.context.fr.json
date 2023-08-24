@@ -4,5 +4,107 @@
     "market": "fr"
   },
   "sections": {
-  }
+    "header": {
+      "disabled": false,
+      "settings": {
+        "header_selector": "Fashion",
+        "enable_country_selector": false,
+        "enable_language_selector": false,
+        "logo": "shopify:\/\/shop_images\/logo.png"
+      },
+      "blocks": {
+        "5d8379cb-0355-457d-977e-fc30d40964a8": {
+          "type": "link",
+          "settings": {
+            "link_url": "shopify:\/\/collections\/hydrogen",
+            "text_display": "Hydrogen"
+          }
+        },
+        "ebdc6538-74f7-49a9-bbe4-67b15ac6b936": {
+          "type": "link",
+          "settings": {
+            "link_url": "shopify:\/\/pages\/contact",
+            "text_display": "Contact"
+          }
+        },
+        "3ab52cb0-afa4-4897-9bee-6fda31825d6a": {
+          "type": "link",
+          "settings": {
+            "link_url": "shopify:\/\/collections\/ski-collection",
+            "text_display": "ski"
+          }
+        }
+      },
+      "block_order": [
+        "cart",
+        "66d28341-e66a-44cc-b3ef-f6a419eafe5f",
+        "account",
+        "5d8379cb-0355-457d-977e-fc30d40964a8",
+        "ebdc6538-74f7-49a9-bbe4-67b15ac6b936",
+        "3ab52cb0-afa4-4897-9bee-6fda31825d6a"
+      ]
+    },
+    "672da7d8-ff98-4ad5-aff7-d84b667f2e5c": {
+      "type": "announcement-bar",
+      "disabled": false,
+      "settings": {
+        "type_annoncement": "Other",
+        "promotion_text": "Free shipping",
+        "promo_type": "Free shipping",
+        "enable_country_selector": false,
+        "enable_language_selector": false,
+        "allow_social_links": false
+      },
+      "blocks": {
+        "2750ce6d-0e14-4072-b2ab-ac763f66c769": {
+          "type": "link",
+          "settings": {
+            "link_url": "shopify:\/\/pages\/about-us",
+            "text_display": "About"
+          }
+        },
+        "66b33c9e-6132-4f00-895e-23b5438c92aa": {
+          "type": "link",
+          "settings": {
+            "link_url": "shopify:\/\/pages\/contact",
+            "text_display": "Contact"
+          }
+        },
+        "effd8a07-c5c1-4ada-b603-5c34b4e447ea": {
+          "type": "link",
+          "settings": {
+            "link_url": "shopify:\/\/pages\/politique-de-confidentialite",
+            "text_display": "Privacy policy"
+          }
+        }
+      },
+      "block_order": [
+        "2750ce6d-0e14-4072-b2ab-ac763f66c769",
+        "66b33c9e-6132-4f00-895e-23b5438c92aa",
+        "effd8a07-c5c1-4ada-b603-5c34b4e447ea"
+      ]
+    },
+    "332cfaa9-e827-4b75-bd1c-582b6bcfb9fe": {
+      "type": "announcement-bar",
+      "disabled": false,
+      "settings": {
+        "type_annoncement": "Promotion",
+        "promotion_text": "Promotion",
+        "promo_type": "Discount",
+        "enable_country_selector": true,
+        "enable_language_selector": true,
+        "allow_social_links": false
+      },
+      "blocks": {
+      },
+      "block_order": [
+
+      ]
+    }
+  },
+  "order": [
+    "672da7d8-ff98-4ad5-aff7-d84b667f2e5c",
+    "332cfaa9-e827-4b75-bd1c-582b6bcfb9fe",
+    "header"
+  ]
 }
