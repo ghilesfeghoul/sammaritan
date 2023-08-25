@@ -1,7 +1,7 @@
 {
   "parent": "index.json",
   "context": {
-    "market": "fr"
+    "b2b": true
   },
   "sections": {
   }
