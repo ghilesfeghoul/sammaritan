@@ -1,0 +1,161 @@
+{% render 'breadcrumb' %}
+<section class="py-12">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <!-- Heading -->
+        <h3 itemprop="headline" class="mb-3">Search Results</h3>
+      </div>
+    </div>
+    {%- liquid 
+     assign product_size = search.results_count | times: 1.0 
+     assign number_of_products = section.settings.products_per_page | times: 1.0 
+    %}
+    {% if number_of_products > product_size %}
+      {% assign showing = product_size %}
+    {% else %}
+      {% assign showing = number_of_products | times: current_page %}
+    {% endif %}
+    {% paginate search.results by section.settings.products_per_page %}
+      <div class="row">
+        {% if search.performed %}
+          {% if search.results.size > 0 %}
+            <div class="col-12 text-center">
+              <p class="text-gray-500 my-10">{{ search.results_count }} results for the search term {{ search.terms | escape }}</p>
+            </div>
+            {% for item in search.results %}
+              {% case item.object_type %}
+                {% when 'product' %}
+                {% assign divider = forloop.index0 | modulo: 5 %}
+                {% if divider == 0 %}
+                  <div class="w-100 d-none d-lg-block"></div>
+                {% endif %}
+                <div class="col-6 col-md-3 col-lg">
+
+                  <!-- Card -->
+                  <div class="card mb-7" data-toggle="card-collapse">
+
+                    <!-- Image -->
+                    <a href="{{ item.url }}">
+                      {% if item.featured_image %}
+                        <img
+                          class="card-img-top"
+                          src="{{ item.featured_image | image_url }}"
+                          alt="{{ item.featured_image.alt }}"
+                          loading="lazy">
+
+                      {% else %}
+                        {{ 'product-1' | placeholder_svg_tag: 'card-img-top' }}
+                      {% endif %}
+                    </a>
+
+                    <!-- Collapse -->
+                    <div class="card-collapse-parent" style="">
+
+                      <!-- Body -->
+                      <div class="card-body px-0 bg-white text-center">
+
+                        <!-- Vendor -->
+                        <div class="fs-xs">
+                          <span class="text-muted">{{ item.vendor }}</a>
+                        </div>
+
+
+                        <!-- Heading -->
+                        <div class="mb-1 fw-bold">
+                          <a class="text-body" href="{{ item.url }}">{{ item.title }}</a>
+                        </div>
+
+                        <!-- Price -->
+                        <div class="mb-1 fw-bold text-muted">
+                          {% if item.price < item.compare_at_price %}
+                            <span class="fs-xs text-gray-350 text-decoration-line-through">{{ item.compare_at_price | money }}</span>
+                            <span class="text-primary">{{ item.price | money }}</span>
+
+                          {% else %}
+                            {{ item.price | money }}
+                          {% endif %}
+                        </div>
+
+                      </div>
+
+                      <!-- Footer -->
+                      <div class="card-collapse collapse" style="">
+                        <div class="card-footer px-0 pt-0 bg-white text-center">
+                          <a class="btn btn-xs btn-link btn-circle" href="{{ item.url }}">
+                            <i class="fe fe-eye"></i>
+                          </a>
+                        </div>
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                </div>
+            {% else %}
+
+              {% endcase %}
+            {% endfor %}
+          {% else %}
+            <div class="col-12 text-center">
+              <p class="my-4">No results found for the search term: {{ search.terms | escape }}. Try to use a different keyword</p>
+            </div>
+          {% endif %}
+        {% endif %}
+
+      </div>
+      <div class="row">
+        <div class="col-12">
+
+          <!-- Progress -->
+          <!-- Progress -->
+            <div class="row justify-content-center mt-7"> <div class="col-12 text-center">
+
+              <!-- Caption -->
+              <p class="fs-sm text-muted">
+                {% if showing > product_size %}
+                  Showing {{ product_size | floor }} of {{ product_size | floor }} items
+                {% else %}
+                  Showing {{ showing | floor }} of {{ product_size | floor }} items
+
+                {% endif %}
+              </p>
+
+              <!-- Progress -->
+              <div class="progress mx-auto mb-7" style="max-width: 250px;">
+                <div
+                  class="progress-bar bg-dark"
+                  role="progressbar"
+                  style="width: {{ showing | divided_by: product_size | times: 100.0 }}%"
+                  aria-valuenow="{{ showing | divided_by: product_size | times: 100.0 }}"
+                  aria-valuemin="0"
+                  aria-valuemax="100"></div>
+              </div>
+
+              <!-- Button -->
+              {% render 'pagination', pagination: paginate %}
+
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endpaginate %}
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Search Page",
+    "settings": [
+      {
+        "type": "range",
+        "id": "products_per_page",
+        "default": 10,
+        "min": 4,
+        "max": 15,
+        "label": "Products per page"
+      }
+    ]
+  }
+{% endschema %}

@@ -114,11 +114,16 @@
   <div class="container">
 
     <!-- Search-->
-    <form class="navbar-form me-auto order-lg-1">
+    <form
+      action="{{ routes.search_url }}"
+        method="get" 
+    class="navbar-form me-auto order-lg-1">
       <div class="input-group">
         <input
+          name="q"
           type="search"
           class="form-control"
+          value="{{ search.terms | escape }}"
           placeholder="Search for items and brands">
         <div class="input-group-append">
           <button class="btn btn-dark">
