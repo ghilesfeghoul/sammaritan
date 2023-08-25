@@ -206,7 +206,7 @@
             {% endif %}
           </ul>
             <li class="nav-item">
-              <a class="nav-link" href="#modalSearch">
+              <a class="nav-link" href="#modalSearch" data-bs-toggle="offcanvas">
                 <i class="fe fe-search"></i>
               </a>
             </li>
@@ -248,3 +248,33 @@
       
         </div>
 </nav>
+
+<div class="offcanvas offcanvas-end" id="modalSearch" tabindex="-1" style="visibility: hidden;" aria-hidden="true">
+    
+      <!-- Close -->
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
+        <i class="fe fe-x" aria-hidden="true"></i>
+      </button>
+    
+      <!-- Header-->
+      <div class="offcanvas-header lh-fixed fs-lg">
+        <strong class="mx-auto">Search Products</strong>
+      </div>
+    
+      <!-- Body: Form -->
+      <div class="offcanvas-body">
+        <form  
+          action="{{ routes.search_url }}"
+          method="get" >
+          <div class="input-group input-group-merge">
+            <input value="{{ search.terms | escape }}" name="q" class="form-control" type="search" placeholder="Search">
+            <div class="input-group-append">
+              <button class="btn btn-outline-border" type="submit">
+                <i class="fe fe-search"></i>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    
+</div>
