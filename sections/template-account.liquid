@@ -6,7 +6,7 @@
       <div class="col-12 text-center">
 
         <!-- Heading -->
-        <h3 class="mb-10">My Account</h3>
+        <h3 class="mb-10">{{ "templates.customers.account.title" | t }}</h3>
 
       </div>
     </div>
@@ -16,7 +16,7 @@
           <div class="col-12 text-center">
 
             <!-- Heading -->
-            <h3 class="mb-10">Order history</h3>
+            <h3 class="mb-10">{{ "templates.customers.account.history.title" | t }}</h3>
 
           </div>
         </div>
@@ -34,7 +34,7 @@
                         <div class="col-6 col-lg-3">
 
                           <!-- Heading -->
-                          <h6 class="heading-xxxs text-muted">Order No:</h6>
+                          <h6 class="heading-xxxs text-muted">{{ "templates.customers.account.history.table.headings.heading_1" | t }}</h6>
 
                           <!-- Text -->
                           <p class="mb-lg-0 fs-sm fw-bold">
@@ -45,7 +45,7 @@
                         <div class="col-6 col-lg-3">
 
                           <!-- Heading -->
-                          <h6 class="heading-xxxs text-muted">Order date:</h6>
+                          <h6 class="heading-xxxs text-muted">{{ "templates.customers.account.history.table.headings.heading_2" | t }}</h6>
 
                           <!-- Text -->
                           <p class="mb-lg-0 fs-sm fw-bold">
@@ -58,7 +58,7 @@
                         <div class="col-6 col-lg-3">
 
                           <!-- Heading -->
-                          <h6 class="heading-xxxs text-muted">Status:</h6>
+                          <h6 class="heading-xxxs text-muted">{{ "templates.customers.account.history.table.headings.heading_3" | t }}</h6>
 
                           <!-- Text -->
                           <p class="mb-0 fs-sm fw-bold">
@@ -69,7 +69,7 @@
                         <div class="col-6 col-lg-3">
 
                           <!-- Heading -->
-                          <h6 class="heading-xxxs text-muted">Order Amount:</h6>
+                          <h6 class="heading-xxxs text-muted">{{ "templates.customers.account.history.table.headings.heading_4" | t }}</h6>
 
                           <!-- Text -->
                           <p class="mb-0 fs-sm fw-bold">
@@ -110,7 +110,7 @@
 
                           <!-- Button -->
                           <a class="btn btn-sm w-100 btn-outline-dark" href="{{ order.customer_url }}">
-                            Order Details
+                            {{ "templates.customers.account.history.table.footer.button_1" | t }}
                           </a>
 
                         </div>
@@ -118,7 +118,7 @@
 
                           <!-- Button -->
                           <a class="btn btn-sm w-100 btn-outline-dark" href="{{ order.line_items.first.fulfillment.tracking_url }}">
-                            Track order
+                            {{ "templates.customers.account.history.table.footer.button_2" | t }}
                           </a>
 
                         </div>
@@ -136,7 +136,7 @@
             </div>
           {% endpaginate %}
         {% else %}
-          <h5>You currently don't have any orders</h5>
+          <h5>{{ "templates.customers.account.history.empty.title" | t }}</h5>
         {% endif %}
       </div>
       <div class="col-12 col-md-3">
@@ -144,7 +144,7 @@
           <div class="col-12 text-center">
 
             <!-- Heading -->
-            <h3 class="mb-10">Account details</h3>
+            <h3 class="mb-10">{{ "templates.customers.account.details.title" | t }}</h3>
 
           </div>
           <div class="col-12">
@@ -160,7 +160,7 @@
             </div>
 
 
-            <a class="btn btn-outline-dark" href="{{ routes.account_addresses_url }}">View addresses</a>
+            <a class="btn btn-outline-dark" href="{{ routes.account_addresses_url }}">{{ "templates.customers.account.details.button" | t }}</a>
           </div>
         </div>
       </div>
@@ -168,7 +168,7 @@
     </div>
     <div class="row">
       <div class="col-12 mt-7 mt-md-0">
-        <a class="btn btn-dark" href="{{ routes.account_logout_url }}">Logout</a>
+        <a class="btn btn-dark" href="{{ routes.account_logout_url }}">{{ "templates.customers.account.button" | t }}</a>
       </div>
     </div>
   </div>

@@ -13,6 +13,24 @@
       },
       "none": "There are no comments in this article",
       "impressions": "See what people are saying"
+    },
+    "featured-collection": {
+      "button": {
+        "text": "View More"
+      }
+    },
+    "newsletter": {
+      "form": {
+        "email": {
+          "placeholder": "Enter Email"
+        },
+        "submit": {
+          "text": "Subscribe"
+        },
+        "success": {
+          "message": "Subscribed successfully"
+        }
+      }
     }
   },
   "templates": {
@@ -20,6 +38,51 @@
       "login": {
         "title": "Login",
         "password-reset-title": "Forgot Password?"
+      },
+      "account": {
+        "title": "My Account",
+        "history": {
+          "title": "Order history",
+          "table": {
+            "headings": {
+              "heading_1": "Order No:",
+              "heading_2": "Order date:",
+              "heading_3": "Status:",
+              "heading_4": "Order Amount:"
+            },
+            "footer": {
+              "button_1": "Order Details",
+              "button_2": "Track order"
+            }
+          },
+          "empty": {
+            "title": "You currently don't have any orders"
+          }
+        },
+        "details": {
+          "title": "Account details",
+          "button": "View addresses"
+        },
+        "button": "Logout"
+      }
+    },
+    "contact-form": {
+      "form-error": {
+        "message": "Oh no! Your message is not sent"
+      },
+      "form-success": {
+        "message": "Your message is sent successfully"
+      },
+      "form": {
+        "inputs": {
+          "name": "Your Name",
+          "email": "Your Email",
+          "phone": "Phone number",
+          "message": "Message",
+          "button": {
+            "text": "Send"
+          }
+        }
       }
     }
   },

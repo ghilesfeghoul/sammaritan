@@ -27,6 +27,274 @@
           "info": "https://medium.com/sammaritan"
         }
       }
+    },
+    "announcement-bar": {
+      "name": "Announcement bar",
+      "settings": {
+        "type_annoncement": {
+          "label": "Choose the type of the announcement bar",
+          "options": {
+            "option_1": {
+              "label": "Promotion"
+            },
+            "option_2": {
+              "label": "Other"
+            }
+          }
+        },
+        "promotion_text": {
+          "label": "Promotion text"
+        },
+        "promo_type": {
+          "label": "Type of the promotion",
+          "options": {
+            "option_1" : {
+              "label": "Free shipping"
+            },
+            "option_2": {
+              "label": "Discount"
+            }
+          }
+        },
+        "enable_country_selector": {
+          "info": "The country selector is only available on other announcement bar"
+        },
+        "enable_language_selector": {
+          "info": "The language selector is only available on other announcement bar"
+        },
+        "allow_social_links": {
+          "info": "This setting is only available on other announcement bar"
+        }
+      },
+      "blocks": {
+        "link": {
+          "name": "Link"
+        },
+        "settings": {
+          "link_url": {
+            "label": "Type the link url",
+            "info": "The link url is only available on other announcement bar"
+          },
+          "text_display": {
+            "label": "Type the text to display in the header",
+            "info": "The link text is only available on other announcement bar"
+          }
+        }
+      }
+    },
+    "general": {
+      "enable_country_selector": {
+        "label": "Show country selector"
+      },
+      "enable_language_selector": {
+        "label": "Show language selector"
+      },
+      "allow_social_links": {
+        "label": "Display all social links"
+      },
+      "logo": {
+        "label": "Choose the logo to display for your brand"
+      }
+    },
+    "contact-form": {
+      "name": "Contact Form",
+      "settings": {
+        "title": {
+          "label": "Title"
+        },
+        "show_phone": {
+          "label": "Enable phone input",
+          "info": "Add an input phone to the contact form"
+        }
+      }
+    },
+    "featured-collection": {
+      "name": "Featured collection",
+      "settings": {
+        "title": {
+          "label": "Title"
+        },
+        "featured_collection": {
+          "label": "Collection"
+        },
+        "number_of_products_to_show": {
+          "label": "Number of products to show"
+        }
+      }
+    },
+    "footer": {
+      "name": "Footer",
+      "blocks": {
+        "link_list": {
+          "name": "Quick links",
+          "settings": {
+            "heading": {
+              "label": "Quick links"
+            },
+            "menu": {
+              "label": "Choose a menu to display"
+            }
+          }
+        },
+        "text": {
+          "name": "Text",
+          "settings": {
+            "inline_richtext": {
+              "label": "Heading"
+            },
+            "subtext": {
+              "label": "Content"
+            }
+          }
+        }
+      },
+      "settings": {
+        "footer_type": {
+          "label": "Select the default footer to display",
+          "options": {
+            "option_1": {
+              "label": "Simple"
+            },
+            "option_2": {
+              "label": "Fashion"
+            }
+          }
+        },
+        "show_payment_methods": {
+          "label": "Show payment methods"
+        },
+        "rights": {
+          "label": "Type text",
+          "info": "Example : All rights reserved."
+        }
+      }
+    },
+    "header": {
+      "name": "Header",
+      "settings": {
+        "header_selector": {
+          "options": {
+            "option_1": {
+              "label": "Fashion"
+            },
+            "option_2": {
+              "label": "Classic"
+            },
+            "option_3": {
+              "label": "Assymetric"
+            }
+          },
+          "label": "Choose the default header to render in your shop",
+          "info": "Header chooser"
+        },
+        "menu": {
+          "label": "Header menu"
+        }
+      },
+      "blocks": {
+        "link": {
+          "name": "Link",
+          "settings": {
+            "link_url": {
+              "label": "Type the link url"
+            },
+            "text_display": {
+              "label": "Type the text to display in the header"
+            }
+          }
+        },
+        "customer_account": {
+          "name": "Account"
+        },
+        "customer_cart": {
+          "name": "Cart"
+        }
+      }
+    },
+    "header-group": {
+      "name": "Navbar"
+    },
+    "newsletter": {
+      "name": "Newsletter",
+      "settings": {
+        "newsletter_color": {
+          "label": "Change the color scheme",
+          "options": {
+            "option_1": {
+              "label": "White"
+            },
+            "option_2": {
+              "label": "Gray"
+            },
+            "option_3": {
+              "label": "Dark"
+            }
+          }
+        }
+      },
+      "blocks": {
+        "text": {
+          "name": "Text",
+          "settings": {
+            "heading": {
+              "label": "Heading"
+            },
+            "size": {
+              "label": "Text size",
+              "options": {
+                "option_1": {
+                  "label": "Small"
+                },
+                "option_2": {
+                  "label": "Medium"
+                },
+                "option_3": {
+                  "label": "Large"
+                }
+              }
+            }
+          }
+        },
+        "subtext": {
+          "name": "Description",
+          "settings": {
+            "paragraph": {
+              "label": "Paragraph"
+            }
+          }
+        },
+        "email_form": {
+          "name": "Newsletter form"
+        }
+      }
+    },
+    "404": {
+      "name": "Template 404", 
+      "settings": {
+        "title": {
+          "label": "Title of the page",
+          "info": "Customize the title of your page"
+        },
+        "subtext_html": {
+          "label": "Error Message",
+          "info": "Customize the error message of your page"
+        },
+        "button_text_color": {
+          "label": "Text color button",
+          "info": "Customize the color of the text button"
+        },
+        "button_color": {
+          "label": "Color button",
+          "info": "Customize the color of the button"
+        },
+        "button_text": {
+          "label": "Button text",
+          "info": "Customize the text of the button"
+        },
+        "button_url": {
+          "label": "Button URL"
+        }
+      }
     }
   }
 }

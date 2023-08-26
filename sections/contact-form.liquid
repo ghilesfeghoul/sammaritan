@@ -15,7 +15,7 @@
           {% if form.errors %}
             <div class="alert alert-danger">
               <div class="text-sm ml-3">
-                Oh no! Your message is not sent
+                {{ "templates.contact-form.form-error.message" | t }}
               </div>
               <ul class="px-4 mb-3 ml-7 list-decimal">
                 {% for error in form.errors %}
@@ -27,63 +27,63 @@
             </div>
           {% elsif form.posted_successfully? %}
             <div class="alert alert-success">
-              Your message is sent successfully
+              {{ "templates.contact-form.form-success.message" | t }}
             </div>
           {% endif %}
           <div class="form-group">
             <label class="visually-hidden" for="ContactFormName">
-              Your Name *
+              {{ "templates.contact-form.form.inputs.name" | t }} *
             </label>
             <input
               class="form-control form-control-sm"
               id="ContactFormName"
               name="contact[name]"
               type="text"
-              placeholder="Your Name *"
+              placeholder="{{ "templates.contact-form.form.inputs.name" | t }} *"
               required>
           </div>
           <!-- Email -->
           <div class="form-group">
             <label class="visually-hidden" for="ContactFormEmail">
-              email *
+              {{ "templates.contact-form.form.inputs.email" | t }} *
             </label>
             <input
               class="form-control form-control-sm"
               name="contact[email]"
               id="ContactFormEmail"
               type="email"
-              placeholder="Your Email *"
+              placeholder="{{ "templates.contact-form.form.inputs.email" | t }} *"
               required>
           </div>
 
           {% if section.settings.show_phone %}
             <div class="form-group">
               <label class="visually-hidden" for="ContactFormPhone">
-                phone *
+                {{ "templates.contact-form.form.inputs.phone" | t }} *
               </label>
               <input
                 class="form-control form-control-sm"
                 id="ContactFormPhone"
                 name="contact[phone]"
                 type="tel"
-                placeholder="Phone number *"
+                placeholder="{{ "templates.contact-form.form.inputs.phone" | t }} *"
                 required>
             </div>
           {% endif %}
 
           <div class="form-group mb-7">
             <label class="visually-hidden" for="ContactFormMessage">
-              Message *
+              {{ "templates.contact-form.form.inputs.message" | t }} *
             </label>
             <textarea
               class="form-control form-control-sm"
               name="contact[body]"
               id="ContactFormMessage"
               rows="5"
-              placeholder="Message *"
+              placeholder="{{ "templates.contact-form.form.inputs.message" | t }} *"
               required></textarea>
           </div>
-          <button class="btn btn-dark" type="submit">Send</button>
+          <button class="btn btn-dark" type="submit">{{ "templates.contact-form.form.inputs.button.text" | t }}</button>
         {% endform %}
 
       </div>
@@ -93,7 +93,7 @@
 
 {% schema %}
   {
-    "name": "Contact Form",
+    "name": "t:settings_schema.contact-form.name",
     "disabled_on": {
       "groups": ["header", "footer"]
     },
@@ -101,18 +101,19 @@
       {
         "type": "text",
         "id": "title",
-        "label": "Title"
+        "label": "t:settings_schema.contact-form.settings.title.label",
+        "default": "Contact"
       }, {
         "type": "checkbox",
         "id": "show_phone",
-        "label": "Enable phone input",
-        "info": "Add an input phone to the contact form",
+        "label": "t:settings_schema.contact-form.settings.show_phone.label",
+        "info": "t:settings_schema.contact-form.settings.show_phone.info",
         "default": false
       }
     ],
     "presets": [
       {
-        "name": "Contact Form"
+        "name": "t:settings_schema.contact-form.name"
       }
     ]
   }

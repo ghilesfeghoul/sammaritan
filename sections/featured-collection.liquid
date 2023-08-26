@@ -26,7 +26,7 @@
 
           <!-- Link  -->
           <div class="mt-7 text-center">
-            <a class="link-underline" href="{{ section.settings.featured_collection.url }}">View More</a>
+            <a class="link-underline" href="{{ section.settings.featured_collection.url }}">{{ "general.featured-collection.button.text" | t }}</a>
           </div>
 
         </div>
@@ -37,7 +37,7 @@
 
 {% schema %}
   {
-    "name": "Featured collection",
+    "name": "t:settings_schema.featured-collection.name",
     "disabled_on": {
       "groups": ["header", "footer"]
     },
@@ -45,24 +45,23 @@
       {
         "type": "text",
         "id": "title",
-        "default": "Featured collection",
-        "label": "Title"
+        "label": "t:settings_schema.featured-collection.settings.title.label"
       }, {
         "type": "collection",
         "id": "featured_collection",
-        "label": "Collection"
+        "label": "t:settings_schema.featured-collection.settings.featured_collection.label"
       }, {
         "type": "range",
         "id": "number_of_products_to_show",
         "min": 4,
         "max": 12,
         "default": 4,
-        "label": "Number of products to show"
+        "label": "t:settings_schema.featured-collection.settings.number_of_products_to_show.label"
       }
     ],
     "presets": [
       {
-        "name": "Featured Collection"
+        "name": "t:settings_schema.featured-collection.name"
       }
     ]
   }

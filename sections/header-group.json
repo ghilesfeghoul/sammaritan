@@ -1,5 +1,5 @@
 {
-  "name": "Navbar",
+  "name": "t:settings_schema.header-group.name",
   "type": "header",
   "sections": {
     "header": {

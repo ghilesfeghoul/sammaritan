@@ -10,21 +10,21 @@
 
 {% schema %}
   {
-    "name": "Announcement bar",
+    "name": "t:settings_schema.announcement-bar.name",
     "enabled_on": {
       "groups": ["header"]
     },
     "settings": [
       {
         "id": "type_annoncement",
-        "label": "Choose the type of the announcement bar",
+        "label": "t:settings_schema.announcement-bar.settings.type_annoncement.label",
         "type": "select",
         "options": [
           {
-            "label": "Promotion",
+            "label": "t:settings_schema.announcement-bar.settings.type_annoncement.options.option_1.label",
             "value": "Promotion"
           }, {
-            "label": "Other",
+            "label": "t:settings_schema.announcement-bar.settings.type_annoncement.options.option_2.label",
             "value": "Other"
           }
         ],
@@ -33,7 +33,7 @@
       {
         "type": "text",
         "id": "promotion_text",
-        "label": "Promotion text",
+        "label": "t:settings_schema.announcement-bar.settings.promotion_text.label",
         "default": "Promotion"
       },
       {
@@ -41,59 +41,59 @@
         "id": "promo_type",
         "options": [
           {
-            "label": "Free shipping",
+            "label": "t:settings_schema.announcement-bar.settings.promo_type.options.option_1.label",
             "value": "Free shipping"
           }, {
-            "label": "Discount",
+            "label": "t:settings_schema.announcement-bar.settings.promo_type.options.option_2.label",
             "value": "Discount"
           }
         ],
         "default": "Discount",
-        "label": "Type of the promotion"
+        "label": "t:settings_schema.announcement-bar.settings.promo_type.label"
       },
       {
         "type": "checkbox",
         "id": "enable_country_selector",
         "default": true,
-        "label": "Show country selector",
-        "info": "The country selector is only available on other announcement bar"
+        "label": "t:settings_schema.general.enable_country_selector.label",
+        "info": "t:settings_schema.announcement-bar.settings.enable_country_selector.info"
       }, {
         "type": "checkbox",
         "id": "enable_language_selector",
         "default": true,
-        "label": "Show language selector",
-        "info": "The language selector is only available on other announcement bar"
+        "label": "t:settings_schema.general.enable_language_selector.label",
+        "info": "t:settings_schema.announcement-bar.settings.enable_language_selector.info"
       }, {
         "type": "checkbox",
         "id": "allow_social_links",
         "default": false,
-        "label": "Display all social links",
-        "info": "This setting is only available on other announcement bar"
+        "label": "t:settings_schema.general.allow_social_links.label",
+        "info": "t:settings_schema.announcement-bar.settings.allow_social_links.info"
       }
     ],
     "blocks": [
       {
-        "name": "Link",
+        "name": "t:settings_schema.announcement-bar.blocks.link.name",
         "type": "link",
         "limit": 3,
         "settings": [
           {
             "type": "url",
             "id": "link_url",
-            "label": "Type the link url",
-            "info": "The link url is only available on other announcement bar"
+            "label": "t:settings_schema.announcement-bar.blocks.settings.link_url.label",
+            "info": "t:settings_schema.announcement-bar.blocks.settings.link_url.info"
           }, {
             "type": "text",
             "id": "text_display",
-            "label": "Type the text to display in the header",
-            "info": "The link text is only available on other announcement bar"
+            "label": "t:settings_schema.announcement-bar.blocks.settings.text_display.label",
+            "info": "t:settings_schema.announcement-bar.blocks.settings.text_display.info"
           }
         ]
       }
     ],
     "presets": [
       {
-        "name": "Announcement bar"
+        "name": "t:settings_schema.announcement-bar.name"
       }
     ],
     "limit": 2

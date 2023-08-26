@@ -27,6 +27,274 @@
           "content": "Comptes sociaux"
         }
       }
+    },
+    "announcement-bar": {
+      "name": "Barre d'annonce",
+      "settings": {
+        "type_annoncement": {
+          "label": "Choisir le type de la barre d'annonce ",
+          "options": {
+            "option_1": {
+              "label": "Promotion"
+            },
+            "option_2": {
+              "label": "Autre"
+            }
+          }
+        },
+        "promotion_text": {
+          "label": "Tapez le texte de votre promotion"
+        },
+        "promo_type": {
+          "label": "CHoisir le type de la promotion",
+          "options": {
+            "option_1": {
+              "label": "Livraison gratuite"
+            },
+            "option_2": {
+              "label": "Réduction de prix"
+            }
+          }
+        },
+        "enable_country_selector": {
+          "info": "Le sélecteur de pays n'est disponible qu'avec la barre d'annonce de type 'Autre'"
+        },
+        "enable_language_selector": {
+          "info": "Le sélecteur de langues n'est disponible qu'avec la barre d'annonce de type 'Autre'"
+        },
+        "allow_social_links": {
+          "info": "Ce paramètre n'est disponible qu'avec la barre d'annonce de type 'Autre'"
+        }
+      },
+      "blocks": {
+        "link": {
+          "name": "Un lien"
+        },
+        "settings": {
+          "link_url": {
+            "label": "Choisir le lien de l'url",
+            "info": "Le lien d'url n'est disponible qu'avec la barre d'annonce de type 'Autre'"
+          },
+          "text_display": {
+            "label": "Tapez le texte qui sera visible dans votre barre d'annonce",
+            "info": "Le texte du lien n'est disponible qu'avec la barre d'annonce de type 'Autre'"
+          }
+        }
+      }
+    },
+    "general": {
+      "enable_country_selector": {
+        "label": "Afficher le sélecteur de pays"
+      },
+      "enable_language_selector": {
+        "label": "Afficher le sélecteur de langues"
+      },
+      "allow_social_links": {
+        "label": "Afficher vos réseaux sociaux"
+      },
+      "logo": {
+        "label": "Choisir un logo à afficher à la place du titre"
+      }
+    },
+    "contact-form": {
+      "name": "Formulaire de contact",
+      "settings": {
+        "title": {
+          "label": "Titre de votre formulaire"
+        },
+        "show_phone": {
+          "label": "Afficher le champs Téléphone",
+          "info": "Ajoute un champs Tél à votre formulaire"
+        }
+      }
+    },
+    "featured-collection": {
+      "name": "Collection en vedette",
+      "settings": {
+        "title": {
+          "label": "Titre de la collection"
+        },
+        "featured_collection": {
+          "label": "Collection"
+        },
+        "number_of_products_to_show": {
+          "label": "Nombre de produits à afficher dans la collection"
+        }
+      }
+    },
+    "footer": {
+      "name": "Pied de page",
+      "blocks": {
+        "link_list": {
+          "name": "Liens rapides",
+          "settings": {
+            "heading": {
+              "label": "Liens rapides"
+            },
+            "menu": {
+              "label": "Choisir un menu à afficher"
+            }
+          }
+        },
+        "text": {
+          "name": "Texte",
+          "settings": {
+            "inline_richtext": {
+              "label": "Titre du texte"
+            },
+            "subtext": {
+              "label": "Contenu du texte"
+            }
+          }
+        }
+      },
+      "settings": {
+        "footer_type": {
+          "label": "Choisir le type de footer à afficher",
+          "options": {
+            "option_1": {
+              "label": "Simple"
+            },
+            "option_2": {
+              "label": "Fashion"
+            }
+          }
+        },
+        "show_payment_methods": {
+          "label": "Afficher les méthodes de paiement"
+        },
+        "rights": {
+          "label": "Taper un texte à afficher",
+          "info": "Example : Tous droits réservés."
+        }
+      }
+    },
+    "header": {
+      "name": "En-tête",
+      "settings": {
+        "header_selector": {
+          "options": {
+            "option_1": {
+              "label": "Fashion"
+            },
+            "option_2": {
+              "label": "Classique"
+            },
+            "option_3": {
+              "label": "Assymetrique"
+            }
+          },
+          "label": "Choisir le logo de votre marque",
+          "info": "Sélecteur d'en-têtes"
+        },
+        "menu": {
+          "label": "Menu de votre en-tête"
+        }
+      },
+      "blocks": {
+        "link": {
+          "name": "Lien",
+          "settings": {
+            "link_url": {
+              "label": "Sélectionnez le lien de votre url"
+            },
+            "text_display": {
+              "label": "Tapez le texte de votre lien"
+            }
+          }
+        },
+        "customer_account": {
+          "name": "Compte"
+        },
+        "customer_cart": {
+          "name": "Panier"
+        }
+      }
+    },
+    "header-group": {
+      "name": "Barre de navigation"
+    },
+    "newsletter": {
+      "name": "Newsletter",
+      "settings": {
+        "newsletter_color": {
+          "label": "Changer le schéma de couleur",
+          "options": {
+            "option_1": {
+              "label": "Clair"
+            },
+            "option_2": {
+              "label": "Gris"
+            },
+            "option_3": {
+              "label": "Noir"
+            }
+          }
+        }
+      },
+      "blocks": {
+        "text": {
+          "name": "Titre",
+          "settings": {
+            "heading": {
+              "label": "Titre"
+            },
+            "size": {
+              "label": "Taille de la police",
+              "options": {
+                "option_1": {
+                  "label": "Petite"
+                },
+                "option_2": {
+                  "label": "Moyenne"
+                },
+                "option_3": {
+                  "label": "Grande"
+                }
+              }
+            }
+          }
+        },
+        "subtext": {
+          "name": "Description",
+          "settings": {
+            "paragraph": {
+              "label": "Paragraphe"
+            }
+          }
+        },
+        "email_form": {
+          "name": "Formulaire de la newsletter"
+        }
+      }
+    },
+    "404": {
+      "name": "Page d'erreur 404", 
+      "settings": {
+        "title": {
+          "label": "Titre de la page",
+          "info": "Personnalisez le titre de cette page"
+        },
+        "subtext_html": {
+          "label": "Message d'erreur",
+          "info": "Personnalisez votre message d'erreur"
+        },
+        "button_text_color": {
+          "label": "Couleur du texte du bouton",
+          "info": "Personnalisez la couleur de votre texte du bouton"
+        },
+        "button_color": {
+          "label": "Couleur du bouton",
+          "info": "Personnalisez la couleur de votre bouton"
+        },
+        "button_text": {
+          "label": "Texte du bouton",
+          "info": "Changez le texte de votre bouton"
+        },
+        "button_url": {
+          "label": "Changez l'url de redirection lorsque le client clique sur le bouton"
+        }
+      }
     }
   }
 }

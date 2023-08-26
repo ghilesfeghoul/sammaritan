@@ -7,40 +7,36 @@
 
 {% schema %}
   {
-    "name": "Footer",
+    "name": "t:settings_schema.footer.name",
     "blocks": [
       {
         "type": "@app"
       }, {
         "type": "link_list",
-        "name": "Liens utiles",
+        "name": "t:settings_schema.footer.blocks.link_list.name",
         "settings": [
           {
             "type": "inline_richtext",
             "id": "heading",
-            "default": "Quick links",
-            "label": "Quick links"
+            "label": "t:settings_schema.footer.blocks.link_list.settings.heading.label"
           }, {
             "type": "link_list",
             "id": "menu",
-            "default": "footer",
-            "label": "Choose a menu to display"
+            "label": "t:settings_schema.footer.blocks.link_list.settings.menu.label"
           }
         ]
       }, {
         "type": "text",
-        "name": "text",
+        "name": "t:settings_schema.footer.blocks.text.name",
         "settings": [
           {
             "type": "inline_richtext",
             "id": "heading",
-            "default": "Heading",
-            "label": "Heading"
+            "label": "t:settings_schema.footer.blocks.text.settings.heading.label"
           }, {
             "type": "richtext",
             "id": "subtext",
-            "default": "<p>Share contact information, store details, and brand content with your customers.</p>",
-            "label": "content"
+            "label": "t:settings_schema.footer.blocks.text.settings.subtext.label"
           }
         ]
       }
@@ -49,13 +45,13 @@
       {
         "type": "select",
         "id": "footer_type",
-        "label": "Select the default footer to display",
+        "label": "t:settings_schema.footer.settings.footer_type.label",
         "options": [
           {
-            "label": "Simple",
+            "label": "t:settings_schema.footer.settings.footer_type.options.option_1.label",
             "value": "simple"
           }, {
-            "label": "Fashion",
+            "label": "t:settings_schema.footer.settings.footer_type.options.option_2.label",
             "value": "fashion"
           }
         ]
@@ -63,30 +59,30 @@
       {
         "type": "checkbox",
         "id": "allow_social_links",
-        "label": "Display all social links"
+        "label": "t:settings_schema.general.allow_social_links.label"
       },
       {
         "type": "checkbox",
         "id": "enable_country_selector",
-        "label": "Show country selector"
+        "label": "t:settings_schema.general.enable_country_selector.label"
       },
       {
         "type": "checkbox",
         "id": "enable_language_selector",
-        "label": "Show language selector"
+        "label": "t:settings_schema.general.enable_language_selector.label"
       }, {
         "type": "checkbox",
         "id": "show_payment_methods",
-        "label": "Show payment methods"
+        "label": "t:settings_schema.footer.settings.show_payment_methods.label"
       }, {
         "type": "text",
         "id": "rights",
-        "label": "Type text",
-        "info": "Example : All rights reserved."
+        "label": "t:settings_schema.footer.settings.rights.label",
+        "info": "t:settings_schema.footer.settings.rights.info"
       }, {
         "type": "image_picker",
         "id": "logo",
-        "label": "Choose the logo to display for your brand"
+        "label": "t:settings_schema.general.logo.label"
       }
     ],
     "default": {

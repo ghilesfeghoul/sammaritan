@@ -13,6 +13,24 @@
         },
         "none": "Cet article ne contient pas de commentaires",
         "impressions": "Ce qu'ils en pensent"
+      },
+      "featured-collection": {
+        "button": {
+          "text": "Voir plus"
+        }
+      },
+      "newsletter": {
+        "form": {
+          "email": {
+            "placeholder": "Tapez votre email"
+          },
+          "submit": {
+            "text": "S'abonner"
+          },
+          "success": {
+            "message": "Félicitations, vous êtes abonnés à notre newsletter"
+          }
+        }
       }
     },
     "templates": {
@@ -20,6 +38,51 @@
         "login": {
           "title": "Login",
           "password-reset-title": "Forgot Password?"
+        },
+        "account": {
+          "title": "Mon compte",
+          "history": {
+            "title": "Historique de mes achats",
+            "table": {
+              "headings": {
+                "heading_1": "N° de commande",
+                "heading_2": "Date",
+                "heading_3": "Statut",
+                "heading_4": "Total"
+              },
+              "footer": {
+                "button_1": "Voir plus",
+                "button_2": "Suivi de commande"
+              }
+            },
+            "empty": {
+              "title": "Vous n'avez pas encore de commandes"
+            }
+          },
+          "details": {
+            "title": "Détails du compte",
+            "button": "Voir mes addresses"
+          },
+          "button": "Se déconnecter"
+        }
+      },
+      "contact-form": {
+        "form-error": {
+          "message": "Une erreur s'est produite lors de l'envoie de votre message, veuillez réessayer plus tard."
+        },
+        "form-success": {
+          "message": "Votre message a été envoyé avec succès."
+        },
+        "form": {
+          "inputs": {
+            "name": "Tapez votre nom",
+            "email": "Tapez votre email",
+            "phone": "Tapez votre numéro de téléphone",
+            "message": "Tapez votre message",
+            "button": {
+              "text": "Envoyer"
+            }
+          }
         }
       }
     }

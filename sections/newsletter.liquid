@@ -43,14 +43,14 @@
                     name="contact[email]"
                     value="{{ form.email }}"
                     class="form-control form-control-gray-700 form-control-lg"
-                    placeholder="Enter Email *"
+                    placeholder="{{ "general.newsletter.form.email.placeholder" | t }} *"
                     required>
                 </div>
                 <div class="col-auto">
                   <button
                     type="submit"
                     name="commit"
-                    class="btn btn-gray-500 btn-lg">Subscribe</button>
+                    class="btn btn-gray-500 btn-lg">{{ "general.newsletter.form.submit.text" | t }}</button>
                 </div>
               </div>
               {%- if form.errors -%}
@@ -61,7 +61,7 @@
               {%- endif -%}
               {%- if form.posted_successfully? -%}
                 <div class="alert alert-success mt-5">
-                  Subscribed successfully
+                  {{ "general.newsletter.form.success.message" | t }}
                 </div>
               {%- endif -%}
             {% endform %}
@@ -77,7 +77,7 @@
 
 {% schema %}
   {
-    "name": "Newsletter",
+    "name": "t:settings_schema.newsletter.name",
     "disabled_on": {
       "groups": ["header"]
     },
@@ -85,16 +85,16 @@
       {
         "type": "select",
         "id": "newsletter_color",
-        "label": "Change the newsletter color scheme",
+        "label": "t:settings_schema.newsletter.settings.newsletter_color.label",
         "options": [
           {
-            "label": "White",
+            "label": "t:settings_schema.newsletter.settings.newsletter_color.options.option_1.label",
             "value": "white"
           }, {
-            "label": "Gray",
+            "label": "t:settings_schema.newsletter.settings.newsletter_color.options.option_2.label",
             "value": "gray"
           }, {
-            "label": "Dark",
+            "label": "t:settings_schema.newsletter.settings.newsletter_color.options.option_3.label",
             "value": "dark"
           }
         ],
@@ -104,26 +104,25 @@
     "blocks": [
       {
         "type": "text",
-        "name": "text",
+        "name": "t:settings_schema.newsletter.blocks.text.name",
         "settings": [
           {
             "type": "inline_richtext",
             "id": "heading",
-            "default": "Subscribe to our emails",
-            "label": "Heading"
+            "label": "t:settings_schema.newsletter.blocks.text.settings.heading.label"
           }, {
             "type": "select",
             "id": "size",
-            "label": "Text size",
+            "label": "t:settings_schema.newsletter.blocks.text.settings.size.label",
             "options": [
               {
-                "label": "Small",
+                "label": "t:settings_schema.newsletter.blocks.text.settings.size.options.option_1.label",
                 "value": "fs-5"
               }, {
-                "label": "Medium",
+                "label": "t:settings_schema.newsletter.blocks.text.settings.size.options.option_2.label",
                 "value": "fs-3"
               }, {
-                "label": "Large",
+                "label": "t:settings_schema.newsletter.blocks.text.settings.size.options.option_3.label",
                 "value": "fs-1"
               }
             ],
@@ -131,19 +130,18 @@
           }
         ]
       }, {
-        "name": "Description",
+        "name": "t:settings_schema.newsletter.blocks.subtext.name",
         "type": "subtext",
         "settings": [
           {
             "type": "richtext",
             "id": "paragraph",
-            "default": "<p>Be the first to know about new collections and exclusive offers.</p>",
-            "label": "Description"
+            "label": "t:settings_schema.newsletter.blocks.subtext.settings.paragraph.label"
           }
         ],
         "limit": 1
       }, {
-        "name": "Newsletter form",
+        "name": "t:settings_schema.newsletter.blocks.email_form.name",
         "type": "email_form",
         "limit": 1
       }, {
@@ -152,7 +150,7 @@
     ],
     "presets": [
       {
-        "name": "Newsletter",
+        "name": "t:settings_schema.newsletter.name",
         "blocks": [
           {
             "type": "text"
