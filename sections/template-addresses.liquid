@@ -5,7 +5,7 @@
       <div class="col-12 text-center">
 
         <!-- Heading -->
-        <h3 class="mb-10">My Addresses</h3>
+        <h3 class="mb-10">{{ "templates.customers.addresses.title" | t }}</h3>
 
       </div>
     </div>
@@ -16,13 +16,13 @@
         <nav class="mb-10 mb-md-0">
           <div class="list-group list-group-sm list-group-strong list-group-flush-x">
             <a class="list-group-item list-group-item-action dropend-toggle " href="{{ routes.account_url }}">
-              Orders
+              {{ "templates.customers.addresses.nav.link_1" | t }}
             </a>
             <a class="list-group-item list-group-item-action dropend-toggle active" href="#">
-              Addresses
+              {{ "templates.customers.addresses.nav.link_2" | t }}
             </a>
             <a class="list-group-item list-group-item-action dropend-toggle" href="{{ routes.account_logout_url }}">
-              Logout
+              {{ "templates.customers.addresses.nav.link_3" | t }}
             </a>
           </div>
         </nav>
@@ -39,7 +39,7 @@
 
                   <div class="card-body">
                     {% if address == customer.default_address %}
-                      <span class="rounded-pill bg-dark text-white p-2">Default</span>
+                      <span class="rounded-pill bg-dark text-white p-2">{{ "templates.customers.addresses.address.default" | t }}</span>
                     {% endif %}
                     <!-- Text -->
                     <p class="text-muted mb-0 py-3">
@@ -78,7 +78,7 @@
 
                 <!-- Heading -->
                 <h6 class="mb-7">
-                  Edit Address
+                  {{ "templates.customers.addresses.address.edit" | t }}
                 </h6>
 
                 <!-- Form -->
@@ -86,43 +86,43 @@
                   <div class="row">
                     <div class="col-12 col-md-6">
                       <div class="form-group">
-                        <label class="form-label" for="address_fname_{{ form.id }}">First Name</label>
+                        <label class="form-label" for="address_fname_{{ form.id }}">{{ "templates.customers.addresses.address.form.inputs.firstname" | t }}</label>
                         <input
                           class="form-control"
                           name="address[first_name]"
                           id="address_fname_{{ form.id }}"
                           value="{{ form.first_name }}"
                           type="text"
-                          placeholder="First Name">
+                          placeholder="{{ "templates.customers.addresses.address.form.inputs.firstname" | t }}">
                       </div>
                     </div>
                     <div class="col-12 col-md-6">
                       <div class="form-group">
-                        <label class="form-label" for="address_lname_{{ form.id }}">Last Name</label>
+                        <label class="form-label" for="address_lname_{{ form.id }}">{{ "templates.customers.addresses.address.form.inputs.lastname" | t }}</label>
                         <input
                           class="form-control"
                           name="address[last_name]"
                           id="address_lname_{{ form.id }}"
                           value="{{ form.last_name }}"
                           type="text"
-                          placeholder="Last Name">
+                          placeholder="{{ "templates.customers.addresses.address.form.inputs.lastname" | t }}">
                       </div>
                     </div>
                     <div class="col-12">
                       <div class="form-group">
-                        <label class="form-label" for="address_company_{{ form.id }}">Company Name</label>
+                        <label class="form-label" for="address_company_{{ form.id }}">{{ "templates.customers.addresses.address.form.inputs.company" | t }}</label>
                         <input
                           class="form-control"
                           name="address[company]"
                           id="address_company_{{ form.id }}"
                           value="{{ form.company }}"
                           type="text"
-                          placeholder="Company Name">
+                          placeholder="{{ "templates.customers.addresses.address.form.inputs.company" | t }}">
                       </div>
                     </div>
                     <div class="col-6">
                       <div class="form-group">
-                        <label class="form-label" for="address_country_{{ form.id }}">Country</label>
+                        <label class="form-label" for="address_country_{{ form.id }}">{{ "templates.customers.addresses.address.form.inputs.country" | t }}</label>
                         <select
                           class="form-control form-select"
                           name="address[country]"
@@ -136,7 +136,7 @@
                     </div>
                     <div class="col-6">
                       <div class="form-group">
-                        <label class="form-label" for="address_province_{{ form.id }}">Province</label>
+                        <label class="form-label" for="address_province_{{ form.id }}">{{ "templates.customers.addresses.address.form.inputs.province" | t }}</label>
                         <select
                           class="form-control form-select"
                           name="address[province]"
@@ -146,62 +146,62 @@
                     </div>
                     <div class="col-12">
                       <div class="form-group">
-                        <label class="form-label" for="address_address1_{{ form.id }}">Address Line 1</label>
+                        <label class="form-label" for="address_address1_{{ form.id }}">{{ "templates.customers.addresses.address.form.inputs.line_1" | t }}</label>
                         <input
                           class="form-control"
                           name="address[address1]"
                           id="address_address1_{{ form.id }}"
                           value="{{ form.address1 }}"
                           type="text"
-                          placeholder="Address Line 1">
+                          placeholder="{{ "templates.customers.addresses.address.form.inputs.line_1" | t }}">
                       </div>
                     </div>
                     <div class="col-12">
                       <div class="form-group">
-                        <label class="form-label" for="address_address2_{{ form.id }}">Address Line 2</label>
+                        <label class="form-label" for="address_address2_{{ form.id }}">{{ "templates.customers.addresses.address.form.inputs.line_2" | t }}</label>
                         <input
                           class="form-control"
                           name="address[address2]"
                           id="address_address2_{{ form.id }}"
                           value="{{ form.address2 }}"
                           type="text"
-                          placeholder="Address Line 2">
+                          placeholder="{{ "templates.customers.addresses.address.form.inputs.line_2" | t }}">
                       </div>
                     </div>
                     <div class="col-12 col-md-6">
                       <div class="form-group">
-                        <label class="form-label" for="address_city_{{ form.id }}">Town / City</label>
+                        <label class="form-label" for="address_city_{{ form.id }}">{{ "templates.customers.addresses.address.form.inputs.city" | t }}</label>
                         <input
                           class="form-control"
                           name="address[city]"
                           id="address_city_{{ form.id }}"
                           value="{{ form.city }}"
                           type="text"
-                          placeholder="Town / City">
+                          placeholder="{{ "templates.customers.addresses.address.form.inputs.city" | t }}">
                       </div>
                     </div>
                     <div class="col-12 col-md-6">
                       <div class="form-group">
-                        <label class="form-label" for="address_zip_{{ form.id }}">ZIP / Postcode</label>
+                        <label class="form-label" for="address_zip_{{ form.id }}">{{ "templates.customers.addresses.address.form.inputs.zip" | t }}</label>
                         <input
                           class="form-control"
                           name="address[zip]"
                           id="address_zip_{{ form.id }}"
                           value="{{ form.zip }}"
                           type="text"
-                          placeholder="ZIP / Postcode">
+                          placeholder="{{ "templates.customers.addresses.address.form.inputs.zip" | t }}">
                       </div>
                     </div>
                     <div class="col-12">
                       <div class="form-group">
-                        <label class="form-label" for="address_phone_{{ form.id }}">Mobile Phone</label>
+                        <label class="form-label" for="address_phone_{{ form.id }}">{{ "templates.customers.addresses.address.form.inputs.phone" | t }}</label>
                         <input
                           class="form-control"
                           type="tel"
                           name="address[phone]"
                           id="address_phone_{{ form.id }}"
                           value="{{ form.phone }}"
-                          placeholder="Mobile Phone">
+                          placeholder="{{ "templates.customers.addresses.address.form.inputs.phone" | t }}">
                       </div>
                     </div>
                     <div class="col-12">
@@ -212,7 +212,7 @@
                           <label
                             for="address_default_address_{{ form.id }}"
                             class="form-check-label"
-                            for="defaultDeliveryAddress">Set as default address</label>
+                            for="defaultDeliveryAddress">{{ "templates.customers.addresses.address.form.default" | t }}</label>
                         </div>
                       </div>
                     </div>
@@ -220,7 +220,7 @@
 
                   <!-- Button -->
                   <button class="btn btn-dark" type="submit">
-                    Edit
+                    {{ "templates.customers.addresses.address.form.submit" | t }}
                   </button>
 
                   <!-- Button -->
@@ -228,7 +228,7 @@
                     data-address="{{ forloop.index }}"
                     class="cancel_edit btn btn-outline-dark"
                     type="reset">
-                    Cancel
+                    {{ "templates.customers.addresses.address.form.reset" | t }}
                   </button>
 
                 {% endform %}
@@ -244,7 +244,7 @@
               id="add"
               type="button"
               class="btn w-100 btn-lg btn-outline-border">
-              Add Address
+              {{ "templates.customers.addresses.address.add" | t }}
               <i class="fe fe-plus"></i>
             </button>
 
@@ -255,7 +255,7 @@
 
         <!-- Heading -->
         <h6 class="mb-7">
-          Add Address
+          {{ "templates.customers.addresses.address.add" | t }}
         </h6>
 
         <!-- Form -->
@@ -263,43 +263,43 @@
           <div class="row">
             <div class="col-12 col-md-6">
               <div class="form-group">
-                <label class="form-label" for="address_fname_{{ form.id }}">First Name</label>
+                <label class="form-label" for="address_fname_{{ form.id }}">{{ "templates.customers.addresses.address.form.inputs.firstname" | t }}</label>
                 <input
                   class="form-control"
                   name="address[first_name]"
                   id="address_fname_{{ form.id }}"
                   value="{{ form.first_name }}"
                   type="text"
-                  placeholder="First Name">
+                  placeholder="{{ "templates.customers.addresses.address.form.inputs.firstname" | t }}">
               </div>
             </div>
             <div class="col-12 col-md-6">
               <div class="form-group">
-                <label class="form-label" for="address_lname_{{ form.id }}">Last Name</label>
+                <label class="form-label" for="address_lname_{{ form.id }}">{{ "templates.customers.addresses.address.form.inputs.lastname" | t }}</label>
                 <input
                   class="form-control"
                   name="address[last_name]"
                   id="address_lname_{{ form.id }}"
                   value="{{ form.last_name }}"
                   type="text"
-                  placeholder="Last Name">
+                  placeholder="{{ "templates.customers.addresses.address.form.inputs.lastname" | t }}">
               </div>
             </div>
             <div class="col-12">
               <div class="form-group">
-                <label class="form-label" for="address_company_{{ form.id }}">Company Name</label>
+                <label class="form-label" for="address_company_{{ form.id }}">{{ "templates.customers.addresses.address.form.inputs.company" | t }}</label>
                 <input
                   class="form-control"
                   name="address[company]"
                   id="address_company_{{ form.id }}"
                   value="{{ form.company }}"
                   type="text"
-                  placeholder="Company Name">
+                  placeholder="{{ "templates.customers.addresses.address.form.inputs.company" | t }}">
               </div>
             </div>
             <div class="col-6">
               <div class="form-group">
-                <label class="form-label" for="address_country_{{ form.id }}">Country</label>
+                <label class="form-label" for="address_country_{{ form.id }}">{{ "templates.customers.addresses.address.form.inputs.country" | t }}</label>
                 <select
                   class="form-control form-select"
                   name="address[country]"
@@ -313,7 +313,7 @@
             </div>
             <div class="col-6">
               <div class="form-group">
-                <label class="form-label" for="address_province_{{ form.id }}">Province</label>
+                <label class="form-label" for="address_province_{{ form.id }}">{{ "templates.customers.addresses.address.form.inputs.province" | t }}</label>
                 <select
                   class="form-control form-select"
                   name="address[province]"
@@ -323,62 +323,62 @@
             </div>
             <div class="col-12">
               <div class="form-group">
-                <label class="form-label" for="address_address1_{{ form.id }}">Address Line 1</label>
+                <label class="form-label" for="address_address1_{{ form.id }}">{{ "templates.customers.addresses.address.form.inputs.line_1" | t }}</label>
                 <input
                   class="form-control"
                   name="address[address1]"
                   id="address_address1_{{ form.id }}"
                   value="{{ form.address1 }}"
                   type="text"
-                  placeholder="Address Line 1">
+                  placeholder="{{ "templates.customers.addresses.address.form.inputs.line_1" | t }}">
               </div>
             </div>
             <div class="col-12">
               <div class="form-group">
-                <label class="form-label" for="address_address2_{{ form.id }}">Address Line 2</label>
+                <label class="form-label" for="address_address2_{{ form.id }}">{{ "templates.customers.addresses.address.form.inputs.line_2" | t }}</label>
                 <input
                   class="form-control"
                   name="address[address2]"
                   id="address_address2_{{ form.id }}"
                   value="{{ form.address2 }}"
                   type="text"
-                  placeholder="Address Line 2">
+                  placeholder="{{ "templates.customers.addresses.address.form.inputs.line_2" | t }}">
               </div>
             </div>
             <div class="col-12 col-md-6">
               <div class="form-group">
-                <label class="form-label" for="address_city_{{ form.id }}">Town / City</label>
+                <label class="form-label" for="address_city_{{ form.id }}">{{ "templates.customers.addresses.address.form.inputs.city" | t }}</label>
                 <input
                   class="form-control"
                   name="address[city]"
                   id="address_city_{{ form.id }}"
                   value="{{ form.city }}"
                   type="text"
-                  placeholder="Town / City">
+                  placeholder="{{ "templates.customers.addresses.address.form.inputs.city" | t }}">
               </div>
             </div>
             <div class="col-12 col-md-6">
               <div class="form-group">
-                <label class="form-label" for="address_zip_{{ form.id }}">ZIP / Postcode</label>
+                <label class="form-label" for="address_zip_{{ form.id }}">{{ "templates.customers.addresses.address.form.inputs.zip" | t }}</label>
                 <input
                   class="form-control"
                   name="address[zip]"
                   id="address_zip_{{ form.id }}"
                   value="{{ form.zip }}"
                   type="text"
-                  placeholder="ZIP / Postcode">
+                  placeholder="{{ "templates.customers.addresses.address.form.inputs.zip" | t }}">
               </div>
             </div>
             <div class="col-12">
               <div class="form-group">
-                <label class="form-label" for="address_phone_{{ form.id }}">Mobile Phone</label>
+                <label class="form-label" for="address_phone_{{ form.id }}">{{ "templates.customers.addresses.address.form.inputs.phone" | t }}</label>
                 <input
                   class="form-control"
                   type="tel"
                   name="address[phone]"
                   id="address_phone_{{ form.id }}"
                   value="{{ form.phone }}"
-                  placeholder="Mobile Phone">
+                  placeholder="{{ "templates.customers.addresses.address.form.inputs.phone" | t }}">
               </div>
             </div>
             <div class="col-12">
@@ -389,7 +389,7 @@
                   <label
                     for="address_default_address_{{ form.id }}"
                     class="form-check-label"
-                    for="defaultDeliveryAddress">Set as default address</label>
+                    for="defaultDeliveryAddress">{{ "templates.customers.addresses.address.form.default" | t }}</label>
                 </div>
               </div>
             </div>
@@ -397,7 +397,7 @@
 
           <!-- Button -->
           <button class="btn btn-dark" type="submit">
-            Add Address
+            {{ "templates.customers.addresses.address.add" | t }}
           </button>
 
           <!-- Button -->
@@ -405,7 +405,7 @@
             id="cancel"
             class="btn btn-outline-dark"
             type="reset">
-            Cancel
+            {{ "templates.customers.addresses.address.form.reset" | t }}
           </button>
 
         {% endform %}

@@ -4,14 +4,14 @@
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <a class="btn btn-outline-dark" href="{{ routes.account_url }}">Back to account</a>
+        <a class="btn btn-outline-dark" href="{{ routes.account_url }}">{{ "templates.order.back" | t }}</a>
       </div>
     </div>
     <div class="row">
       <div class="col-12 text-center">
 
         <!-- Heading -->
-        <h3 class="mb-10">My Account</h3>
+        <h3 class="mb-10">{{ "templates.order.title" | t }}</h3>
 
       </div>
 
@@ -30,7 +30,7 @@
                   <div class="col-6 col-lg-3">
 
                     <!-- Heading -->
-                    <h6 class="heading-xxxs text-muted">Order No:</h6>
+                    <h6 class="heading-xxxs text-muted">{{ "templates.order.table.headings.heading_1" | t }}</h6>
 
                     <!-- Text -->
                     <p class="mb-lg-0 fs-sm fw-bold">
@@ -41,7 +41,7 @@
                   <div class="col-6 col-lg-3">
 
                     <!-- Heading -->
-                    <h6 class="heading-xxxs text-muted">Order date:</h6>
+                    <h6 class="heading-xxxs text-muted">{{ "templates.order.table.headings.heading_2" | t }}</h6>
 
                     <!-- Text -->
                     <p class="mb-lg-0 fs-sm fw-bold">
@@ -54,7 +54,7 @@
                   <div class="col-6 col-lg-3">
 
                     <!-- Heading -->
-                    <h6 class="heading-xxxs text-muted">Status:</h6>
+                    <h6 class="heading-xxxs text-muted">{{ "templates.order.table.headings.heading_3" | t }}</h6>
 
                     <!-- Text -->
                     <p class="mb-0 fs-sm fw-bold">
@@ -65,7 +65,7 @@
                   <div class="col-6 col-lg-3">
 
                     <!-- Heading -->
-                    <h6 class="heading-xxxs text-muted">Order Amount:</h6>
+                    <h6 class="heading-xxxs text-muted">{{ "templates.order.table.headings.heading_4" | t }}</h6>
 
                     <!-- Text -->
                     <p class="mb-0 fs-sm fw-bold">
@@ -81,7 +81,7 @@
           <div class="card-footer">
 
             <!-- Heading -->
-            <h6 class="mb-7">Order Items ({{ order.line_items | size }})</h6>
+            <h6 class="mb-7">{{ "templates.order.table.footer.heading" | t }} ({{ order.line_items | size }})</h6>
 
             <!-- Divider -->
             <hr class="my-5">
@@ -128,21 +128,21 @@
                       {% if line_item.successfully_fulfilled_quantity > 0 %}
                         <div class="card card-lg bg-light mt-5 mt-md-0">
                           <div class="card-body py-5">
-                            <p class="mb-2">We have fulfilled {{ line_item.successfully_fulfilled_quantity }} items of your recent order.</p>
-                            <p class="mb-2">Tracking company: {{ line_item.fulfillment.tracking_company }}</p>
-                            <p class="mb-2">Tracking number: {{ line_item.fulfillment.tracking_number }}</p>
+                            <p class="mb-2">{{ "templates.order.table.footer.fullfil.info_1" | t }} {{ line_item.successfully_fulfilled_quantity }} {{ "templates.order.table.footer.fullfil.info_1_complete" | t }}</p>
+                            <p class="mb-2">{{ "templates.order.table.footer.fullfil.tracking.company" | t }} {{ line_item.fulfillment.tracking_company }}</p>
+                            <p class="mb-2">{{ "templates.order.table.footer.fullfil.tracking.number" | t }} {{ line_item.fulfillment.tracking_number }}</p>
 
                             <a
                               target="_blank"
                               href="{{ line_item.fulfillment.tracking_url }}"
                               class="btn btn-dark mt-3">
-                              Track order
+                              {{ "templates.order.table.footer.button_1" | t }}
                             </a>
                           </div>
                         </div>
 
                       {% else %}
-                        <p class="fw-bold fs-sm">This item is not yet fulfilled</p>
+                        <p class="fw-bold fs-sm">{{ "templates.order.table.footer.fullfil.empty" | t }}</p>
                       {% endif %}
                     </div>
                   </div>
@@ -158,24 +158,24 @@
           <div class="card-body">
 
             <!-- Heading -->
-            <h6 class="mb-7">Order Total</h6>
+            <h6 class="mb-7">{{ "templates.order.total.title" | t }}</h6>
 
             <!-- List group -->
             <ul class="list-group list-group-sm list-group-flush-y list-group-flush-x">
               <li class="list-group-item d-flex">
-                <span>Subtotal</span>
+                <span>{{ "templates.order.total.subtotal" | t }}</span>
                 <span class="ms-auto">{{ order.subtotal_price | money }}</span>
               </li>
               <li class="list-group-item d-flex">
-                <span>Tax</span>
+                <span>{{ "templates.order.total.tax" | t }}</span>
                 <span class="ms-auto">{{ order.tax_price | money }}</span>
               </li>
               <li class="list-group-item d-flex">
-                <span>Shipping</span>
+                <span>{{ "templates.order.total.shipping" | t }}</span>
                 <span class="ms-auto">{{ order.shipping_price | money }}</span>
               </li>
               <li class="list-group-item d-flex fs-lg fw-bold">
-                <span>Total</span>
+                <span>{{ "templates.order.total.total" | t }}</span>
                 <span class="ms-auto">{{ order.total_price | money }}</span>
               </li>
             </ul>
@@ -188,7 +188,7 @@
           <div class="card-body">
 
             <!-- Heading -->
-            <h6 class="mb-7">Billing &amp; Shipping Details</h6>
+            <h6 class="mb-7">{{ "templates.order.billing.details.title" | t }}</h6>
 
             <!-- Content -->
             <div class="row">
@@ -196,7 +196,7 @@
 
                 <!-- Heading -->
                 <p class="mb-4 fw-bold">
-                  Billing Address:
+                  {{ "templates.order.billing.details.address" | t }}
                 </p>
 
                 <p class="mb-7 mb-md-0 text-gray-500">
@@ -212,7 +212,7 @@
 
                 <!-- Heading -->
                 <p class="mb-4 fw-bold">
-                  Shipping Address:
+                  {{ "templates.order.shipping.details.address" | t }}
                 </p>
 
                 <p class="mb-7 mb-md-0 text-gray-500">
@@ -228,7 +228,7 @@
 
                 <!-- Heading -->
                 <p class="mb-4 fw-bold">
-                  Shipping Status:
+                  {{ "templates.order.shipping.details.status" | t }}
                 </p>
 
                 <p class="mb-7 text-gray-500">
@@ -237,7 +237,7 @@
 
                 <!-- Heading -->
                 <p class="mb-4 fw-bold">
-                  Payment Information:
+                  {{ "templates.order.payment" | t }}
                 </p>
 
                 <p class="mb-0 text-gray-500">
@@ -259,7 +259,7 @@
 
                         <span class="bg-{{ background }} rounded-pill text-sm px-4 py-1 text-white">{{ transaction.status_label }}</span>
                       {% else %}
-                        <p class="text-sm mb-4">This order is manually placed by {{ shop.name }}</p>
+                        <p class="text-sm mb-4">{{ "templates.order.default" | t }} {{ shop.name }}</p>
                       {% endif %}
                     </div>
                   {% endfor %}
@@ -277,5 +277,5 @@
 </section>
 
 {% schema %}
-  {"name": "Order Page"}
+  {"name": "t:settings_schema.order.name"}
 {% endschema %}

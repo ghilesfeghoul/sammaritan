@@ -8,12 +8,12 @@
   {% if product_info.available %}
     {% if product_info.price < product_info.compare_at_price %}
       <div class="badge bg-primary text-white card-badge card-badge-start text-uppercase">
-        Sale
+        {{ "templates.product.stock.available" | t }}
       </div>
     {% endif %}
   {% else %}
     <div class="badge bg-dark card-badge card-badge-start text-uppercase">
-      Sold out
+      {{ "templates.product.stock.unavailable" | t }}
     </div>
   {% endif %}
 

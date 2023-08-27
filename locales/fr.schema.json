@@ -295,6 +295,156 @@
           "label": "Changez l'url de redirection lorsque le client clique sur le bouton"
         }
       }
+    },
+    "article": {
+      "name": "Page d'article",
+      "settings": {
+        "enable_author": {
+          "label": "Afficher l'auteur"
+        },
+        "enable_published_date": {
+          "label": "Afficher la date de publication"
+        },
+        "enable_tags": {
+          "label": "Afficher les tags"
+        }
+      },
+      "blocks": {
+        "article_title": {
+          "name": "Titre et auteur"
+        },
+        "article_published_date": {
+          "name": "Date de publication"
+        },
+        "featured_image": {
+          "name": "Image"
+        },
+        "article_content": {
+          "name": "Contenu de l'article"
+        }
+      }
+    },
+    "blog": {
+      "name": "Page de blog",
+      "settings": {
+        "blog_read_more": {
+          "label": "Lire plus"
+        },
+        "number_of_blog_posts": {
+          "label": "Nombre de blogs par page"
+        }
+      }
+    },
+    "collection": {
+      "name": "Page de collection",
+      "blocks": {
+        "collection_grid": {
+          "settings": {
+            "products_per_page": {
+              "label": "Nombre de produits par page"
+            },
+            "cols_per_row": {
+              "label": "Nombre de colonnes par ligne à afficher sur les écrans moyens et larges"
+            },
+            "mobile_cols_per_row": {
+              "label": "Nombre de colonnes par ligne à afficher sur les petits écrans"
+            }
+          },
+          "name": "Grille de la collection"
+        },
+        "collection_banner": {
+          "settings": {
+            "show_description": {
+              "label": "Afficher la description de la collection"
+            },
+            "show_image": {
+              "label": "Afficher l'image de la collection",
+              "info": "Pour une meilleure expérience, veuillez charger une image au format 16:9"
+            }
+          },
+          "name": "Introduction de la collection"
+        }
+      }
+    },
+    "list-collection": {
+      "name": "Page de liste des collection",
+      "settings": {
+        "title": {
+          "label": "Titre de la collection"
+        },
+        "button_text": {
+          "label": "Texte du lien vers la collection"
+        },
+        "text_color": {
+          "label": "Changer la couleur du texte du bouton"
+        }
+      }
+    },
+    "login": {
+      "name": "Page de connexion",
+      "settings": {
+        "show_register": {
+          "label": "Afficher le lien d'inscription"
+        }
+      }
+    },
+    "order": {
+      "name": "Page de détails de commande"
+    },
+    "product": {
+      "name": "Page détails produit",
+      "settings": {
+        "image_render": {
+          "label": "Changer le rendu des images",
+          "options": {
+            "option_1": {
+              "label": "Empilées"
+            },
+            "option_2": {
+              "label": "Images à gauche"
+            }
+          }
+        }
+      },
+      "blocks": {
+        "vendor": {
+          "name": "Fabriquant"
+        },
+        "title": {
+          "name": "Titre"
+        },
+        "price": {
+          "name": "Prix"
+        },
+        "variant_selector": {
+          "name": "Sélecteur des variants"
+        },
+        "quantity": {
+          "name": "Quantité"
+        },
+        "description": {
+          "name": "Description"
+        },
+        "checkout_button": {
+          "name": "Bouton d'ajout au panier"
+        }
+      }
+    },
+    "register": {
+      "name": "Page d'inscription",
+      "settings": {
+        "show_login": {
+          "label": "Afficher le lien vers la page de connexion"
+        }
+      }
+    },
+    "search": {
+      "name": "Page de recherche",
+      "settings": {
+        "products_per_page": {
+          "label": "Produits par page"
+        }
+      }
     }
   }
 }

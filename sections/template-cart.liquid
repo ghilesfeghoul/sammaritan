@@ -4,12 +4,12 @@
       <div class="col-12">
         <!-- Heading -->
         {% if cart.empty? %}
-          <h3 class="text-center">Your cart is empty</h3>
+          <h3 class="text-center">{{ "general.cart.empty.title" | t }}</h3>
           <div class="text-center">
-            <a class="btn btn-dark" href="{{ routes.all_products_collection_url }}">Continue Shopping</a>
+            <a class="btn btn-dark" href="{{ routes.all_products_collection_url }}">{{ "general.cart.button" | t }}</a>
           </div>
         {% else %}
-          <h3 class="mb-10 text-center">Shopping Cart</h3>
+          <h3 class="mb-10 text-center">{{ "general.cart.title" | t }}</h3>
         {% endif %}
       </div>
     </div>
@@ -80,7 +80,7 @@
                         <!-- Remove -->
                         <a class="fs-xs text-gray-400 ms-auto" href="{{ routes.cart_change_url }}?line={{ forloop.index }}&quantity=0">
                           <i class="fe fe-x"></i>
-                          Remove
+                          {{ "general.cart.form.actions.remove" | t }}
                         </a>
 
                       </div>
@@ -98,7 +98,7 @@
                 <!-- Coupon -->
                 <div class="mb-7 mb-md-0">
                   <label class="form-label fs-sm fw-bold" for="cart_note">
-                    Cart notes:
+                    {{ "general.cart.form.notes" | t }}
                   </label>
                   <div class="row gx-5">
                     <div class="col">
@@ -107,7 +107,7 @@
                         name="note"
                         id="cart_note"
                         rows="5"
-                        placeholder="Notes"></textarea>
+                        placeholder="{{ "general.cart.form.notes" | t }}"></textarea>
 
                     </div>
                   </div>
@@ -120,7 +120,7 @@
                 <button
                   name="update"
                   type="submit"
-                  class="btn btn-sm btn-outline-dark">Update Cart</button>
+                  class="btn btn-sm btn-outline-dark">{{ "general.cart.form.actions.update" | t }}</button>
 
               </div>
             </div>
@@ -133,15 +133,15 @@
               <div class="card-body">
                 <ul class="list-group list-group-sm list-group-flush-y list-group-flush-x">
                   <li class="list-group-item d-flex">
-                    <span>Subtotal</span>
+                    <span>{{ "general.cart.subtotal" | t }}</span>
                     <span class="ms-auto fs-sm">{{ cart.items_subtotal_price | money }}</span>
                   </li>
                   <li class="list-group-item d-flex fs-lg fw-bold">
-                    <span>Total</span>
+                    <span>{{ "general.cart.total" | t }}</span>
                     <span class="ms-auto fs-sm">{{ cart.total_price | money }}</span>
                   </li>
                   <li class="list-group-item fs-sm text-center text-gray-500">
-                    Tax included and shipping and discounts calculated at checkout
+                    {{ "general.cart.tax" | t }}
                   </li>
                 </ul>
               </div>
@@ -151,12 +151,12 @@
             <button
               type="submit"
               name="checkout"
-              class="btn w-100 btn-dark">Proceed to Checkout</a>
+              class="btn w-100 btn-dark">{{ "general.cart.form.actions.checkout" | t }}</a>
 
             <!-- Link -->
             <a class="btn btn-link btn-sm text-body d-block mt-5" href="{{ routes.all_products_collection_url }}">
               <i class="fe fe-arrow-left me-2"></i>
-              Continue Shopping
+              {{ "general.cart.button" | t }}
             </a>
 
           </div>

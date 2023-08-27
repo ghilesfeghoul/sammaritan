@@ -4,7 +4,7 @@
     <div class="row">
       <div class="col-12 text-center">
         <!-- Heading -->
-        <h3 itemprop="headline" class="mb-3">Search Results</h3>
+        <h3 itemprop="headline" class="mb-3">{{ "general.search.title" | t }}</h3>
       </div>
     </div>
     {%- liquid 
@@ -21,7 +21,7 @@
         {% if search.performed %}
           {% if search.results.size > 0 %}
             <div class="col-12 text-center">
-              <p class="text-gray-500 my-10">{{ search.results_count }} results for the search term {{ search.terms | escape }}</p>
+              <p class="text-gray-500 my-10">{{ search.results_count }} {{ "general.search.results" | t }} {{ search.terms | escape }}</p>
             </div>
             {% for item in search.results %}
               {% case item.object_type %}
@@ -99,7 +99,7 @@
             {% endfor %}
           {% else %}
             <div class="col-12 text-center">
-              <p class="my-4">No results found for the search term: {{ search.terms | escape }}. Try to use a different keyword</p>
+              <p class="my-4">{{ "general.search.empty.title" | t }} {{ search.terms | escape }}. {{ "general.search.empty.help" | t }}</p>
             </div>
           {% endif %}
         {% endif %}
@@ -115,9 +115,9 @@
               <!-- Caption -->
               <p class="fs-sm text-muted">
                 {% if showing > product_size %}
-                  Showing {{ product_size | floor }} of {{ product_size | floor }} items
+                  {{ "general.pagination.showing" | t }} {{ product_size | floor }} {{ "general.pagination.of" | t }} {{ product_size | floor }} {{ "general.pagination.items" | t }}
                 {% else %}
-                  Showing {{ showing | floor }} of {{ product_size | floor }} items
+                  {{ "general.pagination.showing" | t }} {{ showing | floor }} {{ "general.pagination.of" | t }} {{ product_size | floor }} {{ "general.pagination.items" | t }}
 
                 {% endif %}
               </p>
@@ -146,7 +146,7 @@
 
 {% schema %}
   {
-    "name": "Search Page",
+    "name": "t:settings_schema.search.name",
     "settings": [
       {
         "type": "range",
@@ -154,7 +154,7 @@
         "default": 10,
         "min": 4,
         "max": 15,
-        "label": "Products per page"
+        "label": "t:settings_schema.search.settings.products_per_page.label"
       }
     ]
   }

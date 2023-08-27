@@ -128,7 +128,7 @@
         <div class="col-12">
 
           <!-- Heading -->
-          <h3 class="mb-10 text-center">Drop comment here</h3>
+          <h3 class="mb-10 text-center">{{ "templates.article.comments.title" | t }}</h3>
 
         </div>
       </div>
@@ -160,47 +160,47 @@
                   <!-- Title -->
                   <div class="form-group col-12 col-md-6">
                     <label class="visually-hidden" for="comment_author">
-                      Your Name *
+                      {{ "templates.article.comments.form.inputs.comment_author" | t }} *
                     </label>
                     <input
                       name="comment[author]"
                       id="comment_author"
                       class="form-control form-control-sm"
                       type="text"
-                      placeholder="Your Name *"
+                      placeholder="{{ "templates.article.comments.form.inputs.comment_author" | t }} *"
                       required="">
                   </div>
 
                   <!-- Email -->
                   <div class="form-group col-12 col-md-6">
                     <label class="visually-hidden" for="comment_email">
-                      Your Email *
+                      {{ "templates.article.comments.form.inputs.email" | t }} *
                     </label>
                     <input
                       class="form-control form-control-sm"
                       type="email"
                       name="comment[email]"
                       id="comment_email"
-                      placeholder="Your Email *"
+                      placeholder="{{ "templates.article.comments.form.inputs.email" | t }} *"
                       required="">
                   </div>
                 </div>
                 <!-- Email -->
                 <div class="form-group mb-7">
                   <label class="visually-hidden" for="comment_content">
-                    Message *
+                    {{ "templates.article.comments.form.inputs.message" | t }} *
                   </label>
                   <textarea
                     class="form-control form-control-sm"
                     rows="5"
                     name="comment[body]"
                     id="comment_content"
-                    placeholder="Type your comment"
+                    placeholder="{{ "templates.article.comments.form.inputs.message" | t }}"
                     required=""></textarea>
                 </div>
                 <!-- Button -->
                 <button type="submit" class="btn btn-dark">
-                  Send Message
+                  {{ "templates.article.comments.form.submit" | t }}
                 </button>
               </div>
             {% endform %}
@@ -216,8 +216,8 @@
 <script type="application/ld+json">
   {
   "@context": "https://schema.org",
-      "@type": "BlogPosting",
-      "headline": {{ article.title | json }},
+        "@type": "BlogPosting",
+        "headline": {{ article.title | json }},
   "articleBody": {{ article.content | strip_html | json }},
   {% if article.excerpt != blank %}
     "description": {{ article.excerpt | strip_html | json }},
@@ -230,53 +230,53 @@
   "datePublished": {{ article.published_at | date: format: "default" | json }},
   "dateCreated": {{ article.created_at | date: format: "default" | json }},
   "author": {
-          "@type": "Person",
-          "name": {{ article.author | json }}
+            "@type": "Person",
+            "name": {{ article.author | json }}
   },
   "publisher": {
-          "@type": "Organization",
-          "name": {{ shop.name | json }}
+            "@type": "Organization",
+            "name": {{ shop.name | json }}
   }
   }
 </script>
 
 {% schema %}
   {
-    "name": "Template Article",
+    "name": "t:settings_schema.article.name",
     "settings": [
       {
         "type": "checkbox",
         "id": "enable_author",
         "default": true,
-        "label": "Display Author Name"
+        "label": "t:settings_schema.article.settings.enable_author.label"
       }, {
         "type": "checkbox",
         "id": "enable_published_date",
         "default": true,
-        "label": "Display Published Date"
+        "label": "t:settings_schema.article.settings.enable_published_date.label"
       }, {
         "type": "checkbox",
         "id": "enable_tags",
         "default": true,
-        "label": "Display Article tags"
+        "label": "t:settings_schema.article.settings.enable_tags.label"
       }
     ],
     "blocks": [
       {
         "type": "article_title",
-        "name": "Title and Author",
+        "name": "t:settings_schema.article.blocks.article_title.name",
         "limit": 1
       }, {
         "type": "article_published_date",
-        "name": "Published Date",
+        "name": "t:settings_schema.article.blocks.article_published_date.name",
         "limit": 1
       }, {
         "type": "featured_image",
-        "name": "Thumbnail",
+        "name": "t:settings_schema.article.blocks.featured_image.name",
         "limit": 1
       }, {
         "type": "article_content",
-        "name": "Content",
+        "name": "t:settings_schema.article.blocks.article_content.name",
         "limit": 1
       }
     ]

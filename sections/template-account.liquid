@@ -22,7 +22,7 @@
         </div>
         {% assign number_of_orders = customer.orders | size %}
         {% if number_of_orders > 0 %}
-          {% paginate customer.orders by 5 %}
+          {% paginate customer.orders by 10 %}
             {% for order in customer.orders %}
               <div class="card card-lg mb-5 border">
                 <div class="card-body pb-0">

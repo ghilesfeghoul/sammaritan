@@ -81,9 +81,9 @@
                 <!-- Caption -->
                 <p class="fs-sm text-muted">
                   {% if showing > article_size %}
-                    Showing {{ article_size | floor }} of {{ article_size | floor }} blog posts
+                    {{ "templates.blog.pagination.showing" | t }} {{ article_size | floor }} {{ "templates.blog.pagination.of" | t }} {{ article_size | floor }} {{ "templates.blog.pagination.blogs" | t }}
                   {% else %}
-                    Showing {{ showing | floor }} of {{ article_size | floor }} blog posts
+                    {{ "templates.blog.pagination.showing" | t }} {{ showing | floor }} {{ "templates.blog.pagination.of" | t }} {{ article_size | floor }} {{ "templates.blog.pagination.blogs" | t }}
 
                   {% endif %}
                 </p>

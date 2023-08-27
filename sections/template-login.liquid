@@ -17,14 +17,14 @@
                   <!-- Email -->
                   <div class="form-group">
                     <label class="visually-hidden" for="loginEmail">
-                      Email Address *
+                      {{ 'templates.customers.login.form.inputs.email' | t }} *
                     </label>
                     <input
                       class="form-control form-control-sm"
                       id="loginEmail"
                       type="email"
                       name="customer[email]"
-                      placeholder="Email Address *"
+                      placeholder="{{ 'templates.customers.login.form.inputs.email' | t }} *"
                       required="">
                   </div>
                 </div>
@@ -32,14 +32,14 @@
                   <!-- Password -->
                   <div class="form-group">
                     <label class="visually-hidden" for="loginPassword">
-                      Password *
+                      {{ 'templates.customers.login.form.inputs.password' | t }} *
                     </label>
                     <input
                       class="form-control form-control-sm"
                       id="loginPassword"
                       type="password"
                       name="customer[password]"
-                      placeholder="Password *"
+                      placeholder="{{ 'templates.customers.login.form.inputs.password' | t }} *"
                       required="">
                   </div>
                 </div>
@@ -49,16 +49,16 @@
                     <a
                       class="fs-sm text-reset"
                       data-bs-toggle="modal"
-                      href="#modalPasswordReset">Forgot Password?</a>
+                      href="#modalPasswordReset">{{ 'templates.customers.login.forgot' | t }}</a>
                   </div>
                 </div>
                 <div class="col-12">
                   <!-- Button -->
-                  <button class="btn btn-sm btn-dark" type="submit">Sign In</button>
+                  <button class="btn btn-sm btn-dark" type="submit">{{ 'templates.customers.login.form.actions.signin' | t }}</button>
                 </div>
 
                 {% if section.settings.show_register %}
-                  <a class="mt-5" href="{{ routes.account_register_url }}">Not registered yet?</a>
+                  <a class="mt-5" href="{{ routes.account_register_url }}">{{ 'templates.customers.login.register' | t }}</a>
                 {% endif %}
               </div>
             {% endform %}
@@ -89,7 +89,7 @@
 
       <!-- Header-->
       <div class="modal-header lh-fixed fs-lg">
-        <strong class="mx-auto">{{ 'templates.customers.login.password-reset-title' | t }}</strong>
+        <strong class="mx-auto">{{ 'templates.customers.login.forgot' | t }}</strong>
       </div>
 
       <!-- Body -->
@@ -97,8 +97,7 @@
 
         <!-- Text -->
         <p class="mb-7 fs-sm text-gray-500">
-          Please enter your Email Address. You will receive a link
-          to create a new password via Email.
+          {{ "templates.customers.login.reset.description" | t }}
         </p>
 
         <!-- Form -->
@@ -107,20 +106,20 @@
           <!-- Email -->
           <div class="form-group">
             <label class="visually-hidden" for="modalPasswordResetEmail">
-              Email Address *
+              {{ 'templates.customers.login.form.inputs.email' | t }} *
             </label>
             <input
               name="email"
               class="form-control form-control-sm"
               id="modalPasswordResetEmail"
               type="email"
-              placeholder="Email Address *"
+              placeholder="{{ 'templates.customers.login.form.inputs.email' | t }} *"
               required="">
           </div>
 
           <!-- Button -->
           <button type="submit" class="btn btn-sm btn-dark">
-            Reset Password
+            {{ "templates.customers.login.reset.submit" | t }}
           </button>
 
         {% endform %}
@@ -134,13 +133,13 @@
 
 {% schema %}
   {
-    "name": "Login Page",
+    "name": "t:settings_schema.login.name",
     "settings": [
       {
         "type": "checkbox",
         "id": "show_register",
         "default": true,
-        "label": "Show register link"
+        "label": "t:settings_schema.login.settings.show_register.label"
       }
     ]
   }

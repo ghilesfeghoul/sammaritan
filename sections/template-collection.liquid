@@ -97,7 +97,7 @@
           {% else %}
             <div class="row">
               <div class="col-12 text-center fw-bold">
-                No products found
+                {{ "templates.collection.empty.title" | t }}
               </div>
             </div>
           {% endif %}
@@ -113,10 +113,10 @@
 
 {% schema %}
   {
-    "name": "Collection Template",
+    "name": "t:settings_schema.collection.name",
     "blocks": [
       {
-        "name": "Collection grid",
+        "name": "t:settings_schema.collection.blocks.collection_grid.name",
         "type": "collection_grid",
         "limit": 1,
         "settings": [
@@ -126,7 +126,7 @@
             "min": 3,
             "max": 12,
             "step": 1,
-            "label": "Products per page",
+            "label": "t:settings_schema.collection.blocks.collection_grid.settings.products_per_page.label",
             "default": 3
           }, {
             "type": "select",
@@ -140,7 +140,7 @@
                 "value": "4"
               }
             ],
-            "label": "Number of columns to show within a row for medium and large screens",
+            "label": "t:settings_schema.collection.blocks.collection_grid.settings.cols_per_row.label",
             "default": "3"
           }, {
             "type": "select",
@@ -154,25 +154,25 @@
                 "value": "2"
               }
             ],
-            "label": "Number of columns to show within a row for mobile screens",
+            "label": "t:settings_schema.collection.blocks.collection_grid.settings.mobile_cols_per_row.label",
             "default": "1"
           }
         ]
       }, {
-        "name": "Collection banner",
+        "name": "t:settings_schema.collection.blocks.collection_banner.name",
         "type": "collection_banner",
         "limit": 1,
         "settings": [
           {
             "type": "checkbox",
             "id": "show_description",
-            "label": "Show the description of the collection",
+            "label": "t:settings_schema.collection.blocks.collection_banner.settings.show_description.label",
             "default": true
           }, {
             "type": "checkbox",
             "id": "show_image",
-            "label": "Show the image of the collection",
-            "info": "For a better experience, make sure to upload a photo format 16:9",
+            "label": "t:settings_schema.collection.blocks.collection_banner.settings.show_image.label",
+            "info": "t:settings_schema.collection.blocks.collection_banner.settings.show_image.info",
             "default": true
           }
         ]

@@ -6,7 +6,7 @@
       <div class="card card-lg mx-auto">
         <div class="card-body">
           <!-- Heading -->
-          <h6 class="mb-7 text-center">Register</h6>
+          <h6 class="mb-7 text-center">{{ "templates.customers.register.title" | t }}</h6>
 
           {% form 'create_customer' %}
             <div class="row">
@@ -14,42 +14,42 @@
               <div class="col-12">
                 <div class="form-group">
                   <label class="visually-hidden" for="first_name">
-                    First Name *
+                    {{ "templates.customers.register.form.inputs.firstname" | t }} *
                   </label>
                   <input
                     class="form-control form-control-sm"
                     name="customer[first_name]"
                     id="first_name"
                     type="text"
-                    placeholder="First Name *"
+                    placeholder="{{ "templates.customers.register.form.inputs.firstname" | t }} *"
                     required="">
                 </div>
               </div>
               <div class="col-12">
                 <div class="form-group">
                   <label class="visually-hidden" for="last_name">
-                    Last Name *
+                    {{ "templates.customers.register.form.inputs.lastname" | t }} *
                   </label>
                   <input
                     class="form-control form-control-sm"
                     name="customer[last_name]"
                     id="last_name"
                     type="text"
-                    placeholder="Last Name *"
+                    placeholder="{{ "templates.customers.register.form.inputs.lastname" | t }} *"
                     required="">
                 </div>
               </div>
               <div class="col-12">
                 <div class="form-group">
                   <label class="visually-hidden" for="email">
-                    Email Address *
+                    {{ "templates.customers.register.form.inputs.email" | t }} *
                   </label>
                   <input
                     class="form-control form-control-sm"
                     id="email"
                     name="customer[email]"
                     type="email"
-                    placeholder="Email Address *"
+                    placeholder="{{ "templates.customers.register.form.inputs.email" | t }} *"
                     required="">
                 </div>
               </div>
@@ -57,25 +57,25 @@
                 <!-- Password -->
                 <div class="form-group">
                   <label class="visually-hidden" for="password">
-                    Password *
+                    {{ "templates.customers.register.form.inputs.password" | t }} *
                   </label>
                   <input
                     class="form-control form-control-sm"
                     name="customer[password]"
                     id="password"
                     type="password"
-                    placeholder="Password *"
+                    placeholder="{{ "templates.customers.register.form.inputs.password" | t }} *"
                     required="">
                 </div>
               </div>
 
               <div class="col-12">
                 <!-- Button -->
-                <button class="btn btn-sm btn-dark" type="submit">Register</button>
+                <button class="btn btn-sm btn-dark" type="submit">{{ "templates.customers.register.form.actions.register" | t }}</button>
               </div>
 
               {% if section.settings.show_login %}
-                <a class="mt-5" href="{{ routes.account_login_url }}">Already have an account?</a>
+                <a class="mt-5" href="{{ routes.account_login_url }}">{{ "templates.customers.register.registered" | t }}</a>
 
               {% endif %}
             </div>
@@ -89,13 +89,13 @@
 
 {% schema %}
   {
-    "name": "Register Page",
+    "name": "t:settings_schema.register.name",
     "settings": [
       {
         "type": "checkbox",
         "id": "show_login",
         "default": true,
-        "label": "Show login link"
+        "label": "t:settings_schema.register.settings.show_login.label"
       }
     ]
   }

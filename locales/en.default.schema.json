@@ -295,6 +295,156 @@
           "label": "Button URL"
         }
       }
+    },
+    "article": {
+      "name": "Template Article",
+      "settings": {
+        "enable_author": {
+          "label": "Display Author Name"
+        },
+        "enable_published_date": {
+          "label": "Display Published Date"
+        },
+        "enable_tags": {
+          "label": "Display Article tags"
+        }
+      },
+      "blocks": {
+        "article_title": {
+          "name": "Title and Author"
+        },
+        "article_published_date": {
+          "name": "Published Date"
+        },
+        "featured_image": {
+          "name": "Image"
+        },
+        "article_content": {
+          "name": "Content"
+        }
+      }
+    },
+    "blog": {
+      "name": "Blog",
+      "settings": {
+        "blog_read_more": {
+          "label": "Read more label"
+        },
+        "number_of_blog_posts": {
+          "label": "Blog posts per page"
+        }
+      }
+    },
+    "collection": {
+      "name": "Collection Template",
+      "blocks": {
+        "collection_grid": {
+          "settings": {
+            "products_per_page": {
+              "label": "Products per page"
+            },
+            "cols_per_row": {
+              "label": "Number of columns to show within a row for medium and large screens"
+            },
+            "mobile_cols_per_row": {
+              "label": "Number of columns to show within a row for mobile screens"
+            }
+          },
+          "name": "Collection Grid"
+        },
+        "collection_banner": {
+          "settings": {
+            "show_description": {
+              "label": "Show the description of the collection"
+            },
+            "show_image": {
+              "label": "Show the image of the collection",
+              "info": "For a better experience, make sure to upload a photo format 16:9"
+            }
+          },
+          "name": "Collection Banner"
+        }
+      }
+    },
+    "list-collection": {
+      "name": "Template List Collections",
+      "settings": {
+        "title": {
+          "label": "Title"
+        },
+        "button_text": {
+          "label": "Link text"
+        },
+        "text_color": {
+          "label": "Change the color of text inside the cards"
+        }
+      }
+    },
+    "login": {
+      "name": "Login Page",
+      "settings": {
+        "show_register": {
+          "label": "Show register link"
+        }
+      }
+    },
+    "order": {
+      "name": "Order Page"
+    },
+    "product": {
+      "name": "Product page",
+      "settings": {
+        "image_render": {
+          "label": "Change the image render",
+          "options": {
+            "option_1": {
+              "label": "Stacked"
+            },
+            "option_2": {
+              "label": "Images left"
+            }
+          }
+        }
+      },
+      "blocks": {
+        "vendor": {
+          "name": "Vendor"
+        },
+        "title": {
+          "name": "Title"
+        },
+        "price": {
+          "name": "Price"
+        },
+        "variant_selector": {
+          "name": "Variant Selector"
+        },
+        "quantity": {
+          "name": "Quantity"
+        },
+        "description": {
+          "name": "Description"
+        },
+        "checkout_button": {
+          "name": "Checkout Button"
+        }
+      }
+    },
+    "register": {
+      "name": "Register Page",
+      "settings": {
+        "show_login": {
+          "label": "Show login link"
+        }
+      }
+    },
+    "search": {
+      "name": "Search Page",
+      "settings": {
+        "products_per_page": {
+          "label": "Products per page"
+        }
+      }
     }
   }
 }

@@ -1,90 +1,289 @@
 {
-    "general": {
-      "404": {
-        "title": "Not found",
-        "subtext_html": "The page you were looking for does not exist",
-        "homepage_link": "Go to Homepage"
+  "general": {
+    "404": {
+      "title": "Not found",
+      "subtext_html": "The page you were looking for does not exist",
+      "homepage_link": "Go to Homepage"
+    },
+    "article": {
+      "comment": {
+        "message_success": "Votre commentaire a été ajouté avec succés",
+        "message_error": "En raison d'une erreur technique, votre message n'a pas été publié, veuillez réessayer plus tard",
+        "button_title": "Commenter"
       },
-      "article": {
-        "comment": {
-          "message_success": "Votre commentaire a été ajouté avec succés",
-          "message_error": "En raison d'une erreur technique, votre message n'a pas été publié, veuillez réessayer plus tard",
-          "button_title": "Commenter"
+      "none": "Cet article ne contient pas de commentaires",
+      "impressions": "Ce qu'ils en pensent"
+    },
+    "featured-collection": {
+      "button": {
+        "text": "Voir plus"
+      }
+    },
+    "newsletter": {
+      "form": {
+        "email": {
+          "placeholder": "Tapez votre email"
         },
-        "none": "Cet article ne contient pas de commentaires",
-        "impressions": "Ce qu'ils en pensent"
+        "submit": {
+          "text": "S'abonner"
+        },
+        "success": {
+          "message": "Félicitations, vous êtes abonnés à notre newsletter"
+        }
+      }
+    },
+    "cart": {
+      "empty": {
+        "title": "Votre panier est vide"
       },
-      "featured-collection": {
-        "button": {
-          "text": "Voir plus"
+      "button": "Continuer vos achats",
+      "title": "Mon Panier",
+      "form": {
+        "actions": {
+          "remove": "Supprimer",
+          "update": "Mettre à jour",
+          "checkout": "Acheter"
+        },
+        "notes": "Notes de panier"
+      },
+      "subtotal": "Sous-Total",
+      "total": "Total",
+      "tax": "Les taxes, frais de livraison et les remises sont calaculés à la page de paiement"
+    },
+    "search": {
+      "title": "Résultats de la recherche",
+      "results": "résultats pour le terme : ",
+      "empty": {
+        "title": "Pas de résultats trouvés pour le terme : ",
+        "help": "Essayez de taper une autre recherche"
+      }
+    },
+    "pagination": {
+      "showing": "Affichage",
+      "of": "de",
+      "items": "produits",
+      "next": "Suivant",
+      "previous": "Précédent"
+    }
+  },
+  "templates": {
+    "customers": {
+      "login": {
+        "title": "Se connecter",
+        "forgot": "Mot de passe oublié ?",
+        "form": {
+          "inputs": {
+            "email": "Adresse email",
+            "password": "Mot de passe"
+          },
+          "actions": {
+            "signin": "Se connecter"
+          }
+        },
+        "register": "Pas encore inscrit ?",
+        "reset": {
+          "description": "Veuillez entrer votre email pour recevoir un lien de création d'un nouveau mot de passe.",
+          "submit": "Envoyer"
         }
       },
-      "newsletter": {
+      "account": {
+        "title": "Mon compte",
+        "history": {
+          "title": "Historique de mes achats",
+          "table": {
+            "headings": {
+              "heading_1": "N° de commande",
+              "heading_2": "Date",
+              "heading_3": "Statut",
+              "heading_4": "Total"
+            },
+            "footer": {
+              "button_1": "Voir plus",
+              "button_2": "Suivi de commande"
+            }
+          },
+          "empty": {
+            "title": "Vous n'avez pas encore de commandes"
+          }
+        },
+        "details": {
+          "title": "Détails du compte",
+          "button": "Voir mes addresses"
+        },
+        "button": "Se déconnecter"
+      },
+      "activate-account": {
+        "title": "Activer votre compte",
         "form": {
-          "email": {
-            "placeholder": "Tapez votre email"
+          "inputs": {
+            "password": "Tapez un mot de passe",
+            "password-confirm": "Confirmez votre mot de passe"
           },
-          "submit": {
-            "text": "S'abonner"
+          "buttons": {
+            "submit": "Activer",
+            "decline": "Decliner l'invitation"
+          }
+        }
+      },
+      "addresses": {
+        "title": "Mes adresses",
+        "nav": {
+          "link_1": "Commandes",
+          "link_2": "Adresses",
+          "link_3": "Se déconnecter"
+        },
+        "address": {
+          "default": "Défaut",
+          "edit": "Modifier l'adresse",
+          "add": "Ajouter une nouvelle adresse",
+          "form": {
+            "inputs": {
+              "firstname": "Prénom",
+              "lastname": "Nom",
+              "company": "Entreprise",
+              "country": "Pays",
+              "province": "Etat",
+              "line_1": "Adresse ligne 1",
+              "line_2": "Adresse ligne 2",
+              "city": "Ville",
+              "zip": "Code postal",
+              "phone": "Téléphone mobile"
+            },
+            "default": "Définir comme adresse par défaut",
+            "submit": "Modifier",
+            "reset": "Annuler"
+          }
+        }
+      },
+      "register": {
+        "title": "Inscription",
+        "form": {
+          "inputs": {
+            "firstname": "Prénom",
+            "lastname": "Nom",
+            "email": "Adresse email",
+            "password": "Mot de passe"
           },
-          "success": {
-            "message": "Félicitations, vous êtes abonnés à notre newsletter"
+          "actions": {
+            "register": "S'inscrire"
+          }
+        },
+        "registered": "Vous avez déjà un compte ?"
+      },
+      "reset": {
+        "title": "Modification du mot de passe",
+        "form": {
+          "inputs": {
+            "password": "Nouveau mot de passe",
+            "password-confirm": "Confirmez votre mot de passe"
+          },
+          "actions": {
+            "reset": "Confirmer"
           }
         }
       }
     },
-    "templates": {
-      "customers": {
-        "login": {
-          "title": "Login",
-          "password-reset-title": "Forgot Password?"
-        },
-        "account": {
-          "title": "Mon compte",
-          "history": {
-            "title": "Historique de mes achats",
-            "table": {
-              "headings": {
-                "heading_1": "N° de commande",
-                "heading_2": "Date",
-                "heading_3": "Statut",
-                "heading_4": "Total"
-              },
-              "footer": {
-                "button_1": "Voir plus",
-                "button_2": "Suivi de commande"
-              }
-            },
-            "empty": {
-              "title": "Vous n'avez pas encore de commandes"
-            }
-          },
-          "details": {
-            "title": "Détails du compte",
-            "button": "Voir mes addresses"
-          },
-          "button": "Se déconnecter"
-        }
+    "contact-form": {
+      "form-error": {
+        "message": "Une erreur s'est produite lors de l'envoie de votre message, veuillez réessayer plus tard."
       },
-      "contact-form": {
-        "form-error": {
-          "message": "Une erreur s'est produite lors de l'envoie de votre message, veuillez réessayer plus tard."
-        },
-        "form-success": {
-          "message": "Votre message a été envoyé avec succès."
-        },
-        "form": {
-          "inputs": {
-            "name": "Tapez votre nom",
-            "email": "Tapez votre email",
-            "phone": "Tapez votre numéro de téléphone",
-            "message": "Tapez votre message",
-            "button": {
-              "text": "Envoyer"
-            }
+      "form-success": {
+        "message": "Votre message a été envoyé avec succès."
+      },
+      "form": {
+        "inputs": {
+          "name": "Tapez votre nom",
+          "email": "Tapez votre email",
+          "phone": "Tapez votre numéro de téléphone",
+          "message": "Tapez votre message",
+          "button": {
+            "text": "Envoyer"
           }
         }
       }
+    },
+    "article": {
+      "comments": {
+        "title": "Laissez un commentaire",
+        "form": {
+          "inputs": {
+            "comment_author": "Votre nom",
+            "email": "Votre email",
+            "message": "Votre commentaire"
+          },
+          "submit": "Envoyer"
+        }
+      }
+    },
+    "blog": {
+      "pagination": {
+        "showing": "Affichage",
+        "of": "de",
+        "blogs": "blogs"
+      }
+    },
+    "collection": {
+      "empty": {
+        "title": "Pas de produits trouvés, collection vide"
+      }
+    },
+    "order": {
+      "title": "Mon Compte",
+      "back": "Revenir à mon compte",
+      "table": {
+        "headings": {
+          "heading_1": "N° de commande",
+          "heading_2": "Date",
+          "heading_3": "Statut",
+          "heading_4": "Total"
+        },
+        "footer": {
+          "heading": "Lignes de commande",
+          "fullfil": {
+            "info_1": "Nous avons procédé à la livraison de ",
+            "info_1_complete": "items de cette commande.",
+            "tracking": {
+              "company": "Organisme de suivi de commande : ",
+              "number": "N° de suivi de commande : "
+            },
+            "empty": "Cet item n'a pas encore été livré"
+          },
+          "button_1": "Suivre la commande"
+        }
+      },
+      "total": {
+        "title": "Total de la commande",
+        "subtotal": "Sous-Total",
+        "tax": "Taxes",
+        "shipping": "Frais de livraison",
+        "total": "Total"
+      },
+      "billing": {
+        "details": {
+          "title": "Facture &amp; détails de livraison",
+          "address": "Adresse de facturation : "
+        }
+      },
+      "shipping": {
+        "details": {
+          "address": "Adresse de livraison : ",
+          "status": "Statut de livraison : "
+        }
+      },
+      "payment": "Informations de paiement : ",
+      "default": "Cette commande a été placée manuellement par"
+    },
+    "product": {
+      "stock": {
+        "available": "Disponible",
+        "unavailable": "Non disponible"
+      },
+      "add": "Ajouter au panier",
+      "description": "Description produit",
+      "by": "Par",      
+      "vendor": "Fabriquant",
+      "title": "Titre du produit",
+      "new": "NOuveau"
     }
   }
-  
+}

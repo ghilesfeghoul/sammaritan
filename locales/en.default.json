@@ -31,13 +31,60 @@
           "message": "Subscribed successfully"
         }
       }
+    },
+    "cart": {
+      "empty": {
+        "title": "Your cart is empty"
+      },
+      "button": "Continue Shopping",
+      "title": "Shopping Cart",
+      "form": {
+        "actions": {
+          "remove": "Remove",
+          "update": "Update Cart",
+          "checkout": "Proceed to Checkout"
+        },
+        "notes": "Cart Notes"
+      },
+      "subtotal": "Subtotal",
+      "total": "Total",
+      "tax": "Tax included and shipping and discounts calculated at checkout"
+    },
+    "search": {
+      "title": "Search Results",
+      "results": "results for the search term",
+      "empty": {
+        "title": "No results found for the search term:",
+        "help": "Try to use a different keyword"
+      }
+    },
+    "pagination": {
+      "showing": "Showing",
+      "of": "Of",
+      "items": "items",
+      "next": "Next",
+      "previous": "Previous"
     }
   },
   "templates": {
     "customers": {
       "login": {
         "title": "Login",
-        "password-reset-title": "Forgot Password?"
+        "forgot": "Forgot Password?",
+        "form": {
+          "inputs": {
+            "email": "Email Address",
+            "password": "Password"
+          },
+          "actions": {
+            "signin": "Sign In"
+          }
+        },
+        "register": "Not registered yet?",
+        "reset": {
+          "description": "Please enter your Email Address. You will receive a link to create a new password via Email.",
+          "submit": "Reset Password"
+        }
       },
       "account": {
         "title": "My Account",
@@ -64,6 +111,76 @@
           "button": "View addresses"
         },
         "button": "Logout"
+      },
+      "activate-account": {
+        "title": "Activate Account",
+        "form": {
+          "inputs": {
+            "password": "Type a password",
+            "password-confirm": "Confirm your password"
+          },
+          "buttons": {
+            "submit": "Submit",
+            "decline": "Decline invitation"
+          }
+        }
+      },
+      "addresses": {
+        "title": "My Addresses",
+        "nav": {
+          "link_1": "Orders",
+          "link_2": "Addresses",
+          "link_3": "Logout"
+        },
+        "address": {
+          "default": "Default",
+          "edit": "Edit Address",
+          "add": "Add Address",
+          "form": {
+            "inputs": {
+              "firstname": "First Name",
+              "lastname": "Last Name",
+              "company": "Company Name",
+              "country": "Country",
+              "province": "Province",
+              "line_1": "Address Line 1",
+              "line_2": "Address Line 2",
+              "city": "Town / City",
+              "zip": "ZIP / Postcode",
+              "phone": "Mobile Phone"
+            },
+            "default": "Set as default address",
+            "submit": "Edit",
+            "reset": "Cancel"
+          }
+        }
+      },
+      "register": {
+        "title": "Register",
+        "form": {
+          "inputs": {
+            "firstname": "First Name",
+            "lastname": "Last Name",
+            "email": "Email Address",
+            "password": "Password"
+          },
+          "actions": {
+            "register": "Register"
+          }
+        },
+        "registered": "Already have an account?"
+      },
+      "reset": {
+        "title": "Reset Password",
+        "form": {
+          "inputs": {
+            "password": "Password",
+            "password-confirm": "Confirm your password"
+          },
+          "actions": {
+            "reset": "Reset Password"
+          }
+        }
       }
     },
     "contact-form": {
@@ -84,6 +201,89 @@
           }
         }
       }
+    },
+    "article": {
+      "comments": {
+        "title": "Drop comment here",
+        "form": {
+          "inputs": {
+            "comment_author": "Your Name",
+            "email": "Your Email",
+            "message": "Message"
+          },
+          "submit": "Send Message"
+        }
+      }
+    },
+    "blog": {
+      "pagination": {
+        "showing": "Showing",
+        "of": "Of",
+        "blogs": "blog posts"
+      }
+    },
+    "collection": {
+      "empty": {
+        "title": "No products found"
+      }
+    },
+    "order": {
+      "title": "My Account",
+      "back": "Back to account",
+      "table": {
+        "headings": {
+          "heading_1": "Order No:",
+          "heading_2": "Order date:",
+          "heading_3": "Status:",
+          "heading_4": "Order Amount:"
+        },
+        "footer": {
+          "heading": "Order Items",
+          "fullfil": {
+            "info_1": "We have fulfilled",
+            "info_1_complete": "items of your recent order.",
+            "tracking": {
+              "company": "Tracking company:",
+              "number": "Tracking number:"
+            },
+            "empty": "This item is not yet fulfilled"
+          },
+          "button_1": "Track order"
+        }
+      },
+      "total": {
+        "title": "Order Total",
+        "subtotal": "Subtotal",
+        "tax": "Tax",
+        "shipping": "Shipping",
+        "total": "Total"
+      },
+      "billing": {
+        "details": {
+          "title": "Billing &amp; Shipping Details",
+          "address": "Billing Address:"
+        }
+      },
+      "shipping": {
+        "details": {
+          "address": "Shipping Address:",
+          "status": "Shipping Status:"
+        }
+      },
+      "payment": "Payment Information:",
+      "default": "This order is manually placed by"
+    },
+    "product": {
+      "stock": {
+        "available": "In Stock",
+        "unavailable": "Sold out"
+      },
+      "add": "Add to Cart",
+      "description": "Product Description",
+      "by": "By",
+      "vendor": "Vendor",
+      "title": "Product title",
+      "new": "New"
     }
   },
   "shopify": {
@@ -155,7 +355,7 @@
           "many": "Your orders are covered by your gift cards."
         },
         "card_fields_unavailable_html": {
-          "many": "Credit and debit card payments are not available at this time.<br> <a href=\"%{current_url}\">Refresh this page<\/a> or try another payment method."
+          "many": "Credit and debit card payments are not available at this time.<br> <a href=\"%{current_url}\">Refresh this page</a> or try another payment method."
         },
         "expired_cards_info": {
           "many": "There are %{count} expired cards that you can view and edit in your account."
@@ -242,10 +442,10 @@
           "many": "Products not available"
         },
         "products_not_available": {
-          "many": "These products will be removed from your cart as they are not available in your country\/region."
+          "many": "These products will be removed from your cart as they are not available in your country/region."
         },
         "all_products_in_cart_unavailable": {
-          "many": "These products are not available in your country\/region."
+          "many": "These products are not available in your country/region."
         }
       },
       "throttle": {

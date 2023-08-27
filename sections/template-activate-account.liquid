@@ -5,7 +5,7 @@
       <div class="card card-lg mx-auto">
         <div class="card-body">
           <!-- Heading -->
-          <h6 class="mb-7 text-center">Activate Account</h6>
+          <h6 class="mb-7 text-center">{{ "templates.customers.activate-account.title" | t }}</h6>
 
           {% form 'activate_customer_password' %}
             <div class="row">
@@ -24,7 +24,7 @@
                     value=""
                     name="customer[password]"
                     type="password"
-                    placeholder="Type your new password"
+                    placeholder="{{ "templates.customers.activate-account.form.inputs.password" | t }}"
                     required="">
                 </div>
               </div>
@@ -38,17 +38,20 @@
                     value=""
                     name="customer[password_confirmation]"
                     type="password"
-                    placeholder="Type your password confirmation"
+                    placeholder="{{ "templates.customers.activate-account.form.inputs.password-confirm" | t }}"
                     required="">
                 </div>
               </div>
-              <div class="col-12">
-                <!-- Button -->
-                <button class="btn btn-sm btn-dark" type="submit">Reset Password</button>
+              <div class="row">
+                <div class="col">
+                  <!-- Button -->
+                  <button class="btn btn-sm btn-dark" type="submit">{{ "templates.customers.activate-account.form.buttons.submit" | t }}</button>
+                </div>
+                <div class="col">
+                  <button class="btn btn-sm btn-outline-dark" name="decline">{{ "templates.customers.activate-account.form.buttons.decline" | t }}</button>
+                </div>
               </div>
-              <div class="col-12">
-                <button class="btn btn-sm btn-outline-dark" name="decline">Decline invitation</button>
-              </div>
+
             </div>
           {% endform %}
           <!-- Form -->
