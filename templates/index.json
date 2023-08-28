@@ -1,6 +1,6 @@
 {
   "sections": {
-    "b44a8107-2623-47b8-a49b-43f9a12f2eef": {
+    "9898182e-0826-450d-970b-4b0b35d3da8f": {
       "type": "template-carousel",
       "settings": {
         "text_1": "Summer Sale",
@@ -36,7 +36,7 @@
     }
   },
   "order": [
-    "b44a8107-2623-47b8-a49b-43f9a12f2eef",
+    "9898182e-0826-450d-970b-4b0b35d3da8f",
     "template"
   ]
 }
