@@ -1,13 +1,42 @@
 {
   "sections": {
+    "b44a8107-2623-47b8-a49b-43f9a12f2eef": {
+      "type": "template-carousel",
+      "settings": {
+        "text_1": "Summer Sale",
+        "heading_1": "-70%",
+        "heading_1_complete": "with promo code CN67EW*",
+        "show_heading": true,
+        "url_1": "",
+        "text_url_1": "",
+        "text_2": "So called give, one whales tree seas dry place own day, winged tree created spirit.",
+        "heading_2": "Summer Collection",
+        "show_text_2": true,
+        "url_2": "",
+        "text_url_2": "",
+        "show_slide_1": true,
+        "show_slide_2": true,
+        "show_slide_3": true,
+        "heading_3": "50% OFF",
+        "preheading_3": "Summer Styles",
+        "url_3": "",
+        "text_url_3": "Shop women",
+        "url_4": "",
+        "text_url_4": "Shop men",
+        "show_url_4": true
+      }
+    },
     "template": {
       "type": "featured-collection",
       "settings": {
-        "featured_collection": "all"
+        "title": "",
+        "featured_collection": "all",
+        "number_of_products_to_show": 4
       }
     }
   },
   "order": [
+    "b44a8107-2623-47b8-a49b-43f9a12f2eef",
     "template"
   ]
 }
