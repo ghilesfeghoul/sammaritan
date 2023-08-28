@@ -275,7 +275,7 @@
     },
     "product": {
       "stock": {
-        "available": "Disponible",
+        "available": "En solde",
         "unavailable": "Non disponible"
       },
       "add": "Ajouter au panier",

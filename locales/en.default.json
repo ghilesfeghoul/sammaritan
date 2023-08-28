@@ -275,7 +275,7 @@
     },
     "product": {
       "stock": {
-        "available": "In Stock",
+        "available": "Sold",
         "unavailable": "Sold out"
       },
       "add": "Add to Cart",
