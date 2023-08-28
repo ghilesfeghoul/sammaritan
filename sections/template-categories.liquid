@@ -1,0 +1,160 @@
+<section class="pt-6">
+  <div class="container-fluid px-3 px-md-6">
+    <div class="row mx-n3">
+      <div class="col-12 col-sm-4 d-flex flex-column px-3">
+
+        <!-- Card-->
+        <div class="card card-xl mb-3 mb-sm-0" style="min-height: 280px">
+
+          <!-- Background -->
+          <div class="card-bg">
+            <div class="card-bg-img bg-cover" style="background-image: url({% if section.settings.image_1 != blank  %} {{ section.settings.image_1 | image_url }} {% else %} {{ "product-22.jpg" | asset_url }} {% endif %});"></div>
+          </div>
+
+          <!-- Body -->
+          <div class="card-body my-auto">
+
+            <!-- Heading -->
+            <h5 class="mb-0">{{ section.settings.heading_1 }}</h5>
+
+            <!-- Link -->
+            <a class="btn btn-link stretched-link px-0 text-reset" href="{{ section.settings.url_1 }}">
+              {{ section.settings.text_url_1 }}
+              <i class="fe fe-arrow-right ms-2"></i>
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+      <div class="col-12 col-sm-4 d-flex flex-column px-3">
+
+        <!-- Card-->
+        <div class="card card-xl mb-3 mb-sm-0" style="min-height: 280px;">
+
+          <!-- Background -->
+          <div class="card-bg">
+            <div class="card-bg-img bg-cover" style="background-image: url({% if section.settings.image_2 != blank  %} {{ section.settings.image_2 | image_url }} {% else %} {{ "product-23.jpg" | asset_url }} {% endif %});"></div>
+          </div>
+
+          <!-- Body -->
+          <div class="card-body my-auto">
+
+            <!-- Heading -->
+            <h5 class="mb-0">{{ section.settings.heading_2 }}</h5>
+
+            <!-- Link -->
+            <a class="btn btn-link stretched-link px-0 text-reset" href="{{ section.settings.url_2 }}">
+              {{ section.settings.text_url_2 }}
+              <i class="fe fe-arrow-right ms-2"></i>
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+      <div class="col-12 col-sm-4 d-flex flex-column px-3">
+
+        <!-- Card-->
+        <div class="card card-xl bg-cover bg-hover" style="min-height: 280px;">
+
+          <!-- Background -->
+          <div class="card-bg">
+            <div class="card-bg-img bg-cover" style="background-image: url({% if section.settings.image_3 != blank  %} {{ section.settings.image_3 | image_url }} {% else %} {{ "product-24.jpg" | asset_url }} {% endif %});"></div>
+          </div>
+
+          <!-- Body -->
+          <div class="card-body my-auto">
+
+            <!-- Heading -->
+            <h5 class="mb-0">{{ section.settings.heading_3 }}</h5>
+
+            <!-- Link -->
+            <a class="btn btn-link stretched-link px-0 text-reset" href="{{ section.settings.url_3 }}">
+              {{ section.settings.text_url_3 }}
+              <i class="fe fe-arrow-right ms-2"></i>
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "disabled_on": {
+      "groups": ["header", "footer"]
+    },
+    "presets": [
+      {
+        "name": "Categories"
+      }
+    ],
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "image_1",
+        "label": "Image 1"
+      },
+      {
+        "type": "text",
+        "id": "heading_1",
+        "label": "Heading 1",
+        "default": "Summer Hats"
+      },
+      {
+        "type": "url",
+        "id": "url_1",
+        "label": "Link 1"
+      },
+      {
+        "type": "text",
+        "id": "text_url_1",
+        "label": "Text Link 1",
+        "default": "Shop now"
+      }, {
+        "type": "image_picker",
+        "id": "image_2",
+        "label": "Image 2"
+      }, {
+        "type": "image_picker",
+        "id": "image_3",
+        "label": "Image 3"
+      }, {
+        "type": "text",
+        "id": "heading_2",
+        "label": "Heading 2",
+        "default": "Men Hats"
+      }, {
+        "type": "url",
+        "id": "url_2",
+        "label": "Link 2"
+      }, {
+        "type": "text",
+        "id": "text_url_2",
+        "label": "Text Link 2",
+        "default": "Shop now"
+      }, {
+        "type": "text",
+        "id": "heading_3",
+        "label": "Heading 3",
+        "default": "Floral Dresses"
+      }, {
+        "type": "url",
+        "id": "url_3",
+        "label": "Link 3"
+      }, {
+        "type": "text",
+        "id": "text_url_3",
+        "label": "Text Link 3",
+        "default": "Shop now"
+      }
+    ]
+  }
+{% endschema %}
