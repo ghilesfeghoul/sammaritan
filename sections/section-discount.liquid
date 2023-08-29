@@ -5,19 +5,45 @@
 
         <!-- Heading-->
         <h1 class="display-4 mb-9 text-white">
-          Sale up to 50% off
+          {{ section.settings.title | escape }}
         </h1>
 
-        <!-- Buttons -->
-        <a class="btn btn-outline-white border-2 px-md-8 m-2 m-md-4" href="shop.html">Dresses</a>
-        <a class="btn btn-outline-white border-2 px-md-8 m-2 m-md-4" href="shop.html">Tops &amp; T-Shirts</a>
-        <a class="btn btn-outline-white border-2 px-md-8 m-2 m-md-4" href="shop.html">Blouses &amp; Shirts</a>
-        <a class="btn btn-outline-white border-2 px-md-8 m-2 m-md-4" href="shop.html">Jeans &amp; Trousers</a>
-        <a class="btn btn-outline-white border-2 px-md-8 m-2 m-md-4" href="shop.html">Jeans &amp; Trousers</a>
-        <a class="btn btn-outline-white border-2 px-md-8 m-2 m-md-4" href="shop.html">Shoes</a>
-        <a class="btn btn-outline-white border-2 px-md-8 m-2 m-md-4" href="shop.html">Acessories</a>
-        <a class="btn btn-outline-white border-2 px-md-8 m-2 m-md-4" href="shop.html">Coats &amp; Jakets</a>
-        <a class="btn btn-outline-white border-2 px-md-8 m-2 m-md-4" href="shop.html">Shorts &amp; Skirts</a>
+        {% for counter in (1..section.settings.number_of_discounts) %}
+          {% case counter %}
+            {% when 1 %}
+            <a class="btn btn-outline-white border-2 px-md-8 m-2 m-md-4" href="{{ section.settings.link_1 }}">{{ section.settings.link_text_1 | escape }}</a>
+
+            {% when 2 %}
+            <a class="btn btn-outline-white border-2 px-md-8 m-2 m-md-4" href="{{ section.settings.link_2 }}">{{ section.settings.link_text_2 | escape }}</a>
+
+            {% when 3 %}
+            <a class="btn btn-outline-white border-2 px-md-8 m-2 m-md-4" href="{{ section.settings.link_3 }}">{{ section.settings.link_text_3 | escape }}</a>
+
+            {% when 4 %}
+            <a class="btn btn-outline-white border-2 px-md-8 m-2 m-md-4" href="{{ section.settings.link_4 }}">{{ section.settings.link_text_4 | escape }}</a>
+
+            {% when 5 %}
+            <a class="btn btn-outline-white border-2 px-md-8 m-2 m-md-4" href="{{ section.settings.link_5 }}">{{ section.settings.link_text_5 | escape }}</a>
+
+            {% when 6 %}
+            <a class="btn btn-outline-white border-2 px-md-8 m-2 m-md-4" href="{{ section.settings.link_6 }}">{{ section.settings.link_text_6 | escape }}</a>
+
+            {% when 7 %}
+            <a class="btn btn-outline-white border-2 px-md-8 m-2 m-md-4" href="{{ section.settings.link_7 }}">{{ section.settings.link_text_7 | escape }}</a>
+
+            {% when 8 %}
+            <a class="btn btn-outline-white border-2 px-md-8 m-2 m-md-4" href="{{ section.settings.link_8 }}">{{ section.settings.link_text_8 | escape }}</a>
+
+            {% when 9 %}
+            <a class="btn btn-outline-white border-2 px-md-8 m-2 m-md-4" href="{{ section.settings.link_9 }}">{{ section.settings.link_text_9 | escape }}</a>
+
+            {% when 10 %}
+            <a class="btn btn-outline-white border-2 px-md-8 m-2 m-md-4" href="{{ section.settings.link_10 }}">{{ section.settings.link_text_10 | escape }}</a>
+
+        {% else %}
+
+          {% endcase %}
+        {% endfor %}
 
       </div>
     </div>
@@ -25,12 +51,122 @@
 </section>
 {% schema %}
   {
+    "name": "t:settings_schema.discounts.name",
     "disabled_on": {
       "groups": ["header", "footer"]
     },
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "t:settings_schema.discounts.settings.title.label",
+        "default": "Sale up to 50% off"
+      },
+      {
+        "type": "range",
+        "min": 3,
+        "max": 10,
+        "default": 9,
+        "id": "number_of_discounts",
+        "step": 1,
+        "label": "t:settings_schema.discounts.settings.number_of_discounts.label"
+      },
+      {
+        "type": "url",
+        "id": "link_1",
+        "label": "t:settings_schema.discounts.settings.link_1.label"
+      },
+      {
+        "type": "text",
+        "id": "link_text_1",
+        "label": "t:settings_schema.discounts.settings.link_text_1.label",
+        "default": "Dresses"
+      }, {
+        "type": "url",
+        "id": "link_2",
+        "label": "t:settings_schema.discounts.settings.link_2.label"
+      }, {
+        "type": "text",
+        "id": "link_text_2",
+        "label": "t:settings_schema.discounts.settings.link_text_2.label",
+        "default": "Jeans & Trousers"
+      }, {
+        "type": "url",
+        "id": "link_3",
+        "label": "t:settings_schema.discounts.settings.link_3.label"
+      }, {
+        "type": "text",
+        "id": "link_text_3",
+        "label": "t:settings_schema.discounts.settings.link_text_3.label",
+        "default": "Acessories"
+      }, {
+        "type": "url",
+        "id": "link_4",
+        "label": "t:settings_schema.discounts.settings.link_4.label"
+      }, {
+        "type": "text",
+        "id": "link_text_4",
+        "label": "t:settings_schema.discounts.settings.link_text_4.label",
+        "default": "CrocTops"
+      }, {
+        "type": "url",
+        "id": "link_5",
+        "label": "t:settings_schema.discounts.settings.link_5.label"
+      }, {
+        "type": "text",
+        "id": "link_text_5",
+        "label": "t:settings_schema.discounts.settings.link_text_5.label",
+        "default": "Top & T-Shirts"
+      }, {
+        "type": "url",
+        "id": "link_6",
+        "label": "t:settings_schema.discounts.settings.link_6.label"
+      }, {
+        "type": "text",
+        "id": "link_text_6",
+        "label": "t:settings_schema.discounts.settings.link_text_6.label",
+        "default": "Shoes"
+      }, {
+        "type": "url",
+        "id": "link_7",
+        "label": "t:settings_schema.discounts.settings.link_7.label"
+      }, {
+        "type": "text",
+        "id": "link_text_7",
+        "label": "t:settings_schema.discounts.settings.link_text_7.label",
+        "default": "Blouses & Shirts"
+      }, {
+        "type": "url",
+        "id": "link_8",
+        "label": "t:settings_schema.discounts.settings.link_8.label"
+      }, {
+        "type": "text",
+        "id": "link_text_8",
+        "label": "t:settings_schema.discounts.settings.link_text_8.label",
+        "default": "Coats & Jackets"
+      }, {
+        "type": "url",
+        "id": "link_9",
+        "label": "t:settings_schema.discounts.settings.link_9.label"
+      }, {
+        "type": "text",
+        "id": "link_text_9",
+        "label": "t:settings_schema.discounts.settings.link_text_9.label",
+        "default": "Jewerly"
+      }, {
+        "type": "url",
+        "id": "link_10",
+        "label": "t:settings_schema.discounts.settings.link_10.label"
+      }, {
+        "type": "text",
+        "id": "link_text_10",
+        "label": "t:settings_schema.discounts.settings.link_text_10.label",
+        "default": "Watches"
+      }
+    ],
     "presets": [
       {
-        "name": "Discount Section"
+        "name": "t:settings_schema.discounts.name"
       }
     ]
   }

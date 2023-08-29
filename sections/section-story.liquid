@@ -1,0 +1,96 @@
+<section class="py-12">
+  <div class="container">
+    <div class="row align-items-center justify-content-between">
+      <div class="col-12 col-md-6">
+
+        <!-- Image -->
+        <img
+        src="{% if section.settings.image_1 != blank  %} {{ section.settings.image_1 | image_url }} {% else %} {{ "product-62.jpg" | asset_url }} {% endif %}"
+          alt="Image 1"
+          class="img-fluid w-50">
+
+        <!-- Image -->
+        <div class="text-end mt-n13 mt-lg-n15 mb-10 mb-md-0">
+          <img
+            src="{% if section.settings.image_2 != blank  %} {{ section.settings.image_2 | image_url }} {% else %} {{ "product-63.jpg" | asset_url }} {% endif %}"
+            alt="Image 2"
+            class="img-fluid w-75">
+        </div>
+
+      </div>
+      <div class="col-12 col-md-6 col-lg-5">
+
+        <!-- Preheading -->
+        <h6 class="heading-xxs mb-3 text-gray-400">
+          {{ section.settings.preheading | escape }}
+        </h6>
+
+        <!-- Heading -->
+        <h2 class="mb-7">
+          {{ section.settings.heading | escape }}
+        </h2>
+
+        <!-- Text -->
+        <div class="fs-lg text-muted">
+          {{ section.settings.description }}
+        </div>
+
+        <!-- Link -->
+        <a class="link-underline" href="{{ section.settings.link }}">{{ section.settings.text_link | escape }}</a>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "t:settings_schema.story.name",
+    "disabled_on": {
+      "groups": ["header", "footer"]
+    },
+    "presets": [
+      {
+        "name": "t:settings_schema.story.name"
+      }
+    ],
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "image_1",
+        "label": "t:settings_schema.story.settings.image_1.label"
+      },
+      {
+        "type": "image_picker",
+        "id": "image_2",
+        "label": "t:settings_schema.story.settings.image_2.label"
+      },
+      {
+        "type": "text",
+        "id": "preheading",
+        "label": "t:settings_schema.story.settings.preheading.label",
+        "default": "Our story"
+      },
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "t:settings_schema.story.settings.heading.label",
+        "default": "About our Store"
+      }, {
+        "type": "richtext",
+        "id": "description",
+        "label": "t:settings_schema.story.settings.description.label",
+        "default": "<p>Open created shall two he second moving whose. He face whose two upon, fowl behold waters. Fly there their day creepeth. Darkness beginning spirit after. Creepeth subdue. Brought may, first. Under living that.</p><p>Third. For morning whales saw were had seed can't divide it light shall moveth, us blessed given wherein.</p>"
+      }, {
+        "type": "url",
+        "id": "link",
+        "label": "t:settings_schema.story.settings.link.label"
+      }, {
+        "type": "text",
+        "id": "text_link",
+        "label": "t:settings_schema.story.settings.text_link.label",
+        "default": "Discover more"
+      }
+    ]
+  }
+{% endschema %}

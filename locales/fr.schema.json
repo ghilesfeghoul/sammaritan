@@ -445,6 +445,334 @@
           "label": "Produits par page"
         }
       }
+    },
+    "carousel": {
+      "name": "Carrousel",
+      "settings": {
+        "image_1": {
+          "label": "Sélectionnez la première image pour le carrousel"
+        },
+        "image_2": {
+          "label": "Sélectionnez la deuxième image pour le carrousel"
+        },
+        "image_3": {
+          "label": "Sélectionnez la troisième image pour le carrousel"
+        },
+        "text_1": {
+          "label": "Texte pour la première image"
+        },
+        "text_2": {
+          "label": "Texte pour la deuxième image"
+        },
+        "text_3": {
+          "label": "Texte pour la troisième image"
+        },
+        "heading_1": {
+          "label": "Texte d'en-tête pour la première image"
+        },
+        "heading_1_complete": {
+          "label": "Complétion du texte d'en-tête pour la première image"
+        },
+        "show_heading": {
+          "label": "Afficher le texte d'en-tête pour la première image"
+        },
+        "show_text_2": {
+          "label": "Afficher le texte d'en-tête pour la deuxième image"
+        },
+        "heading_2": {
+          "label": "Texte d'en-tête pour la deuxième image"
+        },
+        "heading_3": {
+          "label": "Texte d'en-tête pour la troisième image"
+        },
+        "url_1": {
+          "label": "Sélectionnez l'URL de redirection pour le bouton sur la première image"
+        },
+        "url_2": {
+          "label": "Sélectionnez l'URL de redirection pour le bouton sur la deuxième image"
+        },
+        "url_3": {
+          "label": "Sélectionnez l'URL de redirection pour le bouton sur la troisième image"
+        },
+        "show_slide_1": {
+          "label": "Afficher le numéro de la diapositive 1"
+        },
+        "show_slide_2": {
+          "label": "Afficher le numéro de la diapositive 2"
+        },
+        "show_slide_3": {
+          "label": "Afficher le numéro de la diapositive 3"
+        },
+        "preheading_3": {
+          "label": "Texte d'introduction pour l'image 3"
+        },
+        "url_4": {
+          "label": "Sélectionnez la deuxième URL de redirection pour le bouton sur la troisième image"
+        },
+        "show_url_4": {
+          "label": "Afficher la deuxième URL de redirection pour le bouton sur la troisième image"
+        },
+        "text_url_1": {
+          "label": "Saisissez le texte à afficher dans le bouton sur la première image"
+        },
+        "text_url_2": {
+          "label": "Saisissez le texte à afficher dans le bouton sur la deuxième image"
+        },
+        "text_url_3": {
+          "label": "Saisissez le texte à afficher dans le bouton sur la troisième image"
+        },
+        "text_url_4": {
+          "label": "Saisissez le texte à afficher dans le deuxième bouton sur la troisième image"
+        }
+      }
+    },
+    "categories": {
+      "name": "Catégories",
+      "settings": {
+        "image_1": {
+          "label": "Sélectionnez la première image pour les catégories"
+        },
+        "image_2": {
+          "label": "Sélectionnez la deuxième image pour les catégories"
+        },
+        "image_3": {
+          "label": "Sélectionnez la troisième image pour les catégories"
+        },
+        "text_1": {
+          "label": "Texte pour la première image"
+        },
+        "text_2": {
+          "label": "Texte pour la deuxième image"
+        },
+        "text_3": {
+          "label": "Texte pour la troisième image"
+        },
+        "heading_1": {
+          "label": "Texte d'en-tête pour la première image"
+        },
+        "heading_2": {
+          "label": "Texte d'en-tête pour la deuxième image"
+        },
+        "heading_3": {
+          "label": "Texte d'en-tête pour la troisième image"
+        },
+        "url_1": {
+          "label": "Sélectionnez l'URL de redirection pour le bouton sur la première image"
+        },
+        "url_2": {
+          "label": "Sélectionnez l'URL de redirection pour le bouton sur la deuxième image"
+        },
+        "url_3": {
+          "label": "Sélectionnez l'URL de redirection pour le bouton sur la troisième image"
+        },
+        "text_url_1": {
+          "label": "Saisissez le texte à afficher dans le bouton sur la première image"
+        },
+        "text_url_2": {
+          "label": "Saisissez le texte à afficher dans le bouton sur la deuxième image"
+        },
+        "text_url_3": {
+          "label": "Saisissez le texte à afficher dans le bouton sur la troisième image"
+        }
+      }
+    },
+    "covers": {
+      "name": "Couverture de collection",
+      "settings": {
+        "image_1": {
+          "label": "Sélectionnez la première image pour votre couverture"
+        },
+        "image_2": {
+          "label": "Sélectionnez la deuxième image pour votre couverture"
+        },
+        "image_3": {
+          "label": "Sélectionnez la troisième image pour votre couverture"
+        },
+        "image_4": {
+          "label": "Sélectionnez la quatrième image pour votre couverture"
+        },
+        "title": {
+          "label": "Tapez le titre de votre couverture"
+        },
+        "descrption": {
+          "label": "Tapez la description de votre couverture"
+        },
+        "button_title": {
+          "label": "Tapez le texte de votre bouton"
+        },
+        "link": {
+          "label": "Sélectionnez l'URL de redirection pour le bouton de votre couverture"
+        }
+      }
+    },
+    "discounts": {
+      "name": "Promotions & Réductions",
+      "settings": {
+        "title": {
+          "label": "Tapez le titre de vos promotions/réductions"
+        },
+        "number_of_discounts": {
+          "label": "Nombre de promotions/réductions"
+        },
+        "link_1": {
+          "label": "Sélectionnez l'URL de redirection pour le bouton sur la promo numéro 1"
+        },
+        "link_2": {
+          "label": "Sélectionnez l'URL de redirection pour le bouton sur la promo numéro 2"
+        },
+        "link_3": {
+          "label": "Sélectionnez l'URL de redirection pour le bouton sur la promo numéro 3"
+        },
+        "link_4": {
+          "label": "Sélectionnez l'URL de redirection pour le bouton sur la promo numéro 4"
+        },
+        "link_5": {
+          "label": "Sélectionnez l'URL de redirection pour le bouton sur la promo numéro 5"
+        },
+        "link_6": {
+          "label": "Sélectionnez l'URL de redirection pour le bouton sur la promo numéro 6"
+        },
+        "link_7": {
+          "label": "Sélectionnez l'URL de redirection pour le bouton sur la promo numéro 7"
+        },
+        "link_8": {
+          "label": "Sélectionnez l'URL de redirection pour le bouton sur la promo numéro 8"
+        },
+        "link_9": {
+          "label": "Sélectionnez l'URL de redirection pour le bouton sur la promo numéro 9"
+        },
+        "link_10": {
+          "label": "Sélectionnez l'URL de redirection pour le bouton sur la promo numéro 10"
+        },
+        "link_text_1": {
+          "label": "Saisissez le texte du bouton numéro 1"
+        },
+        "link_text_2": {
+          "label": "Saisissez le texte du bouton numéro 2"
+        },
+        "link_text_3": {
+          "label": "Saisissez le texte du bouton numéro 3"
+        },
+        "link_text_4": {
+          "label": "Saisissez le texte du bouton numéro 4"
+        },
+        "link_text_5": {
+          "label": "Saisissez le texte du bouton numéro 5"
+        },
+        "link_text_6": {
+          "label": "Saisissez le texte du bouton numéro 6"
+        },
+        "link_text_7": {
+          "label": "Saisissez le texte du bouton numéro 7"
+        },
+        "link_text_8": {
+          "label": "Saisissez le texte du bouton numéro 8"
+        },
+        "link_text_9": {
+          "label": "Saisissez le texte du bouton numéro 9"
+        },
+        "link_text_10": {
+          "label": "Saisissez le texte du bouton numéro 10"
+        }
+      }
+    },
+    "features": {
+      "name": "Caractéristiques",
+      "settings": {
+        "show_icon_1": {
+          "label": "Afficher l'icône de la première caractéristique"
+        },
+        "heading_1": {
+          "label": "Titre la première caractéristique"
+        },
+        "text_1": {
+          "label": "Texte de la première caractéristique"
+        },
+        "show_icon_2": {
+          "label": "Afficher l'icône de la deuxième caractéristique"
+        },
+        "heading_2": {
+          "label": "Titre la deuxième caractéristique"
+        },
+        "text_2": {
+          "label": "Texte de la deuxième caractéristique"
+        },
+        "show_icon_3": {
+          "label": "Afficher l'icône de la troisième caractéristique"
+        },
+        "heading_3": {
+          "label": "Titre la troisième caractéristique"
+        },
+        "text_3": {
+          "label": "Texte de la troisième caractéristique"
+        },
+        "show_icon_4": {
+          "label": "Afficher l'icône de la quatrième caractéristique"
+        },
+        "heading_4": {
+          "label": "Titre la quatrième caractéristique"
+        },
+        "text_4": {
+          "label": "Texte de la quatrième caractéristique"
+        }
+      }
+    },
+    "musthave": {
+      "name": "Incontournables",
+      "settings": {
+        "image": {
+          "label": "Sélectionnez l'image de votre section Incontournables"
+        },
+        "preheading": {
+          "label": "Prétitre du bloc de Texte enrichi"
+        },
+        "heading": {
+          "label": "Titre du bloc de Texte enrichi"
+        },
+        "description": {
+          "label": "Description du bloc de Texte enrichi"
+        },
+        "link": {
+          "label": "Sélectionnez l'url de redirection de votre bouton"
+        },
+        "text_link": {
+          "label": "Tapez le texte de votre bouton"
+        }
+      },
+      "blocks": {
+        "img": {
+          "name": "Image"
+        },
+        "txt": {
+          "name": "Texte enrichi"
+        }
+      }
+    },
+    "story": {
+      "name": "A découvrir",
+      "settings": {
+        "image_1": {
+          "label": "Sélectionnez la première image de votre section"
+        },
+        "image_2": {
+          "label": "Sélectionnez la deuxième image de votre section"
+        },
+        "preheading": {
+          "label": "Pré-titre de votre section"
+        },
+        "heading": {
+          "label": "Titre de votre section"
+        },
+        "description": {
+          "label": "Tapez la description"
+        },
+        "link": {
+          "label": "Sélectionnez l'url de redirection de votre bouton"
+        },
+        "text_link": {
+          "label": "Tapez le texte de votre bouton"
+        }
+      }
     }
   }
 }

@@ -1,0 +1,102 @@
+<section class="bg-light overflow-hidden mt-10">
+  <div class="container">
+    <div class="row gx-0 justify-content-between">
+      {% for block in section.blocks %}
+        {% case block.type %}
+          {% when 'txt' %}
+            <div class="col-12 col-md-5 col-lg-4 py-13">
+
+            <!-- Pretitle -->
+            <h6 class="heading-xxs text-gray-400">
+              {{ section.settings.preheading | escape }}
+            </h6>
+
+            <!-- Heading -->
+            <h1 class="mb-4">{{ section.settings.heading | escape }}</h1>
+
+            <!-- Text -->
+            <p class="text-gray-500 mb-8">
+              {{ section.settings.description | escape }}
+            </p>
+
+            <!-- Button -->
+            <a class="btn btn-dark" href="{{ section.settings.link }}">
+              {{ section.settings.text_link | escape }}
+              <i class="fe fe-arrow-right ms-2"></i>
+            </a>
+
+          </div>
+
+          {% when 'img' %}
+            <div class="col-12 col-md-6">
+
+            <!-- Image -->
+            <div class="h-100 vw-50 bg-cover" style="background-image: url({% if section.settings.image != blank  %} {{ section.settings.image | image_url }} {% else %} {{ "cover-10.jpg" | asset_url }} {% endif %});"></div>
+
+          </div>
+      {% else %}
+
+        {% endcase %}
+      {% endfor %}
+
+
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "t:settings_schema.musthave.name",
+    "disabled_on": {
+      "groups": ["header", "footer"]
+    },
+    "presets": [
+      {
+        "name": "t:settings_schema.musthave.name"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "t:settings_schema.musthave.blocks.img.name",
+        "type": "img"
+      }, {
+        "name": "t:settings_schema.musthave.blocks.txt.name",
+        "type": "txt"
+      }
+    ],
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "t:settings_schema.musthave.settings.image.label"
+      },
+      {
+        "type": "text",
+        "id": "preheading",
+        "label": "t:settings_schema.musthave.settings.preheading.label",
+        "default": "SUMMER TRENDS"
+      },
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "t:settings_schema.musthave.settings.heading.label",
+        "default": "Our must haves"
+      },
+      {
+        "type": "text",
+        "id": "description",
+        "label": "t:settings_schema.musthave.settings.description.label",
+        "default": "Male his our upon seed had said wherein their i great wherein under you'll deep first multiply. Fish waters they're herb shall saying."
+      }, {
+        "type": "url",
+        "id": "link",
+        "label": "t:settings_schema.musthave.settings.link.label"
+      }, {
+        "type": "text",
+        "id": "text_link",
+        "label": "t:settings_schema.musthave.settings.text_link.label",
+        "default": "Shop now"
+      }
+    ]
+  }
+{% endschema %}
