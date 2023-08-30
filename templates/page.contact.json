@@ -1,14 +1,20 @@
 {
   "sections": {
     "template": {
-      "type": "template-page"
+      "type": "template-page",
+      "settings": {
+      }
     },
     "contact": {
-      "type": "contact-form"
+      "type": "contact-form",
+      "settings": {
+        "title": "",
+        "show_phone": true
+      }
     }
   },
   "order": [
-    "template", 
+    "template",
     "contact"
   ]
 }
