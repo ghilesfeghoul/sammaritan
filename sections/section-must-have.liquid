@@ -52,16 +52,25 @@
     },
     "presets": [
       {
-        "name": "t:settings_schema.musthave.name"
+        "name": "t:settings_schema.musthave.name",
+        "blocks": [
+          {
+            "type": "img"
+          }, {
+            "type": "txt"
+          }
+        ]
       }
     ],
     "blocks": [
       {
         "name": "t:settings_schema.musthave.blocks.img.name",
-        "type": "img"
+        "type": "img",
+        "limit": 1
       }, {
         "name": "t:settings_schema.musthave.blocks.txt.name",
-        "type": "txt"
+        "type": "txt",
+        "limit": 1
       }
     ],
     "settings": [
