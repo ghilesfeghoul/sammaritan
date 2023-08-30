@@ -797,7 +797,145 @@
     },
     "B2B": {
       "orders": {
-        "order_list_column_headers_contact": "Contatto"
+        "order_list_column_headers_contact": "Contatto",
+        "draft_order_list": {
+          "hide_all": "Nascondi tutto",
+          "show_all": "Mostra tutto",
+          "hide_all_accessibility_label": "Nascondi tutti gli ordini in revisione",
+          "show_all_accessibility_label": "Mostra tutti gli ordini in revisione",
+          "show_all_orders_in_review": "Mostra tutti gli ordini in revisione",
+          "show_less_orders_in_review": "Mostra meno ordini in revisione",
+          "title": "In attesa di",
+          "pending_tab_accessibility_label": {
+            "no_pending_orders": "Non hai ordini in sospeso",
+            "pending_orders": {
+              "one": "Hai {{count}} ordine in sospeso",
+              "other": "Hai {{count}} ordini in sospeso"
+            },
+            "more_than_pagination_length": "Hai più di {{count}} ordini in sospeso"
+          },
+          "pending_orders_count_more_than_pagination_length": "{{count}} +",
+          "pagination": {
+            "nav_accessibility_label": "Ordini nei pulsanti di navigazione di revisione"
+          }
+        },
+        "order_list_column_headers_location": "Posizione",
+        "removed_company_contact_tooltip": "Rimosso dall'azienda"
+      },
+      "location_selection": {
+        "no_location_title": "Solo ordini personali",
+        "no_location_description": "Non hai più l'autorizzazione per effettuare ordini per {{company}} . Puoi ancora effettuare ordini personali.",
+        "no_locations_found": "Nessuna posizione trovata",
+        "search": "Cerca una posizione",
+        "search_location_title": "Seleziona una posizione",
+        "selection_cancel_button": "Annulla",
+        "selection_confirmation_button": "Scegli la posizione",
+        "title": "Per quale località stai acquistando?",
+        "clear_search": "Cancella ricerca",
+        "try_new_search": "Prova una nuova ricerca"
+      },
+      "addresses": {
+        "add_billing_address_button": "Aggiungi indirizzo di fatturazione",
+        "add_billing_address_section_accessibility_label": "Aggiungi indirizzo di fatturazione",
+        "add_shipping_address_button": "Aggiungi l'indirizzo di spedizione",
+        "add_shipping_address_section_accessibility_label": "Aggiungi l'indirizzo di spedizione",
+        "billing_address_card_title": "Indirizzo di fatturazione",
+        "cancel_adding_billing_address_accessibility_label": "Annulla l'aggiunta dell'indirizzo di fatturazione",
+        "cancel_adding_shipping_address_accessibility_label": "Annulla l'aggiunta dell'indirizzo di spedizione",
+        "save_new_billing_address_accessibility_label": "Salva indirizzo di fatturazione",
+        "save_new_shipping_address_accessibility_label": "Salva l'indirizzo di spedizione",
+        "shipping_address_card_title": "Indirizzo di spedizione"
+      },
+      "draft_order_details": {
+        "draft_order_subtitle": "Confermato {{date}} dall'ordine {{draftOrderName}}",
+        "loading": "Caricamento dettagli ordine",
+        "loading_finished_accessibility_message": "I dettagli dell'ordine sono stati caricati",
+        "payment_status": {
+          "pending": {
+            "banner_overdue": {
+              "one": "Il tuo pagamento è scaduto da {{count}} giorni",
+              "other": "Il tuo pagamento è scaduto da {{count}} giorni"
+            },
+            "banner_due": {
+              "one": "Il pagamento scade tra {{count}} giorno",
+              "other": "Il pagamento scade tra {{count}} giorni"
+            },
+            "banner_due_today": "Il tuo pagamento è dovuto oggi",
+            "title": "Pagamento dovuto",
+            "title_with_date": "Pagamento dovuto il {{date}}",
+            "title_due_on_receipt": "Pagamento non ancora dovuto",
+            "title_due_on_fulfillment": "Pagamento dovuto all'adempimento",
+            "description_overdue": "Il tuo pagamento è in ritardo.",
+            "description_partially_paid": "Questo ordine è stato parzialmente pagato. Hai un saldo rimanente.",
+            "description_authorized": "L'addebito verrà effettuato sul tuo metodo di pagamento alla data di scadenza oppure puoi pagare adesso.",
+            "description_due_on_receipt": "Riceverai una fattura alla scadenza del pagamento.",
+            "description_due_on_fulfillment": "Il pagamento è dovuto una volta evasi tutti gli articoli dell'ordine."
+          },
+          "draft": {
+            "description": "I dettagli del pagamento vengono decisi al momento della conferma dell'ordine.",
+            "title": "Pagamento non ancora dovuto",
+            "in_review": {
+              "description": "I dettagli del pagamento vengono decisi al momento della conferma dell'ordine.",
+              "title": "Pagamento non ancora dovuto"
+            },
+            "submitted": {
+              "description": "Invia il pagamento per confermare questo ordine.",
+              "title": "Paga per confermare"
+            }
+          },
+          "paid": {
+            "title": "Pagato",
+            "title_with_date": "Pagato il {{date}}",
+            "description": "Il tuo ordine è stato completamente pagato."
+          },
+          "refund": {
+            "title": "Rimborsato",
+            "title_with_date": "Rimborsato il {{date}}",
+            "description_full_refund": "Hai ricevuto un rimborso completo per questo ordine.",
+            "description_single_refund": "Hai ricevuto un rimborso parziale per questo ordine.",
+            "description_multiple_refunds": "Hai ricevuto rimborsi parziali per questo ordine."
+          },
+          "canceled": {
+            "title": "Pagamento annullato",
+            "description": "Non ti è stato addebitato alcun importo."
+          },
+          "pay_now": "Paga ora",
+          "pay_now_accessibility_label": "Paga ora l'ordine {{orderName}}",
+          "title": "Stato del pagamento"
+        },
+        "order_timeline": {
+          "expand_events_label": "Mostra dettagli",
+          "expand_events_accessibility_label": "Mostra i dettagli dell'ordine preliminare",
+          "hide_events_label": "Nascondere dettagli",
+          "hide_events_accessibility_label": "Nascondi i dettagli dell'ordine preliminare"
+        },
+        "subtitle": "Inserito {{date}}",
+        "title": "Ordina {{name}}"
+      },
+      "payment_methods": {
+        "payment_delete": {
+          "description_without_replacement": "Questo metodo di pagamento non sarà più disponibile per futuri acquisti da questa sede.",
+          "description_with_replacement": "L'eliminazione di questo metodo di pagamento influirà sui pagamenti preautorizzati per questa sede. Sostituiscilo con un metodo di pagamento alternativo per continuare a ricevere gli ordini imminenti."
+        },
+        "payment_details": {
+          "order_label": "Ordina {{name}}",
+          "draft_label": "Bozza di ordine {{name}}"
+        }
+      },
+      "purchase_order_number": {
+        "add_accessibility_label": "Aggiungi il numero dell'ordine di acquisto",
+        "add_modal_title": "Aggiungi il numero dell'ordine di acquisto",
+        "cancel": "Annulla",
+        "close_modal_accessibility_label": "Chiudi il numero dell'ordine d'acquisto modale",
+        "discard": "Scartare",
+        "discard_changes_modal_title": "Non salvare le modifiche?",
+        "edit_accessibility_label": "Modifica il numero dell'ordine di acquisto",
+        "edit_modal_title": "Modifica il numero dell'ordine di acquisto",
+        "empty_state": "Nessun numero di ordine postale",
+        "modal_po_number_input_label": "Numero dell'ordine d'acquisto",
+        "modal_po_number_input_max_length_error": "I numeri PO hanno un massimo di {{maxLength}} caratteri.",
+        "save": "Salva",
+        "title": "Numero ordine {{poNumber}}"
       }
     },
     "navigation_and_structure": {
@@ -934,6 +1072,24 @@
         "sort_by": "Ordina per: {{option}}",
         "sort_hide_options_accessibility_label": "Nascondi le opzioni di ordinamento per gli ordini confermati.",
         "sort_show_options_accessibility_label": "Mostra le opzioni di ordinamento per gli ordini confermati."
+      }
+    },
+    "errors": {
+      "address_deletion_error": {
+        "description": "Si è verificato un problema durante l'eliminazione di questo indirizzo. Riprova o aggiorna la pagina."
+      },
+      "addresses_loading_issue": {
+        "description": "Errore di connessione. Controlla la connessione Internet e riprova."
+      },
+      "banner_title": {
+        "one": "C'è un errore {{count}}",
+        "other": "Sono presenti {{count}} errori"
+      },
+      "failed_address_creation": {
+        "description": "Si è verificato un problema durante la creazione del tuo indirizzo. Prova ad aggiornare questa pagina o controlla la tua connessione Internet."
+      },
+      "failed_address_update": {
+        "description": "Si è verificato un problema durante l'aggiornamento del tuo indirizzo. Prova ad aggiornare questa pagina o controlla la tua connessione Internet."
       }
     }
   }
