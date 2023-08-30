@@ -5,23 +5,23 @@
       "settings": {
         "social_twitter_link": {
           "label": "Twitter",
-          "info": "https://twitter.com/sammaritan"
+          "info": "https:\/\/twitter.com\/sammaritan"
         },
         "social_facebook_link": {
           "label": "Facebook",
-          "info": "https://facebook.com/sammaritan"
+          "info": "https:\/\/facebook.com\/sammaritan"
         },
         "social_instagram_link": {
           "label": "Instagram",
-          "info": "http://instagram.com/sammaritan"
+          "info": "http:\/\/instagram.com\/sammaritan"
         },
         "social_youtube_link": {
           "label": "YouTube",
-          "info": "https://www.youtube.com/sammaritan"
+          "info": "https:\/\/www.youtube.com\/sammaritan"
         },
         "social_medium_link": {
           "label": "Medium",
-          "info": "https://medium.com/sammaritan"
+          "info": "https:\/\/medium.com\/sammaritan"
         },
         "header": {
           "content": "Comptes sociaux"
@@ -269,7 +269,7 @@
       }
     },
     "404": {
-      "name": "Page d'erreur 404", 
+      "name": "Page d'erreur 404",
       "settings": {
         "title": {
           "label": "Titre de la page",
@@ -620,10 +620,10 @@
       "name": "Promotions & Réductions",
       "settings": {
         "title": {
-          "label": "Tapez le titre de vos promotions/réductions"
+          "label": "Tapez le titre de vos promotions\/réductions"
         },
         "number_of_discounts": {
-          "label": "Nombre de promotions/réductions"
+          "label": "Nombre de promotions\/réductions"
         },
         "link_1": {
           "label": "Sélectionnez l'URL de redirection pour le bouton sur la promo numéro 1"
