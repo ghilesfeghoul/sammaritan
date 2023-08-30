@@ -64,6 +64,9 @@
       "items": "produits",
       "next": "Suivant",
       "previous": "Précédent"
+    },
+    "home": {
+      "title": "Accueil"
     }
   },
   "templates": {

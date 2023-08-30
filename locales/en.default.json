@@ -64,6 +64,9 @@
       "items": "items",
       "next": "Next",
       "previous": "Previous"
+    },
+    "home": {
+      "title": "Home"
     }
   },
   "templates": {
