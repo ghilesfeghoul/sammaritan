@@ -1319,9 +1319,43 @@
               "number": "Numero di identificazione:"
             },
             "empty": "Questo articolo non è ancora stato soddisfatto"
-          }
+          },
+          "button_1": "Ordine dei brani"
         }
-      }
+      },
+      "total": {
+        "title": "Ordine totale",
+        "subtotal": "totale parziale",
+        "tax": "Imposta",
+        "shipping": "Spedizione",
+        "total": "Totale"
+      },
+      "billing": {
+        "details": {
+          "title": "Dettagli di fatturazione e spedizione",
+          "address": "Indirizzo di fatturazione:"
+        }
+      },
+      "shipping": {
+        "details": {
+          "address": "Indirizzo di spedizione:",
+          "status": "Stato della spedizione:"
+        }
+      },
+      "payment": "Informazioni sul pagamento:",
+      "default": "Questo ordine viene effettuato manualmente da"
+    },
+    "product": {
+      "stock": {
+        "available": "Venduto",
+        "unavailable": "Esaurito"
+      },
+      "add": "Aggiungi al carrello",
+      "description": "Descrizione del prodotto",
+      "by": "Di",
+      "vendor": "Venditore",
+      "title": "Titolo del prodotto",
+      "new": "Nuovo"
     }
   }
 }
