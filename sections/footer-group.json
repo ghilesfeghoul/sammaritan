@@ -34,12 +34,11 @@
       ],
       "settings": {
         "footer_type": "fashion",
+        "allow_social_links": true,
         "enable_country_selector": true,
         "enable_language_selector": true,
-        "allow_social_links": true,
         "show_payment_methods": true,
-        "rights": "© 2023 All rights reserved.",
-        "display_newsletter": false
+        "rights": "© 2023 All rights reserved."
       }
     }
   },

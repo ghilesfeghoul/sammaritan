@@ -33,11 +33,6 @@
           "settings": {
           }
         },
-        "68ef1ecf-5c5d-42a9-a195-10c88c891b61": {
-          "type": "shopify:\/\/apps\/app-wishlist\/blocks\/wishlist-button\/c9c2c3c8-8744-4fe7-90f5-f62b22a092cc",
-          "settings": {
-          }
-        },
         "description": {
           "type": "description",
           "settings": {
@@ -51,15 +46,23 @@
         "variant_selector",
         "quantity",
         "checkout_button",
-        "68ef1ecf-5c5d-42a9-a195-10c88c891b61",
         "description"
       ],
       "settings": {
         "image_render": "stacked"
       }
+    },
+    "990cd739-4b83-490d-99d4-ecf08b96a330": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "RELATED PRODUCTS",
+        "featured_collection": "beaute",
+        "number_of_products_to_show": 4
+      }
     }
   },
   "order": [
-    "template"
+    "template",
+    "990cd739-4b83-490d-99d4-ecf08b96a330"
   ]
 }
