@@ -985,6 +985,91 @@
       "delete_confirmation": {
         "cancel": "Annulla"
       }
+    },
+    "payment_methods": {
+      "payment_delete": {
+        "replace_method_with_new_method_description": "Il tuo {{currentPaymentMethodName}} verrà eliminato e sostituito con il tuo {{newPaymentMethodName}} .",
+        "error_when_deleting": "Ci scusiamo ma qualcosa è andato storto e non è stato possibile eliminare questo metodo di pagamento. Riprova più tardi o aggiorna la pagina.",
+        "delete_and_replace_button": "Elimina e sostituisci",
+        "delete_and_replace_button_accessibility_label": "Elimina {{currentPaymentMethodName}} e sostituisci con {{newPaymentMethodName}} .",
+        "deleted_successfully": "Metodo di pagamento eliminato correttamente.",
+        "loading_available_payment_methods_accessibility_label": "Caricamento dei metodi di pagamento disponibili"
+      },
+      "add_payment_method": {
+        "title": "Aggiungi metodo di pagamento",
+        "payment_method_added_confirmation": "Metodo di pagamento aggiunto",
+        "billing_address": {
+          "title": "Indirizzo di fatturazione",
+          "add_billing_address_button": "Aggiungere nuova",
+          "add_billing_address_button_accessibility_label": "Aggiungi un nuovo indirizzo di fatturazione",
+          "choose_billing_address_from_list_button": "Scegli dall'elenco",
+          "choose_billing_address_from_list_button_accessibility_label": "Scegli un indirizzo di fatturazione dall'elenco",
+          "missing_billing_address_error_message": "Si prega di specificare un indirizzo di fatturazione"
+        }
+      }
+    },
+    "payment_method_brands": {
+      "discover": "Scoprire",
+      "visaelectron": "Visa Elettrone",
+      "shoppay": "Negozio Paga",
+      "applepay": "ApplePaga",
+      "googlepay": "GooglePaga"
+    },
+    "shop_policies": {
+      "legal_notice": "Avviso legale",
+      "privacy_policy": "Politica sulla riservatezza",
+      "refund_policy": "Politica di rimborso",
+      "shipping_policy": "Politica di spedizione",
+      "subscription_policy": "Politica di abbonamento",
+      "terms_of_sale": "Condizioni di vendita",
+      "terms_of_service": "Termini di servizio"
+    },
+    "ui_components": {
+      "closeNotification": "Vicino",
+      "expandNotification": "Visualizza altro",
+      "closeModal": "Vicino",
+      "submit": "Invia",
+      "processing": "In lavorazione…",
+      "increase": "Aumenta {{type}}",
+      "decrease": "Diminuisci {{type}}",
+      "minimumReached": "Minimo di {{value}} raggiunto",
+      "maximumReached": "È stato raggiunto il massimo di {{value}}",
+      "january": "Gennaio",
+      "february": "Febbraio",
+      "march": "Marzo",
+      "april": "aprile",
+      "may": "Maggio",
+      "june": "Giugno",
+      "july": "Luglio",
+      "august": "agosto",
+      "september": "settembre",
+      "october": "ottobre",
+      "november": "novembre",
+      "december": "Dicembre",
+      "monday": "Lunedi",
+      "tuesday": "Martedì",
+      "wednesday": "Mercoledì",
+      "thursday": "Giovedì",
+      "friday": "Venerdì",
+      "saturday": "Sabato",
+      "sunday": "Domenica",
+      "wednesdayAbbreviation": "Noi",
+      "thursdayAbbreviation": "Gi",
+      "showNextMonth": "Mostra il mese prossimo, {{month}} {{year}}",
+      "showPreviousMonth": "Mostra il mese precedente, {{month}} {{year}}",
+      "rangeStart": "Inizio della gamma",
+      "inRange": "Nel raggio d'azione",
+      "rangeEnd": "Fine dell'intervallo",
+      "autocompleteOptionsAvailable": {
+        "one": "{{count}} articolo disponibile",
+        "other": "{{count}} articoli disponibili"
+      },
+      "removeItem": "Rimuovi {{label}}",
+      "removeTag": "Rimuovi tag",
+      "month": {
+        "one": "mese",
+        "other": "mesi"
+      }
     }
   },
   "general": {
@@ -999,7 +1084,12 @@
       },
       "subtotal": "totale parziale",
       "total": "Totale",
-      "tax": "Tasse incluse, spedizione e sconti calcolati al momento del pagamento"
+      "tax": "Tasse incluse, spedizione e sconti calcolati al momento del pagamento",
+      "empty": {
+        "title": "il tuo carrello è vuoto"
+      },
+      "button": "Continua a fare acquisti",
+      "title": "Carrello della spesa"
     },
     "search": {
       "title": "risultati di ricerca",
@@ -1015,6 +1105,38 @@
       "items": "elementi",
       "next": "Prossimo",
       "previous": "Precedente"
+    },
+    "404": {
+      "title": "Non trovato",
+      "subtext_html": "La pagina che stavi cercando non esiste",
+      "homepage_link": "Vai alla pagina principale"
+    },
+    "article": {
+      "comment": {
+        "message_success": "Il commento è stato pubblicato con successo",
+        "message_error": "Oh no! Il tuo commento non è stato pubblicato",
+        "button_title": "Posta un commento"
+      },
+      "none": "Non ci sono commenti in questo articolo",
+      "impressions": "Guarda cosa dice la gente"
+    },
+    "featured-collection": {
+      "button": {
+        "text": "Visualizza altro"
+      }
+    },
+    "newsletter": {
+      "form": {
+        "email": {
+          "placeholder": "Inserisci l'email"
+        },
+        "submit": {
+          "text": "sottoscrivi"
+        },
+        "success": {
+          "message": "Iscrizione avvenuta con successo"
+        }
+      }
     }
   },
   "templates": {
