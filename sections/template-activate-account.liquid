@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <!-- Card -->
-      <div class="card card-lg mx-auto">
+      <div class="col-12 col-md-3 card card-lg mx-auto">
         <div class="card-body">
           <!-- Heading -->
           <h6 class="mb-7 text-center">{{ "templates.customers.activate-account.title" | t }}</h6>
@@ -43,12 +43,10 @@
                 </div>
               </div>
               <div class="row">
-                <div class="col">
+                <div class="col-12">
                   <!-- Button -->
-                  <button class="btn btn-sm btn-dark" type="submit">{{ "templates.customers.activate-account.form.buttons.submit" | t }}</button>
-                </div>
-                <div class="col">
-                  <button class="btn btn-sm btn-outline-dark" name="decline">{{ "templates.customers.activate-account.form.buttons.decline" | t }}</button>
+                  <button class="btn btn-sm btn-dark me-3 mb-3" type="submit">{{ "templates.customers.activate-account.form.buttons.submit" | t }}</button>
+                  <button class="btn btn-sm btn-outline-dark me-3 mb-3" name="decline">{{ "templates.customers.activate-account.form.buttons.decline" | t }}</button>
                 </div>
               </div>
 
