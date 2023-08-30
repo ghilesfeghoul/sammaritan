@@ -280,10 +280,19 @@
       },
       "add": "Ajouter au panier",
       "description": "Description produit",
-      "by": "Par",      
+      "by": "Par",
       "vendor": "Fabriquant",
       "title": "Titre du produit",
       "new": "NOuveau"
+    }
+  },
+  "shopify": {
+    "checkout": {
+      "payment": {
+        "use_order_billing_address_label": "Utiliser l'adresse de facturation de la commande",
+        "use_location_billing_address_label": "Utiliser l'adresse de facturation de l'emplacement",
+        "use_location_shipping_address_label": "Utiliser l'adresse de livraison du lieu"
+      }
     }
   }
 }
