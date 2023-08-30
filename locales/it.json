@@ -675,11 +675,146 @@
     },
     "page_titles": {
       "search": "Ricerca",
-      "collections": "Collezioni"
+      "collections": "Collezioni",
+      "blog_or_article_with_error": "Errore - %{titolo}",
+      "products": "Prodotti",
+      "shopping_cart": "Il tuo carrello acquisti",
+      "create_account": "Creare un account",
+      "reset_account": "Reimposta account",
+      "addresses": "Indirizzi",
+      "order": "Ordina %{nome}",
+      "search_results": {
+        "one": "Ricerca: %{count} risultato trovato per \"%{terms}\"",
+        "other": "Ricerca: %{count} risultati trovati per \"%{terms}\""
+      },
+      "not_found": "404 non trovato",
+      "challenge": "Sfida",
+      "checkpoint": "Punto di controllo"
     },
     "sentence": {
       "two_words_connector": " E ",
       "last_word_connector": ", E "
+    },
+    "notices": {
+      "cart": {
+        "more_than_maximum": "Questo articolo ha un massimo di %{max}.",
+        "not_respect_step": "Puoi aggiungere questo elemento solo in multipli di %{step}.",
+        "all_items_in_cart": "Tutti i %{count} %{name} sono nel tuo carrello.",
+        "empty_update": "impossibile aggiornare il carrello vuoto",
+        "missing_parameters": "nessun ID o parametro di linea valido",
+        "generic_error": "Errore carrello",
+        "product_not_available": "Il prodotto non è disponibile",
+        "too_many_line_items_error": "Il tuo carrello non può contenere più di %{max} articoli.",
+        "link_expired": "Collegamento scaduto",
+        "link_no_longer_exists": "Il collegamento non esiste più.",
+        "stock_problems_html": "Uno o più articoli non sono più disponibili. Abbiamo fornito un <a href=\"%{link}\">carrello aggiornato<\/a> .",
+        "changed": "Il carrello è cambiato",
+        "items_changed": "Uno o più elementi sono cambiati.",
+        "product_sold_out": "Il prodotto '%{name}' è già esaurito.",
+        "variant_not_found": "Impossibile trovare la variante",
+        "variant_requires_selling_plan": "La variante può essere acquistata solo con un piano di vendita.",
+        "selling_plan_not_available_for_company_locations": "Per gli ordini B2B è disponibile un solo acquisto una tantum",
+        "digital_product_not_available_for_company_locations": "Questo articolo non può essere aggiunto a un ordine B2B",
+        "selling_plan_not_applicable": "Impossibile applicare il piano di vendita alla variante",
+        "shipping_address_not_required": "Questo carrello non necessita di spedizione",
+        "shipping_address_invalid": "Si è verificato un problema nel calcolo delle tariffe di spedizione. Continua al checkout per scegliere una tariffa di spedizione prima di completare l'ordine.",
+        "bundle_requires_components": "Impossibile aggiungere il prodotto in bundle '%{name}' al carrello.",
+        "gift_card_with_components_not_supported": "Impossibile aggiungere il prodotto in bundle '%{name}' al carrello.",
+        "bundle_products_not_supported_for_b2b_draft": "Gli articoli in bundle non possono essere aggiunti agli ordini B2B per questa sede."
+      },
+      "storefront": {
+        "invalid_password": "Password errata, riprova."
+      },
+      "tags": {
+        "add_articles": "Restringi la ricerca agli articoli che hanno anche il tag %{tag}",
+        "add_products": "Restringi la selezione ai prodotti che corrispondono al tag %{tag}",
+        "remove_articles": "Amplia la ricerca agli articoli senza tag %{tag}",
+        "remove_products": "Rimuovi tag %{tag}"
+      }
+    },
+    "email_marketing": {
+      "subscribed": {
+        "confirmation": "Grazie per esserti iscritto alla nostra mailing list.",
+        "disclaimer": "È possibile disdire in qualsiasi momento.",
+        "unsubscribe": "Annulla l'iscrizione"
+      },
+      "unsubscribed": {
+        "confirmation": "Hai annullato l'iscrizione alla nostra mailing list.",
+        "disclaimer": "Non riceverai più aggiornamenti di marketing da parte nostra. Puoi iscriverti nuovamente in qualsiasi momento.",
+        "preview": "Stai visualizzando l'anteprima di ciò che i clienti vedranno quando annulleranno l'iscrizione."
+      },
+      "open_tracking": {
+        "opt_in": {
+          "opted_in_html": "<b>Hai attivato il monitoraggio dell'apertura delle email.<\/b>",
+          "visibility": "I tassi di apertura delle e-mail verranno segnalati in modo anonimo. Vedremo solo se hai aperto un'e-mail come parte di un tasso di apertura e-mail aggregato.",
+          "opt_out_html": "Puoi <a style=\"text-decoration:underline;\" href=\"%{link}\">disattivare<\/a> il monitoraggio dell'apertura delle email se non desideri condividere queste informazioni.",
+          "preview_bar": "Stai visualizzando l'anteprima di ciò che vedranno i clienti quando attivano il monitoraggio dell'apertura delle email."
+        },
+        "opt_out": {
+          "opted_out_html": "<b>Hai disattivato il monitoraggio dell'apertura delle email.<\/b>",
+          "visibility": "Non vedremo se hai aperto le nostre email.",
+          "opt_in_html": "<a style=\"text-decoration:underline;\" href=\"%{link}\">Attiva<\/a> il monitoraggio dell'apertura tramite e-mail.",
+          "preview_bar": "Stai visualizzando l'anteprima di ciò che vedranno i clienti quando disattivano il monitoraggio dell'apertura delle email."
+        },
+        "no_longer_track": {
+          "status_html": "<b>Non teniamo più traccia delle aperture di posta elettronica.<\/b>",
+          "privacy_policy": "Dopo l'invio di questa email, abbiamo aggiornato la nostra politica sulla privacy e non tracciamo più le aperture."
+        },
+        "track": {
+          "status_html": "<b>Viene segnalato il monitoraggio dell'apertura delle e-mail.<\/b>",
+          "visibility": "Vedremo solo se hai aperto l'e-mail, come parte del tasso di apertura totale dell'e-mail."
+        },
+        "updated_policy": {
+          "status_html": "<b>Viene segnalato il monitoraggio dell'apertura delle e-mail.<\/b>",
+          "visibility": "Abbiamo aggiornato la nostra politica e ora teniamo traccia delle aperture delle email. I tassi di apertura delle e-mail verranno segnalati in modo anonimo. Vedremo solo se hai aperto un'e-mail come parte del tasso di apertura totale delle e-mail.",
+          "opt_out_html": "Se non desideri condividere queste informazioni, puoi <a style=\"text-decoration:underline;\" href=\"%{link}\">annullare l'iscrizione.<\/a>"
+        }
+      }
+    },
+    "filters": {
+      "availability": {
+        "value": {
+          "in_stock": "In magazzino",
+          "out_of_stock": "Esaurito"
+        }
+      },
+      "boolean": {
+        "true_label": "SÌ"
+      }
+    },
+    "search": {
+      "sorting": {
+        "relevance": "Rilevanza",
+        "price_ascending": "Prezzo, da basso ad alto",
+        "price_descending": "Prezzo, dal più alto al più basso"
+      }
+    },
+    "cart": {
+      "discounts_with_count": "Sono stati applicati %{count} sconti"
+    },
+    "challenge": {
+      "message": "Per continuare, facci sapere che non sei un robot.",
+      "error": "La tua risposta non era corretta, riprova.",
+      "submit_button_text": "Invia"
+    },
+    "checkpoint": {
+      "message": "Risolvi Captcha per continuare",
+      "error": "La convalida del captcha non è riuscita",
+      "submit_button_text": "Invia"
+    },
+    "store_availability": {
+      "pick_up_time": {
+        "one_hour": "Solitamente pronto in 1 ora",
+        "two_hours": "Solitamente pronto in 2 ore",
+        "four_hours": "Solitamente pronto in 4 ore",
+        "twenty_four_hours": "Solitamente pronto in 24 ore",
+        "two_to_four_days": "Solitamente pronto in 2-4 giorni",
+        "five_or_more_days": "Di solito pronto in 5+ giorni",
+        "zero_to_two_hours": "Solitamente pronto in 2 ore",
+        "two_to_four_hours": "Solitamente pronto in 4 ore",
+        "immediately": "Pronti per il ritiro adesso",
+        "next_day": "Pronto per il ritiro il giorno successivo"
+      }
     }
   },
   "customer_accounts": {
@@ -832,6 +967,24 @@
       "havent_received_your_delivery": "Non hai ricevuto la consegna?",
       "didnt_pick_up_order": "Non hai ritirato il tuo ordine?",
       "if_you_didnt_receive_this": "Se non hai ricevuto questo,"
+    },
+    "enable_javascript": "Per visualizzare il tuo account, abilita JavaScript nelle impostazioni del browser o accedi con un altro browser.",
+    "navigation_and_structure": {
+      "account_menu": {
+        "hide_accessibility_label": "Nascondi il menu Account",
+        "show_accessibility_label": "Mostra il menu Account",
+        "nav_accessibility_label": "Navigazione dell'account",
+        "open_menu_accessibility_label": "Apri la navigazione dell'account",
+        "close_menu_accessibility_label": "Chiudi la navigazione dell'account",
+        "loading_message": "Caricamento della navigazione dell'account"
+      },
+      "action_menu_accessibility_label": "Più azioni",
+      "close_menu_accessibility_label": "Chiudi la navigazione principale",
+      "contact_email_subject": "Contatta dal negozio online {{shopName}}",
+      "contact_link": "Contattaci",
+      "delete_confirmation": {
+        "cancel": "Annulla"
+      }
     }
   },
   "general": {
