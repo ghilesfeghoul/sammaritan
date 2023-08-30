@@ -4,18 +4,5 @@
     "market": "suisse"
   },
   "sections": {
-    "eba9372a-9bd9-4de3-8d4d-940e743397d5": {
-      "settings": {
-      },
-      "blocks": {
-        "template--20882439602489__eba9372a-9bd9-4de3-8d4d-940e743397d5-slide_1-1": {
-          "settings": {
-            "url_1": "shopify:\/\/collections\/sante",
-            "heading_1": "-20%",
-            "heading_1_complete": "Don't hesitate, it's your last chance to get this promotion!"
-          }
-        }
-      }
-    }
   }
 }

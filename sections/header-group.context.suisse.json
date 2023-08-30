@@ -41,15 +41,6 @@
         "207de04a-eadb-482b-935e-45ee54f8a200"
       ]
     },
-    "ed47d502-b920-468f-927d-95819694ad36": {
-      "settings": {
-        "type_annoncement": "Promotion",
-        "promo_type": "Discount",
-        "promotion_text": "PROMOTION"
-      },
-      "blocks": {
-      }
-    },
     "985d37b6-fabc-4c47-ba7a-1e172ca0b61b": {
       "type": "announcement-bar",
       "disabled": false,
@@ -77,7 +68,6 @@
   },
   "order": [
     "985d37b6-fabc-4c47-ba7a-1e172ca0b61b",
-    "ed47d502-b920-468f-927d-95819694ad36",
     "header"
   ]
 }
