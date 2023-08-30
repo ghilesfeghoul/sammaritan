@@ -4,102 +4,107 @@
     class="carousel slide carousel-fade"
     data-bs-ride="carousel">
     <div class="carousel-inner" style="height: 550px;">
-      {% if section.settings.show_slide_1 %}
-        <div class="carousel-item active">
-          <div style="aspect-ratio: 1.5; background-image: url({% if section.settings.image_1 != blank  %} {{ section.settings.image_1 | image_url }} {% else %} {{ "cover-5.jpg" | asset_url }} {% endif %})" class="w-100 bg-cover">
-            <div class="container d-flex flex-column">
-              <div class="row align-items-center py-12" style="min-height: 550px;">
-                <div class="col-12 col-md-6 col-lg-5 col-xl-4 offset-md-1">
-
-                  {% if section.settings.show_heading %}
-                    <!-- Heading -->
-                    <h1>{{ section.settings.text_1 }}</h1>
-                  {% endif %}
-
-                  <!-- Heading -->
-                  <h2 class="display-1 text-primary">{{ section.settings.heading_1 }}</h2>
-
-                  <!-- Heading -->
-                  <h5 class="mt-n4 mb-8">{{ section.settings.heading_1_complete }}</h5>
-
-                  <!-- Button -->
-                  <a class="btn btn-dark" href="{{ section.settings.url_1 }}">
-                    {{ section.settings.text_url_1 }}
-                    <i class="fe fe-arrow-right ms-2"></i>
-                  </a>
-
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      {% endif %}
-      {% if section.settings.show_slide_2 %}
-        <div class="carousel-item {% if section.settings.show_slide_1 == false %} active {% endif %}">
-          <div style="aspect-ratio: 1.5; background-image: url({% if section.settings.image_2 != blank  %} {{ section.settings.image_2 | image_url }} {% else %} {{ "cover-23.jpg" | asset_url }} {% endif %})" class="w-100 bg-cover">
-            <div class="container d-flex flex-column">
-              <div class="row align-items-center justify-content-end py-12" style="min-height: 550px;">
-                <div class="col-12 col-md-6 col-lg-5 col-xl-4 offset-md-n1">
-
-                  <!-- Heading -->
-                  <h1 class="mb-5">{{ section.settings.heading_2 | escape }}</h1>
-
-                  {% if section.settings.show_text_2 %}
-                    <!-- Text -->
-                    <p class="mb-8 fs-lg text-gray-500">
-                      {{ section.settings.text_2 | escape }}
-                    </p>
-                  {% endif %}
-
-
-
-                  <!-- Button -->
-                  <a class="btn btn-dark" href="{{ section.settings.url_2 }}">
-                    {{ section.settings.text_url_2 }}
-                    <i class="fe fe-arrow-right ms-2"></i>
-                  </a>
-
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      {% endif %}
-      {% if section.settings.show_slide_3 %}
-        <div class="carousel-item {% if section.settings.show_slide_1 == false and section.settings.show_slide_2 == false %} active {% endif %}">
-          <div style="aspect-ratio: 1.5; background-image: url({% if section.settings.image_3 != blank  %} {{ section.settings.image_3 | image_url }} {% else %} {{ "cover-16.jpg" | asset_url }} {% endif %})" class="w-100 bg-cover">
-            <div class="bg-dark-20">
+      {% for block in section.blocks %}
+        {% case block.type %}
+          {% when "slide_1" %}
+          <div class="carousel-item {% if block.settings.show_slide_1 %} active {% endif %}">
+            <div style="aspect-ratio: 1.5; background-image: url({% if block.settings.image_1 != blank  %} {{ block.settings.image_1 | image_url }} {% else %} {{ "cover-5.jpg" | asset_url }} {% endif %})" class="w-100 bg-cover">
               <div class="container d-flex flex-column">
-                <div class="row align-items-center justify-content-end" style="min-height: 550px;">
-                  <div class="col-12 text-center text-white">
+                <div class="row align-items-center py-12" style="min-height: 550px;">
+                  <div class="col-12 col-md-6 col-lg-5 col-xl-4 offset-md-1">
 
-                    <!-- Preheading -->
-                    <h4 class="mb-0">{{ section.settings.preheading_3 }}</h4>
+                    {% if block.settings.show_heading %}
+                      <!-- Heading -->
+                      <h1>{{ block.settings.text_1 }}</h1>
+                    {% endif %}
 
                     <!-- Heading -->
-                    <h1 class="display-1">
-                      {{ section.settings.heading_3 }}
-                    </h1>
+                    <h2 class="display-1 text-primary">{{ block.settings.heading_1 }}</h2>
 
-                    <!-- Links -->
-                    <p class="mb-0">
-                      <a href="{{ section.settings.url_3 }}" class="link-underline text-reset mx-4 my-4">{{ section.settings.text_url_3 }}</a>
-                      {% if section.settings.show_url_4 %}
-                        <a href="{{ section.settings.url_4 }}" class="link-underline text-reset mx-4 my-4">{{ section.settings.text_url_4 }}</a>
-                      {% endif %}
+                    <!-- Heading -->
+                    <h5 class="mt-n4 mb-8">{{ block.settings.heading_1_complete }}</h5>
 
-                    </p>
+                    <!-- Button -->
+                    <a class="btn btn-dark" href="{{ block.settings.url_1 }}">
+                      {{ block.settings.text_url_1 }}
+                      <i class="fe fe-arrow-right ms-2"></i>
+                    </a>
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          {% when "slide_2" %}
+          <div class="carousel-item {% if block.settings.show_slide_2 %} active {% endif %}">
+            <div style="aspect-ratio: 1.5; background-image: url({% if block.settings.image_2 != blank  %} {{ block.settings.image_2 | image_url }} {% else %} {{ "cover-23.jpg" | asset_url }} {% endif %})" class="w-100 bg-cover">
+              <div class="container d-flex flex-column">
+                <div class="row align-items-center justify-content-end py-12" style="min-height: 550px;">
+                  <div class="col-12 col-md-6 col-lg-5 col-xl-4 offset-md-n1">
+
+                    <!-- Heading -->
+                    <h1 class="mb-5">{{ block.settings.heading_2 | escape }}</h1>
+
+                    {% if block.settings.show_text_2 %}
+                      <!-- Text -->
+                      <p class="mb-8 fs-lg text-gray-500">
+                        {{ block.settings.text_2 | escape }}
+                      </p>
+                    {% endif %}
+
+
+
+                    <!-- Button -->
+                    <a class="btn btn-dark" href="{{ block.settings.url_2 }}">
+                      {{ block.settings.text_url_2 }}
+                      <i class="fe fe-arrow-right ms-2"></i>
+                    </a>
 
                   </div>
                 </div>
               </div>
             </div>
-
           </div>
 
-        </div>
-      {% endif %}
+          {% when "slide_3" %}
+          <div class="carousel-item {% if block.settings.show_slide_3 %} active {% endif %}">
+            <div style="aspect-ratio: 1.5; background-image: url({% if block.settings.image_3 != blank  %} {{ block.settings.image_3 | image_url }} {% else %} {{ "cover-16.jpg" | asset_url }} {% endif %})" class="w-100 bg-cover">
+              <div class="bg-dark-20">
+                <div class="container d-flex flex-column">
+                  <div class="row align-items-center justify-content-end" style="min-height: 550px;">
+                    <div class="col-12 text-center text-white">
+
+                      <!-- Preheading -->
+                      <h4 class="mb-0">{{ block.settings.preheading_3 }}</h4>
+
+                      <!-- Heading -->
+                      <h1 class="display-1">
+                        {{ block.settings.heading_3 }}
+                      </h1>
+
+                      <!-- Links -->
+                      <p class="mb-0">
+                        <a href="{{ block.settings.url_3 }}" class="link-underline text-reset mx-4 my-4">{{ block.settings.text_url_3 }}</a>
+                        {% if block.settings.show_url_4 %}
+                          <a href="{{ block.settings.url_4 }}" class="link-underline text-reset mx-4 my-4">{{ block.settings.text_url_4 }}</a>
+                        {% endif %}
+
+                      </p>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+      {% else %}
+
+        {% endcase %}
+      {% endfor %}
     </div>
     <button
       class="carousel-control-prev"
@@ -126,128 +131,161 @@
     "disabled_on": {
       "groups": ["header", "footer"]
     },
-    "settings": [
+    "blocks": [
       {
-        "type": "checkbox",
-        "id": "show_slide_1",
-        "default": true,
-        "label": "t:settings_schema.carousel.settings.show_slide_1.label"
-      },
-      {
-        "type": "image_picker",
-        "id": "image_1",
-        "label": "t:settings_schema.carousel.settings.image_1.label"
-      },
-      {
-        "type": "text",
-        "id": "text_1",
-        "label": "t:settings_schema.carousel.settings.text_1.label",
-        "default": "Summer Sale"
-      },
-      {
-        "type": "text",
-        "id": "heading_1",
-        "label": "t:settings_schema.carousel.settings.heading_1.label",
-        "default": "-70%"
+        "type": "slide_1",
+        "name": "t:settings_schema.carousel.blocks.slide_1.name",
+        "settings": [
+          {
+            "type": "checkbox",
+            "id": "show_slide_1",
+            "label": "t:settings_schema.carousel.settings.show_slide_1.label",
+            "default": true
+          },
+          {
+            "type": "image_picker",
+            "id": "image_1",
+            "label": "t:settings_schema.carousel.settings.image_1.label"
+          },
+          {
+            "type": "text",
+            "id": "text_1",
+            "label": "t:settings_schema.carousel.settings.text_1.label",
+            "default": "Summer Sale"
+          },
+          {
+            "type": "text",
+            "id": "heading_1",
+            "label": "t:settings_schema.carousel.settings.heading_1.label",
+            "default": "-70%"
+          }, {
+            "type": "text",
+            "id": "heading_1_complete",
+            "label": "t:settings_schema.carousel.settings.heading_1_complete.label",
+            "default": "with promo code CN67EW*"
+          }, {
+            "type": "checkbox",
+            "id": "show_heading",
+            "label": "t:settings_schema.carousel.settings.show_heading.label",
+            "default": true
+          }, {
+            "type": "url",
+            "id": "url_1",
+            "label": "t:settings_schema.carousel.settings.url_1.label"
+          }, {
+            "type": "text",
+            "id": "text_url_1",
+            "label": "t:settings_schema.carousel.settings.text_url_1.label",
+            "default": "Shop now"
+          }
+        ]
       }, {
-        "type": "text",
-        "id": "heading_1_complete",
-        "label": "t:settings_schema.carousel.settings.heading_1_complete.label",
-        "default": "with promo code CN67EW*"
+        "type": "slide_2",
+        "name": "t:settings_schema.carousel.blocks.slide_2.name",
+        "settings": [
+          {
+            "type": "checkbox",
+            "id": "show_slide_2",
+            "label": "t:settings_schema.carousel.settings.show_slide_2.label",
+            "default": false
+          },
+          {
+            "type": "image_picker",
+            "id": "image_2",
+            "label": "t:settings_schema.carousel.settings.image_2.label"
+          },
+          {
+            "type": "text",
+            "id": "text_2",
+            "label": "t:settings_schema.carousel.settings.text_2.label",
+            "default": "So called give, one whales tree seas dry place own day, winged tree created spirit."
+          },
+          {
+            "type": "text",
+            "id": "heading_2",
+            "label": "t:settings_schema.carousel.settings.heading_2.label",
+            "default": "Summer Collection"
+          }, {
+            "type": "checkbox",
+            "id": "show_text_2",
+            "label": "t:settings_schema.carousel.settings.show_text_2.label",
+            "default": true
+          }, {
+            "type": "url",
+            "id": "url_2",
+            "label": "t:settings_schema.carousel.settings.url_2.label"
+          }, {
+            "type": "text",
+            "id": "text_url_2",
+            "label": "t:settings_schema.carousel.settings.text_url_2.label",
+            "default": "Shop now"
+          }
+        ]
       }, {
-        "type": "checkbox",
-        "id": "show_heading",
-        "label": "t:settings_schema.carousel.settings.show_heading.label",
-        "default": true
-      }, {
-        "type": "url",
-        "id": "url_1",
-        "label": "t:settings_schema.carousel.settings.url_1.label"
-      }, {
-        "type": "text",
-        "id": "text_url_1",
-        "label": "t:settings_schema.carousel.settings.text_url_1.label",
-        "default": "Shop now"
-      }, {
-        "type": "checkbox",
-        "id": "show_slide_2",
-        "default": true,
-        "label": "t:settings_schema.carousel.settings.show_slide_2.label"
-      }, {
-        "type": "image_picker",
-        "id": "image_2",
-        "label": "t:settings_schema.carousel.settings.image_2.label"
-      }, {
-        "type": "text",
-        "id": "text_2",
-        "label": "t:settings_schema.carousel.settings.text_2.label",
-        "default": "So called give, one whales tree seas dry place own day, winged tree created spirit."
-      }, {
-        "type": "text",
-        "id": "heading_2",
-        "label": "t:settings_schema.carousel.settings.heading_2.label",
-        "default": "Summer Collection"
-      }, {
-        "type": "checkbox",
-        "id": "show_text_2",
-        "label": "t:settings_schema.carousel.settings.show_text_2.label",
-        "default": true
-      }, {
-        "type": "url",
-        "id": "url_2",
-        "label": "t:settings_schema.carousel.settings.url_2.label"
-      }, {
-        "type": "text",
-        "id": "text_url_2",
-        "label": "t:settings_schema.carousel.settings.text_url_2.label",
-        "default": "Shop now"
-      }, {
-        "type": "checkbox",
-        "id": "show_slide_3",
-        "default": true,
-        "label": "t:settings_schema.carousel.settings.show_slide_3.label"
-      }, {
-        "type": "image_picker",
-        "id": "image_3",
-        "label": "t:settings_schema.carousel.settings.image_3.label"
-      }, {
-        "type": "text",
-        "id": "heading_3",
-        "label": "t:settings_schema.carousel.settings.heading_3.label",
-        "default": "50% OFF"
-      }, {
-        "type": "text",
-        "id": "preheading_3",
-        "label": "t:settings_schema.carousel.settings.preheading_3.label",
-        "default": "Summer Styles"
-      }, {
-        "type": "url",
-        "id": "url_3",
-        "label": "t:settings_schema.carousel.settings.url_3.label"
-      }, {
-        "type": "text",
-        "id": "text_url_3",
-        "label": "t:settings_schema.carousel.settings.text_url_3.label",
-        "default": "Shop women"
-      }, {
-        "type": "url",
-        "id": "url_4",
-        "label": "t:settings_schema.carousel.settings.url_4.label"
-      }, {
-        "type": "text",
-        "id": "text_url_4",
-        "label": "t:settings_schema.carousel.settings.text_url_4.label",
-        "default": "Shop men"
-      }, {
-        "type": "checkbox",
-        "id": "show_url_4",
-        "label": "t:settings_schema.carousel.settings.show_url_4.label",
-        "default": true
+        "type": "slide_3",
+        "name": "t:settings_schema.carousel.blocks.slide_3.name",
+        "settings": [
+          {
+            "type": "checkbox",
+            "id": "show_slide_3",
+            "label": "t:settings_schema.carousel.settings.show_slide_3.label",
+            "default": false
+          },
+          {
+            "type": "image_picker",
+            "id": "image_3",
+            "label": "t:settings_schema.carousel.settings.image_3.label"
+          },
+          {
+            "type": "text",
+            "id": "heading_3",
+            "label": "t:settings_schema.carousel.settings.heading_3.label",
+            "default": "50% OFF"
+          },
+          {
+            "type": "text",
+            "id": "preheading_3",
+            "label": "t:settings_schema.carousel.settings.preheading_3.label",
+            "default": "Summer Styles"
+          }, {
+            "type": "url",
+            "id": "url_3",
+            "label": "t:settings_schema.carousel.settings.url_3.label"
+          }, {
+            "type": "text",
+            "id": "text_url_3",
+            "label": "t:settings_schema.carousel.settings.text_url_3.label",
+            "default": "Shop women"
+          }, {
+            "type": "url",
+            "id": "url_4",
+            "label": "t:settings_schema.carousel.settings.url_4.label"
+          }, {
+            "type": "text",
+            "id": "text_url_4",
+            "label": "t:settings_schema.carousel.settings.text_url_4.label",
+            "default": "Shop men"
+          }, {
+            "type": "checkbox",
+            "id": "show_url_4",
+            "label": "t:settings_schema.carousel.settings.show_url_4.label",
+            "default": true
+          }
+        ]
       }
     ],
     "presets": [
       {
-        "name": "t:settings_schema.carousel.name"
+        "name": "t:settings_schema.carousel.name",
+        "blocks": [
+          {
+            "type": "slide_1"
+          }, {
+            "type": "slide_2"
+          }, {
+            "type": "slide_3"
+          }
+        ]
       }
     ]
   }

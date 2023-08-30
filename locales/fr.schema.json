@@ -450,79 +450,90 @@
       "name": "Carrousel",
       "settings": {
         "image_1": {
-          "label": "Sélectionnez la première image pour le carrousel"
+          "label": "Sélectionnez une image pour cette diapositive"
         },
         "image_2": {
-          "label": "Sélectionnez la deuxième image pour le carrousel"
+          "label": "Sélectionnez une image pour cette diapositive"
         },
         "image_3": {
-          "label": "Sélectionnez la troisième image pour le carrousel"
+          "label": "Sélectionnez une image pour cette diapositive"
         },
         "text_1": {
-          "label": "Texte pour la première image"
+          "label": "Texte pour l'image"
         },
         "text_2": {
-          "label": "Texte pour la deuxième image"
+          "label": "Texte pour l'image"
         },
         "text_3": {
-          "label": "Texte pour la troisième image"
+          "label": "Texte pour l'image"
         },
         "heading_1": {
-          "label": "Texte d'en-tête pour la première image"
+          "label": "Texte d'en-tête pour l'image"
         },
         "heading_1_complete": {
-          "label": "Complétion du texte d'en-tête pour la première image"
+          "label": "Complétion du texte d'en-tête pour l'image"
         },
         "show_heading": {
-          "label": "Afficher le texte d'en-tête pour la première image"
+          "label": "Afficher le texte d'en-tête pour l'image"
         },
         "show_text_2": {
-          "label": "Afficher le texte d'en-tête pour la deuxième image"
+          "label": "Afficher le texte d'en-tête pour l'image"
         },
         "heading_2": {
-          "label": "Texte d'en-tête pour la deuxième image"
+          "label": "Texte d'en-tête pour l'image"
         },
         "heading_3": {
-          "label": "Texte d'en-tête pour la troisième image"
+          "label": "Texte d'en-tête pour l'image"
         },
         "url_1": {
-          "label": "Sélectionnez l'URL de redirection pour le bouton sur la première image"
+          "label": "Sélectionnez l'URL de redirection pour le bouton sur l'image"
         },
         "url_2": {
-          "label": "Sélectionnez l'URL de redirection pour le bouton sur la deuxième image"
+          "label": "Sélectionnez l'URL de redirection pour le bouton sur l'image"
         },
         "url_3": {
-          "label": "Sélectionnez l'URL de redirection pour le bouton sur la troisième image"
+          "label": "Sélectionnez l'URL de redirection pour le bouton sur l'image"
         },
         "show_slide_1": {
-          "label": "Afficher le numéro de la diapositive 1"
+          "label": "Définir comme la première diapositive"
         },
         "show_slide_2": {
-          "label": "Afficher le numéro de la diapositive 2"
+          "label": "Définir comme la première diapositive"
         },
         "show_slide_3": {
-          "label": "Afficher le numéro de la diapositive 3"
+          "label": "Définir comme la première diapositive"
         },
         "preheading_3": {
-          "label": "Texte d'introduction pour l'image 3"
+          "label": "Texte d'introduction pour l'image"
         },
         "url_4": {
-          "label": "Sélectionnez la deuxième URL de redirection pour le bouton sur la troisième image"
+          "label": "Sélectionnez la deuxième URL de redirection pour le bouton sur l'image"
         },
         "show_url_4": {
-          "label": "Afficher la deuxième URL de redirection pour le bouton sur la troisième image"
+          "label": "Afficher la deuxième URL de redirection pour le bouton sur l'image"
         },
         "text_url_1": {
-          "label": "Saisissez le texte à afficher dans le bouton sur la première image"
+          "label": "Saisissez le texte à afficher dans le bouton sur l'image"
         },
         "text_url_2": {
-          "label": "Saisissez le texte à afficher dans le bouton sur la deuxième image"
+          "label": "Saisissez le texte à afficher dans le bouton sur l'image"
         },
         "text_url_3": {
-          "label": "Saisissez le texte à afficher dans le bouton sur la troisième image"
+          "label": "Saisissez le texte à afficher dans le bouton sur l'image"
         },
         "text_url_4": {
-          "label": "Saisissez le texte à afficher dans le deuxième bouton sur la troisième image"
+          "label": "Saisissez le texte à afficher dans le deuxième bouton sur l'image"
+        }
+      },
+      "blocks": {
+        "slide_1": {
+          "name": "Diapositive type 1"
+        },
+        "slide_2": {
+          "name": "Diapositive type 2"
+        },
+        "slide_3": {
+          "name": "Diapositive type 3"
         }
       }
     },
