@@ -8,14 +8,15 @@
     "169177423463f0a20f": {
       "type": "apps",
       "blocks": {
-        "8fc62aaa-b810-45b0-8c0c-f64ee257ad17": {
+        "085c83aa-f9c4-4149-9c83-510daa56d402": {
           "type": "shopify:\/\/apps\/app-wishlist\/blocks\/wishlist-page\/c9c2c3c8-8744-4fe7-90f5-f62b22a092cc",
           "settings": {
+            "title": ""
           }
         }
       },
       "block_order": [
-        "8fc62aaa-b810-45b0-8c0c-f64ee257ad17"
+        "085c83aa-f9c4-4149-9c83-510daa56d402"
       ],
       "settings": {
       }
