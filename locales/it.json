@@ -1,0 +1,151 @@
+{
+  "shopify": {
+    "checkout": {
+      "contact": {
+        "contact_method_title": "Contatto",
+        "title": "Informazione",
+        "address_title": "Indirizzo",
+        "shipping_used_as_billing_notice": "Questo verrà utilizzato anche come indirizzo di fatturazione per questo ordine.",
+        "delivery_option_title": "Metodo di consegna",
+        "email_label": "E-mail",
+        "email_placeholder": "E-mail",
+        "email_or_phone_label": "E-mail o numero di cellulare",
+        "email_or_phone_placeholder": "E-mail o numero di cellulare"
+      },
+      "payment": {
+        "use_order_billing_address_label": "Utilizza l'indirizzo di fatturazione dell'ordine",
+        "use_location_billing_address_label": "Utilizza l'indirizzo di fatturazione della sede",
+        "use_location_shipping_address_label": "Utilizza l'indirizzo di spedizione della località"
+      },
+      "review": {
+        "blocks": {
+          "contact_method_title": "Contatto"
+        }
+      },
+      "pickup_point": {
+        "search_button": "Ricerca"
+      },
+      "general": {
+        "page_title": "Guardare",
+        "error_page_title": "Errore",
+        "skip_to_content": "Salta al contenuto",
+        "breadcrumb": "Percorso di navigazione",
+        "continue_button_label": "Continua",
+        "complete_purchase_button_label": "Completa l'ordine",
+        "pay_now_button_label": "Paga ora",
+        "authenticate_purchase_button_label": "Autenticare il pagamento",
+        "edit_link_label": "Modificare",
+        "all_rights_reserved": "Tutti i diritti riservati %{shop_name}",
+        "print_policies_link_label": "Stampa",
+        "cart": "Carrello",
+        "close_modal_label": "Vicino",
+        "close_notice_label": "Vicino",
+        "expand_notice_label": "Visualizza altro",
+        "continue_to_shipping_method": "Continua con la spedizione",
+        "continue_to_payment_method": "Procedi al pagamento",
+        "continue_to_review": "Rivedi l'ordine",
+        "back_to_cart": "Ritorna al carrello",
+        "back_to_contact_information": "Ritorno alle informazioni",
+        "back_to_shipping_method": "Ritorno alla spedizione",
+        "back_to_payment_method": "Ritorno al pagamento",
+        "choose_shipping_method": "Scegli un metodo di spedizione",
+        "choose_payment_method": "Scegli un metodo di pagamento",
+        "choose_billing_address": "Scegli un indirizzo di fatturazione",
+        "contact_us_html": "Contattateci per maggiori informazioni",
+        "autocomplete_title": "Suggerimenti",
+        "autocomplete_single_item": "1 articolo disponibile",
+        "autocomplete_multi_item": "{{number}} articoli disponibili",
+        "autocomplete_close": "Chiudi suggerimenti",
+        "forwarding_indicator": {
+          "new_window": "Si apre in una nuova finestra?",
+          "external": "Apre il sito web esterno.",
+          "external_and_new_window": "Apre il sito web esterno in una nuova finestra."
+        },
+        "checkout_context": {
+          "step_one": "%{shop_name} - Acquista"
+        },
+        "tooltip_accessibility_label": "Maggiori informazioni",
+        "errors": {
+          "session_identifier_not_unique_error": "Qualcosa è andato storto con il tuo ordine, prova a effettuare nuovamente il checkout.",
+          "line_item_limit_reached": "È stato raggiunto il numero massimo di elementi pubblicitari."
+        },
+        "full_price": "Prezzo pieno:",
+        "title": "Pagamento - {{shopName}}",
+        "full_title": "{{pageTitle}} - {{shopName}} - Pagamento",
+        "loading_title": "Pagamento - {{shopName}}",
+        "submit_order_button_label": "Inviare ordine",
+        "submit_for_review_button_label": "Invia per la revisione",
+        "submit_for_review_notice_label": "Il pagamento non sarà dovuto finché il tuo ordine non sarà stato esaminato",
+        "continue_to_payment_plans_button_label": "Continua ai piani di pagamento",
+        "back_button_label": "Ritorno",
+        "choose_delivery_strategy": "Scegli un metodo di consegna",
+        "autocomplete_zero_item": "Nessun articolo disponibile",
+        "autocomplete_powered_by_google": "Realizzato da {{brandName}}",
+        "submit": "Invia",
+        "processing": "In lavorazione…",
+        "stepper": {
+          "increase": "Aumenta {{type}}",
+          "decrease": "Diminuisci {{type}}",
+          "minimum_reached": "Minimo di {{value}} raggiunto",
+          "maximum_reached": "È stato raggiunto il massimo di {{value}}"
+        },
+        "remove_item": "Rimuovi %{etichetta}",
+        "remove_tag": "Rimuovi tag",
+        "dates": {
+          "weekdays": {
+            "monday": "Lunedi",
+            "tuesday": "Martedì",
+            "wednesday": "Mercoledì",
+            "thursday": "Giovedì",
+            "friday": "Venerdì",
+            "saturday": "Sabato",
+            "sunday": "Domenica"
+          },
+          "weekdays_abbreviation": {
+            "wednesday": "Noi",
+            "thursday": "Gi"
+          },
+          "months": {
+            "january": "Gennaio",
+            "february": "Febbraio",
+            "march": "Marzo",
+            "april": "aprile",
+            "may": "Maggio",
+            "june": "Giugno",
+            "july": "Luglio",
+            "august": "agosto",
+            "september": "settembre",
+            "october": "ottobre",
+            "november": "novembre",
+            "december": "Dicembre"
+          }
+        },
+        "datepicker": {
+          "show_previous_month": "Mostra il mese precedente, {{month}} {{year}}",
+          "show_next_month": "Mostra il mese prossimo, {{month}} {{year}}",
+          "range_start": "Inizio della gamma",
+          "in_range": "Nel raggio d'azione",
+          "range_end": "Fine dell'intervallo"
+        }
+      }
+    },
+    "page_titles": {
+      "search": "Ricerca",
+      "collections": "Collezioni"
+    },
+    "sentence": {
+      "two_words_connector": " E ",
+      "last_word_connector": ", E "
+    }
+  },
+  "customer_accounts": {
+    "order_details": {
+      "contact": "Contatto"
+    },
+    "B2B": {
+      "orders": {
+        "order_list_column_headers_contact": "Contatto"
+      }
+    }
+  }
+}
