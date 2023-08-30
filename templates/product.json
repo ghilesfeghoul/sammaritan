@@ -51,18 +51,9 @@
       "settings": {
         "image_render": "stacked"
       }
-    },
-    "990cd739-4b83-490d-99d4-ecf08b96a330": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "RELATED PRODUCTS",
-        "featured_collection": "beaute",
-        "number_of_products_to_show": 4
-      }
     }
   },
   "order": [
-    "template",
-    "990cd739-4b83-490d-99d4-ecf08b96a330"
+    "template"
   ]
 }

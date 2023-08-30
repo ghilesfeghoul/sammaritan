@@ -18,7 +18,8 @@
             {% endif %}
           {% endif %}
           <div class="col-12 col-md-6 col-lg-4 d-flex flex-column mb-7">
-
+            <!-- Heading -->
+            <h5 class="mb-0">{{ collection.title }}</h5>
             <!-- Card -->
             <div class="card justify-content-center bg-cover" style="min-height: 320px;">
 
@@ -28,23 +29,19 @@
               </div>
 
               <!-- Body -->
-              <div class="card-body text-center fw-bold" style="color: {{ section.settings.text_color }};">
-
-                <!-- Heading -->
-                <h5 class="mb-0">{{ collection.title }}</h5>
-
-                <!-- Text -->
-                <a
-                  class="btn btn-link stretched-link px-0 fw-bold"
-                  style="color: {{ section.settings.text_color }};"
-                  href="{{ collection.url }}">
-                  {{ section.settings.button_text }}
-                  <i class="fe fe-arrow-right ms-2"></i>
-                </a>
-
-              </div>
+              <div class="card-body text-center fw-bold"></div>
 
             </div>
+
+
+            <!-- Text -->
+            <a
+              class="btn btn-link stretched-link px-0 fw-bold"
+              style="color: {{ section.settings.text_color }};"
+              href="{{ collection.url }}">
+              {{ section.settings.button_text }}
+              <i class="fe fe-arrow-right ms-2"></i>
+            </a>
 
           </div>
         {% endif %}
@@ -73,7 +70,7 @@
       }, {
         "type": "color",
         "id": "text_color",
-        "default": "#FFF",
+        "default": "#000",
         "label": "t:settings_schema.list-collection.settings.text_color.label"
       }
     ],

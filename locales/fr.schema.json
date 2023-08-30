@@ -367,7 +367,7 @@
       }
     },
     "list-collection": {
-      "name": "Page de liste des collection",
+      "name": "Liste de collections",
       "settings": {
         "title": {
           "label": "Titre de la collection"
