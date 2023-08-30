@@ -7,6 +7,17 @@
     },
     "169177423463f0a20f": {
       "type": "apps",
+      "blocks": {
+        "82f7e728-ae34-42ba-ad9d-7928da01cdaa": {
+          "type": "shopify:\/\/apps\/app-wishlist\/blocks\/wishlist-page\/c9c2c3c8-8744-4fe7-90f5-f62b22a092cc",
+          "settings": {
+            "title": ""
+          }
+        }
+      },
+      "block_order": [
+        "82f7e728-ae34-42ba-ad9d-7928da01cdaa"
+      ],
       "settings": {
       }
     }
