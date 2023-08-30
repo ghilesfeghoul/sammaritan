@@ -4,5 +4,35 @@
     "market": "international"
   },
   "sections": {
-  }
+    "eba9372a-9bd9-4de3-8d4d-940e743397d5": {
+      "settings": {
+      },
+      "blocks": {
+        "ab77ce84-cd17-4c65-9615-b589f3168850": {
+          "type": "slide_2",
+          "settings": {
+            "show_slide_2": false,
+            "image_2": "shopify:\/\/shop_images\/photo-1515955656352-a1fa3ffcd111.jpg",
+            "text_2": "So called give, one whales tree seas dry place own day, winged tree created spirit.",
+            "heading_2": "Summer Collection",
+            "show_text_2": true,
+            "url_2": "",
+            "text_url_2": "Shop now"
+          }
+        }
+      },
+      "block_order": [
+        "template--20882439602489__eba9372a-9bd9-4de3-8d4d-940e743397d5-slide_1-1",
+        "template--20882439602489__eba9372a-9bd9-4de3-8d4d-940e743397d5-slide_2-1",
+        "template--20882439602489__eba9372a-9bd9-4de3-8d4d-940e743397d5-slide_3-1",
+        "ab77ce84-cd17-4c65-9615-b589f3168850"
+      ]
+    }
+  },
+  "order": [
+    "eba9372a-9bd9-4de3-8d4d-940e743397d5",
+    "template",
+    "cb30b961-3fe5-4d8c-8616-754a74081370",
+    "c8319fe3-f1cd-4d5e-8a9a-9ac474e3a35c"
+  ]
 }

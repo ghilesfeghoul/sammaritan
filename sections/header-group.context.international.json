@@ -4,5 +4,15 @@
     "market": "international"
   },
   "sections": {
+    "header": {
+      "settings": {
+        "header_selector": "Assymetric",
+        "allow_social_links": true,
+        "enable_language_selector": false,
+        "enable_country_selector": false
+      },
+      "blocks": {
+      }
+    }
   }
 }
