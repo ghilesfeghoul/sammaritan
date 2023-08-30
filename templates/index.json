@@ -1,15 +1,102 @@
 {
   "sections": {
+    "eba9372a-9bd9-4de3-8d4d-940e743397d5": {
+      "type": "section-carousel",
+      "blocks": {
+        "template--20882439602489__eba9372a-9bd9-4de3-8d4d-940e743397d5-slide_1-1": {
+          "type": "slide_1",
+          "settings": {
+            "show_slide_1": true,
+            "text_1": "Summer Sale",
+            "heading_1": "-70%",
+            "heading_1_complete": "Ready to shop ?",
+            "show_heading": true,
+            "url_1": "",
+            "text_url_1": "Shop now"
+          }
+        },
+        "template--20882439602489__eba9372a-9bd9-4de3-8d4d-940e743397d5-slide_2-1": {
+          "type": "slide_2",
+          "settings": {
+            "show_slide_2": false,
+            "text_2": "So called give, one whales tree seas dry place own day, winged tree created spirit.",
+            "heading_2": "Sport Collection",
+            "show_text_2": true,
+            "url_2": "shopify:\/\/collections\/sport",
+            "text_url_2": "Discover now"
+          }
+        },
+        "template--20882439602489__eba9372a-9bd9-4de3-8d4d-940e743397d5-slide_3-1": {
+          "type": "slide_3",
+          "settings": {
+            "show_slide_3": false,
+            "heading_3": "10% OFF",
+            "preheading_3": "Summer Styles",
+            "url_3": "",
+            "text_url_3": "Shop women",
+            "url_4": "shopify:\/\/products\/awesome-concrete-clock",
+            "text_url_4": "Shop men",
+            "show_url_4": false
+          }
+        }
+      },
+      "block_order": [
+        "template--20882439602489__eba9372a-9bd9-4de3-8d4d-940e743397d5-slide_1-1",
+        "template--20882439602489__eba9372a-9bd9-4de3-8d4d-940e743397d5-slide_2-1",
+        "template--20882439602489__eba9372a-9bd9-4de3-8d4d-940e743397d5-slide_3-1"
+      ],
+      "settings": {
+      }
+    },
     "template": {
       "type": "featured-collection",
       "settings": {
-        "title": "",
+        "title": "NEW COLLECTION",
         "featured_collection": "all",
-        "number_of_products_to_show": 4
+        "number_of_products_to_show": 8
+      }
+    },
+    "cb30b961-3fe5-4d8c-8616-754a74081370": {
+      "type": "section-must-have",
+      "blocks": {
+        "61b150bb-cb41-44d8-8400-57dbe47b431a": {
+          "type": "txt",
+          "settings": {
+          }
+        },
+        "268f88b1-be92-4ad7-8bb8-da51b7e3c9f1": {
+          "type": "img",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "61b150bb-cb41-44d8-8400-57dbe47b431a",
+        "268f88b1-be92-4ad7-8bb8-da51b7e3c9f1"
+      ],
+      "settings": {
+        "preheading": "SUMMER TRENDS",
+        "heading": "Our must haves",
+        "description": "Male his our upon seed had said wherein their i great wherein under you'll deep first multiply. Fish waters they're herb shall saying.",
+        "link": "shopify:\/\/collections\/sante",
+        "text_link": "Discover now"
+      }
+    },
+    "c8319fe3-f1cd-4d5e-8a9a-9ac474e3a35c": {
+      "type": "section-story",
+      "settings": {
+        "preheading": "Our story",
+        "heading": "About our Store",
+        "description": "<p>Open created shall two he second moving whose. He face whose two upon, fowl behold waters. Fly there their day creepeth. Darkness beginning spirit after. Creepeth subdue. Brought may, first. Under living that.<\/p><p>Third. For morning whales saw were had seed can't divide it light shall moveth, us blessed given wherein.<\/p>",
+        "link": "",
+        "text_link": "Discover more"
       }
     }
   },
   "order": [
-    "template"
+    "eba9372a-9bd9-4de3-8d4d-940e743397d5",
+    "template",
+    "cb30b961-3fe5-4d8c-8616-754a74081370",
+    "c8319fe3-f1cd-4d5e-8a9a-9ac474e3a35c"
   ]
 }

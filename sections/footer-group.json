@@ -2,6 +2,37 @@
   "name": "t:settings_schema.footer.name",
   "type": "footer",
   "sections": {
+    "389e3ae0-8383-49db-93dc-7fe44cb2e938": {
+      "type": "newsletter",
+      "blocks": {
+        "sections--20882438357305__389e3ae0-8383-49db-93dc-7fe44cb2e938-text-1": {
+          "type": "text",
+          "settings": {
+            "heading": "Subsribe to our newsletter",
+            "size": "fs-3"
+          }
+        },
+        "sections--20882438357305__389e3ae0-8383-49db-93dc-7fe44cb2e938-subtext-1": {
+          "type": "subtext",
+          "settings": {
+            "paragraph": "<p><strong>Be the first to get all the news from us<\/strong><\/p>"
+          }
+        },
+        "sections--20882438357305__389e3ae0-8383-49db-93dc-7fe44cb2e938-email_form-1": {
+          "type": "email_form",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "sections--20882438357305__389e3ae0-8383-49db-93dc-7fe44cb2e938-text-1",
+        "sections--20882438357305__389e3ae0-8383-49db-93dc-7fe44cb2e938-subtext-1",
+        "sections--20882438357305__389e3ae0-8383-49db-93dc-7fe44cb2e938-email_form-1"
+      ],
+      "settings": {
+        "newsletter_color": "gray"
+      }
+    },
     "footer": {
       "type": "footer",
       "blocks": {
@@ -34,16 +65,16 @@
       ],
       "settings": {
         "footer_type": "fashion",
+        "allow_social_links": true,
         "enable_country_selector": true,
         "enable_language_selector": true,
-        "allow_social_links": true,
         "show_payment_methods": true,
-        "rights": "© 2023 All rights reserved.",
-        "display_newsletter": false
+        "rights": "© 2023 All rights reserved."
       }
     }
   },
   "order": [
+    "389e3ae0-8383-49db-93dc-7fe44cb2e938",
     "footer"
   ]
 }

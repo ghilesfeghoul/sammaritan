@@ -2,16 +2,34 @@
   "name": "t:settings_schema.header-group.name",
   "type": "header",
   "sections": {
+    "ed47d502-b920-468f-927d-95819694ad36": {
+      "type": "announcement-bar",
+      "blocks": {
+        "29620156-88ec-4715-b411-f373c5d9a2e5": {
+          "type": "link",
+          "settings": {
+            "link_url": "shopify:\/\/pages\/contact",
+            "text_display": "CONTACT"
+          }
+        }
+      },
+      "block_order": [
+        "29620156-88ec-4715-b411-f373c5d9a2e5"
+      ],
+      "settings": {
+        "type_annoncement": "Other",
+        "promotion_text": "FREE SHIPPING",
+        "promo_type": "Free shipping",
+        "enable_country_selector": false,
+        "enable_language_selector": false,
+        "allow_social_links": true
+      }
+    },
     "header": {
       "type": "header",
       "blocks": {
         "account": {
           "type": "customer_account",
-          "settings": {
-          }
-        },
-        "66d28341-e66a-44cc-b3ef-f6a419eafe5f": {
-          "type": "shopify:\/\/apps\/app-wishlist\/blocks\/wishlist-logo\/c9c2c3c8-8744-4fe7-90f5-f62b22a092cc",
           "settings": {
           }
         },
@@ -23,7 +41,6 @@
       },
       "block_order": [
         "account",
-        "66d28341-e66a-44cc-b3ef-f6a419eafe5f",
         "cart"
       ],
       "settings": {
@@ -36,6 +53,7 @@
     }
   },
   "order": [
+    "ed47d502-b920-468f-927d-95819694ad36",
     "header"
   ]
 }
