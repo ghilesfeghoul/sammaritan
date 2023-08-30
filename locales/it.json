@@ -1137,6 +1137,9 @@
           "message": "Iscrizione avvenuta con successo"
         }
       }
+    },
+    "home": {
+      "title": "Casa"
     }
   },
   "templates": {
