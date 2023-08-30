@@ -1,8 +1,15 @@
 {
   "sections": {
     "template": {
-      "type": "template-list-collections"
+      "type": "template-list-collections",
+      "settings": {
+        "title": "Collections",
+        "button_text": "Shop now",
+        "text_color": "#000000"
+      }
     }
   },
-  "order": ["template"]
+  "order": [
+    "template"
+  ]
 }

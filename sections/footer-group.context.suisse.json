@@ -4,5 +4,16 @@
     "market": "suisse"
   },
   "sections": {
+    "footer": {
+      "settings": {
+        "footer_type": "simple",
+        "enable_country_selector": false,
+        "enable_language_selector": false,
+        "allow_social_links": true,
+        "show_payment_methods": true
+      },
+      "blocks": {
+      }
+    }
   }
 }
