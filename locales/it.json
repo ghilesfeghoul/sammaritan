@@ -60,7 +60,8 @@
         },
         "alternative_payment_currency_total_notice": "Nota: ti verranno addebitati %{amount_due}.",
         "waiting_on_taxes_message": "Se le tue tasse non vengono calcolate entro i prossimi secondi, aggiorna la pagina.",
-        "waiting_on_taxes_notice": "Calcolo delle tasse"
+        "waiting_on_taxes_notice": "Calcolo delle tasse",
+        "subscription_heading": "Contratto di abbonamento"
       },
       "review": {
         "blocks": {
@@ -671,6 +672,9 @@
         "location_information": {
           "one": "C'è %{count} negozio con stock vicino a %{address}"
         }
+      },
+      "customer_account": {
+        "invalid_shipping_method_summary": "Seleziona un indirizzo di spedizione valido per visualizzare i metodi di spedizione disponibili"
       }
     },
     "page_titles": {
