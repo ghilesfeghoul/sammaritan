@@ -33,6 +33,11 @@
           "settings": {
           }
         },
+        "4b87a8c8-2ebf-49cd-a06d-a6c773dd5277": {
+          "type": "shopify:\/\/apps\/app-wishlist\/blocks\/wishlist-button\/c9c2c3c8-8744-4fe7-90f5-f62b22a092cc",
+          "settings": {
+          }
+        },
         "description": {
           "type": "description",
           "settings": {
@@ -46,6 +51,7 @@
         "variant_selector",
         "quantity",
         "checkout_button",
+        "4b87a8c8-2ebf-49cd-a06d-a6c773dd5277",
         "description"
       ],
       "settings": {
