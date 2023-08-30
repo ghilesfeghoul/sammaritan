@@ -149,53 +149,94 @@
     <div class="collapse navbar-collapse" id="navbarFashionBottomCollapse">
       <ul class="navbar-nav">
         {%- for link in section.settings.menu.links -%}
+          {% assign deep = false %}
+          {% if link.links != blank %}
+            {% for childlink in link.links %}
+              {% if childlink.links != blank %}
+                {% assign deep = true %}
+              {% endif %}
+            {% endfor %}
+          {% endif %}
+
+          {% if deep %}
         <li class="nav-item flex flex-row {% if link.links != blank %}dropdown position-static{% endif %}">
-            {%- if link.links != blank -%}
-              <a
-              class="nav-link"
-              data-bs-toggle="dropdown"
-              href="#">{{ link.title | escape }}</a>
+          {%- if link.links != blank -%}
+            <a
+            class="nav-link"
+            data-bs-toggle="dropdown"
+            href="#">{{ link.title | escape }}</a>
 
-              <div class="dropdown-menu px-10" style="min-width: 650px;">
-                <div class="card card-lg">
-                  <div class="card-body">
-                      {%- for childlink in link.links -%}
-                        {% assign openRow = forloop.index | modulo: 3 %}
-                        {% assign closeRow = forloop.index | modulo: 2 %}
-                        {% if openRow == 0 or forloop.index == 1 %}
-                          <div class="row mb-5">
+            <div class="dropdown-menu px-10" style="min-width: 650px;">
+              <div class="card card-lg">
+                <div class="card-body">
+                    {%- for childlink in link.links -%}
+                      {% assign openRow = forloop.index | modulo: 3 %}
+                      {% assign closeRow = forloop.index | modulo: 2 %}
+                      {% if openRow == 0 or forloop.index == 1 %}
+                        <div class="row mb-5">
+                      {% endif %}
+                        <div class="col">
+                          {%- if childlink.links != blank -%}
+                          <a class="mb-2 fw-bold d-block" href="{{ childlink.url }}">{{- childlink.title | escape -}}</a>
+                          <ul class="list-styled fs-sm">
+                            {% for grandchildlink in childlink.links %}
+                              <li class="list-styled-item">
+                                <a class="list-styled-link" href="{{ grandchildlink.url }}">{{- grandchildlink.title | escape -}}</a>
+                              </li>
+                            {% endfor %}
+                          </ul>
+                        </div>
+                        {% if closeRow == 0 %}
+                        </div>   
                         {% endif %}
-                          <div class="col">
-                            {%- if childlink.links != blank -%}
-                            <a class="mb-2 fw-bold d-block" href="{{ childlink.url }}">{{- childlink.title | escape -}}</a>
-                            <ul class="list-styled fs-sm">
-                              {% for grandchildlink in childlink.links %}
-                                <li class="list-styled-item">
-                                  <a class="list-styled-link" href="{{ grandchildlink.url }}">{{- grandchildlink.title | escape -}}</a>
-                                </li>
-                              {% endfor %}
-                            </ul>
-                          </div>
-                          {% if closeRow == 0 %}
-                          </div>   
-                          {% endif %}
 
-                      {%- else -%}
-                            <a class="mb-5 fw-bold d-block" href="{{ childlink.url }}">{{- childlink.title | escape -}}</a>
-                      {%- endif -%}
+                    {%- else -%}
+                          <a class="mb-5 fw-bold d-block" href="{{ childlink.url }}">{{- childlink.title | escape -}}</a>
+                    {%- endif -%}
 
-        
-                        
-                    {%- endfor -%}
-                  </div>
-                    
-                  </div>
+      
+                      
+                  {%- endfor -%}
+                </div>
+                  
                 </div>
               </div>
-            {% else %}
-              <a class="nav-link" href="{{ link.url }}">{{- link.title | escape -}}</a>
-            {% endif %}
+            </div>
+          {% else %}
+            <a class="nav-link" href="{{ link.url }}">{{- link.title | escape -}}</a>
+          {% endif %}
+        </li>
+
+          {% else %}
+          {%- if link.links != blank -%}
+          <li class="nav-item dropdown hovered">
+    
+          <!-- Toggle -->
+          <a class="nav-link" data-bs-toggle="dropdown" href="#" aria-expanded="false">{{ link.title | escape }}</a>
+
+          <!-- Menu -->
+          <div class="dropdown-menu">
+            <div class="card card-lg">
+              <div class="card-body">
+                <ul class="list-styled fs-sm">
+                  {%- for childlink in link.links -%}
+                  <li class="list-styled-item">
+                    <a class="list-styled-link" href="{{ childlink.url }}">{{ childlink.title | escape  }}</a>
+                  </li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </div>
+          </div>
+
           </li>
+        {% else %}
+            <a class="nav-link" href="{{ link.url }}">{{- link.title | escape -}}</a>
+          {% endif %}
+          {% endif %}
+
+
+        
         {% endfor %}
       </ul>
     </div>

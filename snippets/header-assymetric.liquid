@@ -10,15 +10,25 @@
         <!-- Nav -->
         <ul class="nav nav-vertical nav-unstyled fs-2" id="sidebarNav">
           {%- for link in section.settings.menu.links -%}
+            {% assign deep = false %}
+          {% if link.links != blank %}
+            {% for childlink in link.links %}
+              {% if childlink.links != blank %}
+                {% assign deep = true %}
+              {% endif %}
+            {% endfor %}
+          {% endif %}
+
+          {% if deep %}
             <li class="nav-item">
             {%- if link.links != blank -%}
                 <a
                 class="nav-link dropdown-toggle" 
                 data-bs-toggle="collapse"
-                  href="#sidebar{{ link.title | escape }}">{{- link.title | escape -}}  
+                  href="#sidebar{{ forloop.index }}">{{- link.title | escape -}}  
                 </a>
 
-                  <div class="collapse" id="sidebar{{ link.title | escape }}" data-bs-parent="#sidebarNav">
+                  <div class="collapse" id="sidebar{{ forloop.index }}" data-bs-parent="#sidebarNav">
                    
                         {%- for childlink in link.links -%}
                           {%- if childlink.links != blank -%}
@@ -47,8 +57,34 @@
             {%- else -%}
                 <a class="nav-link" href="{{ link.url }}">{{- link.title | escape -}}</a>
             {%- endif -%}
-          {%- endfor -%}
+            </li>
+            {% else %}
+            {%- if link.links != blank -%}
+            <li class="nav-item">
+    
+            <!-- Toggle -->
+            <a class="nav-link dropdown-toggle" data-bs-toggle="collapse" href="#sidebar{{ forloop.index }}">
+              {{ link.title | escape }}
+            </a>
+    
+            <!-- Collapse -->
+            <div class="collapse" id="sidebar{{ forloop.index }}" data-bs-parent="#sidebarNav">
+              <ul class="list-styled fs-lg py-3 mb-0">
+                {% for childlink in link.links %}
+                  <li class="list-styled-item">
+                    <a class="list-styled-link" href="{{ childlink.url }}">{{ childlink.title | escape }}</a>
+                  </li>
+                {% endfor %}
+              </ul>
+            </div>
+    
           </li>
+            {% else %}
+            <a class="nav-link" href="{{ link.url }}">{{- link.title | escape -}}</a>
+          {% endif %}
+          {% endif %}
+          {%- endfor -%}
+          
         </ul>
     
       </div>
