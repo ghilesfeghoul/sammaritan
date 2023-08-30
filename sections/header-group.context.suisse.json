@@ -4,5 +4,12 @@
     "market": "suisse"
   },
   "sections": {
+    "header": {
+      "settings": {
+        "menu": "ch-menu"
+      },
+      "blocks": {
+      }
+    }
   }
 }
