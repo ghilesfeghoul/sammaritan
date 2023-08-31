@@ -1,15 +1,100 @@
 {
   "sections": {
-    "template": {
-      "type": "featured-collection",
+    "cc7f1fa4-15ef-4282-8e76-31b7571c52c1": {
+      "type": "section-carousel",
+      "blocks": {
+        "template--20884250657081__cc7f1fa4-15ef-4282-8e76-31b7571c52c1-slide_1-1": {
+          "type": "slide_1",
+          "settings": {
+            "show_slide_1": false,
+            "text_1": "Summer Sale",
+            "heading_1": "-70%",
+            "heading_1_complete": "with promo code CN67EW*",
+            "show_heading": true,
+            "url_1": "",
+            "text_url_1": "Shop now"
+          }
+        },
+        "template--20884250657081__cc7f1fa4-15ef-4282-8e76-31b7571c52c1-slide_2-1": {
+          "type": "slide_2",
+          "settings": {
+            "show_slide_2": false,
+            "text_2": "So called give, one whales tree seas dry place own day, winged tree created spirit.",
+            "heading_2": "Summer Collection",
+            "show_text_2": true,
+            "url_2": "",
+            "text_url_2": "Shop now"
+          }
+        },
+        "template--20884250657081__cc7f1fa4-15ef-4282-8e76-31b7571c52c1-slide_3-1": {
+          "type": "slide_3",
+          "settings": {
+            "show_slide_3": false,
+            "heading_3": "50% OFF",
+            "preheading_3": "Summer Styles",
+            "url_3": "",
+            "text_url_3": "Shop women",
+            "url_4": "",
+            "text_url_4": "Shop men",
+            "show_url_4": true
+          }
+        },
+        "7f39afa1-2b80-4a46-b1fe-631a05c9c36e": {
+          "type": "slide_2",
+          "settings": {
+            "show_slide_2": true,
+            "image_2": "shopify:\/\/shop_images\/photo-1515955656352-a1fa3ffcd111.jpg",
+            "text_2": "rdsjkskdkqsj",
+            "heading_2": "Summer Collection",
+            "show_text_2": true,
+            "url_2": "",
+            "text_url_2": "Shop now"
+          }
+        }
+      },
+      "block_order": [
+        "template--20884250657081__cc7f1fa4-15ef-4282-8e76-31b7571c52c1-slide_1-1",
+        "template--20884250657081__cc7f1fa4-15ef-4282-8e76-31b7571c52c1-slide_2-1",
+        "template--20884250657081__cc7f1fa4-15ef-4282-8e76-31b7571c52c1-slide_3-1",
+        "7f39afa1-2b80-4a46-b1fe-631a05c9c36e"
+      ],
       "settings": {
-        "title": "",
-        "featured_collection": "all",
-        "number_of_products_to_show": 4
+      }
+    },
+    "f627e9bf-291d-41ea-b7b6-b5a5f90f14f4": {
+      "type": "newsletter",
+      "blocks": {
+        "template--20884250657081__f627e9bf-291d-41ea-b7b6-b5a5f90f14f4-text-1": {
+          "type": "text",
+          "settings": {
+            "heading": "Newstletter",
+            "size": "fs-1"
+          }
+        },
+        "template--20884250657081__f627e9bf-291d-41ea-b7b6-b5a5f90f14f4-subtext-1": {
+          "type": "subtext",
+          "settings": {
+            "paragraph": "<p>Subscribe to our newsletter<\/p>"
+          }
+        },
+        "template--20884250657081__f627e9bf-291d-41ea-b7b6-b5a5f90f14f4-email_form-1": {
+          "type": "email_form",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "template--20884250657081__f627e9bf-291d-41ea-b7b6-b5a5f90f14f4-text-1",
+        "template--20884250657081__f627e9bf-291d-41ea-b7b6-b5a5f90f14f4-subtext-1",
+        "template--20884250657081__f627e9bf-291d-41ea-b7b6-b5a5f90f14f4-email_form-1"
+      ],
+      "settings": {
+        "newsletter_color": "gray"
       }
     }
   },
   "order": [
-    "template"
+    "cc7f1fa4-15ef-4282-8e76-31b7571c52c1",
+    "f627e9bf-291d-41ea-b7b6-b5a5f90f14f4"
   ]
 }
