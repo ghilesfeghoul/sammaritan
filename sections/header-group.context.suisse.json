@@ -4,5 +4,48 @@
     "market": "suisse"
   },
   "sections": {
-  }
+    "header": {
+      "disabled": false,
+      "settings": {
+        "header_selector": "Fashion",
+        "menu": "ch-menu"
+      },
+      "blocks": {
+        "876a7df3-24c3-45f2-bc85-9297e9f72b67": {
+          "type": "link",
+          "settings": {
+            "link_url": "shopify:\/\/collections\/vetements",
+            "text_display": "Clothing"
+          }
+        }
+      },
+      "block_order": [
+        "account",
+        "bf044efe-6cd4-4baf-8d57-42bb93e4b8ed",
+        "cart",
+        "876a7df3-24c3-45f2-bc85-9297e9f72b67"
+      ]
+    },
+    "b48fcc8b-f926-48ab-9a12-f8c3441bd010": {
+      "type": "announcement-bar",
+      "disabled": false,
+      "settings": {
+        "type_annoncement": "Promotion",
+        "promotion_text": "Promotion",
+        "promo_type": "Discount",
+        "enable_country_selector": true,
+        "enable_language_selector": true,
+        "allow_social_links": false
+      },
+      "blocks": {
+      },
+      "block_order": [
+
+      ]
+    }
+  },
+  "order": [
+    "b48fcc8b-f926-48ab-9a12-f8c3441bd010",
+    "header"
+  ]
 }
